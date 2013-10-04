@@ -23,7 +23,12 @@
  NeoBundle 'Raimondi/delimitMate'
  NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
  NeoBundle 'scrooloose/syntastic'
+ NeoBundle 'shanzi/autoHEADER'
+ let g:autoHEADER_auto_enable=0 " Don't auto-start autoHEADER
+ NeoBundle 'Shougo/unite.vim'
+ NeoBundle 'SirVer/ultisnips'
  NeoBundle 'sjl/gundo.vim'
+ NeoBundle 'terryma/vim-multiple-cursors'
  NeoBundle 'tpope/vim-abolish'
  NeoBundle 'tpope/vim-commentary'
  NeoBundle 'tpope/vim-endwise'
@@ -36,9 +41,7 @@
  NeoBundle 'tpope/vim-surround'
  NeoBundle 'tpope/vim-unimpaired'
  NeoBundle 'tsaleh/vim-matchit'
- NeoBundle 'terryma/vim-multiple-cursors'
- NeoBundle 'Shougo/unite.vim'
- NeoBundle 'SirVer/ultisnips'
+ NeoBundle 'gerw/vim-latex-suite'
 
  " vim-scripts repos
  " NeoBundle 'Screen-vim---gnu-screenmux'
@@ -110,6 +113,7 @@
  NeoBundleCheck
 
  " mappings
+ inoremap jj <ESC>
  let maplocalleader = ","
  nnoremap <F5> :GundoToggle<CR>
 
