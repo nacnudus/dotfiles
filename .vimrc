@@ -1,0 +1,1 @@
+/home/nacnudus/.vimrc
