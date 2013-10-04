@@ -117,3 +117,6 @@
  let maplocalleader = ","
  nnoremap <F5> :GundoToggle<CR>
 
+ " spelling
+ set spell spelllang=en_gb
+ 
