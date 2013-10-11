@@ -156,5 +156,8 @@ bindsym $mod+d move workspace to output LVDS1 # Move current workspace to laptop
 bindsym $mod+Shift+u exec ~/.i3/up.py # Move all workspaces to external monitor.
 bindsym $mod+Shift+d exec ~/.i3/down.py # Move all workspaces to laptop monitor.
 
+# Toggle Mirror/External/Internal
+bindsym $mod+Shift+t exec ~/.i3/toggle.sh
+
 # Network manager
 exec --no-startup-id nm-applet
