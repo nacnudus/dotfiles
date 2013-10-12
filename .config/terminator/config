@@ -15,7 +15,6 @@
     foreground_color = "#eee8d5"
     background_color = "#002b36"
     cursor_color = "#eee8d5"
-    scrollback_lines = 50000
     use_system_font = False
     font = Inconsolata Medium 12
 
@@ -24,7 +23,6 @@
     background_color = "#eee8d5"
     foreground_color = "#002b36"
     cursor_color = "#002b36"
-    scrollback_lines = 50000
     use_system_font = False
     font = Inconsolata Medium 12
 
