@@ -54,7 +54,7 @@ NeoBundle 'Auto-Pairs'
 " NeoBundle 'gist:Shougo/656148', {
 "       \ 'name': 'everything.vim',
 "       \ 'script_type': 'plugin'}
- 
+
 " Non git repos
 " NeoBundle 'git://github.com/godlygeek/tabular.git'
 
@@ -67,6 +67,7 @@ NeoBundle 'othree/html5-syntax.vim'
 " more complicated installations
 NeoBundle 'altercation/vim-colors-solarized'
 let g:solarized_termcolors=256
+let g:solarized_termtrans=1
 colorscheme solarized
 set background=dark
 
@@ -113,6 +114,32 @@ NeoBundleCheck
 " NeoBundle ends here
 "------------------------------------------------------------------------------
 
+" Settings
+set hidden " Handle multiple buffers better
+set ignorecase " Better searching
+set smartcase "Better searching
+set wrap " line wrapping
+set noswapfile " don't use swap files
+set nobackup " No backup when writing a file
+set nowritebackup " No backup when writing a file
+set directory=$HOME/.vim/tmp//,. " Keep swap files in one location
+set gcr=a:blinkon0 "Disable cursor blink
+set autoread " Reload files changed outside vim
+set lazyredraw                  " don't redraw when don't have to
+set magic                       " Enable the magic
+set noerrorbells visualbell t_vb= " Disable ALL bells
+set showfulltag                 " show full completion tags
+set foldenable
+set foldcolumn=2
+set foldminlines=2
+
+" ================ Persistent Undo ==================
+" Keep undo history across sessions, by storing in file.
+" Only works all the time.
+silent !mkdir ~/.vim/backups > /dev/null 2>&1
+set undodir=~/.vim/backups
+set undofile
+
 " Call yankstap early and set mappings afterwards.
 call yankstack#setup()
 
@@ -122,11 +149,30 @@ inoremap jj <ESC>
 nnoremap <F5> :GundoToggle<CR>
 nmap Y y$
 
+" map screen jumping
+map <leader>h <c-w>h
+map <leader>j <c-w>j
+map <leader>k <c-w>k
+map <leader>l <c-w>l
+
+" Reindent File
+map <silent> <LocalLeader>ri G=gg<CR>
+
+" toggle wrapping
+nmap <LocalLeader>ww :set wrap!<CR>
+nmap <LocalLeader>wo :set wrap<CR>
+
+" clear spaces at end of line
+map <silent> <LocalLeader>Cs :%s/\s\+$//e<CR>
+" open file from where last edited (GB screencast)
+:au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
 map k gk
 
-
+" Syntastic
+nmap <LocalLeader>s :SyntasticCheck<CR>
 
 " Smart way to move between windows
 map <C-j> <C-W>j
