@@ -3,47 +3,49 @@
    set runtimepath+=~/.vim/bundle/neobundle.vim/
  endif
 
+ " Run vim-sensible first so it can be easily overridden.
+ runtime! plugin/sensible.vim
+
+ "------------------------------------------------------------------------------
+ " NeoBundle
+ "------------------------------------------------------------------------------
  call neobundle#rc(expand('~/.vim/bundle/'))
 
  " Let NeoBundle manage NeoBundle
  NeoBundleFetch 'Shougo/neobundle.vim'
 
- " Recommended to install
- " After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
-
- " My Bundles here:
-
- " Note: You don't set neobundle setting in .gvimrc!
-
- " Original repos on github
- NeoBundle 'ervandew/supertab'
- NeoBundle 'Lokaltog/vim-easymotion'
- " webapi-vim is necessary for gist-vim
- NeoBundle 'mattn/webapi-vim'
- NeoBundle 'Raimondi/delimitMate'
- NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
- NeoBundle 'scrooloose/syntastic'
- NeoBundle 'shanzi/autoHEADER'
- let g:autoHEADER_auto_enable=0 " Don't auto-start autoHEADER
- NeoBundle 'Shougo/unite.vim'
- NeoBundle 'SirVer/ultisnips'
- NeoBundle 'sjl/gundo.vim'
- NeoBundle 'terryma/vim-multiple-cursors'
- NeoBundle 'tpope/vim-abolish'
- NeoBundle 'tpope/vim-commentary'
- NeoBundle 'tpope/vim-endwise'
- NeoBundle 'tpope/vim-fugitive'
- NeoBundle 'tpope/vim-markdown'
- NeoBundle 'tpope/vim-repeat'
- NeoBundle 'tpope/vim-sensible'
- NeoBundle 'tpope/vim-sleuth'
- NeoBundle 'tpope/vim-speeddating'
- NeoBundle 'tpope/vim-surround'
- NeoBundle 'tpope/vim-unimpaired'
- NeoBundle 'tsaleh/vim-matchit'
- NeoBundle 'gerw/vim-latex-suite'
+ " NeoBundle 'jmcantrell/vim-virtualenv' " use the correct python virtual environment
+ " NeoBundle 'Raimondi/delimitMate' " closing parentheses etc.
+ " NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'} " write HTML faster
+ NeoBundle 'benmills/vimux' " interact with tmux
+ NeoBundle 'bling/vim-airline' " status bar
+ NeoBundle 'chrisbra/csv.vim' " edit csv files
+ NeoBundle 'ervandew/supertab' " tab completion
+ NeoBundle 'git://github.com/godlygeek/tabular.git' " align text
+ NeoBundle 'Lokaltog/vim-easymotion' " move by hotkey
+ NeoBundle 'mattn/webapi-vim' " necessary for gist-vim
+ NeoBundle 'maxbrunsfeld/vim-yankstack' " better yanking
+ NeoBundle 'mhinz/vim-signify' " track diffs in the margin
+ NeoBundle 'scrooloose/syntastic' " syntax checking
+ NeoBundle 'Shougo/unite.vim' " browse directories and goodness knows what
+ NeoBundle 'SirVer/ultisnips' " snippets
+ NeoBundle 'sjl/gundo.vim' " undo tree
+ NeoBundle 'terryma/vim-multiple-cursors' " edit several places at once
+ NeoBundle 'tomtom/tcomment_vim' " commenting
+ NeoBundle 'tpope/vim-abolish' " search and replace word roots
+ NeoBundle 'tpope/vim-endwise' " automagically add 'endif' after 'if' etc.
+ NeoBundle 'tpope/vim-eunuch' " vim sugar for UNIX commands
+ NeoBundle 'tpope/vim-fugitive' " git from vim
+ NeoBundle 'tpope/vim-markdown' " Tim Pope's markdown - others available
+ NeoBundle 'tpope/vim-repeat' " necessary for Tim Pope's other plugins
+ NeoBundle 'tpope/vim-sensible' " sensible settings to start with
+ NeoBundle 'tpope/vim-sleuth' " automagically indent
+ NeoBundle 'tpope/vim-speeddating' " increment dates?
+ NeoBundle 'tpope/vim-surround' " change surrounding thingies to other thingies
+ NeoBundle 'tpope/vim-unimpaired' " pairs of handy bracket matchings
 
  " vim-scripts repos
+ NeoBundle 'Auto-Pairs'
  " NeoBundle 'Screen-vim---gnu-screenmux'
  " NeoBundle 'Vim-R-plugin'
 
@@ -53,8 +55,7 @@
  "       \ 'script_type': 'plugin'}
   
  " Non git repos
- NeoBundle 'git://git.wincent.com/command-t.git'
- NeoBundle 'git://github.com/godlygeek/tabular.git'
+ " NeoBundle 'git://github.com/godlygeek/tabular.git'
 
  " syntax mappings
  NeoBundle 'hail2u/vim-css3-syntax'
@@ -64,22 +65,20 @@
 
  " more complicated installations
  NeoBundle 'altercation/vim-colors-solarized'
- if has('gui_running')
-    set background=light
- else
-    set background=dark
- endif
+ let g:solarized_termcolors=256
+ colorscheme solarized
+ set background=dark
 
- NeoBundle 'Shougo/vimproc', {
-      \ 'build' : {
-      \     'windows' : 'make -f make_mingw32.mak',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ }
+ " NeoBundle 'Shougo/vimproc', {
+      " " \ 'build' : {
+      " \     'windows' : 'make -f make_mingw32.mak',
+      " \     'cygwin' : 'make -f make_cygwin.mak',
+      " \     'mac' : 'make -f make_mac.mak',
+      " \     'unix' : 'make -f make_unix.mak',
+      " \    },
+      " \ }
 
- NeoBundle 'majutsushi/tagbar'
+ NeoBundle 'majutsushi/tagbar' " class outline viewer
  nmap <F8> :TagbarToggle<CR>
  " ctags markdown
  let g:tagbar_type_markdown = {
@@ -100,23 +99,27 @@
          \ 'v:FunctionVariables',
      \ ]
  \ }" ...
- " NeoBundles end here
 
- filetype plugin indent on     " Required!
- "
+ " Installation check.
+ NeoBundleCheck
+
  " Brief help
  " :NeoBundleList          - list configured bundles
  " :NeoBundleInstall(!)    - install(update) bundles
  " :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
 
- " Installation check.
- NeoBundleCheck
+ "------------------------------------------------------------------------------
+ " NeoBundle ends here
+ "------------------------------------------------------------------------------
+
+ " Call yankstap early and set mappings afterwards.
+ call yankstack#setup()
 
  " mappings
- inoremap jj <ESC>
  let maplocalleader = ","
+ inoremap jj <ESC>
  nnoremap <F5> :GundoToggle<CR>
+ nmap Y y$
 
  " spelling
- set spell spelllang=en_gb
- 
+ set spell spelllang=en_nz
