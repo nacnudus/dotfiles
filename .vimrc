@@ -24,6 +24,7 @@ NeoBundle 'git://github.com/godlygeek/tabular.git' " align text
 NeoBundle 'jeffkreeftmeijer/vim-numbertoggle' " automagically toggle absolute/relative line numbers
 NeoBundle 'Lokaltog/vim-easymotion' " move by hotkey
 NeoBundle 'mattn/webapi-vim' " necessary for gist-vim
+NeoBundle 'mattn/gist-vim' " interact with gists
 NeoBundle 'maxbrunsfeld/vim-yankstack' " better yanking
 NeoBundle 'mhinz/vim-signify' " track diffs in the margin
 NeoBundle 'scrooloose/syntastic' " syntax checking
