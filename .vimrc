@@ -66,7 +66,7 @@ NeoBundle 'othree/html5-syntax.vim'
 
 " more complicated installations
 NeoBundle 'altercation/vim-colors-solarized'
-let g:solarized_termcolors=256
+" let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 colorscheme solarized
 set background=dark
