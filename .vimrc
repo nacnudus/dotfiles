@@ -14,36 +14,36 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" NeoBundle 'jmcantrell/vim-virtualenv' " use the correct python virtual environment
-" NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'} " write HTML faster
-NeoBundle 'benmills/vimux' " interact with tmux
-NeoBundle 'bling/vim-airline' " status bar
-NeoBundle 'chrisbra/csv.vim' " edit csv files
-NeoBundle 'ervandew/supertab' " tab completion
+" NeoBundle 'jmcantrell/vim-virtualenv'              " use the correct python virtual environment
+" NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}      " write HTML faster
+NeoBundle 'benmills/vimux'                         " interact with tmux
+NeoBundle 'bling/vim-airline'                      " status bar
+NeoBundle 'chrisbra/csv.vim'                       " edit csv files
+NeoBundle 'ervandew/supertab'                      " tab completion
 NeoBundle 'git://github.com/godlygeek/tabular.git' " align text
-NeoBundle 'jeffkreeftmeijer/vim-numbertoggle' " automagically toggle absolute/relative line numbers
-NeoBundle 'Lokaltog/vim-easymotion' " move by hotkey
-NeoBundle 'mattn/webapi-vim' " necessary for gist-vim
-NeoBundle 'mattn/gist-vim' " interact with gists
-NeoBundle 'maxbrunsfeld/vim-yankstack' " better yanking
-NeoBundle 'mhinz/vim-signify' " track diffs in the margin
-NeoBundle 'scrooloose/syntastic' " syntax checking
-NeoBundle 'Shougo/unite.vim' " browse directories and goodness knows what
-NeoBundle 'SirVer/ultisnips' " snippets
-NeoBundle 'sjl/gundo.vim' " undo tree
-NeoBundle 'terryma/vim-multiple-cursors' " edit several places at once
-NeoBundle 'tomtom/tcomment_vim' " commenting
-NeoBundle 'tpope/vim-abolish' " search and replace word roots
-NeoBundle 'tpope/vim-endwise' " automagically add 'endif' after 'if' etc.
-NeoBundle 'tpope/vim-eunuch' " vim sugar for UNIX commands
-NeoBundle 'tpope/vim-fugitive' " git from vim
-NeoBundle 'tpope/vim-markdown' " Tim Pope's markdown - others available
-NeoBundle 'tpope/vim-repeat' " necessary for Tim Pope's other plugins
-NeoBundle 'tpope/vim-sensible' " sensible settings to start with
-NeoBundle 'tpope/vim-sleuth' " automagically indent
-NeoBundle 'tpope/vim-speeddating' " increment dates?
-NeoBundle 'tpope/vim-surround' " change surrounding thingies to other thingies
-NeoBundle 'tpope/vim-unimpaired' " pairs of handy bracket matchings
+NeoBundle 'jeffkreeftmeijer/vim-numbertoggle'      " automagically toggle absolute/relative line numbers
+NeoBundle 'Lokaltog/vim-easymotion'                " move by hotkey
+NeoBundle 'mattn/webapi-vim'                       " necessary for gist-vim
+NeoBundle 'mattn/gist-vim'                         " interact with gists
+NeoBundle 'maxbrunsfeld/vim-yankstack'             " better yanking
+NeoBundle 'mhinz/vim-signify'                      " track diffs in the margin
+NeoBundle 'scrooloose/syntastic'                   " syntax checking
+NeoBundle 'Shougo/unite.vim'                       " browse directories and goodness knows what
+NeoBundle 'SirVer/ultisnips'                       " snippets
+NeoBundle 'sjl/gundo.vim'                          " undo tree
+NeoBundle 'terryma/vim-multiple-cursors'           " edit several places at once
+NeoBundle 'tomtom/tcomment_vim'                    " commenting
+NeoBundle 'tpope/vim-abolish'                      " search and replace word roots
+NeoBundle 'tpope/vim-endwise'                      " automagically add 'endif' after 'if' etc.
+NeoBundle 'tpope/vim-eunuch'                       " vim sugar for UNIX commands
+NeoBundle 'tpope/vim-fugitive'                     " git from vim
+NeoBundle 'tpope/vim-markdown'                     " Tim Pope's markdown - others available
+NeoBundle 'tpope/vim-repeat'                       " necessary for Tim Pope's other plugins
+NeoBundle 'tpope/vim-sensible'                     " sensible settings to start with
+NeoBundle 'tpope/vim-sleuth'                       " automagically indent
+NeoBundle 'tpope/vim-speeddating'                  " increment dates?
+NeoBundle 'tpope/vim-surround'                     " change surrounding thingies to other thingies
+NeoBundle 'tpope/vim-unimpaired'                   " pairs of handy bracket matchings
 
 " vim-scripts repos
 NeoBundle 'Auto-Pairs'
@@ -115,23 +115,24 @@ NeoBundleCheck
 "------------------------------------------------------------------------------
 
 " Settings
-set hidden " Handle multiple buffers better
-set ignorecase " Better searching
-set smartcase "Better searching
-set wrap " line wrapping
-set noswapfile " don't use swap files
-set nobackup " No backup when writing a file
-set nowritebackup " No backup when writing a file
-set directory=$HOME/.vim/tmp//,. " Keep swap files in one location
-set gcr=a:blinkon0 "Disable cursor blink
-set autoread " Reload files changed outside vim
-set lazyredraw                  " don't redraw when don't have to
-set magic                       " Enable the magic
+set hidden                        " Handle multiple buffers better
+set ignorecase                    " Better searching
+set smartcase                     " Better searching
+set wrap                          " line wrapping
+set noswapfile                    " don't use swap files
+set nobackup                      " No backup when writing a file
+set nowritebackup                 " No backup when writing a file
+set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
+set gcr=a:blinkon0                " Disable cursor blink
+set autoread                      " Reload files changed outside vim
+set lazyredraw                    " don't redraw when don't have to
+set magic                         " Enable the magic
 set noerrorbells visualbell t_vb= " Disable ALL bells
-set showfulltag                 " show full completion tags
+set showfulltag                   " show full completion tags
 set foldenable
 set foldcolumn=2
 set foldminlines=2
+set number                        " line numbers
 
 " ================ Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
@@ -179,6 +180,9 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
+" NumberToggle trigger
+let g:NumberToggleTrigger="<F2>"
 
 " spelling
 set spell spelllang=en_nz
