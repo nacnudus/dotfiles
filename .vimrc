@@ -48,7 +48,7 @@ NeoBundle 'tpope/vim-unimpaired'                   " pairs of handy bracket matc
 " vim-scripts repos
 NeoBundle 'Auto-Pairs'
 " NeoBundle 'Screen-vim---gnu-screenmux'
-" NeoBundle 'Vim-R-plugin'
+NeoBundle 'Vim-R-plugin'
 
 " gist repos
 " NeoBundle 'gist:Shougo/656148', {
