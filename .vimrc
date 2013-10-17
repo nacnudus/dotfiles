@@ -19,6 +19,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'benmills/vimux'                         " interact with tmux
 NeoBundle 'bling/vim-airline'                      " status bar
 NeoBundle 'chrisbra/csv.vim'                       " edit csv files
+NeoBundle 'ervandew/screen'                        " for Vim-R-plugin
 NeoBundle 'ervandew/supertab'                      " tab completion
 NeoBundle 'git://github.com/godlygeek/tabular.git' " align text
 NeoBundle 'jeffkreeftmeijer/vim-numbertoggle'      " automagically toggle absolute/relative line numbers
@@ -47,7 +48,6 @@ NeoBundle 'tpope/vim-unimpaired'                   " pairs of handy bracket matc
 
 " vim-scripts repos
 NeoBundle 'Auto-Pairs'
-" NeoBundle 'Screen-vim---gnu-screenmux'
 NeoBundle 'Vim-R-plugin'
 
 " gist repos
