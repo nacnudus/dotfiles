@@ -71,14 +71,14 @@ NeoBundle 'altercation/vim-colors-solarized'
 colorscheme solarized
 set background=dark
 
-" NeoBundle 'Shougo/vimproc', {
-     " " \ 'build' : {
-     " \     'windows' : 'make -f make_mingw32.mak',
-     " \     'cygwin' : 'make -f make_cygwin.mak',
-     " \     'mac' : 'make -f make_mac.mak',
-     " \     'unix' : 'make -f make_unix.mak',
-     " \    },
-     " \ }
+NeoBundle 'Shougo/vimproc', {
+      \ 'build' : {
+      \     'windows' : 'make -f make_mingw32.mak',
+      \     'cygwin' : 'make -f make_cygwin.mak',
+      \     'mac' : 'make -f make_mac.mak',
+      \     'unix' : 'make -f make_unix.mak',
+      \    },
+      \ }
 
 NeoBundle 'majutsushi/tagbar' " class outline viewer
 nmap <F8> :TagbarToggle<CR>
