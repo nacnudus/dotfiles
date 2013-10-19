@@ -225,3 +225,6 @@ let g:unite_source_history_yank_enable = 1
 nnoremap <space>y :Unite history/yank<cr>
 nnoremap <space>s :Unite -quick-match buffer<cr>
 
+" Toggle goldenview so it doesn't interfere with, e.g., gitv
+nmap <F4> <Plug>ToggleGoldenViewAutoResize
+
