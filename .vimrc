@@ -36,7 +36,8 @@ NeoBundle 'maxbrunsfeld/vim-yankstack'        " better yanking
 NeoBundle 'mbbill/undotree'                   " undo tree
 NeoBundle 'mhinz/vim-signify'                 " track diffs in the margin
 NeoBundle 'scrooloose/syntastic'              " syntax checking
-NeoBundle 'Shougo/neocomplete.vim'            " auto completion
+" NeoBundle 'Shougo/neocomplete.vim'            " auto completion requires lua
+" and just you try compiling that!
 NeoBundle 'Shougo/unite.vim'                  " browse directories and goodness knows what
 NeoBundle 'shougo/vimshell'                   " use the shell from within vim
 NeoBundle 'SirVer/ultisnips'                  " snippets
@@ -68,7 +69,7 @@ NeoBundle 'Vim-R-plugin'
 "       \ 'script_type': 'plugin'}
 
 " Non git repos
-NeoBundle 'git://git.code.sf.net/p/vim-latex/vim-latex vim-latex-vim-latex'
+NeoBundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
 NeoBundle 'git://github.com/godlygeek/tabular.git' " align text
 
 " syntax mappings
@@ -105,8 +106,9 @@ let g:tagbar_type_markdown = {
         \ ]
 \ }
 
-# Initialize neocomplete at startup
-let g:neocomplete#enable_at_startup = 1
+" Initialize neocomplete at startup---I would if only I could compile vim with
+" lua
+" let g:neocomplete#enable_at_startup = 1
 
 " ctags R
 let g:tagbar_type_r = {
