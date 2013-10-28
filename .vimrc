@@ -61,6 +61,7 @@ NeoBundle 'zhaocai/GoldenView.Vim'            " Always have a nice view for vim 
 NeoBundle 'Auto-Pairs'
 NeoBundle 'LanguageTool'
 NeoBundle 'Vim-R-plugin'
+NeoBundle 'screen.vim'
 
 " gist repos
 " NeoBundle 'gist:Shougo/656148', {
