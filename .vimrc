@@ -204,7 +204,7 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " NumberToggle trigger
-let g:NumberToggleTrigger="<F2>"
+let g:NumberToggleTrigger="<F3>"
 
 " spelling
 set spell spelllang=en_nz
