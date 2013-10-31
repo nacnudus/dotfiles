@@ -166,8 +166,13 @@ cmap w!! w !sudo tee > /dev/null %
 " Call yankstap early and set mappings afterwards.
 call yankstack#setup()
 
-" mappings
+" Map leader and localleader key to comma
 let mapleader = ","
+let g:mapleader = ","
+let maplocalleader = ","
+let g:maplocalleader = ","
+
+" mappings
 inoremap jj <ESC>
 nnoremap <F5> :Undotreetoggle<CR>
 nmap Y y$
