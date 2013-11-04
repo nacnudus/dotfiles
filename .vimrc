@@ -54,7 +54,7 @@ NeoBundle 'tpope/vim-sleuth'                  " automagically indent
 NeoBundle 'tpope/vim-speeddating'             " increment dates?
 NeoBundle 'tpope/vim-surround'                " change surrounding thingies to other thingies
 NeoBundle 'tpope/vim-unimpaired'              " pairs of handy bracket matchings
-NeoBundle 'wunki/vim-pandoc'                  " better than tpope and vim-flavoured-markdown?
+NeoBundle 'vim-pandoc/vim-pandoc'                  " better than tpope and vim-flavoured-markdown?
 NeoBundle 'zhaocai/GoldenView.Vim'            " Always have a nice view for vim split windows
 
 " vim-scripts repos
