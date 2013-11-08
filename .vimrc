@@ -174,7 +174,7 @@ let g:maplocalleader = ","
 
 " mappings
 inoremap jj <ESC>
-nnoremap <F5> :Undotreetoggle<CR>
+nnoremap <F5> :UndotreeToggle<CR>
 nmap Y y$
 
 " map screen jumping
