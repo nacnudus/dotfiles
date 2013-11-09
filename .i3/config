@@ -164,7 +164,7 @@ exec --no-startup-id nm-applet
 
 # hibernate and suspend
 bindsym $mod+p exec sudo pm-hibernate | i3lock -c 000000
-bindsym $mod+s exec sudo pm-suspend | i3lock -c 000000
+bindsym $mod+o exec sudo pm-suspend | i3lock -c 000000
 
 # scrot & gimp - root
 bindsym Print exec scrot -e 'mv $f /tmp/ && gimp /tmp/$f'
