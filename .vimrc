@@ -55,6 +55,7 @@ NeoBundle 'tpope/vim-speeddating'             " increment dates?
 NeoBundle 'tpope/vim-surround'                " change surrounding thingies to other thingies
 NeoBundle 'tpope/vim-unimpaired'              " pairs of handy bracket matchings
 NeoBundle 'vim-pandoc/vim-pandoc'                  " better than tpope and vim-flavoured-markdown?
+NeoBundle 'nelstrom/vim-markdown-folding'     " fold markdown
 NeoBundle 'zhaocai/GoldenView.Vim'            " Always have a nice view for vim split windows
 
 " vim-scripts repos
