@@ -175,6 +175,9 @@ inoremap jj <ESC>
 nnoremap <F5> :UndotreeToggle<CR>
 nmap Y y$
 
+" r-plugin mapping to clear the memory and the knitr cache
+nmap <LocalLeader>kr :call SendCmdToR('rm(list=ls(all.names=TRUE)); unlink("cache/*")')<CR>
+
 " map screen jumping
 map <leader>h <c-w>h
 map <leader>j <c-w>j
