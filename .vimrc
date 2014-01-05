@@ -29,6 +29,7 @@ NeoBundle 'ervandew/supertab'                 " tab completion
 NeoBundle 'gregsexton/gitv'                   " git repository browser
 NeoBundle 'jeffkreeftmeijer/vim-numbertoggle' " automagically toggle absolute/relative line numbers
 NeoBundle 'kshenoy/vim-signature'             " visible marks
+NeoBundle 'klen/python-mode'                  " everything Python
 NeoBundle 'Lokaltog/vim-easymotion'           " move by hotkey
 NeoBundle 'mattn/gist-vim'                    " interact with gists
 NeoBundle 'mattn/webapi-vim'                  " necessary for gist-vim
