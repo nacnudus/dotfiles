@@ -24,6 +24,7 @@ NeoBundle 'chrisbra/csv.vim'                  " edit csv files
 NeoBundle 'chrisbra/NrrwRgn'                  " move a region to scratch for safe global editing
 NeoBundle 'christoomey/vim-tmux-navigator'    " seamlessly move between vim and tmux panes with ctrl+hjkl
 NeoBundle 'dahu/vim-fanfingtastic'            " use f and F across lines
+NeoBundle 'davidhalter/jedi-vim'              " autocompletion for Python
 NeoBundle 'ervandew/screen'                   " for Vim-R-plugin
 NeoBundle 'ervandew/supertab'                 " tab completion
 NeoBundle 'gregsexton/gitv'                   " git repository browser
