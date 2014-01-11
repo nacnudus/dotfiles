@@ -317,9 +317,18 @@ nmap <Space> <Plug>RDSendLine
 
 " For Latex work: open *.pdf files in evince/xpdf upon opening of *.tex files in vim 
 " more on this on this page: http://ubuntuforums.org/showthread.php?p=5351607
-au BufRead *.tex silent !xpdf %<.pdf 2>/dev/null &
-au BufRead *.Rnw silent !xpdf %<.pdf 2>/dev/null &
+au BufRead *.tex silent !atril %<.pdf 2>/dev/null &
+au BufRead *.Rnw silent !atril %<.pdf 2>/dev/null &
+" Compile latex to pdf by default
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_MultipleCompileFormats='pdf, aux'
+" Enable forward and inverse searching
+let g:Tex_ViewRule_ps = 'okular'
+let g:Tex_ViewRule_pdf = 'okular'
+let g:Tex_ViewRule_dvi = 'okular'
 
+let g:Tex_CompileRule_dvi = 'latex -src-specials -interaction=nonstopmode $*'
+let g:Tex_CompileRule_pdf = 'pdflatex -synctex=1'
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
 
