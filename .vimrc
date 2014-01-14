@@ -14,110 +14,41 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" NeoBundle 'jmcantrell/vim-virtualenv'         " use the correct python virtual environment
-" NeoBundle 'jtratner/vim-flavored-markdown'    " add-on to T Pope's that recognises code blocks
-" NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'} " write HTML faster
-" NeoBundle 'tpope/vim-markdown'                " Tim Pope's markdown - others available
+NeoBundle 'Lokaltog/vim-easymotion'           " move by hotkey
+NeoBundle 'SirVer/ultisnips'                  " snippets
+NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'benmills/vimux'                    " interact with tmux
 NeoBundle 'bling/vim-airline'                 " status bar
 NeoBundle 'chrisbra/csv.vim'                  " edit csv files
-NeoBundle 'chrisbra/NrrwRgn'                  " move a region to scratch for safe global editing
 NeoBundle 'christoomey/vim-tmux-navigator'    " seamlessly move between vim and tmux panes with ctrl+hjkl
 NeoBundle 'dahu/vim-fanfingtastic'            " use f and F across lines
 NeoBundle 'davidhalter/jedi-vim'              " autocompletion for Python
-NeoBundle 'ervandew/screen'                   " for Vim-R-plugin
-NeoBundle 'ervandew/supertab'                 " tab completion
 NeoBundle 'gregsexton/gitv'                   " git repository browser
 NeoBundle 'jeffkreeftmeijer/vim-numbertoggle' " automagically toggle absolute/relative line numbers
 NeoBundle 'kshenoy/vim-signature'             " visible marks
-NeoBundle 'klen/python-mode'                  " everything Python
-NeoBundle 'Lokaltog/vim-easymotion'           " move by hotkey
 NeoBundle 'mattn/gist-vim'                    " interact with gists
 NeoBundle 'mattn/webapi-vim'                  " necessary for gist-vim
-NeoBundle 'maxbrunsfeld/vim-yankstack'        " better yanking
 NeoBundle 'mbbill/undotree'                   " undo tree
 NeoBundle 'mhinz/vim-signify'                 " track diffs in the margin
-NeoBundle 'scrooloose/syntastic'              " syntax checking
-" NeoBundle 'Shougo/neocomplete.vim'            " auto completion requires lua
-NeoBundle 'Shougo/unite.vim'                  " browse directories and goodness knows what
+NeoBundle 'nelstrom/vim-markdown-folding'     " fold markdown
 NeoBundle 'shougo/vimshell'                   " use the shell from within vim
-NeoBundle 'SirVer/ultisnips'                  " snippets
-NeoBundle 'terryma/vim-expand-region'         " extend/shrink visual selection with +_
 NeoBundle 'terryma/vim-multiple-cursors'      " edit several places at once
-NeoBundle 'tomtom/tcomment_vim'               " commenting
-NeoBundle 'tpope/vim-abolish'                 " search and replace word roots
-NeoBundle 'tpope/vim-characterize'            " identify character under cursor with ga
-NeoBundle 'tpope/vim-endwise'                 " automagically add 'endif' after 'if' etc.
-NeoBundle 'tpope/vim-eunuch'                  " vim sugar for UNIX commands
 NeoBundle 'tpope/vim-fugitive'                " git from vim
 NeoBundle 'tpope/vim-repeat'                  " necessary for Tim Pope's other plugins
 NeoBundle 'tpope/vim-sensible'                " sensible settings to start with
-NeoBundle 'tpope/vim-sleuth'                  " automagically indent
-NeoBundle 'tpope/vim-speeddating'             " increment dates?
 NeoBundle 'tpope/vim-surround'                " change surrounding thingies to other thingies
 NeoBundle 'tpope/vim-unimpaired'              " pairs of handy bracket matchings
 NeoBundle 'vim-pandoc/vim-pandoc'             " better than tpope and vim-flavoured-markdown?
-NeoBundle 'nelstrom/vim-markdown-folding'     " fold markdown
-NeoBundle 'zhaocai/GoldenView.Vim'            " Always have a nice view for vim split windows
-
+"
 " vim-scripts repos
 NeoBundle 'Auto-Pairs'                        " Closing parenthesis etc.
-NeoBundle 'LanguageTool'
 NeoBundle 'Vim-R-plugin'
-" NeoBundle 'screen.vim'                      " Already got from ervandew?
 
 " gist repos
-" NeoBundle 'gist:Shougo/656148', {
-"       \ 'name': 'everything.vim',
-"       \ 'script_type': 'plugin'}
 
 " Non github repos
-NeoBundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
 NeoBundle 'git://github.com/godlygeek/tabular.git' " align text
-
-" syntax mappings
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'jelera/vim-javascript-syntax'
-NeoBundle 'jQuery'
-NeoBundle 'othree/html5-syntax.vim'
-
-" more complicated installations
-NeoBundle 'altercation/vim-colors-solarized'
-" let g:solarized_termcolors=256
-" let g:solarized_termtrans=1
-colorscheme solarized
-set background=dark
-
-NeoBundle 'Shougo/vimproc', {
-      \ 'build' : {
-      \     'windows' : 'make -f make_mingw32.mak',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ }
-
-NeoBundle 'majutsushi/tagbar' " class outline viewer
-nmap <F8> :TagbarToggle<CR>
-" ctags markdown
-let g:tagbar_type_markdown = {
-        \ 'ctagstype' : 'markdown',
-        \ 'kinds' : [
-       	 \ 'h:Heading_L1',
-       	 \ 'i:Heading_L2',
-       	 \ 'k:Heading_L3'
-        \ ]
-\ }
-
-" ctags R
-let g:tagbar_type_r = {
-    \ 'ctagstype' : 'r',
-    \ 'kinds'     : [
-        \ 'f:Functions',
-        \ 'g:GlobalVariables',
-        \ 'v:FunctionVariables',
-    \ ]
-\ }" ...
+NeoBundle 'git://git.code.sf.net/p/atp-vim/code', {'name': 'apt-vim'} " Automatic Latex Plugin
 
 " Installation check.
 NeoBundleCheck
@@ -132,26 +63,27 @@ NeoBundleCheck
 "------------------------------------------------------------------------------
 
 " Settings
+colorscheme solarized
+"set paste                         " Ordinary paste behaviour (causes problems with inoremap jj <ESC>)
+set autoread                      " Reload files changed outside vim
+set background=dark
+set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
+set foldcolumn=2
+set foldenable
+set foldminlines=2
+set gcr=a:blinkon0                " Disable cursor blink
 set hidden                        " Handle multiple buffers better
 set ignorecase                    " Better searching
-set smartcase                     " Better searching
-set wrap                          " line wrapping
-set noswapfile                    " don't use swap files
-set nobackup                      " No backup when writing a file
-set nowritebackup                 " No backup when writing a file
-set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
-set gcr=a:blinkon0                " Disable cursor blink
-set autoread                      " Reload files changed outside vim
 set lazyredraw                    " don't redraw when don't have to
 set magic                         " Enable the magic
+set nobackup                      " No backup when writing a file
 set noerrorbells visualbell t_vb= " Disable ALL bells
-set showfulltag                   " show full completion tags
-set foldenable
-set foldcolumn=2
-set foldminlines=2
+set noswapfile                    " don't use swap files
+set nowritebackup                 " No backup when writing a file
 set number                        " line numbers
-" set paste                         " ordinary paste behaviour?  Causes
-" problems
+set showfulltag                   " show full completion tags
+set smartcase                     " Better searching
+set wrap                          " line wrapping
 
 " ================ Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
@@ -162,15 +94,14 @@ set undofile
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
-
-" Call yankstap early and set mappings afterwards.
-call yankstack#setup()
-
+"
 " Map leader and localleader key to comma
 let mapleader = ","
 let g:mapleader = ","
 let maplocalleader = ","
 let g:maplocalleader = ","
+" Isolate easymotion to avoid conflicts
+let g:EasyMotion_leader_key = '\'
 
 " mappings
 inoremap jj <ESC>
@@ -215,13 +146,7 @@ map <C-l> <C-W>l
 let g:NumberToggleTrigger="<F3>"
 
 " spelling
-set spell spelllang=en_nz
-
-" vim-flavoured-markdown by default
-augroup markdown
-    au!
-    au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
-augroup END
+set spell spelllang=en
 
 " use ag for searching
 if executable('ag')
@@ -229,15 +154,8 @@ if executable('ag')
     set grepformat=%f:%l:%c:%m
 endif
 
-" Unite configuration
-nnoremap <C-p> :Unite file_rec/async<cr>
-nnoremap <space>/ :Unite ag:.<cr>
-let g:unite_source_history_yank_enable = 1
-nnoremap <space>y :Unite history/yank<cr>
-nnoremap <space>s :Unite -quick-match buffer<cr>
-
-" Toggle goldenview so it doesn't interfere with, e.g., gitv
-nmap <F4> <Plug>ToggleGoldenViewAutoResize
+" LanguageTool path
+let g:languagetool_jar=$HOME . '/LanguageTool-2.4.1/languagetool.jar'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " sample settings for vim-r-plugin and screen.vim
@@ -304,40 +222,6 @@ vmap <Space> <Plug>RDSendSelection
 nmap <Space> <Plug>RDSendLine
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-" set folding scheme; more on this see: 
-" http://www.dgp.toronto.edu/~mjmcguff/learn/vim/folding.txt
-" http://vim.dindinx.net/orig/usr_28.txt
-"set foldcolumn=0 " if set to > 1 together with 'set number', then the copy&paste of screen will include the line numbers
-"highlight Folded ctermfg=yellow ctermbg=blue  	
-" highlight  works only when colorscheme is uncommented
-"set foldmethod=indent
-"hi FoldColumn ctermbg=NONE
-
-" For Latex work: open *.pdf files in evince/xpdf upon opening of *.tex files in vim 
-" more on this on this page: http://ubuntuforums.org/showthread.php?p=5351607
-au BufRead *.tex silent !atril %<.pdf 2>/dev/null &
-au BufRead *.Rnw silent !atril %<.pdf 2>/dev/null &
-" Compile latex to pdf by default
-let g:Tex_DefaultTargetFormat = 'pdf'
-let g:Tex_MultipleCompileFormats='pdf, aux'
-" Enable forward and inverse searching
-let g:Tex_ViewRule_ps = 'okular'
-let g:Tex_ViewRule_pdf = 'okular'
-let g:Tex_ViewRule_dvi = 'okular'
-
-let g:Tex_CompileRule_dvi = 'latex -src-specials -interaction=nonstopmode $*'
-let g:Tex_CompileRule_pdf = 'pdflatex -synctex=1'
-" For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
-" let &guioptions = substitute(&guioptions, "t", "", "g")
-
-" Don't use Ex mode, use Q for formatting
-map Q gq
-
-" This is an alternative that also works in block mode, but the deleted
-" text is lost and it only works for putting the current register.
-"vnoremap p "_dp
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -483,143 +367,3 @@ function Prompt(str, ...)
   return ret
 endfunction 
 
-"  ------------------------------
-"" neocomplete - pain in the butt
-"" ------------------------------
-""Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
-"" Disable AutoComplPop.
-"let g:acp_enableAtStartup = 0
-"" Use neocomplete.
-"let g:neocomplete#enable_at_startup = 1
-"" Use smartcase.
-"let g:neocomplete#enable_smart_case = 1
-"" Set minimum syntax keyword length.
-"let g:neocomplete#sources#syntax#min_keyword_length = 3
-"let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-"
-"" Define dictionary.
-"let g:neocomplete#sources#dictionary#dictionaries = {
-"    \ 'default' : '',
-"    \ 'vimshell' : $HOME.'/.vimshell_hist',
-"    \ 'scheme' : $HOME.'/.gosh_completions'
-"        \ }
-"
-"" Define keyword.
-"if !exists('g:neocomplete#keyword_patterns')
-"    let g:neocomplete#keyword_patterns = {}
-"endif
-"let g:neocomplete#keyword_patterns['default'] = '\h\w*'
-"
-"" Plugin key-mappings.
-"inoremap <expr><C-g>     neocomplete#undo_completion()
-"inoremap <expr><C-l>     neocomplete#complete_common_string()
-"
-"" Recommended key-mappings.
-"" <CR>: close popup and save indent.
-"inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-"function! s:my_cr_function()
-"  return neocomplete#close_popup() . "\<CR>"
-"  " For no inserting <CR> key.
-"  "return pumvisible() ? neocomplete#close_popup() : "\<CR>"
-"endfunction
-"" <TAB>: completion.
-"inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-"" <C-h>, <BS>: close popup and delete backword char.
-"inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-"inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-"inoremap <expr><C-y>  neocomplete#close_popup()
-"inoremap <expr><C-e>  neocomplete#cancel_popup()
-"" Close popup by <Space>.
-""inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
-"
-"" For cursor moving in insert mode(Not recommended)
-""inoremap <expr><Left>  neocomplete#close_popup() . "\<Left>"
-""inoremap <expr><Right> neocomplete#close_popup() . "\<Right>"
-""inoremap <expr><Up>    neocomplete#close_popup() . "\<Up>"
-""inoremap <expr><Down>  neocomplete#close_popup() . "\<Down>"
-"" Or set this.
-""let g:neocomplete#enable_cursor_hold_i = 1
-"" Or set this.
-""let g:neocomplete#enable_insert_char_pre = 1
-"
-"" AutoComplPop like behavior.
-""let g:neocomplete#enable_auto_select = 1
-"
-"" Shell like behavior(not recommended).
-""set completeopt+=longest
-""let g:neocomplete#enable_auto_select = 1
-""let g:neocomplete#disable_auto_complete = 1
-""inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
-"
-"" Enable omni completion.
-"autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-"autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-"autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-"autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-"autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-"
-"" Enable heavy omni completion.
-"if !exists('g:neocomplete#sources#omni#input_patterns')
-"  let g:neocomplete#sources#omni#input_patterns = {}
-"endif
-""let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-""let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-""let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-"
-"if !exists('g:neocomplete#sources#omni#functions')
-"  let g:neocomplete#sources#omni#functions = {}
-"endif
-"" SQL
-"let g:neocomplete#sources#omni#functions.sql =
-"  \ 'sqlcomplete#Complete'
-"" R (plugin: vim-R-plugin)
-"let g:neocomplete#sources#omni#input_patterns.r =
-"  \ '[[:alnum:].\\]\+'
-"let g:neocomplete#sources#omni#functions.r =
-"  \ 'rcomplete#CompleteR'
-"
-"" For perlomni.vim setting.
-"" https://github.com/c9s/perlomni.vim
-"let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
-" ------------------------------
-
-" python-mode settings
-" Activate rope
-" Keys:
-" K             Show python docs
-"   Rope autocomplete
-" g     Rope goto definition
-" d     Rope show documentation
-" f     Rope find occurrences
-" b     Set, unset breakpoint (g:pymode_breakpoint enabled)
-" [[            Jump on previous class or function (normal, visual, operator modes)
-" ]]            Jump on next class or function (normal, visual, operator modes)
-" [M            Jump on previous class or method (normal, visual, operator modes)
-" ]M            Jump on next class or method (normal, visual, operator modes)
-let g:pymode_rope = 0 " disable rope in favour of jedi
-
-" Documentation
-let g:pymode_doc = 1
-let g:pymode_doc_key = 'K'
-
-"Linting
-let g:pymode_lint = 1
-let g:pymode_lint_checker = "pyflakes,pep8"
-" Auto check on save
-let g:pymode_lint_write = 1
-
-" Support virtualenv
-let g:pymode_virtualenv = 1
-
-" Enable breakpoints plugin
-let g:pymode_breakpoint = 1
-let g:pymode_breakpoint_key = 'b'
-
-" syntax highlighting
-let g:pymode_syntax = 1
-let g:pymode_syntax_all = 1
-let g:pymode_syntax_indent_errors = g:pymode_syntax_all
-let g:pymode_syntax_space_errors = g:pymode_syntax_all
-
-" Don't autofold code
-let g:pymode_folding = 0
