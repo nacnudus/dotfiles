@@ -30,7 +30,7 @@ NeoBundle 'mattn/gist-vim'                    " interact with gists
 NeoBundle 'mattn/webapi-vim'                  " necessary for gist-vim
 NeoBundle 'mbbill/undotree'                   " undo tree
 NeoBundle 'mhinz/vim-signify'                 " track diffs in the margin
-NeoBundle 'nelstrom/vim-markdown-folding'     " fold markdown
+" NeoBundle 'nelstrom/vim-markdown-folding'   " fold markdown (unnecessary with vim-pandoc?)
 NeoBundle 'shougo/vimshell'                   " use the shell from within vim
 NeoBundle 'terryma/vim-multiple-cursors'      " edit several places at once
 NeoBundle 'tpope/vim-fugitive'                " git from vim
@@ -157,6 +157,9 @@ endif
 " LanguageTool path
 let g:languagetool_jar=$HOME . '/LanguageTool-2.4.1/languagetool.jar'
 
+" Use vim-pandoc for .md markdown files
+au BufNewFile,BufRead *.md   set filetype=pandoc
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " sample settings for vim-r-plugin and screen.vim
 " Installation 
@@ -197,7 +200,7 @@ let g:languagetool_jar=$HOME . '/LanguageTool-2.4.1/languagetool.jar'
 " let vimrplugin_screenplugin = 0
 " For tmux support
 let g:ScreenImpl = 'Tmux'
-let vimrplugin_screenvsplit = 1 " For vertical tmux split
+let vimrplugin_vsplit = 1 " For vertical tmux split
 let g:ScreenShellInitialFocus = 'shell' 
 " instruct to use your own .screenrc file
 let g:vimrplugin_noscreenrc = 1
