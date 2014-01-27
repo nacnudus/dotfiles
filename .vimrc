@@ -203,9 +203,9 @@ let g:ScreenImpl = 'Tmux'
 let vimrplugin_vsplit = 1 " For vertical tmux split
 let g:ScreenShellInitialFocus = 'shell' 
 " instruct to use your own .screenrc file
-let g:vimrplugin_noscreenrc = 1
+" let g:vimrplugin_noscreenrc = 1 " deprecated
 " For integration of r-plugin with screen.vim
-let g:vimrplugin_screenplugin = 1
+" let g:vimrplugin_screenplugin = 1 " deprecated
 " Don't use conque shell if installed
 let vimrplugin_conqueplugin = 0
 " map the letter 'r' to send visually selected lines to R 
