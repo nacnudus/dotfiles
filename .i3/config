@@ -184,5 +184,5 @@ exec sudo /home/nacnudus/.i3/lowpowerhibernate.sh
 # Also use `sudo visudo` to add the line
 # ALL ALL=NOPASSWD:/home/nacnudus/.i3/lowpowerhibernate.sh
 # This doesn't work either, so make it manual
-bindsym $mod+y sudo exec /home/nacnudus/.i3/lowpowerhibernate.sh
+bindsym $mod+y exec sudo /home/nacnudus/.i3/lowpowerhibernate.sh
 
