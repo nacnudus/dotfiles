@@ -165,6 +165,10 @@ exec --no-startup-id nm-applet
 # hibernate and suspend
 bindsym $mod+p exec sudo pm-hibernate | i3lock -c 000000
 bindsym $mod+o exec sudo pm-suspend | i3lock -c 000000
+# Also use `sudo visudo` to add the lines
+# ALL ALL=NOPASSWD:/usr/sbin/pm-hibernate
+# ALL ALL=NOPASSWD:/usr/sbin/pm-suspend
+
 
 # scrot & gimp - root
 bindsym Print exec scrot -e 'mv $f /tmp/ && gimp /tmp/$f'
@@ -172,5 +176,13 @@ bindsym Print exec scrot -e 'mv $f /tmp/ && gimp /tmp/$f'
 bindsym Mod1+Print exec scrot -s -e 'mv $f /tmp/ && gimp /tmp/$f'
 
 # power management (auto-hibernate on low power)
+# only gives notifications but doesn't auto-hibernate -- see next script
 exec mate-power-manager
+
+# manually monitor power for auto-hibernation
+exec sudo /home/nacnudus/.i3/lowpowerhibernate.sh
+# Also use `sudo visudo` to add the line
+# ALL ALL=NOPASSWD:/home/nacnudus/.i3/lowpowerhibernate.sh
+# This doesn't work either, so make it manual
+bindsym $mod+y sudo exec /home/nacnudus/.i3/lowpowerhibernate.sh
 
