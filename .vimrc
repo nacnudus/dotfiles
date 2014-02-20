@@ -83,6 +83,8 @@ set nowritebackup                 " No backup when writing a file
 set number                        " line numbers
 set showfulltag                   " show full completion tags
 set smartcase                     " Better searching
+set textwidth=72
+set colorcolumn=+1                " Mark overlong lines
 set wrap                          " line wrapping
 
 " ================ Persistent Undo ==================
@@ -110,7 +112,12 @@ nmap Y y$
 
 " r-plugin mapping to clear the memory and the knitr cache
 nmap <LocalLeader>kr :call SendCmdToR('rm(list=ls(all.names=TRUE)); unlink("cache/*")')<CR>
+" r-plugin mapping to knit to HTML
+nmap <LocalLeader>kh :call RMakeHTML
 
+let vimrplugin_openpdf_quietly = 1
+let vimrplugin_openhtml = 1
+ 
 " map screen jumping
 map <leader>h <c-w>h
 map <leader>j <c-w>j
