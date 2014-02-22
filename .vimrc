@@ -64,6 +64,8 @@ NeoBundleCheck
 
 " Settings
 colorscheme solarized
+" Toggle between dark and light
+call togglebg#map("<F7>")
 "set paste                         " Ordinary paste behaviour (causes problems with inoremap jj <ESC>)
 set autoread                      " Reload files changed outside vim
 set background=dark
@@ -205,6 +207,8 @@ au BufNewFile,BufRead *.md   set filetype=pandoc
 " To open R in terminal rather than RGui (only necessary on OS X)
 " let vimrplugin_applescript = 0
 " let vimrplugin_screenplugin = 0
+" To open R in Terminator rather than any other it finds
+let vimrplugin_term = "terminator"
 " For tmux support
 let g:ScreenImpl = 'Tmux'
 let vimrplugin_vsplit = 1 " For vertical tmux split
