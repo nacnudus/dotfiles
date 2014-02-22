@@ -1,6 +1,7 @@
 [global_config]
   title_transmit_bg_color = "#d30102"
   focus = system
+  always_split_with_profile = True
 [keybindings]
 [profiles]
   [[default]]
