@@ -63,6 +63,7 @@ NeoBundleCheck
 "------------------------------------------------------------------------------
 
 " Settings
+set t_Co=16 " to use terminator's solarized scheme
 colorscheme solarized
 " Toggle between dark and light
 call togglebg#map("<F7>")
