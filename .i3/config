@@ -168,7 +168,7 @@ exec_always --no-startup-id nm-applet;
 # hibernate and suspend
 bindsym $mod+p exec sudo pm-hibernate | i3lock -c 002b36
 bindsym $mod+o exec sudo pm-suspend | i3lock -c 002b36
-bindsym $mod+i exec sudo shutdown -h now | i3lock -c 002b36
+bindsym $mod+i exec sudo shutdown -h now
 bindsym $mod+q exec i3lock -c 002b36
 # Also use `sudo visudo` to add the lines
 # ALL ALL=NOPASSWD:/usr/sbin/pm-hibernate
