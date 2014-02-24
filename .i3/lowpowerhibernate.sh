@@ -43,7 +43,7 @@ while [ true ]; do
             fi
             if [[ $rem_bat -le $CRITICAL_PERCENT ]]; then
                 SLEEP_TIME=1
-                pm-hibernate
+                sudo pm-hibernate | i3lock -c 002b36
             fi
         fi
     else

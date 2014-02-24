@@ -142,11 +142,12 @@ bar {
 # Focus should not follow mouse
 focus_follows_mouse no
 
-# Function keys.
+# Audio keys.
 bindsym XF86AudioLowerVolume exec /usr/bin/pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo -- '-10%'
 bindsym XF86AudioRaiseVolume exec /usr/bin/pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo -- '+10%'
-bindsym XF86AudioMute exec ~/.i3/mute.sh
-bindsym XF86Launch1 exec /usr/bin/pactl play-sample that_was_easy
+bindsym XF86AudioMute exec /usr/bin/pactl set-sink-mute alsa_output.pci-0000_00_1b.0.analog-stereo toggle
+
+# Brightness
 bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 20 -steps 1 -time 10
 bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 20 -steps 1 -time 10
 # bindsym XF86KbdBrightnessUp exec /usr/bin/xbacklight -inc 10
@@ -162,11 +163,13 @@ bindsym $mod+Shift+d exec ~/.i3/down.py # Move all workspaces to laptop monitor.
 bindsym $mod+Shift+t exec ~/.i3/toggle.sh
 
 # Network manager
-exec --no-startup-id nm-applet
+exec_always --no-startup-id nm-applet;
 
 # hibernate and suspend
-bindsym $mod+p exec sudo pm-hibernate | i3lock -c 000000
-bindsym $mod+o exec sudo pm-suspend | i3lock -c 000000
+bindsym $mod+p exec sudo pm-hibernate | i3lock -c 002b36
+bindsym $mod+o exec sudo pm-suspend | i3lock -c 002b36
+bindsym $mod+i exec sudo shutdown -h now | i3lock -c 002b36
+bindsym $mod+q exec i3lock -c 002b36
 # Also use `sudo visudo` to add the lines
 # ALL ALL=NOPASSWD:/usr/sbin/pm-hibernate
 # ALL ALL=NOPASSWD:/usr/sbin/pm-suspend
@@ -179,12 +182,9 @@ bindsym Mod1+Print exec scrot -s -e 'mv $f /tmp/ && gimp /tmp/$f'
 
 # power management (auto-hibernate on low power)
 # only gives notifications but doesn't auto-hibernate -- see next script
-exec mate-power-manager
+# exec_always mate-power-manager
 
 # manually monitor power for auto-hibernation
-exec /home/nacnudus/.i3/lowpowerhibernate.sh
-# Also use `sudo visudo` to add the line
-# ALL ALL=NOPASSWD:/home/nacnudus/.i3/lowpowerhibernate.sh
-# This doesn't work either, so make it manual
-bindsym $mod+y exec sudo /home/nacnudus/.i3/lowpowerhibernate.sh
+# exec nohup i3-nagbar & 
+exec_always /home/nacnudus/.i3/lowpowerhibernate.sh;
 
