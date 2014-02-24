@@ -188,3 +188,9 @@ bindsym Mod1+Print exec scrot -s -e 'mv $f /tmp/ && gimp /tmp/$f'
 # exec nohup i3-nagbar & 
 exec_always /home/nacnudus/.i3/lowpowerhibernate.sh;
 
+# initiate redshift
+exec_always redshift -l 41.29:174.78
+
+# disable wifi power management
+exec_always sudo iwconfig wlan0 power off
+# and add an entry with visudo
