@@ -30,7 +30,6 @@ NeoBundle 'mattn/gist-vim'                    " interact with gists
 NeoBundle 'mattn/webapi-vim'                  " necessary for gist-vim
 NeoBundle 'mbbill/undotree'                   " undo tree
 NeoBundle 'mhinz/vim-signify'                 " track diffs in the margin
-" NeoBundle 'nelstrom/vim-markdown-folding'   " fold markdown (unnecessary with vim-pandoc?)
 NeoBundle 'shougo/vimshell'                   " use the shell from within vim
 NeoBundle 'terryma/vim-multiple-cursors'      " edit several places at once
 NeoBundle 'tpope/vim-fugitive'                " git from vim
@@ -39,7 +38,7 @@ NeoBundle 'tpope/vim-sensible'                " sensible settings to start with
 NeoBundle 'tpope/vim-surround'                " change surrounding thingies to other thingies
 NeoBundle 'tpope/vim-unimpaired'              " pairs of handy bracket matchings
 NeoBundle 'vim-pandoc/vim-pandoc'             " better than tpope and vim-flavoured-markdown?
-"
+
 " vim-scripts repos
 NeoBundle 'Auto-Pairs'                        " Closing parenthesis etc.
 NeoBundle 'Vim-R-plugin'
@@ -238,6 +237,12 @@ nmap <Space> <Plug>RDSendLine
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+ " Enable file type detection.
+ " Use the default filetype settings, so that mail gets 'tw' set to 72,
+ " 'cindent' is on in C files, etc.
+ " Also load indent files, to automatically do language-dependent indenting.
+ filetype plugin indent on " musst be done before :syntax on otherwise ft-csv complains
+
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
@@ -247,12 +252,6 @@ endif
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
-
-  " Enable file type detection.
-  " Use the default filetype settings, so that mail gets 'tw' set to 72,
-  " 'cindent' is on in C files, etc.
-  " Also load indent files, to automatically do language-dependent indenting.
-  filetype plugin indent on
 
   " For all text files set 'textwidth' to 78 characters.
   autocmd FileType text setlocal textwidth=78
