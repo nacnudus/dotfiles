@@ -40,7 +40,7 @@ NeoBundle 'tpope/vim-unimpaired'              " pairs of handy bracket matchings
 NeoBundle 'vim-pandoc/vim-pandoc'             " better than tpope and vim-flavoured-markdown?
 
 " vim-scripts repos
-NeoBundle 'Auto-Pairs'                        " Closing parenthesis etc.
+NeoBundle 'Raimondi/delimitMate'             " Closing parenthesis etc.
 NeoBundle 'Vim-R-plugin'
 
 " gist repos
@@ -106,6 +106,9 @@ let maplocalleader = ","
 let g:maplocalleader = ","
 " Isolate easymotion to avoid conflicts
 let g:EasyMotion_leader_key = '\'
+
+" compile latex to pdf
+let b:atp_TexCompiler	= "pdflatex"			
 
 " mappings
 inoremap jj <ESC>
