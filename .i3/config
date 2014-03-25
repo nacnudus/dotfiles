@@ -182,10 +182,9 @@ bindsym Mod1+Print exec scrot -s -e 'mv $f /tmp/ && gimp /tmp/$f'
 
 # power management (auto-hibernate on low power)
 # only gives notifications but doesn't auto-hibernate -- see next script
-# exec_always mate-power-manager
+exec_always mate-power-manager
 
 # manually monitor power for auto-hibernation
-# exec nohup i3-nagbar & 
 exec_always /home/nacnudus/.i3/lowpowerhibernate.sh;
 
 # initiate redshift
