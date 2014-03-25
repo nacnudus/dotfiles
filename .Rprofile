@@ -7,7 +7,9 @@ if(interactive()){
 }
 options(repos = c(CRAN = "http://cran.rstudio.com"))
 
-KnitPost <- function(input, base.url = "./") {
+myjekyllsite <- "http://nacnudus.github.io/crosstab-kiwi/"
+
+KnitPost <- function(input, base.url = myjekyllsite) {
     require(knitr)
     opts_knit$set(base.url = base.url)
     fig.path <- paste0("figs/", sub(".Rmd$", "", basename(input)), "/")
