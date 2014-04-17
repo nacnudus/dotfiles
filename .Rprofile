@@ -1,3 +1,5 @@
+options(repos = c(CRAN = "http://cran.rstudio.com"))
+
 if(interactive()){
     library(colorout)
     library(setwidth)
