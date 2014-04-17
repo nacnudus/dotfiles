@@ -30,6 +30,7 @@ NeoBundle 'mattn/gist-vim'                    " interact with gists
 NeoBundle 'mattn/webapi-vim'                  " necessary for gist-vim
 NeoBundle 'mbbill/undotree'                   " undo tree
 NeoBundle 'mhinz/vim-signify'                 " track diffs in the margin
+NeoBundle 'Raimondi/delimitMate'             " Closing parenthesis etc.
 NeoBundle 'shougo/vimshell'                   " use the shell from within vim
 NeoBundle 'terryma/vim-multiple-cursors'      " edit several places at once
 NeoBundle 'tpope/vim-fugitive'                " git from vim
@@ -40,7 +41,7 @@ NeoBundle 'tpope/vim-unimpaired'              " pairs of handy bracket matchings
 NeoBundle 'vim-pandoc/vim-pandoc'             " better than tpope and vim-flavoured-markdown?
 
 " vim-scripts repos
-NeoBundle 'Raimondi/delimitMate'             " Closing parenthesis etc.
+NeoBundle 'swap-parameters'                  " Transpose arguments
 NeoBundle 'Vim-R-plugin'
 
 " gist repos
@@ -98,7 +99,16 @@ set undofile
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
-"
+
+
+" Prevent UltiSnips from stealing ctrl-k.
+augroup VimStartup
+    autocmd!
+    autocmd VimEnter * sil! iunmap <c-k>
+augroup end
+" Use ctrl-b instead.
+let g:UltiSnipsJumpBackwardTrigger = "<c-b>"
+
 " Map leader and localleader key to comma
 let mapleader = ","
 let g:mapleader = ","
