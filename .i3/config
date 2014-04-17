@@ -33,10 +33,11 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+# disabled to make way for screen orientation
+# bindsym $mod+Left focus left
+# bindsym $mod+Down focus down
+# bindsym $mod+Up focus up
+# bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+H move left
@@ -121,10 +122,11 @@ mode "resize" {
         bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
-        bindsym 113 resize shrink width 10 px or 10 ppt
-        bindsym 116 resize grow height 10 px or 10 ppt
-        bindsym 111 resize shrink height 10 px or 10 ppt
-        bindsym 114 resize grow width 10 px or 10 ppt
+	# disabled to be used for screen orientation
+        # bindsym Left resize shrink width 10 px or 10 ppt
+        # bindsym Up resize grow height 10 px or 10 ppt
+        # bindsym Down resize shrink height 10 px or 10 ppt
+        # bindsym Right resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -132,6 +134,12 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+# change orientation
+bindsym $mod+Left exec xrandr --output eDP1 --rotate left
+bindsym $mod+Up exec xrandr --output eDP1 --rotate normal
+bindsym $mod+Down exec xrandr --output eDP1 --rotate inverted
+bindsym $mod+Right exec xrandr --output eDP1 --rotate right
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -154,13 +162,13 @@ bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 20 -steps 1 -time 10
 # bindsym XF86KbdBrightnessDown exec /usr/bin/xbacklight -dec 5
 
 # Swap workspaces between monitors.
-bindsym $mod+u move workspace to output VGA1 # Move current workspace to external monitor.
-bindsym $mod+d move workspace to output LVDS1 # Move current workspace to laptop monitor.
-bindsym $mod+Shift+u exec ~/.i3/up.py # Move all workspaces to external monitor.
-bindsym $mod+Shift+d exec ~/.i3/down.py # Move all workspaces to laptop monitor.
+# bindsym $mod+u move workspace to output VGA1 # Move current workspace to external monitor.
+# bindsym $mod+d move workspace to output LVDS1 # Move current workspace to laptop monitor.
+# bindsym $mod+Shift+u exec ~/.i3/up.py # Move all workspaces to external monitor.
+# bindsym $mod+Shift+d exec ~/.i3/down.py # Move all workspaces to laptop monitor.
 
 # Toggle Mirror/External/Internal
-bindsym $mod+Shift+t exec ~/.i3/toggle.sh
+# bindsym $mod+Shift+t exec ~/.i3/toggle.sh
 
 # Network manager
 exec_always --no-startup-id nm-applet;
@@ -185,7 +193,7 @@ bindsym Mod1+Print exec scrot -s -e 'mv $f /tmp/ && gimp /tmp/$f'
 exec_always mate-power-manager
 
 # manually monitor power for auto-hibernation
-exec_always /home/nacnudus/.i3/lowpowerhibernate.sh;
+# exec_always /home/nacnudus/.i3/lowpowerhibernate.sh;
 
 # initiate redshift
 # exec_always redshift -l 41.29:174.78;
