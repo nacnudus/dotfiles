@@ -106,3 +106,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Prevent oh-my-zsh sharing of history between sessions
 setopt no_share_history
+
+# virtualenv and virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs    
+export PROJECT_HOME=$HOME/Devel          
+source /usr/local/bin/virtualenvwrapper.sh
+
