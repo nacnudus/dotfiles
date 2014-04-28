@@ -129,6 +129,7 @@ nmap Y y$
 nmap <LocalLeader>kr :call SendCmdToR('rm(list=ls(all.names=TRUE)); unlink("cache/*")')<CR>
 " r-plugin mapping to knit to HTML
 nmap <LocalLeader>kh :call RMakeHTML
+nmap <LocalLeader>km :call SendCmdToR('require(knitr); knit("' . expand("%:t") . '"); require(markdown); markdownToHTML("' . expand("%:r:t") . '.md", "' . expand("%:r:t") . '.html"); browseURL("' . expand("%:r:t") . '.html")')<CR>
 
 let vimrplugin_openpdf_quietly = 1
 let vimrplugin_openhtml = 1
