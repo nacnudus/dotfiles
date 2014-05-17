@@ -125,6 +125,9 @@ inoremap jj <ESC>
 nnoremap <F5> :UndotreeToggle<CR>
 nmap Y y$
 
+" paste over the top with vep
+xnoremap p pgvy
+
 " r-plugin mapping to clear the memory and the knitr cache
 nmap <LocalLeader>kr :call SendCmdToR('rm(list=ls(all.names=TRUE)); unlink("cache/*")')<CR>
 " r-plugin mapping to knit to HTML
