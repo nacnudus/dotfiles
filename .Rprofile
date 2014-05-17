@@ -6,6 +6,7 @@ if(interactive()){
     library(vimcom.plus)
     # If you can't install the vimcom.plus package, do:
     # library(vimcom)
+    library(Rdocumentation)
 }
 options(repos = c(CRAN = "http://cran.rstudio.com"))
 
