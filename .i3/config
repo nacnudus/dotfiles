@@ -211,3 +211,5 @@ exec_always mate-power-manager
 exec_always sudo iwconfig wlan0 power off;
 # and add an entry with visudo
 
+# automount stuff
+exec --no-startup-id "devmon --no-gui"
