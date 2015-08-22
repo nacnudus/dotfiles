@@ -68,6 +68,7 @@ RPS1='$(git_prompt_string)'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias vim="vim --servername VIM"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -104,6 +105,12 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
+# Vim keybindings
+bindkey -v
+
+# Search history
+bindkey '^R' history-incremental-search-backward
+
 # Prevent oh-my-zsh sharing of history between sessions
 setopt no_share_history
 
@@ -112,3 +119,16 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel          
 source /usr/local/bin/virtualenvwrapper.sh
 
+# chruby
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH=$PATH:$HOME/.cabal/bin # Add cabal to PATH for pandoc
+export PATH=$PATH:/usr/local/texlive/2013/bin/x86_64-linux # TexLive
+
+export MANPATH=$MANPATH:/usr/local/texlive/2013/texmf-dist/doc/man
+export INFOPATH=$INFOPATH:/usr/local/texlive/2013/texmf-dist/doc/info
+
+PERL_MB_OPT="--install_base \"/home/nacnudus/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/nacnudus/perl5"; export PERL_MM_OPT;
