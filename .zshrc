@@ -117,11 +117,11 @@ setopt no_share_history
 # virtualenv and virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs    
 export PROJECT_HOME=$HOME/Devel          
-source /usr/local/bin/virtualenvwrapper.sh
+source /usr/bin/virtualenvwrapper.sh
 
 # chruby
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
+source /usr/share/chruby/chruby.sh
+source /usr/share/chruby/auto.sh
 
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH=$PATH:$HOME/.cabal/bin # Add cabal to PATH for pandoc
