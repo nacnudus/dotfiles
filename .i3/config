@@ -136,10 +136,10 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # change orientation
-bindsym $mod+Left exec xrandr --output eDP1 --rotate left && xinput set-int-prop "AlpsPS/2 ALPS GlidePoint" "Evdev Axis Inversion" 8 1 0 && xinput set-int-prop "AlpsPS/2 ALPS GlidePoint" "Evdev Axes Swap" 8 1
-bindsym $mod+Up exec xrandr --output eDP1 --rotate normal && xinput set-int-prop "AlpsPS/2 ALPS GlidePoint" "Evdev Axis Inversion" 8 0 0 && xinput set-int-prop "AlpsPS/2 ALPS GlidePoint" "Evdev Axes Swap" 8 0
-bindsym $mod+Down exec xrandr --output eDP1 --rotate inverted && xinput set-int-prop "AlpsPS/2 ALPS GlidePoint" "Evdev Axis Inversion" 8 1 1 && xinput set-int-prop "AlpsPS/2 ALPS GlidePoint" "Evdev Axes Swap" 8 0
-bindsym $mod+Right exec xrandr --output eDP1 --rotate right && xinput set-int-prop "AlpsPS/2 ALPS GlidePoint" "Evdev Axis Inversion" 8 0 1 && xinput set-int-prop "AlpsPS/2 ALPS GlidePoint" "Evdev Axes Swap" 8 1
+bindsym $mod+Left exec xrandr --output eDP-0 --rotate left && xinput set-int-prop "AlpsPS/2 ALPS GlidePoint" "Evdev Axis Inversion" 8 1 0 && xinput set-int-prop "AlpsPS/2 ALPS GlidePoint" "Evdev Axes Swap" 8 1
+bindsym $mod+Up exec xrandr --output eDP-0 --rotate normal && xinput set-int-prop "AlpsPS/2 ALPS GlidePoint" "Evdev Axis Inversion" 8 0 0 && xinput set-int-prop "AlpsPS/2 ALPS GlidePoint" "Evdev Axes Swap" 8 0
+bindsym $mod+Down exec xrandr --output eDP-0 --rotate inverted && xinput set-int-prop "AlpsPS/2 ALPS GlidePoint" "Evdev Axis Inversion" 8 1 1 && xinput set-int-prop "AlpsPS/2 ALPS GlidePoint" "Evdev Axes Swap" 8 0
+bindsym $mod+Right exec xrandr --output eDP-0 --rotate right && xinput set-int-prop "AlpsPS/2 ALPS GlidePoint" "Evdev Axis Inversion" 8 0 1 && xinput set-int-prop "AlpsPS/2 ALPS GlidePoint" "Evdev Axes Swap" 8 1
 
 # bindsym $mod+Left exec xrandr --output eDP1 --rotate left && xinput set-int-prop "GlidePoint Virtual Touchpad" "Evdev Axis Inversion" 8 1 0 && xinput set-int-prop "GlidePoint Virtual Touchpad" "Evdev Axes Swap" 8 1
 # bindsym $mod+Up exec xrandr --output eDP1 --rotate normal && xinput set-int-prop "GlidePoint Virtual Touchpad" "Evdev Axis Inversion" 8 0 0 && xinput set-int-prop "GlidePoint Virtual Touchpad" "Evdev Axes Swap" 8 0
@@ -199,7 +199,7 @@ bindsym Mod1+Print exec scrot -s -e 'mv $f /tmp/ && gimp /tmp/$f'
 
 # power management (auto-hibernate on low power)
 # only gives notifications but doesn't auto-hibernate -- see next script
-exec_always mate-power-manager
+# exec_always mate-power-manager
 
 # manually monitor power for auto-hibernation
 # exec_always /home/nacnudus/.i3/lowpowerhibernate.sh;
@@ -208,8 +208,8 @@ exec_always mate-power-manager
 # exec_always redshift -l 41.29:174.78;
 
 # disable wifi power management
-exec_always sudo iwconfig wlan0 power off;
+# exec_always sudo iwconfig wlan0 power off;
 # and add an entry with visudo
 
 # automount stuff
-exec --no-startup-id "devmon --no-gui"
+# exec --no-startup-id "devmon --no-gui"
