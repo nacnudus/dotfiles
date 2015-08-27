@@ -160,9 +160,12 @@ bar {
 focus_follows_mouse no
 
 # Audio keys.
-bindsym XF86AudioLowerVolume exec /usr/bin/pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo -- '-10%'
-bindsym XF86AudioRaiseVolume exec /usr/bin/pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo -- '+10%'
-bindsym XF86AudioMute exec /usr/bin/pactl set-sink-mute alsa_output.pci-0000_00_1b.0.analog-stereo toggle
+# bindsym XF86AudioLowerVolume exec /usr/bin/pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo -- '-10%'
+# bindsym XF86AudioRaiseVolume exec /usr/bin/pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo -- '+10%'
+# bindsym XF86AudioMute exec /usr/bin/pactl set-sink-mute alsa_output.pci-0000_00_1b.0.analog-stereo toggle
+bindsym XF86AudioLowerVolume exec amixer -c 0 set Master 5-
+bindsym XF86AudioRaiseVolume exec amixer -c 0 set Master 5+
+bindsym XF86AudioMute exec amixer -c 0 set Master toggle
 
 # Brightness
 bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 5 -steps 1 -time 10
