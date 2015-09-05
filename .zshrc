@@ -125,10 +125,9 @@ source /usr/share/chruby/auto.sh
 
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH=$PATH:$HOME/.cabal/bin # Add cabal to PATH for pandoc
-export PATH=$PATH:/usr/local/texlive/2013/bin/x86_64-linux # TexLive
-
-export MANPATH=$MANPATH:/usr/local/texlive/2013/texmf-dist/doc/man
-export INFOPATH=$INFOPATH:/usr/local/texlive/2013/texmf-dist/doc/info
+export PATH=$PATH:/usr/local/texlive/2015/bin/x86_64-linux # TeXLive
+export MANPATH=$MANPATH:/usr/local/texlive/2015/texmf-dist/doc/man
+export INFOPATH=$INFOPATH:/usr/local/texlive/2015/texmf-dist/doc/info
 
 PERL_MB_OPT="--install_base \"/home/nacnudus/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/nacnudus/perl5"; export PERL_MM_OPT;
