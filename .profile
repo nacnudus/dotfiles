@@ -9,6 +9,9 @@
 #umask 022
 
 EDITOR=/usr/bin/vim
+if [[ ! $TERM =~ screen ]]; then
+    SHELL=tmux fbterm
+fi
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
