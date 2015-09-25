@@ -143,8 +143,8 @@ bindsym $mod+Down exec xrandr --output eDP1 --rotate inverted && xinput set-prop
 bindsym $mod+Left exec xrandr --output eDP1 --rotate left && xinput set-prop 13 "Coordinate Transformation Matrix" 0 -1 1 1 0 0 0 0 1
 bindsym $mod+Right exec xrandr --output eDP1 --rotate right && xinput set-prop 13 "Coordinate Transformation Matrix" 0 1 0 -1 0 1 0 0 1
 
-# Reverse scrolling
-exec_always xinput set-button-map 13 1 2 3 5 4 7 6 8 9
+# Reverse scrolling (doesn't work in terminal)
+# exec_always xinput set-button-map 13 1 2 3 5 4 7 6 8 9
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
