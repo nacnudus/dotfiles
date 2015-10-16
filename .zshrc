@@ -72,7 +72,22 @@ RPS1='$(git_prompt_string)'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Alias vim for vim-R-plugin
 alias vim="vim --servername VIM"
+
+# Alias mbie for mounting the secure usb shared from a Windows virtualbox 
+alias mbieon="sudo mount -t cifs //192.168.56.101/h /home/nacnudus/mbie -o user=mbie,password=mbie,rw,gid=1000,uid=1000"
+alias mbieoff="sudo umount /home/nacnudus/mbie"
+
+# Alias windows for mounting C:\ of a Windows virtualbox 
+alias windowson="sudo mount -t cifs //192.168.56.101/c /home/nacnudus/windows -o user=nacnu,rw,gid=1000,uid=1000"
+alias windowsoff="sudo umount /home/nacnudus/windows"
+
+# Aliases for backlight brightness
+alias x100="xbacklight -set 100"
+alias x50="xbacklight -set 50"
+alias x1="xbacklight -set 1"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
