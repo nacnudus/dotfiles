@@ -1,0 +1,1 @@
+set synctex-editor-command 'vim --remote-silent +%{line} %{input}'
