@@ -78,11 +78,23 @@ alias vim="vim --servername VIM"
 
 # Alias mbie for mounting the secure usb shared from a Windows virtualbox 
 alias mbieon="sudo mount -t cifs //192.168.56.101/h /home/nacnudus/mbie -o user=mbie,password=mbie,rw,gid=1000,uid=1000"
-alias mbieoff="sudo umount /home/nacnudus/mbie"
+alias mbieoff="sudo umount -l /home/nacnudus/mbie"
 
 # Alias windows for mounting C:\ of a Windows virtualbox 
 alias windowson="sudo mount -t cifs //192.168.56.101/c /home/nacnudus/windows -o user=nacnu,rw,gid=1000,uid=1000"
 alias windowsoff="sudo umount /home/nacnudus/windows"
+
+# Alias for mounting backup drives
+alias elements1on="sudo mount /media/elements1"
+alias elements2on="sudo mount /media/elements2"
+alias elements1off="sudo umount /media/elements1"
+alias elements2off="sudo umount /media/elements2"
+
+# Alias for mounting usb sticks
+alias sdbon="sudo mount /dev/sdb1 /media/usb"
+alias sdboff="sudo umount /media/usb"
+alias sdcon="sudo mount /dev/sdc1 /media/usb"
+alias sdcoff="sudo umount /media/usb"
 
 # Aliases for backlight brightness
 alias x100="xbacklight -set 100"
