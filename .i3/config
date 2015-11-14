@@ -28,7 +28,7 @@ bindsym $mod+Shift+Q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+m exec dmenu_run
-bindsym $mod+m exec dmenu_run -fn 'Inconsolata 12' -nf "#93a1a1" -nb "#002b36" -sf "#002b36" -sb "#93a1a1" 
+bindsym $mod+m exec dmenu_run -fn 'Inconsolata-12' -nf "#93a1a1" -nb "#002b36" -sf "#002b36" -sb "#93a1a1" 
 
 # change focus
 bindsym $mod+h focus left
@@ -145,18 +145,45 @@ bindsym $mod+Down exec xrandr --output eDP1 --rotate inverted && xinput set-prop
 bindsym $mod+Left exec xrandr --output eDP1 --rotate left && xinput set-prop 13 "Coordinate Transformation Matrix" 0 -1 1 1 0 0 0 0 1
 bindsym $mod+Right exec xrandr --output eDP1 --rotate right && xinput set-prop 13 "Coordinate Transformation Matrix" 0 1 0 -1 0 1 0 0 1
 
+# Second monitor (HDMI1)
+# bindsym $mod+Shift+P move workspace to output HDMI1
+
 # Reverse scrolling (doesn't work in terminal)
 # exec_always xinput set-button-map 13 1 2 3 5 4 7 6 8 9
+
+# Window colours
+# Background (default)
+client.background       #002b36
+
+# class                 border  backgr. text    indicator
+client.focused          #268bd2 #002b36 #839496 #6c71c4 
+client.focused_inactive #859900 #002b36 #839496 #6c71c4
+client.unfocused        #002b36 #002b36 #839496 #6c71c4
+client.urgent           #dc322f #dc322f #fdf6e3 #6c71c4
+client.placeholder      #002b36 #002b36 #839496 #6c71c4
+
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
-        # autohide
-        mode hide
-        hidden_state hide
-        modifier $mod
-        font xft:Inconsolata Medium 12
+  status_command i3status
+  modifier $mod
+  font xft:Inconsolata Medium 12
+  # autohide
+  mode hide
+  hidden_state hide
+
+  colors {
+    background        #002b36
+    separator         #6c71c4
+    statusline        #839496
+
+    # class            border  backgr. text
+    active_workspace   #002b36 #002b36 #839496
+    inactive_workspace #002b36 #002b36 #839496
+    focused_workspace  #268bd2 #002b36 #839496
+    urgent_workspace   #d33682 #d33682 #839496
+  }
 }
 
 # Focus should not follow mouse
@@ -177,11 +204,9 @@ bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 1 -steps 1 -time 10
 # bindsym XF86KbdBrightnessUp exec /usr/bin/xbacklight -inc 10
 # bindsym XF86KbdBrightnessDown exec /usr/bin/xbacklight -dec 5
 
-# Swap workspaces between monitors.
-# bindsym $mod+u move workspace to output VGA1 # Move current workspace to external monitor.
-# bindsym $mod+d move workspace to output LVDS1 # Move current workspace to laptop monitor.
-# bindsym $mod+Shift+u exec ~/.i3/up.py # Move all workspaces to external monitor.
-# bindsym $mod+Shift+d exec ~/.i3/down.py # Move all workspaces to laptop monitor.
+# Swap workspaces between monitors (for some reason u and d down't work)
+bindsym $mod+z move workspace to output HDMI1
+bindsym $mod+x move workspace to output eDP1
 
 # Toggle Mirror/External/Internal
 # bindsym $mod+Shift+t exec ~/.i3/toggle.sh
@@ -211,8 +236,8 @@ bindsym Mod1+Print exec scrot -s -e 'mv $f /tmp/ && gimp /tmp/$f'
 # manually monitor power for auto-hibernation
 # exec_always /home/nacnudus/.i3/lowpowerhibernate.sh;
 
-# initiate redshift
-# exec_always redshift -l 41.29:174.78;
+# initiate #dc322fshift
+# exec_always #dc322fshift -l 41.29:174.78;
 
 # disable wifi power management
 # exec_always sudo iwconfig wlan0 power off;
@@ -220,3 +245,7 @@ bindsym Mod1+Print exec scrot -s -e 'mv $f /tmp/ && gimp /tmp/$f'
 
 # automount stuff
 # exec --no-startup-id "devmon --no-gui"
+
+# Make the laptop screen primary
+# exec_always xrandr --output HDMI1 --above eDP1
+# exec_always xrandr --output eDP1 --primary
