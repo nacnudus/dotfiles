@@ -12,7 +12,8 @@
 set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode
-font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+font xft:Inconsolata Medium 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -26,7 +27,8 @@ bindsym $mod+Return exec /usr/bin/gnome-terminal
 bindsym $mod+Shift+Q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+m exec dmenu_run
+# bindsym $mod+m exec dmenu_run
+bindsym $mod+m exec dmenu_run -fn 'Inconsolata 12' -nf "#93a1a1" -nb "#002b36" -sf "#002b36" -sb "#93a1a1" 
 
 # change focus
 bindsym $mod+h focus left
@@ -154,6 +156,7 @@ bar {
         mode hide
         hidden_state hide
         modifier $mod
+        font xft:Inconsolata Medium 12
 }
 
 # Focus should not follow mouse
