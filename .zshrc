@@ -69,10 +69,6 @@ git_prompt_string() {
 # Set the right-hand prompt
 RPS1='$(git_prompt_string)'
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 # Alias vim for vim-R-plugin
 alias vim="vim --servername VIM"
 
