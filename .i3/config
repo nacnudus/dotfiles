@@ -146,7 +146,8 @@ bindsym $mod+Left exec xrandr --output eDP1 --rotate left && xinput set-prop 13 
 bindsym $mod+Right exec xrandr --output eDP1 --rotate right && xinput set-prop 13 "Coordinate Transformation Matrix" 0 1 0 -1 0 1 0 0 1
 
 # Second monitor (HDMI1)
-# bindsym $mod+Shift+P move workspace to output HDMI1
+bindsym $mod+Shift+Z move workspace to output HDMI1
+bindsym $mod+Shift+X move workspace to output eDP1
 
 # Reverse scrolling (doesn't work in terminal)
 # exec_always xinput set-button-map 13 1 2 3 5 4 7 6 8 9
