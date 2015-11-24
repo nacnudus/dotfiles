@@ -153,14 +153,17 @@ bindsym $mod+Shift+X move workspace to output eDP1
 # exec_always xinput set-button-map 13 1 2 3 5 4 7 6 8 9
 
 # Window colours
+# Desktop
+# exec --no-startup-id xsetroot -solid "#002b36"
+
 # Background (default)
 client.background       #002b36
 
 # class                 border  backgr. text    indicator
-client.focused          #268bd2 #002b36 #839496 #6c71c4 
-client.focused_inactive #859900 #002b36 #839496 #6c71c4
-client.unfocused        #002b36 #002b36 #839496 #6c71c4
-client.urgent           #dc322f #dc322f #fdf6e3 #6c71c4
+client.focused          #268bd2 #073642 #93a1a1 #6c71c4 
+client.focused_inactive #859900 #073642 #93a1a1 #6c71c4
+client.unfocused        #002b36 #073642 #93a1a1 #6c71c4
+client.urgent           #cb4b16 #cb4b16 #fdf6e3 #6c71c4
 client.placeholder      #002b36 #002b36 #839496 #6c71c4
 
 
@@ -183,7 +186,7 @@ bar {
     active_workspace   #002b36 #002b36 #839496
     inactive_workspace #002b36 #002b36 #839496
     focused_workspace  #268bd2 #002b36 #839496
-    urgent_workspace   #d33682 #d33682 #839496
+    urgent_workspace   #cb4b16 #cb4b16 #002b36
   }
 }
 
