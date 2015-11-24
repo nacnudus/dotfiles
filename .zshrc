@@ -97,6 +97,10 @@ alias x100="xbacklight -set 100"
 alias x50="xbacklight -set 50"
 alias x1="xbacklight -set 1"
 
+# Aliases for HDMI1
+alias hdmion="xrandr --output HDMI1 --auto --above eDP1"
+alias hdmioff="xrandr --output HDMI1 --off"
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
