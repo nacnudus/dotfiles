@@ -73,7 +73,8 @@ RPS1='$(git_prompt_string)'
 alias vim="vim --servername VIM"
 
 # Alias mbie for mounting the secure usb shared from a Windows virtualbox 
-alias mbieon="sudo mount -t cifs //192.168.56.101/f /home/nacnudus/mbie -o user=mbie,password=mbie,rw,gid=1000,uid=1000"
+alias mbiefon="sudo mount -t cifs //192.168.56.101/g /home/nacnudus/mbie -o user=mbie,password=mbie,rw,gid=1000,uid=1000"
+alias mbiegon="sudo mount -t cifs //192.168.56.101/g /home/nacnudus/mbie -o user=mbie,password=mbie,rw,gid=1000,uid=1000"
 alias mbieoff="sudo umount -l /home/nacnudus/mbie"
 
 # Alias windows for mounting C:\ of a Windows virtualbox 
