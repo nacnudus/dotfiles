@@ -81,6 +81,9 @@ alias mbiefon="sudo mount -t cifs //192.168.56.101/g /home/nacnudus/mbie -o user
 alias mbiegon="sudo mount -t cifs //192.168.56.101/g /home/nacnudus/mbie -o user=mbie,password=mbie,rw,gid=1000,uid=1000"
 alias mbieoff="sudo umount -l /home/nacnudus/mbie"
 
+# Alias citrix for opening Citrix
+alias citrix="/opt/Citrix/ICAClient/wfica ~/Downloads/launch.jsp"
+
 # Alias windows for mounting C:\ of a Windows virtualbox 
 alias windowson="sudo mount -t cifs //192.168.56.101/c /home/nacnudus/windows -o user=nacnu,rw,gid=1000,uid=1000"
 alias windowsoff="sudo umount /home/nacnudus/windows"
