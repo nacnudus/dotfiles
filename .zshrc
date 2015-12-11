@@ -138,7 +138,7 @@ alias hdmioff="xrandr --output HDMI1 --off"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(extract git desk)
+plugins=(extract gitfast desk fasd archlinux history per-directory-history pip sudo vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
