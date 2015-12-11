@@ -69,6 +69,10 @@ git_prompt_string() {
 # Set the right-hand prompt
 RPS1='$(git_prompt_string)'
 
+# Aliases for updating
+alias updatetest="yaourt -Syua"
+alias updatereal="yaourt -Syua --noconfirm"
+
 # Alias vim for vim-R-plugin
 alias vim="vim --servername VIM"
 
