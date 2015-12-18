@@ -226,6 +226,7 @@ bindsym $mod+q exec i3lock -c 002b36
 # Also use `sudo visudo` to add the lines
 # ALL ALL=NOPASSWD:/usr/sbin/pm-hibernate
 # ALL ALL=NOPASSWD:/usr/sbin/pm-suspend
+# ALL ALL=NOPASSWD:/usr/bin/shutdown -h now
 
 
 # scrot & gimp - root
