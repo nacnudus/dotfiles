@@ -96,6 +96,9 @@ Plug 'ivanov/vim-ipython', {'for': 'python'} " Show reports from coverage.py
 Plug 'jmcantrell/vim-virtualenv' " virtual environments
 Plug 'klen/python-mode', {'for': 'python'} " A Python plugin
 
+" SML New Jersey (for coursera proglang course)
+Plug 'chilicuil/vim-sml-coursera'
+
 " Lilypond
 Plug 'gisraptor/vim-lilypond-integrator', { 'for': 'lilypond' } " lilypond syntax
                                          " <F4> save & make & play midi

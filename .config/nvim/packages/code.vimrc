@@ -90,6 +90,10 @@ au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=markdown
 
 " }}}
 
+" " SML {{{
+   autocmd FileType sml setlocal commentstring=(*\ %s\ *) 
+" " }}}
+
 " Syntastic {{{
 
 nmap <silent><Leader>N :SyntasticCheck<CR>:Errors<CR>
