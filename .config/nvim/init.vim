@@ -88,6 +88,7 @@ let g:rplugin_pdfviewer = "zathura"
 " Plug 'coot/atp_vim' " Automatic TeX Plugin (uses latex-box under the hood)
 Plug 'lervag/vimtex', { 'for': ['tex',  'bib', 'bst'] }
 let g:vimtex_view_method='zathura'
+let g:vimtex_latexmk_progname = '/home/nacnudus/bin/nvr'
 
 " Python
 Plug 'Yggdroot/indentLine', {'for': 'python'} " Show indent lines
