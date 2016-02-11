@@ -30,7 +30,6 @@ let g:tagbar_type_r = {
 " R {{{
 
 " Use Alt+- to create <- as in Rstudio
-set <M-->=-
 let R_assign_map = "<M-->"
 
 let rout_follow_colorscheme = 1 " Doesn't seem to work
