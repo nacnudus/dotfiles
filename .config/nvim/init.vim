@@ -122,6 +122,7 @@ Plug 'plasticboy/vim-markdown', { 'for': 'markdown' } " depends on godlygeek/tab
 Plug 'waylan/vim-markdown-extra-preview', { 'for': 'markdown' } " preview markdown " No python3 support
 
 " Productivity
+Plug 'blueyed/vim-diminactive' " Dim inactive windows
 Plug 'majutsushi/tagbar' " tags side-bar index
 Plug 'mhinz/vim-startify' " session manager and start screen
 Plug 'PeterRincker/vim-argumentative' " move by and switch function arguments
