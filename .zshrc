@@ -96,6 +96,10 @@ alias sdboff="sudo umount /media/usb"
 alias sdcon="sudo mount /dev/sdc1 /media/usb"
 alias sdcoff="sudo umount /media/usb"
 
+# Alias for mounting sd cards
+alias sdon="sudo mount /media/sdcard"
+alias sdoff="sudo umount /media/sdcard"
+
 # Aliases for backlight brightness
 alias x100="xbacklight -set 100"
 alias x50="xbacklight -set 50"
