@@ -257,3 +257,13 @@ let g:neosnippet#snippets_directory='~/.vim/snippets'
 let g:magit_show_help=0
 
 " }}}
+
+
+" return to last position on open {{{
+"
+autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+
+" }}}
