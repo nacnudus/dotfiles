@@ -150,7 +150,8 @@ Plug 'tpope/vim-eunuch' " help for UNIX e.g. :Remove :SudoWrite :Move :Rename et
 
 " Bling
 Plug 'altercation/vim-colors-solarized'            " solarized (F5 toggle background)
-Plug 'bling/vim-airline' " good-looking status line
+Plug 'vim-airline/vim-airline' " good-looking status line
+Plug 'vim-airline/vim-airline-themes' " good-looking status line
 Plug 'flazz/vim-colorschemes'
 Plug 'joedicastro/vim-molokai256'        " additional colourscheme
 
