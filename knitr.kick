@@ -1,0 +1,8 @@
+#!/bin/bash
+
+FILE="${1}"
+
+KNITR="echo \"Rerunning Knitr..\"; Rscript -e \"library(knitr); knit('./${FILE}')\""
+
+echo "Watching ${FILE}..."
+kicker -l 10 -e "${KNITR}" ${FILE}
