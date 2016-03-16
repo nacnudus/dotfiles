@@ -109,6 +109,23 @@ alias x1="xbacklight -set 1"
 alias hdmion="xrandr --output HDMI1 --auto --above eDP1"
 alias hdmioff="xrandr --output HDMI1 --off"
 
+# Alias for replacing spaces with dashes in filenames
+alias dashify="zmv -n '(**/)(* *)' '$1${2//( #-## #| ##)/-}'"
+
+# Aliases for connecting to eduroam (don't seem to work yet)
+alias eduroam="sudo wpa_supplicant -c. /home/nacnudus/dotfiles/eduroam -i wlp2s0 -D nl80211 -B"
+alias ip="sudo dhcpcd wlp2s0"
+
+# Alias for knitr/kicker
+alias knitr="/home/nacnudus/dotfiles/knitr.kick"
+
+# Aliases for zathura pdf reader
+# Fork into background 
+alias pdf="zathura --fork"
+# Switch light/dark
+alias pdfdark="cp /home/nacnudus/.config/zathura/zathurarc-dark /home/nacnudus/.config/zathura/zathurarc"
+alias pdflight="cp /home/nacnudus/.config/zathura/zathurarc-light /home/nacnudus/.config/zathura/zathurarc"
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -162,6 +179,7 @@ source /usr/bin/virtualenvwrapper.sh
 # source /usr/share/chruby/chruby.sh
 source /usr/share/chruby/auto.sh
 
+export PATH=$PATH:$HOME/.gem/ruby/2.3.0/gems/kicker-3.0.0/bin # Add ruby gems to path for scripting
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH=$PATH:$HOME/.cabal/bin # Add cabal to PATH for pandoc
 export PATH=$PATH:/usr/local/texlive/2015/bin/x86_64-linux # TeXLive
