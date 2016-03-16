@@ -29,6 +29,9 @@ let g:tagbar_type_r = {
 
 " R {{{
 
+" Don't use the nvim terminal emulator
+let R_in_buffer = 0
+
 " Use Alt+- to create <- as in Rstudio
 let R_assign_map = "<M-->"
 
