@@ -96,6 +96,10 @@ alias sdboff="sudo umount /media/usb"
 alias sdcon="sudo mount /dev/sdc1 /media/usb"
 alias sdcoff="sudo umount /media/usb"
 
+# Alias for mounting Hilary's pink USB stick
+alias hilaryon="sudo mount /media/hilary"
+alias hilaryoff="sudo umount /media/hilary"
+
 # Alias for mounting sd cards
 alias sdon="sudo mount /media/sdcard"
 alias sdoff="sudo umount /media/sdcard"
