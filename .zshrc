@@ -130,6 +130,10 @@ alias pdf="zathura --fork"
 alias pdfdark="cp /home/nacnudus/.config/zathura/zathurarc-dark /home/nacnudus/.config/zathura/zathurarc"
 alias pdflight="cp /home/nacnudus/.config/zathura/zathurarc-light /home/nacnudus/.config/zathura/zathurarc"
 
+# Aliases for i3
+alias i3dark="cp /home/nacnudus/.i3/config-dark /home/nacnudus/.i3/config; i3-msg reload"
+alias i3light="cp /home/nacnudus/.i3/config-light /home/nacnudus/.i3/config; i3-msg reload"
+
 # Aliases for copyediting
 # Move relevant materials to working directory
 alias getmaterials="cp /home/nacnudus/copyediting/materials/notes.md /home/nacnudus/copyediting/materials/templates.tex /home/nacnudus/copyediting/materials/mms.bst /home/nacnudus/copyediting/materials/SageVnatbib.bst /home/nacnudus/copyediting/materials/SAGE-LaTeX-template/SageH.bst /home/nacnudus/copyediting/materials/SAGE-LaTeX-template/sagej.cls /home/nacnudus/copyediting/materials/hyphenations.sh /home/nacnudus/copyediting/materials/acronyms.sh /home/nacnudus/copyediting/materials/.gitignore /home/nacnudus/copyediting/materials/SAGE-LaTeX-template/SAGE_Logo.eps /home/nacnudus/copyediting/materials/regex.txt ./"
