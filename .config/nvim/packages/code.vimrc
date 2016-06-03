@@ -24,6 +24,11 @@ let g:tagbar_type_r = {
     \ ]
 \ }
 " }}}
+"
+" Pretty XML {{{
+map @@x !xmllint --format --recover -
+" au FileType xml exe ":silent %!xmllint --format --recover - 2>/dev/null"
+" }}}
 
 " FILETYPES  {{{ ==============================================================
 
