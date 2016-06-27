@@ -179,7 +179,8 @@ nnoremap <Leader>h <C-w>s
 
 " Fast window & buffer close and kill {{{
 
-nnoremap <Leader>k <C-w>c
+" from http://stackoverflow.com/a/4468491/937932, close buffer without closing window
+nmap <silent> <leader>k :bp\|bd #<CR>
 nnoremap <silent><Leader>K :bd<CR>
 
 " }}}
