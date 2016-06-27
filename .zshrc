@@ -206,12 +206,14 @@ source /usr/bin/virtualenvwrapper.sh
 # source /usr/share/chruby/chruby.sh
 source /usr/share/chruby/auto.sh
 
-export PATH=$PATH:$HOME/.gem/ruby/2.3.0/gems/kicker-3.0.0/bin # Add ruby gems to path for scripting
+export PATH=$PATH:$HOME/.gem/ruby/2.3.0/bin
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH=$PATH:$HOME/.cabal/bin # Add cabal to PATH for pandoc
-export PATH=$PATH:/usr/local/texlive/2015/bin/x86_64-linux # TeXLive
-export MANPATH=$MANPATH:/usr/local/texlive/2015/texmf-dist/doc/man
-export INFOPATH=$INFOPATH:/usr/local/texlive/2015/texmf-dist/doc/info
+export PATH=$PATH:/usr/local/texlive/2016/bin/x86_64-linux # TeXLive
+export MANPATH=$MANPATH:/usr/local/texlive/2016/texmf-dist/doc/man
+export INFOPATH=$INFOPATH:/usr/local/texlive/2016/texmf-dist/doc/info
+export GITHUB_PAT=e079fe8515a664ec6b3598a55ebd8f125274a0b4
+
 
 PERL_MB_OPT="--install_base \"/home/nacnudus/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/nacnudus/perl5"; export PERL_MM_OPT;
