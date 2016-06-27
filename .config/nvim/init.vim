@@ -97,6 +97,9 @@ Plug 'ivanov/vim-ipython', {'for': 'python'} " Show reports from coverage.py
 Plug 'jmcantrell/vim-virtualenv' " virtual environments
 Plug 'klen/python-mode', {'for': 'python'} " A Python plugin
 
+" Julia
+Plug 'JuliaLang/julia-vim'
+
 " SML New Jersey (for coursera proglang course)
 Plug 'chilicuil/vim-sml-coursera'
 
