@@ -21,3 +21,11 @@ utils::assignInNamespace(
   "base"
 )
 
+.First <- function() {
+  options(
+    repos = c(CRAN = "https://cran.rstudio.com/"),
+    browserNLdisabled = TRUE,
+    deparse.max.lines = 2,
+    devtools.name = "Duncan Garmonsway",
+    devtools.desc.author = "Duncan Garmonsway <duncan.garmonsway@gmail.com> [aut, cre]")
+}
