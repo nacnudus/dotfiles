@@ -107,7 +107,9 @@ alias sdoff="sudo umount /media/sdcard"
 # Aliases for backlight brightness
 alias x100="xbacklight -set 100"
 alias x50="xbacklight -set 50"
+alias x25="xbacklight -set 25"
 alias x1="xbacklight -set 1"
+alias x0="xbacklight -set 0"
 
 # Aliases for HDMI1
 alias hdmion="xrandr --output HDMI1 --auto --above eDP1"
@@ -133,6 +135,14 @@ alias pdflight="cp /home/nacnudus/.config/zathura/zathurarc-light /home/nacnudus
 # Aliases for i3
 alias i3dark="cp /home/nacnudus/.i3/config-dark /home/nacnudus/.i3/config; i3-msg reload"
 alias i3light="cp /home/nacnudus/.i3/config-light /home/nacnudus/.i3/config; i3-msg reload"
+
+# Aliases for gnome terminal dark/light
+alias termdark="/home/nacnudus/gnome-terminal-colors-solarized/set_dark.sh"
+alias termlight="/home/nacnudus/gnome-terminal-colors-solarized/set_light.sh"
+
+# Aliases for dark/light combined
+alias light="pdflight; i3light; termlight"
+alias dark="pdfdark; i3dark; termdark"
 
 # Aliases for copyediting
 # Move relevant materials to working directory
