@@ -18,15 +18,5 @@ fi
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH:/home/nacnudus/.local/bin"
+   PATH="$HOME/bin:$PATH:/home/nacnudus/.local/bin"
 fi
-
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-export PATH=$PATH:$HOME/.cabal/bin # Add cabal to PATH for pandoc
-export PATH=$PATH:$HOME/pycharm-community-4.0.4/bin # Add cabal to PATH for pandoc
-export PATH=$PATH:/usr/local/texlive/2014/bin/x86_64-linux # TexLive
-export PATH=$PATH:$HOME/denemo-1.2.0 # denemo for lilypond
-
-export MANPATH=$MANPATH:/usr/local/texlive/2013/texmf-dist/doc/man
-export INFOPATH=$INFOPATH:/usr/local/texlive/2013/texmf-dist/doc/info
-
