@@ -147,7 +147,7 @@ alias dark="pdfdark; i3dark; termdark"
 # Aliases for copyediting
 # Move relevant materials to working directory
 alias getmaterials="cp /home/nacnudus/copyediting/materials/notes.md /home/nacnudus/copyediting/materials/templates.tex /home/nacnudus/copyediting/materials/mms.bst /home/nacnudus/copyediting/materials/SageVnatbib.bst /home/nacnudus/copyediting/materials/SAGE-LaTeX-template/SageH.bst /home/nacnudus/copyediting/materials/SAGE-LaTeX-template/sagej.cls /home/nacnudus/copyediting/materials/hyphenations.sh /home/nacnudus/copyediting/materials/acronyms.sh /home/nacnudus/copyediting/materials/.gitignore /home/nacnudus/copyediting/materials/SAGE-LaTeX-template/SAGE_Logo.eps /home/nacnudus/copyediting/materials/regex.txt ./"
-alias openguides="pdf /home/nacnudus/copyediting/materials/SAGE-editing-June-2016-READ-THIS-FILE-FIRST.pdf; pdf /home/nacnudus/copyediting/materials/SAGE\ UK\ Style\ Guide\ 28\ Oct\ 2011-with\ comments\ 1\ Nov\ 2012.pdf; pdf /home/nacnudus/copyediting/materials/SAGE-LaTeX-template/Sage_LaTeX_Guidelines.pdf"
+alias openguides="pdf /home/nacnudus/copyediting/materials/SAGE-editing-July-2016-READ-THIS-FILE-FIRST.pdf; pdf /home/nacnudus/copyediting/materials/SAGE\ UK\ Style\ Guide\ 28\ Oct\ 2011-with\ comments\ 1\ Nov\ 2012.pdf; pdf /home/nacnudus/copyediting/materials/SAGE-LaTeX-template/Sage_LaTeX_Guidelines.pdf"
 
 # Alias for wifi and tethering
 alias tether="sudo dhcpcd enp0s20u2"
