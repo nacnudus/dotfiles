@@ -180,7 +180,10 @@ filetype plugin indent on      " Indent and plugins by filetype
 
 let mapleader=','
 let maplocalleader= ' '
-tnoremap jk <C-\><C-n>       " Exit the terminal insert mode
+" Exit insert mode
+inoremap jk <C-\><C-n>
+" Exit the terminal insert mode
+tnoremap jk <C-\><C-n>
 
 " }}}
 
