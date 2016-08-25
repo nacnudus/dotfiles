@@ -15,3 +15,6 @@ augroup vimtex_config
   " au User VimtexEventInitPost VimtexCompile
 augroup END
 
+" Surround with backticks and apostrophes
+autocmd FileType tex let g:surround_39 = "`\r'"
+autocmd FileType tex let g:surround_96 = "``\r''"
