@@ -8,11 +8,6 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-EDITOR=/usr/bin/vim
-if [[ ! $TERM =~ screen ]]; then
-    SHELL=tmux fbterm
-fi
-
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
