@@ -27,5 +27,6 @@ utils::assignInNamespace(
     browserNLdisabled = TRUE,
     deparse.max.lines = 2,
     devtools.name = "Duncan Garmonsway",
-    devtools.desc.author = "Duncan Garmonsway <duncan.garmonsway@gmail.com> [aut, cre]")
+    devtools.desc.author = 'person("Duncan", "Garmonsway", email = "duncan.garmonsway@gmail.com", role = c("aut", "cre"))'
+    )
 }
