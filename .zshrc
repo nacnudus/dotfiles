@@ -144,6 +144,9 @@ alias termlight="/home/nacnudus/gnome-terminal-colors-solarized/set_light.sh"
 alias light="pdflight; i3light; termlight"
 alias dark="pdfdark; i3dark; termdark"
 
+# Alias for magit
+alias magit="nvim -c MagitOnly"
+
 # Aliases for copyediting
 # Move relevant materials to working directory
 alias getmaterials="cp /home/nacnudus/copyediting/materials/notes.md /home/nacnudus/copyediting/materials/templates.tex /home/nacnudus/copyediting/materials/mms.bst /home/nacnudus/copyediting/materials/SageVnatbib.bst /home/nacnudus/copyediting/materials/SAGE-LaTeX-template/SageH.bst /home/nacnudus/copyediting/materials/SAGE-LaTeX-template/sagej.cls /home/nacnudus/copyediting/materials/hyphenations.sh /home/nacnudus/copyediting/materials/acronyms.sh /home/nacnudus/copyediting/materials/.gitignore /home/nacnudus/copyediting/materials/SAGE-LaTeX-template/SAGE_Logo.eps /home/nacnudus/copyediting/materials/regex.txt ./"
