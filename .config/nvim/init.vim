@@ -117,6 +117,14 @@ Plug 'gisraptor/vim-lilypond-integrator', { 'for': 'lilypond' } " lilypond synta
                                          " <S-F12> uncomment region
                                          "
 
+" Haskell
+Plug 'eagletmt/ghcmod-vim'
+Plug 'eagletmt/neco-ghc'
+" Disable haskell-vim omnifunc
+let g:haskellmode_completion_ghc = 0
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+let g:necoghc_enable_detailed_browse = 1
+
 " Other filetypes
 Plug 'chrisbra/csv.vim'                  " csv filetype plugin
 Plug 'godlygeek/tabular' " dependency of plasticboy/vim-markdown
