@@ -8,7 +8,6 @@
 if(interactive()){
   suppressMessages(library(colorout))
   suppressMessages(library(setwidth))
-  suppressMessages(library(Rdocumentation))
   suppressMessages(library(devtools))
 }
 
