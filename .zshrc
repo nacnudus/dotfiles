@@ -93,6 +93,8 @@ alias windowsoff="sudo umount /home/nacnudus/windows"
 # Alias for mounting backup drives
 alias elements1on="mount /media/elements1"
 alias elements2on="mount /media/elements2"
+alias backuphome="sudo backintime --profile home backup"
+alias backupfull="sudo backintime --profile full backup"
 alias elements1off="umount /media/elements1"
 alias elements2off="umount /media/elements2"
 
