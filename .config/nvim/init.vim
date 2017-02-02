@@ -163,11 +163,12 @@ Plug 'tpope/vim-eunuch' " help for UNIX e.g. :Remove :SudoWrite :Move :Rename et
 
 " Bling
 Plug 'altercation/vim-colors-solarized'            " solarized (F5 toggle background)
+" Plug 'flazz/vim-colorschemes'
+" Plug 'joedicastro/vim-molokai256'        " additional colourscheme
+Plug 'jonathanfilip/vim-lucius'            " high-contrast dark/light
+" Plug 'chriskempson/base16-vim'            " colorschems inc. solarized and others along similar lines
 Plug 'vim-airline/vim-airline' " good-looking status line
 Plug 'vim-airline/vim-airline-themes' " good-looking status line
-Plug 'flazz/vim-colorschemes'
-Plug 'joedicastro/vim-molokai256'        " additional colourscheme
-
 
 " Text-objects
 Plug 'kana/vim-textobj-entire' " ae, ie
