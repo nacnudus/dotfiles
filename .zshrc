@@ -78,7 +78,10 @@ alias updatetest="yaourt -Syua"
 alias updatereal="yaourt -Syua --noconfirm"
 
 # Alias vim for vim-R-plugin
-alias vim="vim --servername VIM"
+# alias vim="vim --servername VIM"
+#
+# Alias to use nvim instead of vim
+alias vim="nvim"
 
 # Alias citrix for opening Citrix
 alias citrix="/opt/Citrix/ICAClient/wfica ~/Downloads/launch.jsp"
