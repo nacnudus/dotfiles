@@ -57,7 +57,7 @@ endif
 let R_pdfviewer = "zathura"
 let g:R_insert_mode_cmds = 0 " Don't use Nvim-R commands in insert mode
 let R_restart = 1 " restart R on \rf (only works in external terminal
-let R_nvimcom_wait = 100 " Don't wait long for nvimcom to load
+let R_wait = 100 " Don't wait long for nvimcom to load
 let R_nvim_wd = 1 " use the Nvim working directory, not that of the file
 let R_pdfviewer = "zathura"
 
