@@ -80,6 +80,9 @@ Plug 'tpope/vim-fugitive' " dependency of gitv
 Plug 'gregsexton/gitv', {'on': 'Gitv'} " Git viewer
 Plug 'joedicastro/vim-github-dashboard' " Browse GitHub events in Vim
 
+" REPL interaction
+Plug 'jpalardy/vim-slime'   " Send code to a scren/tmux session
+
 " R
 Plug 'jalvesaq/Nvim-R', { 'for': ['r', 'rhelp', 'rmd', 'rrst',
       \ 'rbrowser', 'rdoc', 'rout', 'rmarkdown', 'rnoweb'] }
