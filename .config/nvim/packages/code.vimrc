@@ -37,6 +37,10 @@ map @@x !xmllint --format --recover -
 " Don't use the nvim terminal emulator
 let R_in_buffer = 0
 
+" Open RStudio and connect to that instance
+" let RStudio_cmd = '/usr/bin/rstudio-bin'
+
+
 " Use Alt+- to create <- as in Rstudio
 let R_assign_map = "<M-->"
 
