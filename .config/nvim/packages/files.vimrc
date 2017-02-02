@@ -22,6 +22,8 @@ map <Leader>x :call RangerChooser()<CR>
 
 " Plugin Setup {{{
 
+let g:startify_list_order = ['files', 'dir', 'bookmarks', 'sessions', 'commands']
+
 " Junk files {{{
 
 nnoremap <silent><Leader>d :Unite -silent junkfile/new junkfile<CR>
