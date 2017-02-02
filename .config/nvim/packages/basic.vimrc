@@ -137,6 +137,9 @@ endfunction
 
 nmap <silent><Leader>ew :call ToggleWrap()<CR>
 
+" Strip whitespace on save
+autocmd BufWritePre * StripWhitespace
+
 " Colorscheme {{{
 
 syntax enable                  " enable the syntax highlight
