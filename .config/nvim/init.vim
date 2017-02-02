@@ -169,6 +169,7 @@ Plug 'jonathanfilip/vim-lucius'            " high-contrast dark/light
 " Plug 'chriskempson/base16-vim'            " colorschems inc. solarized and others along similar lines
 Plug 'vim-airline/vim-airline' " good-looking status line
 Plug 'vim-airline/vim-airline-themes' " good-looking status line
+Plug 'edkolev/promptline.vim'  " Export airline colours to promptline config
 
 " Text-objects
 Plug 'kana/vim-textobj-entire' " ae, ie
