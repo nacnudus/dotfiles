@@ -142,9 +142,25 @@ autocmd BufWritePre * StripWhitespace
 
 " Colorscheme {{{
 
+" Solarized
+let g:solarized_termcolors=   16
+let g:solarized_termtrans =   0
+let g:solarized_degrade   =   0
+let g:solarized_bold      =   1
+let g:solarized_underline =   1
+let g:solarized_italic    =   1
+let g:solarized_contrast  =   "normal"
+let g:solarized_visibility=   "high"
+let g:solarized_hitrail   =   0
+let g:solarized_menu      =   0
+
 syntax enable                  " enable the syntax highlight
 set background=dark            " set a dark background
-" set t_Co=256                   " 256 colors for the terminal
+set t_Co=256                   " 256 colors for the terminal
+" if filereadable(expand("~/.vimrc_background"))
+"   let base16colorspace=256
+"   source ~/.vimrc_background
+" endif
 " call togglebg#map("<F5>")
 if has('gui_running')
     colorscheme solarized
@@ -154,16 +170,14 @@ else
     call togglebg#map("<F5>")
 endif
 
-let g:solarized_termcolors=   16      
-let g:solarized_termtrans =   0       
-let g:solarized_degrade   =   0       
-let g:solarized_bold      =   1       
-let g:solarized_underline =   1       
-let g:solarized_italic    =   1       
-let g:solarized_contrast  =   "normal"
-let g:solarized_visibility=   "high"
-let g:solarized_hitrail   =   1       
-let g:solarized_menu      =   0       
+" Lucius (high-contrast dark/light)
+let g:lucius_style =    'dark'
+let g:lucius_contrast = 'high'
+let g:lucius_contrast_bg = 'high'
+let g:lucius_use_bold = 1
+let g:lucius_use_underline = 1
+let g:lucius_no_term_bg = 0
+" then do one of LuciusBlack LuciusDark LuciusLight LuciusWhite
 
 " }}}
 
