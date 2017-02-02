@@ -171,6 +171,7 @@ Plug 'vim-airline/vim-airline' " good-looking status line
 Plug 'vim-airline/vim-airline-themes' " good-looking status line
 Plug 'edkolev/promptline.vim'  " Export airline colours to promptline config
 Plug 'ryanoasis/vim-devicons' " Funky file-type icons etc.
+Plug 'ntpeters/vim-better-whitespace' " highlight and remove trailing whitespace
 
 " Text-objects
 Plug 'kana/vim-textobj-entire' " ae, ie
