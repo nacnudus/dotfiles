@@ -227,11 +227,18 @@ let g:haskellmode_completion_ghc = 0
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 let g:necoghc_enable_detailed_browse = 1
 
-" C completion
-let g:clang_complete_auto = 0
-let g:clang_auto_select = 0
-let g:clang_default_keymappings = 0
-"let g:clang_use_library = 1
+" Python
+" let g:deoplete#sources#omni#input_patterns.python='[^. \t]\.\w*'
+let g:jedi#completions_enabled = 0
+let g:jedi#auto_vim_configuration = 0
+let g:jedi#smart_auto_mappings = 0
+let g:jedi#show_call_signatures = 0
+
+"" C completion
+"let g:clang_complete_auto = 0
+"let g:clang_auto_select = 0
+"let g:clang_default_keymappings = 0
+""let g:clang_use_library = 1
 
 
 " Tab completion
