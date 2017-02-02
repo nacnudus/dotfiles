@@ -402,3 +402,4 @@ function! s:GoogleScholarBibTex(type)
 endfunction
 
 " }}}
+let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
