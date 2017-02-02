@@ -109,7 +109,7 @@ alias hilaryon="sudo mount /media/hilary"
 alias hilaryoff="sudo umount /media/hilary"
 
 # Alias for mounting sd cards
-alias sdon="sudo mount /media/sdcard"
+alias sdon="sudo mount /dev/mmcblk0p1 /media/sdcard"
 alias sdoff="sudo umount /media/sdcard"
 
 # Aliases for backlight brightness
