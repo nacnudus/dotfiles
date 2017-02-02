@@ -2,32 +2,6 @@
 
 " Folding {{{
 
-" nnoremap <leader>Q :call Query()<cr>
-
-" function! Query()
-"   let saved_unnamed_register = @@
-"   let l:querydict = {}
-"   let l:querydict["c"] = " conference"
-"   let l:querydict["p"] = " publisher"
-"   let l:querydict["d"] = " date"
-"   let l:querydict["l"] = " location"
-"   let l:querydict["P"] = " page numbers"
-"   let l:querydict[","] = ","
-"   let l:querydict["a"] = " and"
-"   let l:querydict["t"] = " the"
-"   let l:querystring = expand("<cWORD>")
-"   let l:returnstring = '\query{Please provide the'
-"   for l:item in split(l:querystring, '\zs')
-"     let l:returnstring = l:returnstring . l:querydict[l:item]
-"   endfor
-"   let l:returnstring = l:returnstring . ".}"
-"   " call setline(".", l:returnstring)
-"   let @@ = l:returnstring
-"   " :exe 'normal! "viWp' . l:returnstring
-"   :exe 'normal! viWp'
-"   let @@ = saved_unnamed_register
-" endfunction
-
 set foldmethod=marker
 
 " Default open all folds
