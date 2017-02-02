@@ -223,6 +223,7 @@ let g:deoplete#sources#omni#functions.r = 'rcomplete#CompleteR'
 set completeopt=menuone,preview
 " let R_show_args = 1 " show args in preview window (above code) on
 let R_args_in_stline = 1 " Show function arguments in status line
+let g:rplugin_pdfviewer = "zathura"
 
 " Haskell
 " Disable haskell-vim omnifunc
