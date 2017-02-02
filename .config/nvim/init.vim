@@ -230,7 +230,7 @@ let g:airline#extensions#tabline#buffer_min_count = 1
 
 " Font {{{
 
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 11
+set guifont=InconsolataForPowerline\ Nerd\ Font\ Medium\ 14
 " Italics
 set t_ZH=[3m
 set t_ZR=[23m
