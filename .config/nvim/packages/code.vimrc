@@ -224,6 +224,12 @@ set completeopt=menuone,preview
 " let R_show_args = 1 " show args in preview window (above code) on
 let R_args_in_stline = 1 " Show function arguments in status line
 
+" Haskell
+" Disable haskell-vim omnifunc
+let g:haskellmode_completion_ghc = 0
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+let g:necoghc_enable_detailed_browse = 1
+
 " C completion
 let g:clang_complete_auto = 0
 let g:clang_auto_select = 0
