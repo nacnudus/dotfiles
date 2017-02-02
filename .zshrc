@@ -143,14 +143,20 @@ alias pdflight="cp /home/nacnudus/.config/zathura/zathurarc-light /home/nacnudus
 # Aliases for i3
 alias i3dark="cp /home/nacnudus/.i3/config-dark /home/nacnudus/.i3/config; i3-msg reload"
 alias i3light="cp /home/nacnudus/.i3/config-light /home/nacnudus/.i3/config; i3-msg reload"
+# alias i3dark='cat .i3/config-base16-default-dark .i3/base > .i3/config && i3-msg reload'
+# alias i3light='cat .i3/config-base16-default-light .i3/base > .i3/config && i3-msg reload'
 
 # Aliases for gnome terminal dark/light
 alias termdark="/home/nacnudus/gnome-terminal-colors-solarized/set_dark.sh"
 alias termlight="/home/nacnudus/gnome-terminal-colors-solarized/set_light.sh"
+# alias termdark="base16_solarized-dark"
+# alias termlight="base16_solarized-light"
 
 # Aliases for prompt (Promptline) dark/light
 alias promptdark="ln -fs $HOME/dotfiles/.shell_prompt_dark.sh $HOME/.shell_prompt.sh; source $HOME/.shell_prompt.sh"
 alias promptlight="ln -fs $HOME/dotfiles/.shell_prompt_light.sh $HOME/.shell_prompt.sh; source $HOME/.shell_prompt.sh"
+# alias promptdark="ln -fs $HOME/dotfiles/.shell_prompt_default-dark.sh $HOME/.shell_prompt.sh; source $HOME/.shell_prompt.sh"
+# alias promptlight="ln -fs $HOME/dotfiles/.shell_prompt_default-light.sh $HOME/.shell_prompt.sh; source $HOME/.shell_prompt.sh"
 
 # Aliases for dark/light combined
 alias dark="pdfdark; i3dark; termdark; promptdark"
