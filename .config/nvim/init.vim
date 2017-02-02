@@ -69,6 +69,9 @@ Plug 'vim-scripts/LanguageTool' " grammar checking
 Plug 'elzr/vim-json', {'for': 'json'}
 Plug 'scrooloose/syntastic' " syntax checking
 
+" Tags
+Plug 'ludovicchabant/vim-gutentags' " automatic ctags
+
 " Git
 " Plug 'tpope/vim-fugitive' " Git
 Plug 'jreybert/vimagit' " Git, better than fugitive
