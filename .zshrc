@@ -73,6 +73,11 @@ source $HOME/.shell_prompt.sh
 # # Set the right-hand prompt
 # RPS1='$(git_prompt_string)'
 
+# Load the custom .*-pass I have
+for i in ~/.*-pass; do
+  [ -e $i/.load.zsh ] && . $i/.load.zsh
+done
+
 # Aliases for updating
 alias updatetest="yaourt -Syua"
 alias updatereal="yaourt -Syua --noconfirm"
