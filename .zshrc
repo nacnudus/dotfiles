@@ -256,6 +256,31 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/home/nacnudus/miniconda3/bin # anaconda (don't override existing python)
 # export GITHUB_PAT=e079fe8515a664ec6b3598a55ebd8f125274a0b4
 
+# eval "$(ssh-agent -s)"
+# ssh-add ~/.ssh/gds_rsa
+# Load ssh stuff (mainly for github)
+################################################################################
+SSH_ENV="$HOME/.ssh/environment"
+function start_agent {
+    echo "Initialising new SSH agent..."
+    /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+    echo succeeded
+    chmod 600 "${SSH_ENV}"
+    . "${SSH_ENV}" > /dev/null
+    /usr/bin/ssh-add;
+    /usr/bin/ssh-add ~/.ssh/gds_rsa;
+}
+# Source SSH settings, if applicable
+if [ -f "${SSH_ENV}" ]; then
+    . "${SSH_ENV}" > /dev/null
+    #ps ${SSH_AGENT_PID} doesn't work under cywgin
+    ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+        start_agent;
+    }
+else
+    start_agent;
+fi
+################################################################################
 
 PERL_MB_OPT="--install_base \"/home/nacnudus/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/nacnudus/perl5"; export PERL_MM_OPT;
