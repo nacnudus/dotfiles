@@ -62,11 +62,6 @@ set listchars=tab:→\ ,eol:↵,trail:·,extends:↷,precedes:↶
 
 " }}}
 
-
-" Delete trailing whitespaces {{{
-
-nmap <silent><Leader>et :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
-
 " Text statistics {{{
 
 " get the total of lines, words, chars and bytes (and for the current position)
@@ -135,8 +130,6 @@ let g:unite_source_menu_menus.text.command_candidates = [
         \'normal ,p'],
     \['▷ toggle paste mode                                          ⌘ ,P',
         \'normal ,P'],
-    \['▷ remove trailing whitespaces                                ⌘ ,et',
-        \'normal ,et'],
     \['▷ text statistics                                            ⌘ ,es',
         \'Unite output:normal\ ,es -no-cursor-line'],
     \['▷ show word frequency                                        ⌘ ,ef',

@@ -1,7 +1,7 @@
 " VIM Setup {{{
 
 "Remove all trailing whitespace by pressing F9
-nnoremap <F9> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+nnoremap <F9> :StripWhitespace<CR>
 
 " Count lines of code {{{
 
