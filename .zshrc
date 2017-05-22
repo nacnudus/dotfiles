@@ -177,6 +177,9 @@ alias openguides="pdf /home/nacnudus/copyediting/materials/SAGE-editing-Septembe
 alias tether="sudo dhcpcd enp0s20u2"
 alias wifi="sudo wifi-menu"
 
+# Alias to log out of git (unset credential helper)
+alias gitlogout="git config --global --unset credential.helper"
+alias gitlogin="git config --global credential.helper cache"
 
 # Alias for restarting dunst notifications
 alias notify="killall dunst;notify-send foo;notify-send bar"
