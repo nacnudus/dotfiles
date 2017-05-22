@@ -229,10 +229,11 @@ let g:necoghc_enable_detailed_browse = 1
 
 " Python
 " let g:deoplete#sources#omni#input_patterns.python='[^. \t]\.\w*'
-let g:jedi#completions_enabled = 0
-let g:jedi#auto_vim_configuration = 0
-let g:jedi#smart_auto_mappings = 0
-let g:jedi#show_call_signatures = 0
+let g:deoplete#sources#jedi#python_path = '/home/nacnudus/miniconda3/bin/python'
+" let g:jedi#completions_enabled = 0
+" let g:jedi#auto_vim_configuration = 0
+" let g:jedi#smart_auto_mappings = 0
+" let g:jedi#show_call_signatures = 0
 
 "" C completion
 "let g:clang_complete_auto = 0

@@ -236,6 +236,7 @@ export PATH=$PATH:$HOME/.cabal/bin # Add cabal to PATH for pandoc
 export PATH=$PATH:/usr/local/texlive/2016/bin/x86_64-linux # TeXLive
 export MANPATH=$MANPATH:/usr/local/texlive/2016/texmf-dist/doc/man
 export INFOPATH=$INFOPATH:/usr/local/texlive/2016/texmf-dist/doc/info
+export PATH=$PATH:/home/nacnudus/miniconda3/bin # anaconda (don't override existing python)
 # export GITHUB_PAT=e079fe8515a664ec6b3598a55ebd8f125274a0b4
 
 

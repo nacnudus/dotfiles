@@ -100,6 +100,7 @@ Plug 'alfredodeza/coveragepy.vim', {'for': 'python'} " Show reports from coverag
 Plug 'ivanov/vim-ipython', {'for': 'python'} " Show reports from coverage.py
 Plug 'jmcantrell/vim-virtualenv' " virtual environments
 Plug 'klen/python-mode', {'for': 'python'} " A Python plugin
+Plug 'zchee/deoplete-jedi' " python autocompletion
 
 " Julia
 Plug 'JuliaLang/julia-vim'
