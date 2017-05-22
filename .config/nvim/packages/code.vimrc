@@ -46,6 +46,7 @@ let R_assign_map = "<M-->"
 
 let rout_follow_colorscheme = 1 " Doesn't seem to work
 let R_commented_lines = 1 " Include commented lines when sending to console
+let R_clear_line = 1 " Delete existing stuff on command line before sending command to R
 
 if $DISPLAY != ""
   let R_openpdf = 1
