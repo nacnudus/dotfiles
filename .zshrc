@@ -236,10 +236,10 @@ bindkey '^R' history-incremental-search-backward
 # Prevent oh-my-zsh sharing of history between sessions
 setopt no_share_history
 
-# virtualenv and virtualenvwrapper
-export WORKON_HOME=$HOME/.virtualenvs    
-export PROJECT_HOME=$HOME/Devel          
-source /usr/bin/virtualenvwrapper.sh
+# virtualenv and virtualenvwrapper (replaced by anaconda?)
+# export WORKON_HOME=$HOME/.virtualenvs
+# export PROJECT_HOME=$HOME/Devel
+# source /usr/bin/virtualenvwrapper.sh
 
 # chruby
 # source /usr/share/chruby/chruby.sh
