@@ -177,6 +177,10 @@ alias openguides="pdf /home/nacnudus/copyediting/materials/SAGE-editing-Septembe
 alias tether="sudo dhcpcd enp0s20u2"
 alias wifi="sudo wifi-menu"
 
+
+# Alias for restarting dunst notifications
+alias notify="killall dunst;notify-send foo;notify-send bar"
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
