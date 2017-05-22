@@ -217,6 +217,9 @@ plugins=(extract gitfast desk fasd archlinux history pip sudo vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
+# nvm (nodejs version manager)
+# source /usr/share/nvm/init-nvm.sh
+
 # Customize to your needs...
 
 # Vim keybindings
