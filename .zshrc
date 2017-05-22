@@ -243,7 +243,7 @@ source /usr/bin/virtualenvwrapper.sh
 
 # chruby
 # source /usr/share/chruby/chruby.sh
-source /usr/share/chruby/auto.sh
+# source /usr/share/chruby/auto.sh
 
 export PATH=$PATH:$HOME/.gem/ruby/2.3.0/bin
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
