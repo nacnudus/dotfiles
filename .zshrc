@@ -185,13 +185,14 @@ setopt no_share_history
 export MANPATH=$MANPATH:/usr/local/texlive/2016/texmf-dist/doc/man
 export INFOPATH=$INFOPATH:/usr/local/texlive/2016/texmf-dist/doc/info
 export GOPATH=$HOME/go/
-export PATH=$PATH:$HOME/.gem/ruby/2.3.0/bin
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH=$PATH:$HOME/.cabal/bin # Add cabal to PATH for pandoc
 export PATH=$PATH:/usr/local/texlive/2016/bin/x86_64-linux # TeXLive
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/home/nacnudus/miniconda3/bin # anaconda (don't override existing python)
 # export GITHUB_PAT=e079fe8515a664ec6b3598a55ebd8f125274a0b4
+
+# load rvm (ruby version manager)
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # eval "$(ssh-agent -s)"
 # ssh-add ~/.ssh/gds_rsa
