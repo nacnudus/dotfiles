@@ -15,6 +15,7 @@ zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 zplug "molovo/tipz" # Gives you helpful hints when you execute a command for which you have an alias defined
 zplug "peterhurford/up.zsh" # Type up 5 to move up five directories
 zplug "supercrabtree/k" # k is the new l, with git context
+zplug "zlsun/solarized-man" # syntax-highlighted man-pages
 
 # Set the priority when loading
 # e.g., zsh-syntax-highlighting must be loaded
