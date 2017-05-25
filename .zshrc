@@ -26,6 +26,7 @@ zplug "molovo/tipz" # Gives you helpful hints when you execute a command for whi
 zplug "peterhurford/up.zsh" # Type up 5 to move up five directories
 zplug "supercrabtree/k" # k is the new l, with git context
 zplug "zlsun/solarized-man" # syntax-highlighted man-pages
+zplug "psprint/zsh-navigation-tools" # syntax-highlighted man-pages
 
 # Set the priority when loading
 # e.g., zsh-syntax-highlighting must be loaded
