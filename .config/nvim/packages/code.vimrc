@@ -122,20 +122,15 @@ let g:syntastic_style_warning_symbol  = '⚡'
 let g:syntastic_python_checkers = ['pylint', 'pep8', 'mccabe', 'pep257']
 let g:syntastic_enable_r_lintr_checker = 1
 let g:syntastic_r_checkers = 1
-" let g:syntastic_r_checkers = ['lintr', 'svtools']
-" let g:syntastic_enable_r_svtools_checker=1
+let g:syntastic_r_checkers = ['lintr']
 " If speed is a problem, specify less intensive checking with the line below
 " let g:syntastic_r_lint_styles = 'list(spacing.indentation.notabs, spacing.indentation.evenindent)'
 let g:syntastic_tex_checkers = ['lacheck', 'chktex']
 
 " Only check syntax on demand (passive)
-" Python is passive to avoid conflicts with vim-pythonmode
 let g:syntastic_mode_map = { 'mode': 'active',
             \ 'active_filetypes': [],
-            \ 'passive_filetypes': ['tex', 'python', 'r', 'rmd', 'rmarkdown', 'rst', 'cpp'] }
-" let g:syntastic_mode_map = { 'mode': 'active',
-"             \ 'active_filetypes': ['r', 'rmd', 'rmarkdown', 'rst'],
-"             \ 'passive_filetypes': ['tex', 'python'] }
+            \ 'passive_filetypes': ['tex'] }
 
 " Recommended settings
 set statusline+=%#warningmsg#
