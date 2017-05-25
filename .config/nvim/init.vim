@@ -143,7 +143,7 @@ Plug 'Rykka/easydigraph.vim' " convert digraphs to graphs and insert them
 Plug 'Shougo/junkfile.vim' " scratch files with types
 Plug 'christoomey/vim-sort-motion' " sort text by motion
 Plug 'dahu/vim-fanfingtastic'            " search mutliple lines
-Plug 'delimitMate.vim' " Autocompletion of (, [, {, ', ...
+Plug 'vim-scripts/delimitMate.vim' " Autocompletion of (, [, {, ', ...
 Plug 'jimsei/winresizer' " easy window resizing
 Plug 'chrisbra/vim-diff-enhanced' " better diffs
 Plug 'joedicastro/DirDiff.vim', { 'on': 'DirDiff'} " diff directories
