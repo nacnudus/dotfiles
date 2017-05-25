@@ -184,6 +184,9 @@ alias notify="killall dunst;notify-send foo;notify-send bar"
 # Vim keybindings
 bindkey -v
 
+# Prevent oh-my-zsh sharing of history between sessions
+setopt no_share_history
+
 export MANPATH=$MANPATH:/usr/local/texlive/2016/texmf-dist/doc/man
 export INFOPATH=$INFOPATH:/usr/local/texlive/2016/texmf-dist/doc/info
 export GOPATH=$HOME/go/
