@@ -9,8 +9,18 @@ source ~/.zplug/init.zsh
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
 # Ordinary plugins
-zplug "plugins/git",   from:oh-my-zsh
+zplug "lib/history",   from:oh-my-zsh
+zplug "lib/completion",   from:oh-my-zsh
+zplug "lib/compfix",   from:oh-my-zsh
+zplug "lib/correction",   from:oh-my-zsh
+zplug "lib/directories",   from:oh-my-zsh
+zplug "lib/functions",   from:oh-my-zsh
+zplug "lib/keybindings",   from:oh-my-zsh
+zplug "lib/misc",   from:oh-my-zsh
+zplug "plugins/gitfast",   from:oh-my-zsh
 zplug "plugins/fasd",   from:oh-my-zsh
+zplug "plugins/pip",   from:oh-my-zsh
+zplug "plugins/vi-mode",   from:oh-my-zsh
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 zplug "molovo/tipz" # Gives you helpful hints when you execute a command for which you have an alias defined
 zplug "peterhurford/up.zsh" # Type up 5 to move up five directories
@@ -52,10 +62,6 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs background_jobs battery)
 # for i in ~/.*-pass; do
 #   [ -e $i/.load.zsh ] && . $i/.load.zsh
 # done
-
-# Aliases for moving around
-alias ..="cd .."
-alias ~="cd ~"
 
 # Alias for listing with human-readable file sizes, and dotfiles
 alias l="k -ha"
@@ -181,7 +187,7 @@ bindkey -v
 bindkey '^R' history-incremental-search-backward
 
 # Prevent oh-my-zsh sharing of history between sessions
-setopt no_share_history
+# setopt no_share_history
 
 export MANPATH=$MANPATH:/usr/local/texlive/2016/texmf-dist/doc/man
 export INFOPATH=$INFOPATH:/usr/local/texlive/2016/texmf-dist/doc/info
