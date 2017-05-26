@@ -187,6 +187,15 @@ bindkey -v
 # Prevent oh-my-zsh sharing of history between sessions
 setopt no_share_history
 
+# Allow e.g. ~ as an 'alias' of cd ~/ (prevents 'permission denied' error, which
+# is due to ~ otherwise being interpreted as an execute command)
+setopt auto_cd
+
+# With multios, date >foo >bar writes the date to two files, named 'foo' and
+# 'bar'. Note that a pipe is an implicit redirection; thus date >foo | cat
+# writes the date to the file 'foo', and also pipes it to cat.
+setopt multios
+
 export MANPATH=$MANPATH:/usr/local/texlive/2016/texmf-dist/doc/man
 export INFOPATH=$INFOPATH:/usr/local/texlive/2016/texmf-dist/doc/info
 export GOPATH=$HOME/go/
