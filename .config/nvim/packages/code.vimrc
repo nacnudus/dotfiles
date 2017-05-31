@@ -103,7 +103,7 @@ au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=markdown
 
 " Syntastic {{{
 
-nmap <silent><Leader>N :SyntasticCheck<CR>:Errors<CR>
+nmap <silent><Leader>S :SyntasticCheck<CR>:Errors<CR>
 
 " Symbols
 let g:syntastic_enable_signs = 1
@@ -125,7 +125,7 @@ let g:syntastic_r_checkers = ['lintr']
 let g:syntastic_tex_checkers = ['lacheck', 'chktex']
 
 " Only check syntax on demand (passive)
-let g:syntastic_mode_map = { 'mode': 'active',
+let g:syntastic_mode_map = { 'mode': 'passive',
             \ 'active_filetypes': [],
             \ 'passive_filetypes': ['tex'] }
 
@@ -254,8 +254,8 @@ let g:unite_source_menu_menus.code = {
 let g:unite_source_menu_menus.code.command_candidates = [
     \['▷ toggle auto-completion state (manual → disabled → auto)    ⌘ ,ea',
         \'call Toggledeoplete()'],
-    \['▷ syntastic toggle                           (syntastic)',
-        \'SyntasticToggleMode'],
+    \['▷ syntastic toggle                           (syntastic)     ⌘ ,S',
+        \'SyntasticToggleMode ,S'],
     \['▷ syntastic check & errors                   (syntastic)     ⌘ ,N',
         \'normal ,N'],
     \['▷ count lines of code',
