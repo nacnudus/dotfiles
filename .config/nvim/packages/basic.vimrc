@@ -138,7 +138,12 @@ endfunction
 nmap <silent><Leader>ew :call ToggleWrap()<CR>
 
 " Strip whitespace on save
-" autocmd BufWritePre * StripWhitespace
+autocmd BufEnter * EnableStripWhitespaceOnSave
+" But not on these filetypes
+let g:better_whitespace_filetypes_blacklist=
+      \ ['csv', 'diff', 'gitcommit', 'unite', 'qf', 'help']
+"Remove all trailing whitespace by pressing F9
+nnoremap <F9> :StripWhitespace<CR>
 
 " Colorscheme {{{
 
