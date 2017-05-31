@@ -98,7 +98,7 @@ au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=markdown
 " }}}
 
 " " SML {{{
-   autocmd FileType sml setlocal commentstring=(*\ %s\ *) 
+   autocmd FileType sml setlocal commentstring=(*\ %s\ *)
 " " }}}
 
 " Syntastic {{{
@@ -168,7 +168,7 @@ let g:deoplete#data_directory = $OH_MY_VIM.'/tmp/deoplete'
 " disable the auto select feature by default to speed up writing without
 " obstacles (is optimal for certain situations)
 let g:deoplete#enable_auto_select = 0
-                                        
+
 " toggle the auto select feature
 function! Toggledeoplete()
   if !g:deoplete#disable_auto_complete && g:deoplete#enable_auto_select

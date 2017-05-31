@@ -107,7 +107,7 @@ set softtabstop=2              " a soft-tab of four spaces
 "         n - numbered lists
 "         2 - keep second line indent
 "         1 - single letter words on next line
-"         r - (in mail) comment leader after 
+"         r - (in mail) comment leader after
 set textwidth=80
 set colorcolumn=81
 
