@@ -137,11 +137,21 @@ endfunction
 
 nmap <silent><Leader>ew :call ToggleWrap()<CR>
 
-" Strip whitespace on save
-autocmd BufEnter * EnableStripWhitespaceOnSave
-" But not on these filetypes
-let g:better_whitespace_filetypes_blacklist=
-      \ ['csv', 'diff', 'gitcommit', 'unite', 'qf', 'help']
+" Don't strip whitespaces for certain filetypes
+" the plugin better_whitespace_filetypes_blacklist variable
+" only affects the usage of the highlighting
+" https://github.com/ntpeters/vim-better-whitespace/issues/53
+fun! FiletypeFilteredStripWhitespace()
+  " if &ft =~ 'markdown|csv'
+  if index(map(['csv', 'diff', 'gitcommit', 'unite', 'qf', 'help'], '&ft =~ v:val'), 1) > -1
+    return
+  endif
+  StripWhitespace
+endfun
+
+" Strip all whitespaces on saving based on filetype
+autocmd BufWritePre * call FiletypeFilteredStripWhitespace()
+"
 "Remove all trailing whitespace by pressing F9
 nnoremap <F9> :StripWhitespace<CR>
 
