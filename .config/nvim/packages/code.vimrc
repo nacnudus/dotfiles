@@ -219,6 +219,8 @@ autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 let g:necoghc_enable_detailed_browse = 1
 
 " Python
+let g:python_host_prog = '/home/nacnudus/miniconda3/envs/neovim2/bin/python'
+let g:python3_host_prog = '/home/nacnudus/miniconda3/envs/neovim3/bin/python'
 " let g:deoplete#sources#omni#input_patterns.python='[^. \t]\.\w*'
 let g:deoplete#sources#jedi#python_path = '/home/nacnudus/miniconda3/bin/python'
 " let g:jedi#completions_enabled = 0
