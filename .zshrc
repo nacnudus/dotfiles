@@ -32,6 +32,7 @@ zplug "peterhurford/up.zsh" # Type up 5 to move up five directories
 zplug "supercrabtree/k" # k is the new l, with git context
 zplug "zlsun/solarized-man" # syntax-highlighted man-pages
 zplug "psprint/zsh-navigation-tools" # multiline history searcher
+zplug "johnhamelink/rvm-zsh", lazy:true
 
 # Set the priority when loading
 # e.g., zsh-syntax-highlighting must be loaded
@@ -226,9 +227,6 @@ export PATH=$PATH:/usr/local/texlive/2016/bin/x86_64-linux # TeXLive
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/home/nacnudus/miniconda3/bin # anaconda (don't override existing python)
 # export GITHUB_PAT=e079fe8515a664ec6b3598a55ebd8f125274a0b4
-
-# load rvm (ruby version manager)
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 PERL_MB_OPT="--install_base \"/home/nacnudus/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/nacnudus/perl5"; export PERL_MM_OPT;
