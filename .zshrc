@@ -78,6 +78,9 @@ alias updatereal="yaourt -Syua --noconfirm"
 # Alias to load R without .Rprofile for using rhub without colorout
 alias rhub="R --no-init-file"
 
+# Alias for nvim with one keystroke
+alias e="nvim"
+
 # Alias to use nvim instead of vim
 alias vim="nvim"
 
