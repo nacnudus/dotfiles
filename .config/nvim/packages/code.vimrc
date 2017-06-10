@@ -104,6 +104,7 @@ au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=markdown
 " Syntastic {{{
 
 nmap <silent><Leader>S :SyntasticCheck<CR>:Errors<CR>
+nmap <silent><Leader>R :SyntasticReset<CR>
 
 " Symbols
 let g:syntastic_enable_signs = 1
