@@ -90,7 +90,7 @@ alias vim="nvim"
 # Alias citrix for opening Citrix
 alias citrix="/opt/Citrix/ICAClient/wfica ~/Downloads/launch.jsp"
 
-# Alias windows for mounting C:\ of a Windows virtualbox 
+# Alias windows for mounting C:\ of a Windows virtualbox
 alias windowson="sudo mount -t cifs //192.168.56.101/c /home/nacnudus/windows -o user=nacnu,rw,gid=1000,uid=1000"
 alias windowsoff="sudo umount /home/nacnudus/windows"
 
@@ -138,7 +138,7 @@ alias ip="sudo dhcpcd wlp2s0"
 alias knitr="/home/nacnudus/dotfiles/knitr.kick"
 
 # Aliases for zathura pdf reader
-# Fork into background 
+# Fork into background
 alias pdf="zathura --fork"
 # Switch light/dark
 alias pdfdark="cp /home/nacnudus/.config/zathura/zathurarc-dark /home/nacnudus/.config/zathura/zathurarc"
