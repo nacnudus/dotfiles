@@ -3,6 +3,10 @@
 # Use nerd fonts (must specify before loading powerlevel9k)
 POWERLEVEL9K_MODE='nerdfont-complete'
 
+# Set default user, for whom the 'context' won't be displayed in the prompt
+# (e.g. nacnudus@nactop)
+DEFAULT_USER="nacnudus"
+
 source ~/.zplug/init.zsh
 
 # Manages itself
