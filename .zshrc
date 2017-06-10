@@ -178,7 +178,7 @@ alias gitlogin="git config --global credential.helper cache"
 alias notify="killall dunst;notify-send foo;notify-send bar"
 
 # nvm (nodejs version manager)
-# source /usr/share/nvm/init-nvm.sh
+source /usr/share/nvm/init-nvm.sh
 
 # Customize to your needs...
 
