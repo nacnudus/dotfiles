@@ -33,17 +33,27 @@ map @@x !xmllint --format --recover -
 
 " Don't use the nvim terminal emulator
 let R_in_buffer = 0
+let R_applescript = 0
+let R_tmux_split = 1
+let R_notmuxconf = 1 " Use my own tmux, which allows mouse scroll
+
 
 " Open RStudio and connect to that instance
 " let RStudio_cmd = '/usr/bin/rstudio-bin'
 
-
 " Use Alt+- to create <- as in Rstudio
 let R_assign_map = "<M-->"
-
 let rout_follow_colorscheme = 1 " Doesn't seem to work
 let R_commented_lines = 1 " Include commented lines when sending to console
 let R_clear_line = 1 " Delete existing stuff on command line before sending command to R
+let g:rplugin_pdfviewer = "zathura"
+let R_args_in_stline = 1 " Show function arguments in status line
+let R_rmd_environment = "new.env()" " compile .Rmd in a fresh environment
+
+" Highlight chunk headers as R code
+let rrst_syn_hl_chunk = 1
+let rmd_syn_hl_chunk = 1
+
 
 if $DISPLAY != ""
   let R_openpdf = 1
@@ -216,9 +226,6 @@ let g:deocomplcache_enable_force_overwrite_completefunc = 1
 let g:deoplete#sources#omni#input_patterns.r = '[[:alnum:].\\]\+'
 let g:deoplete#sources#omni#functions.r = 'rcomplete#CompleteR'
 set completeopt=menuone,preview
-" let R_show_args = 1 " show args in preview window (above code) on
-let R_args_in_stline = 1 " Show function arguments in status line
-let g:rplugin_pdfviewer = "zathura"
 
 " Haskell
 " Disable haskell-vim omnifunc
