@@ -132,7 +132,7 @@ Plug 'chrisbra/csv.vim'                  " csv filetype plugin
 Plug 'godlygeek/tabular' " dependency of plasticboy/vim-markdown
 Plug 'othree/html5.vim', {'for': ['html', 'xhttml', 'css']} " hmtl
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' } " depends on godlygeek/tabular
-" Plug 'waylan/vim-markdown-extra-preview', { 'for': 'markdown' } " preview markdown No python3 support
+Plug 'shime/vim-livedown', { 'for': 'markdown' } " preview markdown
 
 " Productivity
 Plug 'blueyed/vim-diminactive' " Dim inactive windows
