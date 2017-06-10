@@ -73,6 +73,13 @@ autocmd FileType rnoweb set tags+=~/.config/nvim/plugged/Nvim-R/Rtags,~/.config/
 
 " }}}
 
+" AutoFormat {{{ -------------------------------------------------------------
+
+noremap <F3> :Autoformat<CR>
+autocmd Filetype r,rmd noremap <F3> :Rformat<CR>
+
+" }}}
+
 " JSON {{{ -------------------------------------------------------------------
 
 " autocmd BufNewFile,BufRead *.json set ft=javascript
