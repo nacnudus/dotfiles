@@ -65,6 +65,9 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs background_jobs battery)
 #   [ -e $i/.load.zsh ] && . $i/.load.zsh
 # done
 
+# Alias for initialising gds ssh
+alias gdsssh="ssh-add ~/.ssh/gds_rsa"
+
 # Alias for listing with human-readable file sizes, and dotfiles
 alias l="k -ha"
 
