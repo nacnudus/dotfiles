@@ -75,9 +75,6 @@ alias l="k -ha"
 alias updatetest="yaourt -Syua"
 alias updatereal="yaourt -Syua --noconfirm"
 
-# Alias vim for vim-R-plugin
-# alias vim="vim --servername VIM"
-
 # Alias to load R without .Rprofile for using rhub without colorout
 alias rhub="R --no-init-file"
 
