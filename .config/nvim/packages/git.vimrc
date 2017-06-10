@@ -62,25 +62,41 @@ autocmd FileType git set nofoldenable
 nnoremap <Leader>gD :exe 'GHD! '.input("Username: ")<CR>
 nnoremap <Leader>gA :exe 'GHA! '.input("Username or repository: ")<CR>
 
-function! GHDashboard (...)
-  if &filetype == 'github-dashboard'
-    " first variable is the statusline builder
-    let builder = a:1
+let g:github_dashboard = {}
 
-    call builder.add_section('airline_a', 'GitHub ')
-    call builder.add_section('airline_b',
-                \ ' %{get(split(get(split(github_dashboard#statusline(), " "),
-                \ 1, ""), ":"), 0, "")} ')
-    call builder.add_section('airline_c',
-                \ ' %{get(split(get(split(github_dashboard#statusline(), " "),
-                \ 2, ""), "]"), 0, "")} ')
+" Dashboard window position
+" - Options: tab, top, bottom, above, below, left, right
+" - Default: tab
+let g:github_dashboard['position'] = 'top'
 
-    " tell the core to use the contents of the builder
-    return 1
-  endif
-endfunction
+" Disable Emoji output
+" - Default: only enable on terminal Vim on Mac
+let g:github_dashboard['emoji'] = 1
 
-autocmd FileType github-dashboard call airline#add_statusline_func('GHDashboard')
+" Customize emoji (see http://www.emoji-cheat-sheet.com/)
+let g:github_dashboard['emoji_map'] = {
+\   'user_dashboard': 'blush',
+\   'user_activity':  'smile',
+\   'repo_activity':  'laughing',
+\   'ForkEvent':      'fork_and_knife'
+\ }
+
+" Command to open link URLs
+" - Default: auto-detect
+let g:github_dashboard['open_command'] = 'open'
+
+" API timeout in seconds
+" - Default: 10, 20
+let g:github_dashboard['api_open_timeout'] = 10
+let g:github_dashboard['api_read_timeout'] = 20
+
+" Do not set statusline
+" - Then you can customize your own statusline with github_dashboard#status()
+let g:github_dashboard['statusline'] = 0
+
+" GitHub Enterprise
+let g:github_dashboard['api_endpoint'] = 'http://github.mycorp.com/api/v3'
+let g:github_dashboard['web_endpoint'] = 'http://github.mycorp.com'
 
 " }}}
 
