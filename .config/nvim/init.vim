@@ -73,7 +73,6 @@ Plug 'scrooloose/syntastic' " syntax checking
 Plug 'ludovicchabant/vim-gutentags' " automatic ctags
 
 " Git
-" Plug 'tpope/vim-fugitive' " Git
 Plug 'jreybert/vimagit' " Git, better than fugitive
 Plug 'airblade/vim-gitgutter' " symbol margin for fugitive
 Plug 'tpope/vim-fugitive' " dependency of gitv
@@ -162,10 +161,6 @@ Plug 'tpope/vim-eunuch' " help for UNIX e.g. :Remove :SudoWrite :Move :Rename et
 
 " Bling
 Plug 'altercation/vim-colors-solarized'            " solarized (F5 toggle background)
-" Plug 'flazz/vim-colorschemes'
-" Plug 'joedicastro/vim-molokai256'        " additional colourscheme
-Plug 'jonathanfilip/vim-lucius'            " high-contrast dark/light
-" Plug 'chriskempson/base16-vim'            " colorschems inc. solarized and others along similar lines
 Plug 'vim-airline/vim-airline' " good-looking status line
 Plug 'vim-airline/vim-airline-themes' " good-looking status line
 Plug 'edkolev/promptline.vim'  " Export airline colours to promptline config
