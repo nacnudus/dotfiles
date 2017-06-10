@@ -60,6 +60,8 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs background_jobs battery)
 
 # END OF PROMPT STUFF ##########################################################
 
+bindkey "" znt-history-widget
+
 # # Load the custom .*-pass I have
 # for i in ~/.*-pass; do
 #   [ -e $i/.load.zsh ] && . $i/.load.zsh
