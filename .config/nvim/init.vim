@@ -68,6 +68,7 @@ Plug 'vim-scripts/LanguageTool' " grammar checking
 " Syntax
 Plug 'elzr/vim-json', {'for': 'json'}
 Plug 'scrooloose/syntastic' " syntax checking
+Plug 'Chiel92/vim-autoformat' " autoformat various languages
 
 " Tags
 Plug 'ludovicchabant/vim-gutentags' " automatic ctags
@@ -167,7 +168,6 @@ Plug 'edkolev/promptline.vim'  " Export airline colours to promptline config
 Plug 'ryanoasis/vim-devicons' " Funky file-type icons etc.
 Plug 'ntpeters/vim-better-whitespace' " highlight and remove trailing whitespace
 Plug 'severin-lemaignan/vim-minimap' " mini overview of the buffer in the sidebar
-Plug 'Chiel92/vim-autoformat' " autoformat various languages
 
 " Text-objects
 Plug 'kana/vim-textobj-entire' " ae, ie
