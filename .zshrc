@@ -65,8 +65,11 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs background_jobs battery)
 #   [ -e $i/.load.zsh ] && . $i/.load.zsh
 # done
 
+# Alias for initialising normal ssh
+alias sshid="ssh-add ~/.ssh/id_rsa"
+
 # Alias for initialising gds ssh
-alias gdsssh="ssh-add ~/.ssh/gds_rsa"
+alias sshgds="ssh-add ~/.ssh/gds_rsa"
 
 # Alias for listing with human-readable file sizes, and dotfiles
 alias l="k -ha"
@@ -212,32 +215,6 @@ export PATH=$PATH:/home/nacnudus/miniconda3/bin # anaconda (don't override exist
 
 # load rvm (ruby version manager)
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-# eval "$(ssh-agent -s)"
-# ssh-add ~/.ssh/gds_rsa
-# Load ssh stuff (mainly for github)
-################################################################################
-SSH_ENV="$HOME/.ssh/environment"
-function start_agent {
-    echo "Initialising new SSH agent..."
-    /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
-    echo succeeded
-    chmod 600 "${SSH_ENV}"
-    . "${SSH_ENV}" > /dev/null
-    /usr/bin/ssh-add;
-    /usr/bin/ssh-add ~/.ssh/gds_rsa;
-}
-# Source SSH settings, if applicable
-if [ -f "${SSH_ENV}" ]; then
-    . "${SSH_ENV}" > /dev/null
-    #ps ${SSH_AGENT_PID} doesn't work under cywgin
-    ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
-        start_agent;
-    }
-else
-    start_agent;
-fi
-################################################################################
 
 PERL_MB_OPT="--install_base \"/home/nacnudus/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/nacnudus/perl5"; export PERL_MM_OPT;
