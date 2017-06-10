@@ -159,6 +159,7 @@ Plug 'tpope/vim-surround' " surround vim objects with a pair of identical chars
 Plug 'tpope/vim-unimpaired'              " insert/move lines up/down
 Plug 'tpope/vim-dispatch'              " asynchronous external command execution
 Plug 'tpope/vim-eunuch' " help for UNIX e.g. :Remove :SudoWrite :Move :Rename etc.
+Plug 'junegunn/vim-peekaboo' " show registers in a sidebar
 
 " Bling
 Plug 'altercation/vim-colors-solarized'            " solarized (F5 toggle background)
