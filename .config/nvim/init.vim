@@ -225,6 +225,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#buffer_min_count = 1
 
+nnoremap <F6> :AirlineRefresh<CR>
+
 " }}}
 
 " Font {{{
