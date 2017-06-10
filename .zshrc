@@ -189,6 +189,14 @@ alias gitlogin="git config --global credential.helper cache"
 # Alias for restarting dunst notifications
 alias notify="killall dunst;notify-send foo;notify-send bar"
 
+# Aliases for Conda environments
+alias mkenv3="conda create python=3 ipython jupyter pip -n "
+alias mkenv2="conda create python=2 ipython jupyter pip -n "
+alias rmenv="conda remove --all --name "
+alias lsenv="conda info -e"
+alias wo="source activate"
+alias de="source deactivate"
+
 # nvm (nodejs version manager)
 source /usr/share/nvm/init-nvm.sh
 
