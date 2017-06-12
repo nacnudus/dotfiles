@@ -73,10 +73,10 @@ bindkey "" znt-history-widget
 # done
 
 # Alias for initialising normal ssh
-alias sshid="ssh-add ~/.ssh/id_rsa"
+alias sshid="eval \"$(ssh-agent)\";ssh-add ~/.ssh/id_rsa"
 
 # Alias for initialising gds ssh
-alias sshgds="ssh-add ~/.ssh/gds_rsa"
+alias sshgds="eval \"$(ssh-agent)\";ssh-add ~/.ssh/gds_rsa"
 
 # Alias for listing with human-readable file sizes, and dotfiles
 alias l="k -ha"
