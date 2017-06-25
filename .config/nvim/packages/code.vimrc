@@ -76,6 +76,7 @@ else
    inoremap <Nul> <C-x><C-o>
 endif
 
+nnoremap <silent> <LocalLeader>sw :call SendCmdToR("setwidth()")<CR>
 nnoremap <silent> <LocalLeader>gl :call RAction("dplyr::glimpse")<CR>
 
 " tags
