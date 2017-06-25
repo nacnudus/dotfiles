@@ -230,3 +230,6 @@ export PATH=$PATH:/home/nacnudus/miniconda3/bin # anaconda (don't override exist
 
 PERL_MB_OPT="--install_base \"/home/nacnudus/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/nacnudus/perl5"; export PERL_MM_OPT;
+
+export WINEPREFIX=$HOME/.PlayOnLinux/wineprefix/Office2010
+export WINEARCH=win32
