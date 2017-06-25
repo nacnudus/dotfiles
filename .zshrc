@@ -225,7 +225,7 @@ export PATH=$PATH:$HOME/.gem/ruby/2.4.0/bin # Add ruby gem path for vim-github-d
 export PATH=$PATH:$HOME/.cabal/bin # Add cabal to PATH for pandoc
 export PATH=$PATH:/usr/local/texlive/2016/bin/x86_64-linux # TeXLive
 export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:/home/nacnudus/miniconda3/bin # anaconda (don't override existing python)
+export PATH=$PATH:$HOME/miniconda3/bin # anaconda (don't override existing python)
 # export GITHUB_PAT=e079fe8515a664ec6b3598a55ebd8f125274a0b4
 
 PERL_MB_OPT="--install_base \"/home/nacnudus/perl5\""; export PERL_MB_OPT;
