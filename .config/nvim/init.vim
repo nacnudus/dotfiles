@@ -98,15 +98,15 @@ Plug 'lervag/vimtex', { 'for': ['tex',  'bib', 'bst'] }
 Plug 'Yggdroot/indentLine', {'for': 'python'} " Show indent lines
 Plug 'alfredodeza/coveragepy.vim', {'for': 'python'} " Show reports from coverage.py
 Plug 'ivanov/vim-ipython', {'for': 'python'} " Show reports from coverage.py
-Plug 'jmcantrell/vim-virtualenv' " virtual environments
+Plug 'jmcantrell/vim-virtualenv', {'for': 'python'} " virtual environments
 Plug 'klen/python-mode', {'for': 'python'} " A Python plugin
-Plug 'zchee/deoplete-jedi' " python autocompletion
+Plug 'zchee/deoplete-jedi', {'for': 'python'} " python autocompletion
 
 " Julia
-Plug 'JuliaLang/julia-vim'
+" Plug 'JuliaLang/julia-vim', {'for': 'julia'} # Causes error LaTeXtoUnicode
 
 " SML New Jersey (for coursera proglang course)
-Plug 'chilicuil/vim-sml-coursera'
+Plug 'chilicuil/vim-sml-coursera', {'for': 'sml'}
 
 " Lilypond
 Plug 'gisraptor/vim-lilypond-integrator', { 'for': 'lilypond' } " lilypond syntax
@@ -123,15 +123,16 @@ Plug 'gisraptor/vim-lilypond-integrator', { 'for': 'lilypond' } " lilypond synta
                                          "
 
 " Haskell
-Plug 'eagletmt/ghcmod-vim'
-Plug 'eagletmt/neco-ghc'
+Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
+Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
 
 " Other filetypes
-Plug 'chrisbra/csv.vim'                  " csv filetype plugin
+Plug 'chrisbra/csv.vim', { 'for': 'csv' } " csv filetype plugin
 Plug 'godlygeek/tabular' " dependency of plasticboy/vim-markdown
 Plug 'othree/html5.vim', {'for': ['html', 'xhttml', 'css']} " hmtl
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' } " depends on godlygeek/tabular
 Plug 'shime/vim-livedown', { 'for': 'markdown' } " preview markdown
+Plug 'cespare/vim-toml', { 'for': 'toml' }
 
 " Productivity
 Plug 'blueyed/vim-diminactive' " Dim inactive windows
