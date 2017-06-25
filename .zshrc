@@ -67,10 +67,10 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs background_jobs battery)
 
 bindkey "" znt-history-widget
 
-# # Load the custom .*-pass I have
-# for i in ~/.*-pass; do
-#   [ -e $i/.load.zsh ] && . $i/.load.zsh
-# done
+# Load the custom .*-pass I have
+for i in ~/.*-pass; do
+  [ -e $i/.load.zsh ] && . $i/.load.zsh
+done
 
 # Alias for initialising normal ssh
 alias sshid="eval \"$(ssh-agent)\";ssh-add ~/.ssh/id_rsa"
