@@ -87,7 +87,6 @@ Plug 'metakirby5/codi.vim' " REPL feedback in a sidebar
 " R
 Plug 'jalvesaq/Nvim-R', { 'for': ['r', 'rhelp', 'rmd', 'rrst',
       \ 'rbrowser', 'rdoc', 'rout', 'rmarkdown', 'rnoweb'] }
-let g:rplugin_pdfviewer = "zathura"
 " insert mode keybindings in rmd are removed in ftplugin/rmd.vim because they're
 " a pain when typing comment.
 
