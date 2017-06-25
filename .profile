@@ -17,6 +17,6 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-   PATH="$HOME/bin:$PATH:/home/nacnudus/.local/bin"
+if [ -d "$HOME/.local/bin" ] ; then
+   export PATH="$PATH:$HOME/.local/bin"
 fi
