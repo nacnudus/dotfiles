@@ -66,6 +66,8 @@ let R_restart = 1 " restart R on \rf (only works in external terminal
 let R_wait = 100 " Don't wait long for nvimcom to load
 let R_nvim_wd = 1 " use the Nvim working directory, not that of the file
 let R_pdfviewer = "zathura"
+let r_syntax_folding = 1
+set nofoldenable
 
 " Use Ctrl+Space to do omnicompletion:
 if has("gui_running")
