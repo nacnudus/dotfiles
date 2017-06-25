@@ -79,6 +79,7 @@ endif
 nnoremap <silent> <LocalLeader>sw :call SendCmdToR("setwidth()")<CR>
 nnoremap <silent> <LocalLeader>fs :call SendCmdToR("options(width = 211L)")<CR>
 nnoremap <silent> <LocalLeader>gl :call RAction("dplyr::glimpse")<CR>
+nnoremap <silent> <LocalLeader>rP :call RAction("print_tibble_inf")<CR>
 
 " tags
 autocmd FileType r set tags+=~/.config/nvim/plugged/Nvim-R/Rtags,~/.config/nvim/plugged/Nvim-R/RsrcTags
