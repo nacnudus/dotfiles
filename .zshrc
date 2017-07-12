@@ -170,8 +170,8 @@ alias termlight="/home/nacnudus/gnome-terminal-colors-solarized/set_light.sh"
 # alias termlight="base16_solarized-light"
 
 # Aliases for prompt (Promptline) dark/light
-alias promptdark="ln -fs $HOME/dotfiles/.shell_prompt_dark.sh $HOME/.shell_prompt.sh; source $HOME/.shell_prompt.sh"
-alias promptlight="ln -fs $HOME/dotfiles/.shell_prompt_light.sh $HOME/.shell_prompt.sh; source $HOME/.shell_prompt.sh"
+alias promptlight="sed -i -- \"s/^POWERLEVEL9K_COLOR_SCHEME='dark'$/POWERLEVEL9K_COLOR_SCHEME='light'/\" $HOME/dotfiles/.zshrc"
+alias promptdark="sed -i -- \"s/^POWERLEVEL9K_COLOR_SCHEME='light'$/POWERLEVEL9K_COLOR_SCHEME='dark'/\" $HOME/dotfiles/.zshrc"
 
 # Aliases for dark/light combined
 alias dark="pdfdark; i3dark; termdark; promptdark"
