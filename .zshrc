@@ -125,8 +125,10 @@ alias sdoff="sudo umount /media/sdcard"
 
 # Aliases for backlight brightness
 alias x100="xbacklight -set 100"
+alias x75="xbacklight -set 75"
 alias x50="xbacklight -set 50"
 alias x25="xbacklight -set 25"
+alias x5="xbacklight -set 5"
 alias x1="xbacklight -set 1"
 alias x0="xbacklight -set 0"
 

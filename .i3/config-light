@@ -224,8 +224,8 @@ bindsym XF86AudioRaiseVolume exec /usr/bin/pulseaudio-ctl up
 bindsym XF86AudioMute exec /usr/bin/pulseaudio-ctl mute
 
 # Brightness
-bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 1 -steps 1 -time 10
-bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 1 -steps 1 -time 10
+bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 5 -steps 1 -time 10
+bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 5 -steps 1 -time 10
 # bindsym XF86KbdBrightnessUp exec /usr/bin/xbacklight -inc 10
 # bindsym XF86KbdBrightnessDown exec /usr/bin/xbacklight -dec 5
 
