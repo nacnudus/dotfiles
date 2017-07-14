@@ -157,6 +157,10 @@ alias pdf="zathura --fork"
 alias pdfdark="cp /home/nacnudus/.config/zathura/zathurarc-dark /home/nacnudus/.config/zathura/zathurarc"
 alias pdflight="cp /home/nacnudus/.config/zathura/zathurarc-light /home/nacnudus/.config/zathura/zathurarc"
 
+# Aliases for vim/nvim
+alias vimdark="sed -i \"s/^set background=light/set background=dark/\" /home/nacnudus/nvim/packages/basic.vimrc"
+alias vimlight="sed -i \"s/^set background=dark/set background=light/\" /home/nacnudus/nvim/packages/basic.vimrc"
+
 # Aliases for i3
 alias i3dark="cp /home/nacnudus/.i3/config-dark /home/nacnudus/.i3/config; i3-msg reload"
 alias i3light="cp /home/nacnudus/.i3/config-light /home/nacnudus/.i3/config; i3-msg reload"
@@ -174,8 +178,8 @@ alias promptlight="sed -i -- \"s/^POWERLEVEL9K_COLOR_SCHEME='dark'$/POWERLEVEL9K
 alias promptdark="sed -i -- \"s/^POWERLEVEL9K_COLOR_SCHEME='light'$/POWERLEVEL9K_COLOR_SCHEME='dark'/\" $HOME/dotfiles/.zshrc"
 
 # Aliases for dark/light combined
-alias dark="pdfdark; i3dark; termdark; promptdark"
-alias light="pdflight; i3light; termlight; promptlight"
+alias dark="pdfdark; vimdark; i3dark; termdark; promptdark"
+alias light="pdflight; vimlight; i3light; termlight; promptlight"
 
 # Alias for magit
 alias magit="nvim -c MagitOnly"
