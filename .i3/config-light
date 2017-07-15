@@ -28,7 +28,7 @@ bindsym $mod+Shift+Q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+m exec dmenu_run
-bindsym $mod+m exec dmenu_run -fn 'Inconsolata-12' -nf "#93a1a1" -nb "#002b36" -sf "#002b36" -sb "#93a1a1" 
+bindsym $mod+m exec dmenu_run -fn 'Inconsolata-12' -nf "#93a1a1" -nb "#002b36" -sf "#002b36" -sb "#93a1a1"
 
 # change focus
 bindsym $mod+h focus left
@@ -161,14 +161,14 @@ client.background       #fdf6e3
 # client.background       #base3
 
 # class                 border  backgr. text    indicator
-client.focused          #268bd2 #eee8d5 #586e75 #6c71c4 
+client.focused          #268bd2 #eee8d5 #586e75 #6c71c4
 client.focused_inactive #859900 #eee8d5 #586e75 #6c71c4
 client.unfocused        #fdf6e3 #eee8d5 #586e75 #6c71c4
 client.urgent           #cb4b16 #cb4b16 #002b36 #6c71c4
 client.placeholder      #fdf6e3 #fdf6e3 #657b83 #6c71c4
 
 # # class                 border  backgr. text    indicator
-# client.focused          #blue   #base2  #base01 #violet 
+# client.focused          #blue   #base2  #base01 #violet
 # client.focused_inactive #green  #base2  #base01 #violet
 # client.unfocused        #base3  #base2  #base01 #violet
 # client.urgent           #orange #orange #base03 #violet
@@ -236,19 +236,14 @@ bindsym $mod+x move workspace to output eDP1
 # Toggle Mirror/External/Internal
 # bindsym $mod+Shift+t exec ~/.i3/toggle.sh
 
-# Network manager
-exec_always --no-startup-id nm-applet;
+# # Network manager
+# exec --no-startup-id nm-applet;
 
 # hibernate and suspend
-bindsym $mod+p exec sudo pm-hibernate | i3lock -c 002b36
-bindsym $mod+o exec sudo pm-suspend | i3lock -c 002b36
-bindsym $mod+i exec sudo shutdown -h now
-bindsym $mod+q exec i3lock -c 002b36
-# Also use `sudo visudo` to add the lines
-# ALL ALL=NOPASSWD:/usr/sbin/pm-hibernate
-# ALL ALL=NOPASSWD:/usr/sbin/pm-suspend
-# ALL ALL=NOPASSWD:/usr/bin/shutdown -h now
-
+# bindsym $mod+p exec systemctl hibernate
+# bindsym $mod+o exec systemctl suspend
+# bindsym $mod+i exec shutdown -h now
+bindsym $mod+q exec xset s activate
 
 # scrot & gimp - root
 bindsym Print exec scrot -e 'mv $f /tmp/ && gimp /tmp/$f'
@@ -275,3 +270,6 @@ bindsym Mod1+Print exec scrot -s -e 'mv $f /tmp/ && gimp /tmp/$f'
 # Make the laptop screen primary
 # exec_always xrandr --output HDMI1 --above eDP1
 # exec_always xrandr --output eDP1 --primary
+
+# Resume with lock screen
+exec --no-startup-id xss-lock -- i3lock -c 002b36
