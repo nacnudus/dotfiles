@@ -28,7 +28,7 @@ bindsym $mod+Shift+Q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+m exec dmenu_run
-bindsym $mod+m exec dmenu_run -fn 'Inconsolata-12' -nf "#93a1a1" -nb "#002b36" -sf "#002b36" -sb "#93a1a1"
+bindsym $mod+m exec dmenu_run -fn 'Inconsolata-12' -nf "#586e75" -nb "#fdf6e3" -sf "#fdf6e3" -sb "#586e75"
 
 # change focus
 bindsym $mod+h focus left
