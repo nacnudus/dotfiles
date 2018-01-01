@@ -76,9 +76,7 @@ Plug 'ludovicchabant/vim-gutentags' " automatic ctags
 
 " Git
 Plug 'jreybert/vimagit' " Git, better than fugitive
-Plug 'airblade/vim-gitgutter' " symbol margin for fugitive
-Plug 'tpope/vim-fugitive' " dependency of gitv
-Plug 'gregsexton/gitv', {'on': 'Gitv'} " Git viewer
+Plug 'airblade/vim-gitgutter' " symbol margin for fugitive and vimagit
 Plug 'joedicastro/vim-github-dashboard' " Browse GitHub events in Vim
 
 " REPL interaction
