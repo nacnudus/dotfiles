@@ -1,0 +1,10 @@
+-n
+--indent=spaces=2
+--unpad-paren
+--pad-header
+--pad-oper
+--min-conditional-indent=0
+--align-pointer=type
+--align-reference=type
+--max-code-length=79
+--style=google
