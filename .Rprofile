@@ -1,5 +1,6 @@
 if(interactive()){
   suppressMessages(library(colorout))
+  suppressMessages(library(usethis))
   suppressMessages(library(devtools))
 }
 
