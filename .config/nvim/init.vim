@@ -370,28 +370,5 @@ if filereadable(s:after_vimrc)
     exec ':so ' . s:after_vimrc
 endif
 
-nnoremap <leader>r :set operatorfunc=<SID>GoogleScholarBibTex<cr>g@
-vnoremap <leader>r :<c-u>call <SID>GoogleScholarBibTex(visualmode())<cr>
-
-function! s:GoogleScholarBibTex(type)
-  let saved_unnamed_register = @@
-
-  if a:type ==# 'v'
-      normal! `<v`>y
-  elseif a:type ==# 'char'
-      normal! `[v`]y
-  else
-      return
-  endif
-
-  " execute "!python ~\/copyediting\/materials\/gscholar\/gscholar\/gscholar.py -a " . shellescape(@@)
-  execute "Dispatch ~/copyediting/materials/gscholar/gscholar/gscholar.py " . shellescape(@@) | copen
-  " execute "Dispatch ~/copyediting/materials/gscholar/gscholar/gscholar.py -a " . shellescape(@@) | copen
-  " execute "Dispatch python ./test.py"
-  " copen
-
-  let @@ = saved_unnamed_register
-endfunction
-
 " }}}
 let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
