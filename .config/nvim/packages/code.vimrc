@@ -24,7 +24,13 @@ let g:tagbar_type_r = {
 "
 " Pretty XML {{{
 map @@x !xmllint --format --recover -
+nmap @@x %!xmllint --format --recover -
 " au FileType xml exe ":silent %!xmllint --format --recover - 2>/dev/null"
+
+augroup XML
+    autocmd!
+    autocmd FileType xml setlocal foldmethod=indent foldlevelstart=999 foldminlines=0
+augroup END
 " }}}
 
 " FILETYPES  {{{ ==============================================================
