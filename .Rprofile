@@ -28,7 +28,6 @@ utils::assignInNamespace(
   options(
     repos = c(CRAN = "https://cran.rstudio.com/"),
     browserNLdisabled = TRUE,
-    deparse.max.lines = 2,
     devtools.name = "Duncan Garmonsway",
     devtools.desc.author = 'person("Duncan", "Garmonsway", email = "duncan.garmonsway@gmail.com", role = c("aut", "cre"))',
     blogdown.rmd = TRUE
