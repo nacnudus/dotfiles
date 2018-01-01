@@ -33,3 +33,5 @@ utils::assignInNamespace(
     blogdown.rmd = TRUE
     )
 }
+
+options(Ncpus = 4)
