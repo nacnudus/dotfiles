@@ -101,7 +101,7 @@ Plug 'zchee/deoplete-jedi', {'for': 'python'} " python autocompletion
 " Plug 'JuliaLang/julia-vim', {'for': 'julia'} # Causes error LaTeXtoUnicode
 
 " SML New Jersey (for coursera proglang course)
-Plug 'chilicuil/vim-sml-coursera', {'for': 'sml'}
+Plug 'jez/vim-better-sml', {'for': 'sml'}
 
 " Lilypond
 Plug 'gisraptor/vim-lilypond-integrator', { 'for': 'lilypond' } " lilypond syntax
