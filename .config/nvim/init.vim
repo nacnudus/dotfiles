@@ -69,6 +69,7 @@ Plug 'vim-scripts/LanguageTool', {'for': ['text', 'rmd', 'tex']} " grammar check
 Plug 'elzr/vim-json', {'for': 'json'}
 Plug 'scrooloose/syntastic' " syntax checking
 Plug 'Chiel92/vim-autoformat' " autoformat various languages
+Plug 'lifepillar/pgsql.vim' " PostgreSQL for .pgsql suffixes
 
 " Tags
 Plug 'ludovicchabant/vim-gutentags' " automatic ctags
