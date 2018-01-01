@@ -172,18 +172,25 @@ let g:solarized_menu      =   0
 syntax enable                  " enable the syntax highlight
 set background=dark            " set a dark background
 set t_Co=256                   " 256 colors for the terminal
-" if filereadable(expand("~/.vimrc_background"))
-"   let base16colorspace=256
-"   source ~/.vimrc_background
-" endif
-" call togglebg#map("<F5>")
-if has('gui_running')
-    colorscheme solarized
-    call togglebg#map("<F5>")
-else
-    colorscheme solarized
-    call togglebg#map("<F5>")
-endif
+
+colorscheme solarized
+call togglebg#map("<F5>")
+
+" " gruvbox (higher-contrast dark/light similar to solarized
+" let g:gruvbox_contrast_dark     = 'hard'
+" let g:gruvbox_contrast_light    = 'hard'
+" let g:gruvbox_italic            = 1
+" " let g:gruvbox_italicize_strings = 1
+" " let g:gruvbox_improved_strings  = 1
+" " let g:gruvbox_improved_warnings = 1
+
+" " gruvbox make cursor colour more obvious during search
+" nnoremap <silent> [oh :call gruvbox#hls_show()<CR>
+" nnoremap <silent> ]oh :call gruvbox#hls_hide()<CR>
+" nnoremap <silent> coh :call gruvbox#hls_toggle()<CR>
+" nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
+" nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
+" nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
 
 " Lucius (high-contrast dark/light)
 let g:lucius_style =    'dark'
