@@ -9,6 +9,12 @@ setwidth <- function(howWide=Sys.getenv("COLUMNS")) {
   options(width=as.integer(howWide))
 }
 
+# Function to list un-covered lines of code in a package
+coverage <- function() {
+  x <- covr::package_coverage()
+  covr::zero_coverage(x)
+}
+
 utils::assignInNamespace(
   "q",
   function(save = "no", status = 0, runLast = TRUE)
