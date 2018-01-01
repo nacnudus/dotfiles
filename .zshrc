@@ -214,6 +214,13 @@ alias notify="killall dunst;notify-send foo;notify-send bar"
 alias venv="source /usr/bin/virtualenvwrapper.sh"
 alias mkvenv="mkvirtualenv "
 
+# Aliases for rocker
+alias r3.1="docker run --user docker -u 0 -p 8000:8000 -ti rocker/r-ver:3.1 bash"
+alias r3.2="docker run --user docker -u 0 -p 8001:8000 -ti rocker/r-ver:3.2 bash"
+alias r3.3="docker run --user docker -u 0 -p 8002:8000 -ti rocker/tidyverse:3.3 bash"
+alias r3.4="docker run --user docker -u 0 -p 8003:8000 -ti rocker/tidyverse:3.4 bash"
+alias rlatest="docker run --user docker -u 0 -p 8004:8000 -ti rocker/tidyverse bash"
+alias rdevel="docker run --user docker -u 0 -p 8005:8000 -ti rocker/tidyverse:devel bash"
 
 # nvm (nodejs version manager)
 source /usr/share/nvm/init-nvm.sh
