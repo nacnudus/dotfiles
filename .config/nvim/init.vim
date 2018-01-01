@@ -63,7 +63,7 @@ Plug 'Shougo/neosnippet.vim' " snippets infrastructure
 Plug 'Shougo/neosnippet-snippets' " snippets themselves
 
 " Spelling
-Plug 'vim-scripts/LanguageTool' " grammar checking
+Plug 'vim-scripts/LanguageTool', {'for': ['text', 'rmd', 'tex']} " grammar checking
 
 " Syntax
 Plug 'elzr/vim-json', {'for': 'json'}
