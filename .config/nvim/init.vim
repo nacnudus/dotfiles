@@ -79,10 +79,6 @@ Plug 'jreybert/vimagit' " Git, better than fugitive
 Plug 'airblade/vim-gitgutter' " symbol margin for fugitive and vimagit
 Plug 'joedicastro/vim-github-dashboard' " Browse GitHub events in Vim
 
-" REPL interaction
-Plug 'jpalardy/vim-slime'   " Send code to a scren/tmux session
-Plug 'metakirby5/codi.vim' " REPL feedback in a sidebar
-
 " R
 Plug 'jalvesaq/Nvim-R', { 'for': ['r', 'rhelp', 'rmd', 'rrst',
       \ 'rbrowser', 'rdoc', 'rout', 'rmarkdown', 'rnoweb'] }
