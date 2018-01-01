@@ -56,6 +56,9 @@ zplug load
 
 # START OF PROMPT STUFF ########################################################
 
+# solarized light/dark
+POWERLEVEL9K_COLOR_SCHEME='dark'
+
 # Begin on a new line
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=false
