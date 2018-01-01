@@ -43,7 +43,6 @@ let R_applescript = 0
 let R_tmux_split = 1
 let R_notmuxconf = 1 " Use my own tmux, which allows mouse scroll
 
-
 " Open RStudio and connect to that instance
 " let RStudio_cmd = '/usr/bin/rstudio-bin'
 
@@ -59,7 +58,6 @@ let R_rmd_environment = "new.env()" " compile .Rmd in a fresh environment
 " Highlight chunk headers as R code
 let rrst_syn_hl_chunk = 1
 let rmd_syn_hl_chunk = 1
-
 
 if $DISPLAY != ""
   let R_openpdf = 1
