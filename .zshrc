@@ -193,6 +193,7 @@ alias openguides="pdf /home/nacnudus/copyediting/materials/SAGE-editing-Septembe
 # Alias for wifi and tethering
 alias tether="sudo dhcpcd enp0s20u2"
 alias wifi="sudo wifi-menu"
+alias wifirestart="sudo systemctl restart netctl-auto@wlp2s0.service"
 
 # Alias to log out of git (unset credential helper)
 alias gitlogout="git config --global --unset credential.helper"
