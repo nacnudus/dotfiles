@@ -158,7 +158,6 @@ Plug 'AndrewRadev/splitjoin.vim' " transition between multiline and single-line 
 Plug 'altercation/vim-colors-solarized'            " solarized (F5 toggle background)
 Plug 'vim-airline/vim-airline' " good-looking status line
 Plug 'vim-airline/vim-airline-themes' " good-looking status line
-Plug 'edkolev/promptline.vim'  " Export airline colours to promptline config
 Plug 'ryanoasis/vim-devicons' " Funky file-type icons etc.
 Plug 'ntpeters/vim-better-whitespace' " highlight and remove trailing whitespace
 Plug 'severin-lemaignan/vim-minimap' " mini overview of the buffer in the sidebar
