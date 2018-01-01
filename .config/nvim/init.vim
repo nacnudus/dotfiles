@@ -150,7 +150,6 @@ Plug 'tpope/vim-repeat' " extend repetitions by the 'dot' key
 Plug 'tpope/vim-speeddating' " Smart and fast date changer
 Plug 'tpope/vim-surround' " surround vim objects with a pair of identical chars
 Plug 'tpope/vim-unimpaired'              " insert/move lines up/down
-Plug 'tpope/vim-dispatch'              " asynchronous external command execution
 Plug 'tpope/vim-eunuch' " help for UNIX e.g. :Remove :SudoWrite :Move :Rename etc.
 Plug 'junegunn/vim-peekaboo' " show registers in a sidebar
 Plug 'AndrewRadev/splitjoin.vim' " transition between multiline and single-line code
