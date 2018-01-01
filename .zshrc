@@ -245,6 +245,7 @@ setopt multios
 export MANPATH=$MANPATH:/usr/local/texlive/2016/texmf-dist/doc/man
 export INFOPATH=$INFOPATH:/usr/local/texlive/2016/texmf-dist/doc/info
 export GOPATH=$HOME/go/
+export JENA_HOME=$HOME/jena/apache-jena-3.4.0
 export PATH=$PATH:$HOME/.gem/ruby/2.4.0/bin # Add ruby gem path for vim-github-dashboard
 export PATH=$PATH:$HOME/.cabal/bin # Add cabal to PATH for pandoc
 export PATH=$PATH:/usr/local/texlive/2016/bin/x86_64-linux # TeXLive
