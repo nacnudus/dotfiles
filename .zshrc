@@ -16,7 +16,8 @@ zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 zplug "lib/history",   from:oh-my-zsh
 zplug "lib/completion",   from:oh-my-zsh
 zplug "lib/compfix",   from:oh-my-zsh
-zplug "lib/conda",   from:oh-my-zsh
+# zplug "lib/conda",   from:oh-my-zsh # There's no such thing, is there?
+zplug "plugins/virtualenv",   from:oh-my-zsh
 zplug "lib/correction",   from:oh-my-zsh
 zplug "lib/directories",   from:oh-my-zsh
 zplug "lib/functions",   from:oh-my-zsh
@@ -60,7 +61,7 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=false
 
 # Prompt elements
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir anaconda rbenv)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir anaconda virtualenv rbenv)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs background_jobs battery)
 
 # END OF PROMPT STUFF ##########################################################
@@ -200,13 +201,18 @@ alias gitlogin="git config --global credential.helper cache"
 # Alias for restarting dunst notifications
 alias notify="killall dunst;notify-send foo;notify-send bar"
 
-# Aliases for Conda environments
-alias mkenv3="conda create python=3 ipython jupyter pip -n "
-alias mkenv2="conda create python=2 ipython jupyter pip -n "
-alias rmenv="conda remove --all --name "
-alias lsenv="conda info -e"
-alias wo="source activate"
-alias de="source deactivate"
+# # Aliases for Conda environments
+# alias mkenv3="conda create python=3 ipython jupyter pip -n "
+# alias mkenv2="conda create python=2 ipython jupyter pip -n "
+# alias rmenv="conda remove --all --name "
+# alias lsenv="conda info -e "
+# alias wo="source activate "
+# alias de="source deactivate "
+
+# Aliases for virtualenv environments
+alias venv="source /usr/bin/virtualenvwrapper.sh"
+alias mkvenv="mkvirtualenv "
+
 
 # nvm (nodejs version manager)
 source /usr/share/nvm/init-nvm.sh
