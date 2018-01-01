@@ -98,6 +98,8 @@ autocmd VimLeave * if exists("g:SendCmdToR") && string(g:SendCmdToR) != "functio
 " AutoFormat {{{ -------------------------------------------------------------
 
 noremap <F3> :Autoformat<CR>
+let g:formatters_c = ['astyle_c', 'clangformat']
+let g:formatters_cpp = ['astyle_cpp', 'clangformat']
 autocmd Filetype r,rmd noremap <F3> :Rformat<CR>
 
 " }}}
