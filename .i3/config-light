@@ -147,6 +147,7 @@ bindsym $mod+Right exec xrandr --output eDP1 --rotate right && xinput set-prop 1
 
 # Second monitor (HDMI1)
 bindsym $mod+Shift+Z move workspace to output HDMI1
+bindsym $mod+Shift+A move workspace to output HDMI2
 bindsym $mod+Shift+X move workspace to output eDP1
 
 # Reverse scrolling (doesn't work in terminal)
@@ -228,10 +229,6 @@ bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 5 -steps 1 -time 10
 bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 5 -steps 1 -time 10
 # bindsym XF86KbdBrightnessUp exec /usr/bin/xbacklight -inc 10
 # bindsym XF86KbdBrightnessDown exec /usr/bin/xbacklight -dec 5
-
-# Swap workspaces between monitors (for some reason u and d down't work)
-bindsym $mod+z move workspace to output HDMI1
-bindsym $mod+x move workspace to output eDP1
 
 # Toggle Mirror/External/Internal
 # bindsym $mod+Shift+t exec ~/.i3/toggle.sh
