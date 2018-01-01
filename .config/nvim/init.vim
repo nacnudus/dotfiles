@@ -135,7 +135,6 @@ Plug 'majutsushi/tagbar', {'for': ['cpp']} " tags side-bar index
 Plug 'mhinz/vim-startify' " session manager and start screen
 Plug 'PeterRincker/vim-argumentative' " move by and switch function arguments
 Plug 'Rykka/easydigraph.vim' " convert digraphs to graphs and insert them
-Plug 'christoomey/vim-sort-motion' " sort text by motion
 Plug 'dahu/vim-fanfingtastic'            " search mutliple lines
 Plug 'vim-scripts/delimitMate.vim' " Autocompletion of (, [, {, ', ...
 Plug 'jimsei/winresizer' " easy window resizing
