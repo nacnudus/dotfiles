@@ -67,7 +67,8 @@ Plug 'vim-scripts/LanguageTool', {'for': ['text', 'rmd', 'tex']} " grammar check
 
 " Syntax
 Plug 'elzr/vim-json', {'for': 'json'}
-Plug 'scrooloose/syntastic' " syntax checking
+" Plug 'scrooloose/syntastic' " syntax checking and linters
+Plug 'w0rp/ale' " asynchronous lint engine (syntax checking and linters)
 Plug 'Chiel92/vim-autoformat' " autoformat various languages
 Plug 'lifepillar/pgsql.vim' " PostgreSQL for .pgsql suffixes
 
