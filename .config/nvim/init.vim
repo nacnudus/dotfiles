@@ -128,6 +128,7 @@ Plug 'godlygeek/tabular' " dependency of plasticboy/vim-markdown
 Plug 'othree/html5.vim', {'for': ['html', 'xhttml', 'css']} " hmtl
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' } " depends on godlygeek/tabular
 Plug 'shime/vim-livedown', { 'for': 'markdown' } " preview markdown
+" An alternative to livedown is https://github.com/euclio/vim-markdown-composer
 Plug 'cespare/vim-toml', { 'for': 'toml' }
 
 " Productivity
