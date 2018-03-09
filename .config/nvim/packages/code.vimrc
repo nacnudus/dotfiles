@@ -148,6 +148,16 @@ let g:syntastic_style_warning_symbol  = '⚡'
 " ✍ ✏︎ ✒︎ ✄ ✂︎ ☕︎ ✑ ☹ ⚡︎ ☞
 
 " Checkers and styles
+
+" ALE (asynchronous lint engine)
+" let g:ale_lint_on_text_changed = 'never'
+let g:airline#extensions#ale#enabled = 1
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+let g:ale_linters = {'text': ['proselint'], 'markdown': ['proselint']}
+
+
+" Syntastic
 let g:syntastic_python_checkers = ['pylint', 'pep8', 'mccabe', 'pep257']
 let g:syntastic_enable_r_lintr_checker = 1
 let g:syntastic_r_checkers = 1
