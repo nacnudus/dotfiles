@@ -88,10 +88,6 @@ map <Leader>ef :Unite output:WordFrequency<CR>
 
 " END VIM SETUP }}}
 
-" Assume double spaces after full stops
-" http://stevelosh.com/blog/2012/10/why-i-two-space/
-set cpo+=J
-
 " delimitmate {{{
 
 let delimitMate_expand_space = 1
