@@ -15,6 +15,11 @@ coverage <- function() {
   covr::zero_coverage(x)
 }
 
+# Alias to install() without attempting to connect to the internet
+install_offline <- function() {
+  devtools::install(dependencies = FALSE, upgrade_dependencies = FALSE)
+}
+
 utils::assignInNamespace(
   "q",
   function(save = "no", status = 0, runLast = TRUE)
