@@ -289,6 +289,7 @@ export PATH=$PATH:$HOME/miniconda3/bin # anaconda (don't override existing pytho
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/bin
 # export GITHUB_PAT=e079fe8515a664ec6b3598a55ebd8f125274a0b4
+export PATH=$PATH:$JENA_HOME/bin
 
 PERL_MB_OPT="--install_base \"/home/nacnudus/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/nacnudus/perl5"; export PERL_MM_OPT;
