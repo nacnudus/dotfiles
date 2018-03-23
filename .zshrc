@@ -254,6 +254,9 @@ alias r3.4="docker run --user docker -u 0 -p 8003:8000 -ti rocker/tidyverse:3.4 
 alias rlatest="docker run --user docker -u 0 -p 8004:8000 -ti rocker/tidyverse bash"
 alias rdevel="docker run --user docker -u 0 -p 8005:8000 -ti rocker/tidyverse:devel bash"
 
+# Alias for grepping -nonascii characters
+alias nonascii="grep --color='auto' -P -n '[^\x00-\x7F]'"
+
 # nvm (nodejs version manager)
 source /usr/share/nvm/init-nvm.sh
 
