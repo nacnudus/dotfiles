@@ -57,7 +57,7 @@ Plug 'tsukkee/unite-tag'
 Plug 'Shougo/neomru.vim'  " most-recently used files
 
 " Autocompletion
-Plug 'Shougo/deoplete.nvim' " autocompletion
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " autocompletion
 Plug 'Shougo/neopairs.vim' " also auto-complete bracket pairs
 Plug 'Shougo/neosnippet.vim' " snippets infrastructure
 Plug 'Shougo/neosnippet-snippets' " snippets themselves
