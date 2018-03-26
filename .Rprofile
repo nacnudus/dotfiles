@@ -15,6 +15,11 @@ coverage <- function() {
   covr::zero_coverage(x)
 }
 
+# Function to use all the visible columns in the terminal
+print_tibble_inf <- function(.data) {
+  tibble:::print.tbl_df(.data, n = Inf)
+}
+
 # Alias to install() without attempting to connect to the internet
 install_offline <- function() {
   devtools::install(dependencies = FALSE, upgrade_dependencies = FALSE)
