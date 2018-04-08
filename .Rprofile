@@ -25,6 +25,11 @@ install_offline <- function() {
   devtools::install(dependencies = FALSE, upgrade_dependencies = FALSE)
 }
 
+# Alias to install_offline()
+i <- function() {
+  install_offline()
+}
+
 utils::assignInNamespace(
   "q",
   function(save = "no", status = 0, runLast = TRUE)
