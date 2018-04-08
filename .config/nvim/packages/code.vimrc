@@ -40,7 +40,6 @@ augroup END
 " Don't use the nvim terminal emulator
 let R_in_buffer = 0
 let R_applescript = 0
-let R_tmux_split = 1
 let R_notmuxconf = 1 " Use my own tmux, which allows mouse scroll
 
 " Open RStudio and connect to that instance
