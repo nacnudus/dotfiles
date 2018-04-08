@@ -61,6 +61,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " autocompletion
 Plug 'Shougo/neopairs.vim' " also auto-complete bracket pairs
 Plug 'Shougo/neosnippet.vim' " snippets infrastructure
 Plug 'Shougo/neosnippet-snippets' " snippets themselves
+Plug 'tweekmonster/deoplete-clang2' " C/C++ completion
 
 " Spelling
 Plug 'vim-scripts/LanguageTool', {'for': ['text', 'rmd', 'tex']} " grammar checking
