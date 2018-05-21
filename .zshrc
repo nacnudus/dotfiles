@@ -98,6 +98,9 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs background_jobs battery)
 
 # END OF PROMPT STUFF ##########################################################
 
+# Something to make Nvim-R work
+setopt extendedglob
+
 bindkey "" znt-history-widget
 
 # Load the custom .*-pass I have
