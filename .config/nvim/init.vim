@@ -77,7 +77,9 @@ Plug 'lifepillar/pgsql.vim' " PostgreSQL for .pgsql suffixes
 Plug 'ludovicchabant/vim-gutentags' " automatic ctags
 
 " Git
-Plug 'jreybert/vimagit' " Git, better than fugitive
+Plug 'tpope/vim-fugitive' " Git integration
+Plug 'tpope/vim-rhubarb' " Github integration via fugitive
+Plug 'jreybert/vimagit' " better than fugitive for committing
 Plug 'airblade/vim-gitgutter' " symbol margin for fugitive and vimagit
 Plug 'joedicastro/vim-github-dashboard' " Browse GitHub events in Vim
 
