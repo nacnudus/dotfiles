@@ -27,9 +27,7 @@ install_offline <- function() {
 }
 
 # Alias to install_offline()
-i <- function() {
-  install_offline()
-}
+i <- install_offline
 
 utils::assignInNamespace(
   "q",
