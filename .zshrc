@@ -169,12 +169,14 @@ alias x1="xbacklight -set 1"
 alias x0="xbacklight -set 0"
 
 # Aliases for HDMI1
-alias hdmion="xrandr --output HDMI1 --auto --above eDP1"
-alias hdmioff="xrandr --output HDMI1 --off"
+alias monitor="xrandr"
+alias hdmioff="xrandr --output HDMI1 --off; xrandr --output HDMI2 --off"
 alias hdmi1on="xrandr --output HDMI1 --auto --above eDP1"
 alias hdmi1off="xrandr --output HDMI1 --off"
 alias hdmi2on="xrandr --output HDMI2 --auto --above eDP1"
 alias hdmi2off="xrandr --output HDMI2 --off"
+alias dp1on="xrandr --output DP1 --auto --above eDP1"
+alias dp1off="xrandr --output DP1 --off"
 
 # Alias for replacing spaces with dashes in filenames
 alias dashify="zmv -n '(**/)(* *)' '$1${2//( #-## #| ##)/-}'"
