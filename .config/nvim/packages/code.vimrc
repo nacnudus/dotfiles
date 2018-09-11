@@ -37,6 +37,9 @@ augroup END
 
 " R {{{
 
+" Use custom .tmux.conf
+let R_notmuxconf = 1
+
 " Don't use the nvim terminal emulator
 let R_in_buffer = 0
 let R_applescript = 0
