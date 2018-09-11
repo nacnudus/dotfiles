@@ -114,6 +114,9 @@ done
 alias p1="ping 1.1.1.1"
 alias p8="ping 8.8.8.8"
 alias pg="ping www.google.com"
+
+# Alias for hub instead of git
+eval "$(hub alias -s)"
 # Alias for initialising normal ssh
 alias sshid="eval \"$(ssh-agent)\";ssh-add ~/.ssh/id_rsa"
 
