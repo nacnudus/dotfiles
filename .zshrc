@@ -237,13 +237,14 @@ alias gitlogin="git config --global credential.helper cache"
 # Alias for restarting dunst notifications
 alias notify="killall dunst;notify-send foo;notify-send bar"
 
-# # Aliases for Conda environments
-# alias mkenv3="conda create python=3 ipython jupyter pip -n "
-# alias mkenv2="conda create python=2 ipython jupyter pip -n "
-# alias rmenv="conda remove --all --name "
-# alias lsenv="conda info -e "
-# alias wo="source activate "
-# alias de="source deactivate "
+# Aliases for Conda environments
+alias mkenv3="conda create python=3 ipython jupyter pip -n "
+alias mkenv2="conda create python=2 ipython jupyter pip -n "
+alias rmenv="conda remove --all --name "
+alias lsenv="conda info -e "
+alias wo="source activate "
+alias de="source deactivate "
+alias jvim="jupyter contrib nbextension install --symlink --sys-prefix"
 
 # Aliases for virtualenv environments
 alias venv="source /usr/bin/virtualenvwrapper.sh"
@@ -292,6 +293,7 @@ export PATH=$PATH:$HOME/miniconda3/bin # anaconda (don't override existing pytho
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$JENA_HOME/bin
+export PATH=$PATH:python/conda-zsh-completion
 
 PERL_MB_OPT="--install_base \"/home/nacnudus/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/nacnudus/perl5"; export PERL_MM_OPT;
