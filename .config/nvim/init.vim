@@ -207,6 +207,13 @@ endif
 
 " PLUGINS CONFIGURATION {{{
 
+" Neovim python environment {{{
+
+let g:python_host_prog = '/home/nacnudus/miniconda3/envs/neovim2/bin/python'
+let g:python3_host_prog = '/home/nacnudus/miniconda3/envs/neovim3/bin/python'
+
+" }}}
+
 " Airline {{{
 
 set noshowmode " Don't show the default mode indicator
