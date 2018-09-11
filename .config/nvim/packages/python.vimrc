@@ -1,8 +1,8 @@
 
 " Virtualenv {{{
 
-let g:virtualenv_auto_activate = 1
-let g:virtualenv_stl_format = '(%n)'
+" let g:virtualenv_auto_activate = 1
+" let g:virtualenv_stl_format = '(%n)'
 
 " }}}
 
@@ -11,29 +11,32 @@ let g:virtualenv_stl_format = '(%n)'
 " nmap <silent><Leader>n :PymodeLint<CR>
 " nmap <silent><Leader>N :PymodeLintAuto<CR>
 
+let g:pymode_python = 'python3'
+
 let g:pymode_breakpoint_bind = '<Leader>B'
 
 let g:pymode_lint = 1
 let g:pymode_lint_on_write = 0
 let g:pymode_lint_checkers = ['pylint', 'pep8', 'mccabe', 'pep257']
 let g:pymode_lint_ignore = ''
-let g:pymode_virtualenv = 1
-let g:pymode_rope = 1
 
+let g:pymode_virtualenv = 1
+
+let g:pymode_rope = 0
 let g:pymode_rope_completion = 0
 let g:pymode_rope_complete_on_dot = 1
 
 " Ignore missing docstring error
-" let g:pymode_lint_ignore = "C0111,D100,D101,D102,D103" 
+" let g:pymode_lint_ignore = "C0111,D100,D101,D102,D103"
 
 " }}}
 
 " indentLine {{{
 
-map <silent> <Leader>L :IndentLinesToggle<CR>
-let g:indentLine_enabled = 0
-let g:indentLine_char = '┊'
-let g:indentLine_color_term = 239
+" map <silent> <Leader>L :IndentLinesToggle<CR>
+" let g:indentLine_enabled = 0
+" let g:indentLine_char = '┊'
+" let g:indentLine_color_term = 239
 
 " }}}
 
