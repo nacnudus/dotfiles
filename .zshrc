@@ -16,7 +16,6 @@ zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 zplug "lib/history",   from:oh-my-zsh
 zplug "lib/completion",   from:oh-my-zsh
 zplug "lib/compfix",   from:oh-my-zsh
-# zplug "lib/conda",   from:oh-my-zsh # There's no such thing, is there?
 zplug "plugins/virtualenv",   from:oh-my-zsh
 zplug "lib/correction",   from:oh-my-zsh
 zplug "lib/directories",   from:oh-my-zsh
@@ -25,7 +24,7 @@ zplug "lib/keybindings",   from:oh-my-zsh
 zplug "lib/misc",   from:oh-my-zsh
 zplug "plugins/gitfast",   from:oh-my-zsh
 zplug "plugins/fasd",   from:oh-my-zsh
-zplug "plugins/pip",   from:oh-my-zsh
+# zplug "plugins/pip",   from:oh-my-zsh
 zplug "plugins/vi-mode",   from:oh-my-zsh
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 zplug "molovo/tipz" # Gives you helpful hints when you execute a command for which you have an alias defined
@@ -97,6 +96,9 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir anaconda virtualenv rbenv)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs background_jobs battery)
 
 # END OF PROMPT STUFF ##########################################################
+
+# conda completion https://github.com/esc/conda-zsh-completion/blob/master/_conda
+zstyle ':completion::complete:*' use-cache 1
 
 # Something to make Nvim-R work
 setopt extendedglob
