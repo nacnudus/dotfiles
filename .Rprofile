@@ -29,6 +29,8 @@ install_offline <- function() {
 # Alias to install_offline()
 i <- install_offline
 
+# Alias to load_all()
+l <- load_all
 utils::assignInNamespace(
   "q",
   function(save = "no", status = 0, runLast = TRUE)
