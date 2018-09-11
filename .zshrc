@@ -110,6 +110,10 @@ for i in ~/.*-pass; do
   [ -e $i/.load.zsh ] && . $i/.load.zsh
 done
 
+# Aliases for ping
+alias p1="ping 1.1.1.1"
+alias p8="ping 8.8.8.8"
+alias pg="ping www.google.com"
 # Alias for initialising normal ssh
 alias sshid="eval \"$(ssh-agent)\";ssh-add ~/.ssh/id_rsa"
 
