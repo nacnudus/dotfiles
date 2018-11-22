@@ -201,6 +201,19 @@ augroup END
 
 " }}}
 
+" Nvim-completion-manager {{{
+
+" Supress the annoying completion messages:
+" don't give |ins-completion-menu| messages.  For example,
+" '-- XXX completion (YYY)', 'match 1 of 2', 'The only match',
+set shortmess+=c
+
+" When the <Enter> key is pressed while the popup menu is visible, it only hides
+" the menu. Use this mapping to hide the menu and also start a new line.
+inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
+
+" }}}
+
 " Deoplete {{{
 
 let g:deoplete#enable_at_startup = 1
