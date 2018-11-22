@@ -1,10 +1,11 @@
 if(interactive()){
-  suppressMessages(suppressWarnings(require(conflicted)))
+  # suppressMessages(suppressWarnings(require(conflicted)))
   suppressMessages(library(colorout))
   suppressMessages(library(usethis))
   suppressMessages(library(devtools))
 }
 
+options(menu.graphics = FALSE)
 # Function to use all the visible columns in the terminal
 setwidth <- function(howWide=Sys.getenv("COLUMNS")) {
   options(width=as.integer(howWide))
