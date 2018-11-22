@@ -311,3 +311,6 @@ PERL_MM_OPT="INSTALL_BASE=/home/nacnudus/perl5"; export PERL_MM_OPT;
 
 export WINEPREFIX=$HOME/.PlayOnLinux/wineprefix/Office2010
 export WINEARCH=win32
+
+# Setup direnv for directory specific python environment variables
+eval "$(direnv hook zsh)"
