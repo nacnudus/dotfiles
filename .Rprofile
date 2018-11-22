@@ -28,7 +28,7 @@ print_tibble_inf <- function(.data) {
 
 # Alias to install() without attempting to connect to the internet
 install_offline <- function() {
-  devtools::install(dependencies = FALSE, upgrade_dependencies = FALSE)
+  devtools::install(dependencies = FALSE, upgrade = "never")
 }
 
 # Alias to install_offline()
