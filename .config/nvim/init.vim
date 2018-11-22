@@ -86,6 +86,8 @@ Plug 'joedicastro/vim-github-dashboard' " Browse GitHub events in Vim
 " R
 Plug 'jalvesaq/Nvim-R', { 'for': ['r', 'rhelp', 'rmd', 'rrst',
       \ 'rbrowser', 'rdoc', 'rout', 'rmarkdown', 'rnoweb'] }
+Plug 'roxma/nvim-completion-manager' " ncm-R dependency
+Plug 'gaalcaras/ncm-R'               " better completions
 " insert mode keybindings in rmd are removed in ftplugin/rmd.vim because they're
 " a pain when typing comment.
 
