@@ -18,7 +18,7 @@ let g:pymode_breakpoint_bind = '<Leader>B'
 let g:pymode_lint = 1
 let g:pymode_lint_on_write = 0
 let g:pymode_lint_checkers = ['pylint', 'pep8', 'mccabe', 'pep257']
-let g:pymode_lint_ignore = ''
+let g:pymode_lint_ignore = []
 
 let g:pymode_virtualenv = 1
 
