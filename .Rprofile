@@ -36,6 +36,10 @@ i <- install_offline
 
 # Alias to load_all()
 l <- load_all
+
+# Alias for the last result to be calculated
+makeActiveBinding(".", function() .Last.value, env = .GlobalEnv)
+
 utils::assignInNamespace(
   "q",
   function(save = "no", status = 0, runLast = TRUE)
