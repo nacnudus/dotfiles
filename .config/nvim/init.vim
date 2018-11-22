@@ -96,12 +96,12 @@ Plug 'gaalcaras/ncm-R'               " better completions
 Plug 'lervag/vimtex', { 'for': ['tex',  'bib', 'bst'] }
 
 " Python
-Plug 'Yggdroot/indentLine', {'for': 'python'} " Show indent lines
-Plug 'alfredodeza/coveragepy.vim', {'for': 'python'} " Show reports from coverage.py
-Plug 'ivanov/vim-ipython', {'for': 'python'} " Show reports from coverage.py
-Plug 'jmcantrell/vim-virtualenv', {'for': 'python'} " virtual environments
-Plug 'klen/python-mode', {'for': 'python'} " A Python plugin
-Plug 'zchee/deoplete-jedi', {'for': 'python'} " python autocompletion
+" Plug 'Yggdroot/indentLine', {'for': 'python'} " Show indent lines
+" Plug 'alfredodeza/coveragepy.vim', {'for': 'python'} " Show reports from coverage.py
+" Plug 'ivanov/vim-ipython', {'for': 'python'} " Show reports from coverage.py
+" Plug 'jmcantrell/vim-virtualenv', {'for': 'python'} " virtual environments
+Plug 'python-mode/python-mode', { 'branch': 'develop' }
+" Plug 'zchee/deoplete-jedi', {'for': 'python'} " python autocompletion
 
 " Julia
 " Plug 'JuliaLang/julia-vim', {'for': 'julia'} # Causes error LaTeXtoUnicode
