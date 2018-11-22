@@ -6,6 +6,10 @@ if(interactive()){
 }
 
 options(menu.graphics = FALSE)
+
+# Secure download of packages via https
+options(download.file.method = "libcurl")
+
 # Function to use all the visible columns in the terminal
 setwidth <- function(howWide=Sys.getenv("COLUMNS")) {
   options(width=as.integer(howWide))
