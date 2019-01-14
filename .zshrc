@@ -303,7 +303,7 @@ export PATH=$PATH:$HOME/miniconda3/bin # anaconda (don't override existing pytho
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$JENA_HOME/bin
-export PATH=$PATH:python/conda-zsh-completion
+export PATH=$PATH:/home/nacnudus/python/conda-zsh-completion
 
 PERL_MB_OPT="--install_base \"/home/nacnudus/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/nacnudus/perl5"; export PERL_MM_OPT;
