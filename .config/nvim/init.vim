@@ -242,7 +242,6 @@ nnoremap <F6> :AirlineRefresh<CR>
 
 " Font {{{
 
-set guifont=InconsolataForPowerline\ Nerd\ Font\ Medium\ 14
 " Italics
 set t_ZH=[3m
 set t_ZR=[23m
