@@ -209,24 +209,23 @@ alias vimdark="sed -i \"s/^set background=light/set background=dark/\" /home/nac
 alias vimlight="sed -i \"s/^set background=dark/set background=light/\" /home/nacnudus/nvim/packages/basic.vimrc"
 
 # Aliases for i3
+alias i3gruvbox="cp /home/nacnudus/.i3/config-gruvbox-dark /home/nacnudus/.i3/config; i3-msg reload"
 alias i3dark="cp /home/nacnudus/.i3/config-dark /home/nacnudus/.i3/config; i3-msg reload"
 alias i3light="cp /home/nacnudus/.i3/config-light /home/nacnudus/.i3/config; i3-msg reload"
 # alias i3dark='cat .i3/config-base16-default-dark .i3/base > .i3/config && i3-msg reload'
 # alias i3light='cat .i3/config-base16-default-light .i3/base > .i3/config && i3-msg reload'
 
 # Aliases for gnome terminal dark/light
-alias termdark="/home/nacnudus/gnome-terminal-colors-solarized/set_dark.sh"
-alias termlight="/home/nacnudus/gnome-terminal-colors-solarized/set_light.sh"
-# alias termdark="base16_solarized-dark"
-# alias termlight="base16_solarized-light"
+alias termdark="/home/nacnudus/gnome-terminal-colors-solarized/set_gruvbox_dark.sh"
+alias termlight="/home/nacnudus/gnome-terminal-colors-solarized/set_gruvbox_light.sh"
 
 # Aliases for prompt (Promptline) dark/light
 alias promptlight="sed -i -- \"s/^POWERLEVEL9K_COLOR_SCHEME='dark'$/POWERLEVEL9K_COLOR_SCHEME='light'/\" $HOME/dotfiles/.zshrc"
 alias promptdark="sed -i -- \"s/^POWERLEVEL9K_COLOR_SCHEME='light'$/POWERLEVEL9K_COLOR_SCHEME='dark'/\" $HOME/dotfiles/.zshrc"
 
 # Aliases for dark/light combined
-alias dark="pdfdark; vimdark; i3dark; termdark; promptdark"
-alias light="pdflight; vimlight; i3light; termlight; promptlight"
+alias dark="pdfdark; vimdark; i3gruvbox; termdark; promptdark"
+alias light="pdflight; vimlight; i3gruvbox; termlight; promptlight"
 
 # Alias for magit
 alias magit="nvim -c MagitOnly"

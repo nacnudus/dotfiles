@@ -162,7 +162,12 @@ Plug 'junegunn/vim-peekaboo' " show registers in a sidebar
 Plug 'AndrewRadev/splitjoin.vim' " transition between multiline and single-line code
 
 " Bling
-Plug 'altercation/vim-colors-solarized'            " solarized (F5 toggle background)
+Plug 'rakr/vim-togglebg' " toggle background with <F5>
+Plug 'iCyMind/NeoSolarized' " solarized (F5 toggle background)
+Plug 'morhetz/gruvbox' " higher-contrast than solarized (F5 toggle background)
+Plug 'jonathanfilip/vim-lucius' " higher-contrast than solarized (F5 toggle background)
+Plug 'chriskempson/base16-vim' " many colourschemes
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'vim-airline/vim-airline' " good-looking status line
 Plug 'vim-airline/vim-airline-themes' " good-looking status line
 Plug 'ryanoasis/vim-devicons' " Funky file-type icons etc.
@@ -221,6 +226,7 @@ let g:python3_host_prog = '/home/nacnudus/miniconda3/envs/neovim3/bin/python'
 set noshowmode " Don't show the default mode indicator
 
 " let g:airline_theme='solarized'
+let g:airline_theme='gruvbox'
 let g:airline#extensions#branc#enable=1
 let g:airline_powerline_fonts=1
 let g:airline#extensions#whitespace#enabled = 1

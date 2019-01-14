@@ -1,19 +1,19 @@
 #! /bin/bash
- 
+
 SLEEP_TIME=5   # Default time between checks.
 SAFE_PERCENT=30  # Still safe at this level.
 DANGER_PERCENT=15  # Warn when battery at this level.
 CRITICAL_PERCENT=5  # Hibernate when battery at this level.
- 
+
 NAGBAR_PID=0
 export DISPLAY=:0.0
- 
+
 function launchNagBar
 {
     i3-nagbar -m 'Battery low!' -b 'Hibernate!' 'pm-hibernate' >/dev/null 2>&1 &
     NAGBAR_PID=$!
 }
- 
+
 function killNagBar
 {
     if [[ $NAGBAR_PID -ne 0 ]]; then
@@ -24,15 +24,15 @@ function killNagBar
         NAGBAR_PID=0
     fi
 }
- 
- 
+
+
 while [ true ]; do
- 
+
     killNagBar
- 
+
     if [[ -n $(acpi -b | grep -i discharging) ]]; then
         rem_bat=$(acpi -b | grep -Eo "[0-9]+%" | grep -Eo "[0-9]+")
- 
+
         if [[ $rem_bat -gt $SAFE_PERCENT ]]; then
             SLEEP_TIME=10
         else
@@ -43,13 +43,13 @@ while [ true ]; do
             fi
             if [[ $rem_bat -le $CRITICAL_PERCENT ]]; then
                 SLEEP_TIME=1
-                sudo pm-hibernate | i3lock -c 002b36
+                sudo pm-hibernate | i3lock -c 282828
             fi
         fi
     else
         SLEEP_TIME=10
     fi
- 
+
     sleep ${SLEEP_TIME}m
- 
+
 done

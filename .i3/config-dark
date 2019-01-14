@@ -13,7 +13,8 @@ set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-font xft:Inconsolata Medium, FontAwesome 12
+# font xft:Inconsolata Medium, FontAwesome 12
+font xft:Hack 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -181,7 +182,7 @@ client.placeholder      #002b36 #002b36 #839496 #6c71c4
 bar {
   status_command i3status
   modifier $mod
-  font xft:Inconsolata Medium 12
+  font xft:Hack 12
   # autohide
   mode hide
   hidden_state hide
@@ -269,4 +270,4 @@ bindsym Mod1+Print exec scrot -s -e 'mv $f /tmp/ && gimp /tmp/$f'
 # exec_always xrandr --output eDP1 --primary
 
 # Resume with lock screen
-exec --no-startup-id xss-lock -- i3lock -c 002b36
+exec --no-startup-id xss-lock -- i3lock -c 282828

@@ -13,7 +13,9 @@ set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+# font xft:Inconsolata Medium 12
 # font xft:Inconsolata Medium, FontAwesome 12
+# font xft:Inconsolata LGC Nerd Font Complete 12
 font xft:Hack 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -29,7 +31,7 @@ bindsym $mod+Shift+Q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+m exec dmenu_run
-bindsym $mod+m exec dmenu_run -fn 'Inconsolata-12' -nf "#586e75" -nb "#fdf6e3" -sf "#fdf6e3" -sb "#586e75"
+bindsym $mod+m exec dmenu_run -fn 'Hack-12' -nb '#282828' -nf '#ebdbb2' -sb '#458588' -sf '#282828'
 
 # change focus
 bindsym $mod+h focus left
@@ -154,60 +156,85 @@ bindsym $mod+Shift+X move workspace to output eDP1
 # Reverse scrolling (doesn't work in terminal)
 # exec_always xinput set-button-map 13 1 2 3 5 4 7 6 8 9
 
+
+
+
+
+
+
+
+# ~/.i3/config
+# i3 config template
+# Base16 Gruvbox by Gordon Chiam (https://github.com/gchiam)
+# template by Matt Parnell, @parnmatt
+
+set $base00 #282828
+set $base01 #504945
+set $base02 #7c6f54
+set $base03 #ebdbb2
+set $base04 #bdae93
+set $base05 #d5c4a1
+set $base06 #ebdbb2
+set $base07 #fbf1c7
+set $base08 #cc241d
+set $base09 #d65d0e
+set $base0A #d79921
+set $base0B #98971a
+set $base0C #689d6a
+set $base0D #458588
+set $base0E #b16286
+set $base0F #a89984
+
+
+
+
+
+
+
+
+
+
+
+
 # Window colours
 # Desktop
 # exec --no-startup-id xsetroot -solid "#002b36"
 
 # Background (default)
-client.background       #fdf6e3
-# client.background       #base3
+client.background       #002b36
+# client.background       #base03
 
 # class                 border  backgr. text    indicator
-client.focused          #268bd2 #eee8d5 #586e75 #6c71c4
-client.focused_inactive #859900 #eee8d5 #586e75 #6c71c4
-client.unfocused        #fdf6e3 #eee8d5 #586e75 #6c71c4
-client.urgent           #cb4b16 #cb4b16 #002b36 #6c71c4
-client.placeholder      #fdf6e3 #fdf6e3 #657b83 #6c71c4
-
-# # class                 border  backgr. text    indicator
-# client.focused          #blue   #base2  #base01 #violet
-# client.focused_inactive #green  #base2  #base01 #violet
-# client.unfocused        #base3  #base2  #base01 #violet
-# client.urgent           #orange #orange #base03 #violet
-# client.placeholder      #base3  #base3  #base00 #violet
-
+client.focused          $base0D $base0D $base00 $base01
+client.focused_inactive $base02 $base02 $base03 $base01
+client.unfocused        $base01 $base01 $base03 $base01
+client.urgent           $base02 $base08 $base07 $base08
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
   status_command i3status
   modifier $mod
+
   # font xft:Inconsolata Medium 12
+  # font xft:Inconsolata Medium, FontAwesome 12
+  # font xft:Inconsolata LGC Nerd Font Complete 12
   font xft:Hack 12
+
   # autohide
   mode hide
   hidden_state hide
 
   colors {
-    background        #fdf6e3
-    separator         #6c71c4
-    statusline        #657b83
+        background $base00
+        separator $base03
+        statusline $base05
 
-    # background        #base3
-    # separator         #violet
-    # statusline        #base00
-
-    # class            border  backgr. text
-    active_workspace   #fdf6e3 #fdf6e3 #657b83
-    inactive_workspace #fdf6e3 #fdf6e3 #657b83
-    focused_workspace  #268bd2 #fdf6e3 #839496
-    urgent_workspace   #cb4b16 #cb4b16 #fdf6e3
-
-    # # class            border  backgr. text
-    # active_workspace   #base3  #base3  #base00
-    # inactive_workspace #base3  #base3  #base00
-    # focused_workspace  #blue   #base3  #base00
-    # urgent_workspace   #orange #orange #base3
+        # class            border  backgr. text
+        focused_workspace  $base0C $base0D $base00
+        active_workspace   $base02 $base02 $base07
+        inactive_workspace $base01 $base01 $base03
+        urgent_workspace   $base08 $base08 $base07
   }
 }
 

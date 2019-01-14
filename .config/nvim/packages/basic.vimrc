@@ -157,49 +157,60 @@ nnoremap <F9> :StripWhitespace<CR>
 
 " Colorscheme {{{
 
-" Solarized
-let g:solarized_termcolors=   16
-let g:solarized_termtrans =   0
-let g:solarized_degrade   =   0
-let g:solarized_bold      =   1
-let g:solarized_underline =   1
-let g:solarized_italic    =   1
-let g:solarized_contrast  =   "normal"
-let g:solarized_visibility=   "high"
-let g:solarized_hitrail   =   0
-let g:solarized_menu      =   0
-
+set termguicolors
 syntax enable                  " enable the syntax highlight
 set background=dark            " set a dark background
-set t_Co=256                   " 256 colors for the terminal
+call togglebg#map("<F5>")      " toggle dark and light with F5
 
-colorscheme solarized
-call togglebg#map("<F5>")
+" Solarized
 
-" " gruvbox (higher-contrast dark/light similar to solarized
-" let g:gruvbox_contrast_dark     = 'hard'
-" let g:gruvbox_contrast_light    = 'hard'
-" let g:gruvbox_italic            = 1
-" " let g:gruvbox_italicize_strings = 1
-" " let g:gruvbox_improved_strings  = 1
-" " let g:gruvbox_improved_warnings = 1
+" default value is "normal", Setting this option to "high" or "low" does use the
+" same Solarized palette but simply shifts some values up or down in order to
+" expand or compress the tonal range displayed.
+let g:neosolarized_contrast = "high"
 
-" " gruvbox make cursor colour more obvious during search
-" nnoremap <silent> [oh :call gruvbox#hls_show()<CR>
-" nnoremap <silent> ]oh :call gruvbox#hls_hide()<CR>
-" nnoremap <silent> coh :call gruvbox#hls_toggle()<CR>
-" nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
-" nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
-" nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
+" Special characters such as trailing whitespace, tabs, newlines, when displayed
+" using ":set list" can be set to one of three levels depending on your needs.
+" Default value is "normal". Provide "high" and "low" options.
+let g:neosolarized_visibility = "normal"
+
+" I make vertSplitBar a transparent background color. If you like the origin solarized vertSplitBar
+" style more, set this value to 0.
+let g:neosolarized_vertSplitBgTrans = 0
+
+" If you wish to enable/disable NeoSolarized from displaying bold, underlined or italicized
+" typefaces, simply assign 1 or 0 to the appropriate variable. Default values:
+let g:neosolarized_bold = 1
+let g:neosolarized_underline = 1
+let g:neosolarized_italic = 1
+
+" colorscheme NeoSolarized
+
+" " Gruvbox (higher-contrast dark/light similar to solarized
+let g:gruvbox_contrast_dark     = 'low'
+let g:gruvbox_contrast_light    = 'low'
+let g:gruvbox_bold              = 1
+let g:gruvbox_italic            = 1
+let g:gruvbox_underline         = 1
+let g:gruvbox_undercurl         = 1
+let g:gruvbox_guisp_fallback    = 1
+
+colorscheme gruvbox
 
 " Lucius (high-contrast dark/light)
-let g:lucius_style =    'dark'
-let g:lucius_contrast = 'high'
-let g:lucius_contrast_bg = 'high'
-let g:lucius_use_bold = 1
+let g:lucius_style         = 'dark'
+let g:lucius_contrast      = 'high'
+let g:lucius_contrast_bg   = 'high'
+let g:lucius_use_bold      = 1
 let g:lucius_use_underline = 1
-let g:lucius_no_term_bg = 0
+let g:lucius_no_term_bg    = 0
 " then do one of LuciusBlack LuciusDark LuciusLight LuciusWhite
+
+" colorscheme lucius
+
+" colorscheme base16-default-dark
+
+" colorscheme onehalfdark
 
 " }}}
 
