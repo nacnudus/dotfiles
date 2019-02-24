@@ -194,9 +194,6 @@ alias dashify="zmv -n '(**/)(* *)' '$1${2//( #-## #| ##)/-}'"
 alias eduroam="sudo wpa_supplicant -c. /home/nacnudus/dotfiles/eduroam -i wlp2s0 -D nl80211 -B"
 alias ip="sudo dhcpcd wlp2s0"
 
-# Alias for knitr/kicker
-alias knitr="/home/nacnudus/dotfiles/knitr.kick"
-
 # Aliases for zathura pdf reader
 # Fork into background
 alias pdf="zathura --fork"
