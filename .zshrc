@@ -267,6 +267,9 @@ alias rdevel="docker run --user docker -u 0 -p 8005:8000 -ti rocker/tidyverse:de
 
 # Alias for grepping -nonascii characters
 alias nonascii="grep --color='auto' -P -n '[^\x00-\x7F]'"
+#
+# New terminal in the same directory
+alias nt="gnome-terminal"
 
 # nvm (nodejs version manager)
 source /usr/share/nvm/init-nvm.sh
