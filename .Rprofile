@@ -34,6 +34,19 @@ install_offline <- function() {
 # Alias to install_offline()
 i <- install_offline
 
+# Nothing to append to the end of ggplot2 and magrittr pipelines to make
+# commenting-out the final line less of a pain.  Use as follows:
+#
+# mtcars %>%
+#   slice(1) %>%
+#   nowt()
+#
+# ggplot(mtcars, aes(cyl, mpg)) +
+#   geom_point() +
+#   nowt()
+#
+nowt <- function(x = NULL) x
+
 # Alias to load_all()
 # l <- load_all
 
