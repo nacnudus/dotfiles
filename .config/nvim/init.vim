@@ -67,6 +67,7 @@ Plug 'tweekmonster/deoplete-clang2' " C/C++ completion
 Plug 'vim-scripts/LanguageTool', {'for': ['text', 'rmd', 'tex']} " grammar checking
 
 " Syntax
+Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'elzr/vim-json', {'for': 'json'}
 " Plug 'scrooloose/syntastic' " syntax checking and linters
 Plug 'w0rp/ale' " asynchronous lint engine (syntax checking and linters)

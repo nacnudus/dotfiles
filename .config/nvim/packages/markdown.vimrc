@@ -26,3 +26,6 @@ let g:unite_source_menu_menus.markdown.command_candidates = [
 nnoremap <silent>[menu]k :Unite -silent menu:markdown<CR>
 
 " END Unite Menu }}}
+
+let g:pandoc#syntax#codeblocks#embeds#langs = ["r", "python", "md", "markdown", "txt"]
+
