@@ -117,6 +117,13 @@ alias pg="ping www.google.com"
 
 # Alias for hub instead of git
 eval "$(hub alias -s)"
+
+# Aliases for connecting to VPNs
+alias gdsvpn="sudo openconnect -b https://maximus.digital.cabinet-office.gov.uk/byod -u duncangarmonsway --csd-wrapper /home/nacnudus/dotfiles/csd-wrapper.sh"
+alias ahvpn="sudo openconnect -b https://vpn.digital.cabinet-office.gov.uk/ah -u duncangarmonsway"
+alias githubvpn="sudo openconnect -b https://vpn.digital.cabinet-office.gov.uk/github"
+alias vpnoff="sudo killall openconnect"
+
 # Alias for initialising normal ssh
 alias sshid="eval \"$(ssh-agent)\";ssh-add ~/.ssh/id_rsa"
 
@@ -154,6 +161,17 @@ alias backupfull="sudo backintime --profile full backup"
 alias elements1off="umount /media/elements1"
 alias elements2off="umount /media/elements2"
 
+# Alias for backup up to B2 BackBlaze Cloud
+alias backupcloud="
+duplicity --no-encryption --verbosity 8 \
+  --exclude /home/nacnudus/gds \
+  --exclude /home/nacnudus/.cache \
+  --exclude /home/nacnudus/.config/google-chrome \
+  --exclude /home/nacnudus/R/x86_64-pc-linux-gnu-library \
+  --exclude /home/nacnudus/pricepaid \
+  /home b2://51802ef89485:002adf30676c6847c6a0123c09024721e052d7246f@nactop-home/
+"
+
 # Alias for mounting usb sticks
 alias sdbon="sudo mount /dev/sdb1 /media/usb"
 alias sdboff="sudo umount /media/usb"
@@ -177,7 +195,7 @@ alias x5="xbacklight -set 5"
 alias x1="xbacklight -set 1"
 alias x0="xbacklight -set 0"
 
-# Aliases for HDMI1
+# Aliases for xrandr screen monitor things
 alias monitor="xrandr"
 alias hdmioff="xrandr --output HDMI1 --off; xrandr --output HDMI2 --off"
 alias hdmi1on="xrandr --output HDMI1 --auto --above eDP1"
@@ -243,6 +261,8 @@ alias gitlogin="git config --global credential.helper cache"
 
 # Alias for restarting dunst notifications
 alias notify="killall dunst;notify-send foo;notify-send bar"
+alias notifyoff="notify-send \"DUNST_COMMAND_PAUSE\""
+alias notifyon="notify-send \"DUNST_COMMAND_RESUME\""
 
 # Aliases for Conda environments
 alias mkenv3="conda create python=3 ipython jupyter pip -n "
