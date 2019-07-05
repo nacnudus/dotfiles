@@ -74,3 +74,4 @@ utils::assignInNamespace(
 
 options(Ncpus = 4)
 options(pillar.bold = TRUE) # bold column headers
+options(usethis.protocol = "ssh")
