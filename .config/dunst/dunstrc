@@ -173,21 +173,21 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#fdf6e3" # base03
-    foreground = "#93a1a1" # base1
+#    background = "#fdf6e3" # base03 (colour bug makes everything black)
+#    foreground = "#93a1a1" # base1
     timeout = 10
 
 [urgency_normal]
     # background = "#2aa198" # cyan
     # foreground = "#FFFFFF" # white
-    background = "#fdf6e3" # base3
-    foreground = "#657b83" # base00
+#    background = "#fdf6e3" # base3
+#    foreground = "#657b83" # base00
     #timeout = 10
     timeout = 0
 
 [urgency_critical]
-    background = "#fdf6e3" # base3
-    foreground = "#dc322f" # red
+#    background = "#fdf6e3" # base3
+#    foreground = "#dc322f" # red
     timeout = 0
 
 # Every section that isn't one of the above is interpreted as a rules to
@@ -215,44 +215,44 @@
 
 [duncan]
     body = "*duncan*"
-    background = "#6c71c4" # violet
-    foreground = "#FFFFFF" # white
+    # background = "#6c71c4" # violet
+    # foreground = "#FFFFFF" # white
     timeout = 0 # never
 
 [direct]
     summary = "* from *"
-    background = "#6c71c4" # violet
-    foreground = "#FFFFFF" # white
+    # background = "#6c71c4" # violet
+    # foreground = "#FFFFFF" # white
     timeout = 0 # never
 
 [summary-buod]
     summary = "*int-team-buod*"
-    background = "#2aa198" # cyan
-    foreground = "#FFFFFF" # white
+    # background = "#2aa198" # cyan
+    # foreground = "#FFFFFF" # white
     timeout = 0 # never
 
 [summary-verify]
     summary = "*verify*"
-    background = "#2aa198" # cyan
-    foreground = "#FFFFFF" # white
+    # background = "#2aa198" # cyan
+    # foreground = "#FFFFFF" # white
     timeout = 0 # never
 
 [body-verify]
     body = "*verify*"
-    background = "#2aa198" # cyan
-    foreground = "#FFFFFF" # white
+    # background = "#2aa198" # cyan
+    # foreground = "#FFFFFF" # white
     timeout = 0 # never
 
 [calendar]
     body = "*calendar.google.com*"
-    background = "#2aa198" # cyan
-    foreground = "#FFFFFF" # white
+    # background = "#2aa198" # cyan
+    # foreground = "#FFFFFF" # white
     timeout = 0 # never
 
 [mail]
     body = "*mail.google.com*"
-    background = "#6c71c4" # violet
-    foreground = "#FFFFFF" # white
+    # background = "#6c71c4" # violet
+    # foreground = "#FFFFFF" # white
     timeout = 0 # never
 
 #[script-test]
