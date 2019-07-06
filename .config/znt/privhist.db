@@ -1,0 +1,548 @@
+sudo systemctl restart wpa_supplicant.service
+sudo rsync -aAXS --info=progress2 /home /media/home
+rm .cache/dmenu_run
+rm .cache/dmenu_run
+rm .cache/dmenu_run
+libreoffice --convert-to xlsx --outdir ../xlsx/1998 ../sources/1998/98pr_stw.xls
+libreoffice --convert-to xlsx --outdir ../xlsx/1998 ../sources/1998/98pr_stw.xls
+ffmpeg -i Today_at_Wimbledon_2017_-_8._Day_8_Highlights_b08y32z0_original.mp4 -ss 00:58:08 -to 00:58:36 cut.mp4
+ffmpeg -i cut.mp4 -i palette_320.png -filter_complex "fps=10,scale=320:-1:flags=lanczos[x];[x][1:v]paletteuse" poncho_320.gif
+ffmpeg -i cut.mp4 -i palette_320.png -filter_complex "fps=10,scale=320:-1:flags=lanczos[x];[x][1:v]paletteuse" poncho_320.gif
+ffmpeg -y -i cut.mp4 -vf fps=10,scale=320:-1:flags=lanczos,palettegen palette_320.png
+ffmpeg -i Today_at_Wimbledon_2017_-_8._Day_8_Highlights_b08y32z0_original.mp4 -ss 00:58:08 -to 00:58:36 cut.mp4
+./scripts/update-metadata-yaml.sh statistical-geography-unitary-authority-wls discovery registry-data/data/discovery/register/statistical-geography-unitary-authority-wls.yaml local
+./scripts/update-register-tsv.sh social-housing-provider alpha social-housing-data/data/social-housing-provider/social-housing-provider.tsv remote social-housing-data
+git clone git@github.com:openregister/openregister-java.git
+cf login
+e build.gradle
+./gradlew clean build
+rlwrap sml
+./scripts/load-register-tsv.sh public-body discovery public-body-classification-data/data/public-body.tsv remote "David Beckett" public-body-classification-data
+./scripts/load-register-tsv.sh public-body discovery public-body-classification-data/data/public-body.tsv local "David Beckett" public-body-classification-data
+cf login -a https://api.cloud.service.gov.uk -u duncan.garmonsway@digital.cabinet-office.gov.uk
+cp ~/R/enron/enron_corpus-master-b26c7bcad107f247f6bc4f4ca5808131a8745ac0/sheets/barry_tycholiz__848__2002\ Plan\ Worksheet\ CC107322.xlsx inst/extdata/enron-constants.xlsx
+cp ~/R/enron/enron_corpus-master-b26c7bcad107f247f6bc4f4ca5808131a8745ac0/sheets/albert_meyers__1__1-25act.xlsx inst/extdata/enron-nested.xlsx
+unzip tests/testthat/examples.xlsx -d temp
+csvlink lists/public-body.tsv lists/organisation.csv \\
+     --field_names name \\
+     --output_file output.csv
+csvlink lists/public-body.csv lists/organisation.csv \\
+     --field_names name \\
+     --output_file output.csv
+git clone https://github.com/RcppCore/Rcpp
+./scripts/update-metadata-yaml.sh register beta registry-data/data/beta/register/prison-estate.yaml local
+nomacs Dublin-251.jpg Dublin-264.jpg Dublin-266.jpg Dublin-269.jpg Dublin-276.jpg Dublin-278.jpg Dublin-287.jpg Dublin-290.jpg Dublin-297.jpg Dublin-302.jpg Dublin-305.jpg Dublin-307.jpg Dublin-310.jpg Dublin-311.jpg Dublin-313.jpg Dublin-316.jpg Dublin-317.jpg Dublin-318.jpg Dublin-319.jpg Dublin-321.jpg Dublin-322-2017-08-16_20-31-27-009.jpg Dublin-322.jpg Dublin-323.jpg Dublin-324.jpg Dublin-325.jpg Dublin-326.jpg Dublin-328.jpg Dublin-331-HDR.jpg Dublin-331.jpg Dublin-332.jpg Dublin-333.jpg Dublin-334.jpg Dublin-335.jpg Dublin-337.jpg Dublin-350.jpg Dublin-351.jpg Dublin-352-HDR.jpg Dublin-352.jpg Dublin-362.jpg Dublin-363.jpg Dublin-373.jpg Dublin-374-2.jpg Dublin-374.jpg Dublin-375.jpg Dublin-377.jpg Dublin-378.jpg Dublin-379.jpg Dublin-380.jpg Dublin-383.jpg Dublin-385.jpg Dublin-386.jpg Dublin-387.jpg Dublin-388.jpg Dublin-389.jpg Dublin-392.jpg Dublin-393.jpg HDR\ jpeg-331.jpg 
+curl -X GET http://127.0.0.1:9200
+sudo rm /usr/lib/tmpfiles.d/elasticsearch.conf
+sudo rm -rf /usr/share/elasticsearch
+wifirestart
+less +1104178 food-types.json
+less +1104178 food-types.json
+unzip tests/testthat/examples.xlsx -d temp
+rm -r temp
+unzip tests/testthat/examples.xlsx -d temp
+rm -r temp
+unzip tests/testthat/examples.xlsx -d temp
+unzip tests/testthat/examples.xlsx -d temp
+unzip tests/testthat/examples.xlsx -d temp
+./update-metadata-yaml.sh register discovery registry-data/data/discovery/register/westminster-parliamentary-constituency.yaml local
+./load-register-tsv.sh westminster-parliamentary-constituency discovery westminster-parliamentary-constituency-data/data/westminster-parliamentary-constituency.tsv remote "Kate Evans" westminster-parliamentary-constituency-data/data/
+sparql --data=lists/food-types.ttl --query=sparql/q1.rq --results=tsv > lists/query-result.tsv
+./load-register-tsv.sh westminster-parliamentary-constituency discovery westminster-parliamentary-constituency-data/data/westminster-parliamentary-constituency.tsv remote "Kate Evans" westminster-parliamentary-constituency-data/data/
+./load-register-tsv.sh westminster-parliamentary-constituency discovery westminster-parliamentary-constituency-data/data/westminster-parliamentary-constituency.tsv remote "Kate Evans" westminster-parliamentary-constituency-data/data/
+./load-register-tsv.sh westminster-parliamentary-constituency discovery westminster-parliamentary-constituency-data/data/westminster-parliamentary-constituency.tsv remote "" westminster-parliamentary-constituency-data/data/
+unzip tests/testthat/examples.xlsx -d temp
+unzip tests/testthat/examples.xlsx -d temp
+./update-metadata-yaml.sh register discovery registry-data/data/discovery/register/westminster-parliamentary-constituency.yaml local
+./load-register-tsv.sh westminster-parliamentary-constituency discovery westminster-parliamentary-constituency-data/data/westminster-parliamentary-constituency.tsv remote "" westminster-parliamentary-constituency-data/data/
+./load-register-tsv.sh local-authority-nir discovery local-authority-data/data/local-authority-nir/local-authorities.tsv local "Robert Cousins" local-authority-data/data/local-authority-nir
+./update-metadata-yaml.sh register discovery registry-data/data/discovery/register/local-authority-nir.yaml local
+./load-register-tsv.sh local-authority-nir discovery local-authority-data/data/local-authority-nir/local-authorities.tsv remote "Robert Cousins" local-authority-data/data/local-authority-nir
+./load-register-tsv.sh approved-meat-establishment discovery food-data/data/approved-meat-establishment.tsv local "Sian Thomas" food-data/data/
+./load-register-tsv.sh approved-meat-establishment discovery food-data/data/approved-meat-establishment.tsv local "Sian Thomas" food-data/data/
+./update-metadata-yaml.sh field discovery registry-data/data/discovery/field/meat-establishment-operation.yaml local
+./update-metadata-yaml.sh field discovery registry-data/data/discovery/field/local-authority.yaml local
+./load-register-tsv.sh approved-meat-establishment discovery food-data/data/approved-meat-establishment.tsv local "Sian Thomas" food-data/data/
+./load-register-tsv.sh local-authority-nir discovery local-authority-data/data/local-authority-nir/local-authorities.tsv remote "Robert Cousins" local-authority-data/data/local-authority-nir
+./load-register-tsv.sh approved-meat-establishment discovery food-data/data/approved-meat-establishment.tsv local "Sian Thomas" food-data/data/
+ar vx ../pandoc-1.19.2.1-1-amd64.deb
+tar zxpf data.tar.gz
+sudo systemctl start postgresql.service
+sudo systemctl start postgresql
+awk -F, '{print > "by_type/"$1".csv"}' data/*.csv
+./scripts/update-metadata-yaml.sh field discovery registry-data/data/discovery/field/public-body-classifications.yaml remote
+./load-register-tsv.sh public-body alpha public-body-classification-data/data/public-body.tsv local "David Beckett" public-body-classification-data/data
+./load-register-tsv.sh public-body alpha public-body-classification-data/data/public-body.tsv local "David Beckett" public-body-classification-data/data
+z tablr_dev
+./load-register-tsv.sh public-body alpha public-body-classification-data/data/public-body.tsv local "David Beckett" public-body-classification-data/data
+./load-register-tsv.sh public-body alpha public-body-classification-data/data/public-body.tsv local "David Beckett" public-body-classification-data/data
+./load-register-tsv.sh public-body alpha public-body-classification-data/data/public-body.tsv local "David Beckett" public-body-classification-data/data
+./load-register-tsv.sh public-body alpha public-body-classification-data/data/public-body.tsv local "David Beckett" public-body-classification-data/data
+./update-metadata-yaml.sh register alpha registry-data/data/alpha/register/public-body-classification.yaml local
+./load-register-tsv.sh public-body alpha public-body-classification-data/data/public-body.tsv local "David Beckett" public-body-classification-data/data
+./load-register-tsv.sh local-authority-nir discovery local-authority-data/data/local-authority-nir/local-authorities.tsv remote "Robert Cousins" local-authority-data/data/local-authority-nir
+cf apps
+./update-metadata-yaml.sh register alpha registry-data/data/alpha/register/local-authority-nir.yaml local
+./load-register-tsv.sh local-authority-nir alpha local-authority-data/data/local-authority-nir/local-authorities.tsv remote "Robert Cousins" local-authority-data/data/local-authority-nir
+./update-metadata-yaml.sh register alpha registry-data/data/alpha/field/allergen.yaml local
+./update-metadata-yaml.sh register discovery registry-data/data/discovery/register/qualification-level.yaml local
+./load-register-tsv.sh allergen alpha food-data/data/allergen-data/allergen-data.tsv local "Paul Tossell" food-data
+./load-register-tsv.sh qualification-assessment-method discovery qualification-data/data/qualification-assessment-method.tsv remote "Kate Evans" qualification-data/data/
+python rsfcreator.py --tsv food-data/data/approved-meat-establishment.tsv approved-meat-establishment discovery 
+e beta/field/local-authority-nir.yaml
+./load-register-tsv.sh qualification-type discovery qualification-data/data/qualification-type.tsv remote "Kate Evans" qualification-data/data/
+./load-register-tsv.sh qualification-type discovery qualification-data/data/qualification-type.tsv remote "Kate Evans" qualification-data/data/
+./load-register-tsv.sh qualification-level discovery qualification-data/data/qualification-level.tsv remote "Kate Evans" qualification-data/data/
+./load-register-tsv.sh qualification-level discovery qualification-data/data/qualification-level.tsv remote "Kate Evans" qualification-data/data/
+./load-register-tsv.sh public-body alpha public-body-classification-data/data/public-body.tsv local "David Beckett" public-body-classification-data/data
+./update-metadata-yaml.sh register alpha registry-data/data/alpha/register/public-body-classification.yaml local
+./load-register-tsv.sh public-body-account-classification alpha public-body-classification-data/data/public-body-account-classification.tsv local "David Beckett" public-body-classification-data/data
+./update-metadata-yaml.sh field alpha registry-data/data/alpha/field/public-body-account-classifications.yaml local
+./load-register-tsv.sh public-body-account alpha public-body-classification-data/data/public-body-account.tsv local "David Beckett" public-body-classification-data/data
+./update-metadata-yaml.sh field alpha registry-data/data/discovery/field/qualification-level.yaml local
+./load-register-tsv.sh qualification-level discovery qualification-data/data/qualification-level.tsv remote "Kate Evans" qualification-data/data/
+./update-metadata-yaml.sh register discovery registry-data/data/discovery/register/qualification-level.yaml local
+./update-metadata-yaml.sh register discovery registry-data/data/discovery/register/qualification-sector-subject-area.yaml local
+./update-metadata-yaml.sh register discovery registry-data/data/discovery/register/qualification-level.yaml local
+./load-register-tsv.sh qualification-level discovery qualification-data/data/qualification-level.tsv remote "Kate Evans" qualification-data/data/
+./update-metadata-yaml.sh field alpha registry-data/data/discovery/field/parent-qualification-sector-subject-area.yaml local
+./load-register-tsv.sh qualification-level discovery qualification-data/data/qualification-sector-subject-area.tsv remote "Kate Evans" qualification-data/data/
+whipper cd rip -h
+whipper cd rip -O audiobooks
+git revert --no-commit 13a4020decdcae78c984281946b7326fcffde43c..
+git rebase -i 9fef4112a145390071e8b4e6e4e80db070dafe0b
+./load-register-tsv.sh public-body-account alpha public-body-classification-data/data/public-body-account.tsv local "David Beckett" public-body-classification-data/data
+whipper cd rip -O audiobooks
+whipper cd rip -O audiobooks
+./abpprocess abi_43 -c /home/nacnudus/gds/address/addressbase-data-gml/cache/AddressBase/AB76GB_CSV.zip
+sbt
+tail -f address-reputation-ingester.log
+get_iplayer --pid b09kr71h --pid-recursive --get
+whipper cd rip -O audiobooks
+whipper cd rip -O audiobooks
+whipper cd rip -O audiobooks
+whipper cd rip -O audiobooks
+./load-register-tsv.sh public-body-account alpha public-body-classification-data/data/public-body-account.tsv local "David Beckett" public-body-classification-data/data
+./load-register-tsv.sh jobcentre alpha jobcentre-data/data/jobcentre/data.tsv local "Gillian Hall" jobcentre-data
+cf login -a https://api.cloud.service.gov.uk -u duncan.garmonsway@digital.cabinet-office.gov.uk
+./load-register-tsv.sh jobcentre alpha jobcentre-data/data/jobcentre/data.tsv local "Gillian Hall" jobcentre-data
+registers-pass discovery/app/mint/datatype
+./load-register-tsv.sh jobcentre alpha jobcentre-data/data/jobcentre/data.tsv local "Gillian Hall" jobcentre-data
+gpg --keyserver --recv-keys CC34F89A0C79A8A6
+gpg --keyserver --recv-keys CC34F89A0C79A8A6
+gpg --keyserver hkps://hkps.pool.sks-keyservers.net --recv-keys CC34F89A0C79A8A6
+./load-register-tsv.sh jobcentre alpha jobcentre-data/data/jobcentre/data.tsv local "Gillian Hall" jobcentre-data
+gpg --keyserver hkps://hkps.pool.sks-keyservers.net --recv-keys $(cat discovery/app/.gpg-id)
+./update-metadata-yaml.sh register discovery registry-data/data/discovery/register/qualification-sector-subject-area.yaml local
+./load-register-tsv.sh industrial-classification-2003 discovery industrial-classification-data/data/industrial-classification-2003 local "Ruth James" industrial-classification-data
+./update-metadata-yaml.sh field discovery registry-data/data/discovery/field/target-industrial-classification.yaml local
+./load-register-tsv.sh industrial-classification-2003 discovery industrial-classification-data/data/industrial-classification-2003.tsv local "Ruth James" industrial-classification-data
+./update-metadata-yaml.sh register discovery registry-data/data/discovery/register/industrial-classification-2007.yaml local
+./update-metadata-yaml.sh register discovery registry-data/data/discovery/register/industrial-classification-2007.yaml local
+./load-register-tsv.sh industrial-classification-correlation discovery industrial-classification-data/data/industrial-classification-correlation.tsv local "Ruth James" industrial-classification-data
+./update-metadata-yaml.sh field discovery registry-data/data/discovery/field/source-industrial-classification.yaml local
+./load-register-tsv.sh industrial-classification-correlation discovery industrial-classification-data/data/industrial-classification-correlation.tsv local "Ruth James" industrial-classification-data
+./load-register-tsv.sh industrial-classification-2003 discovery industrial-classification-data/data/industrial-classification-2003.tsv local "Ruth James" industrial-classification-data
+./load-register-tsv.sh jobcentre alpha jobcentre-data/data/jobcentre/data.tsv local "Gillian Hall" jobcentre-data
+ping 8.8.8.8
+./update-metadata-yaml.sh register discovery registry-data/data/discovery/register/industrial-classification-2007.yaml local
+./update-metadata-yaml.sh register alpha registry-data/data/alpha/register/qualification-level.yaml local
+./load-register-tsv.sh jobcentre alpha jobcentre-data/data/jobcentre/data.tsv local "Gillian Hall" jobcentre-data
+./update-metadata-yaml.sh register alpha registry-data/data/alpha/register/jobcentre.yaml local
+./load-register-tsv.sh jobcentre alpha jobcentre-data/data/jobcentre/data.tsv local "Gillian Hall" jobcentre-data
+unzip temp.xlsx -d temp
+gp -u origin behead
+tree .git/objects
+tree .git/objects
+unzip temp.xlsx -d temp
+unzip temp.xlsx -d temp
+./load-register-tsv.sh industrial-classification-2007 discovery industrial-classification-data/data/industrial-classification-2007.tsv local "Ruth James" industrial-classification-data
+./load-register-tsv.sh industrial-classification-2007 discovery industrial-classification-data/data/industrial-classification-2007.tsv local "Ruth James" industrial-classification-data
+source activate deployment
+./load-register-tsv.sh industrial-classification-2007 discovery industrial-classification-data/data/industrial-classification-2007.tsv local "Ruth James" industrial-classification-data
+./update-metadata-yaml.sh field discovery registry-data/data/discovery/field/target.yaml local
+./load-register-tsv.sh industrial-classification-2007 discovery industrial-classification-data/data/industrial-classification-2007.tsv local "Ruth James" industrial-classification-data
+./load-register-tsv.sh public-body-account alpha public-body-classification-data/data/public-body-account.tsv local "David Beckett" public-body-classification-data/data
+./load-register-tsv.sh data-sharing-agreement-0001 discovery data-sharing-agreement-data/data/data-sharing-agreement-0001/data-sharing-agreement-0001.tsv all local "Firoze Salim" data-sharing-agreement-data
+./update-metadata-yaml.sh register discovery registry-data/data/discovery/register/data-sharing-agreement-0001.yaml local
+./update-metadata-yaml.sh field discovery registry-data/data/discovery/field/retention-period.yaml local
+./load-register-tsv.sh data-sharing-agreement-0001 discovery data-sharing-agreement-data/data/data-sharing-agreement-0001/data-sharing-agreement-0001.tsv all local "Firoze Salim" data-sharing-agreement-data
+./update-metadata-yaml.sh register discovery registry-data/data/discovery/register/data-sharing-agreement-person-0001.yaml local
+./load-register-tsv.sh data-sharing-agreement-person-0001 discovery data-sharing-agreement-data/data/data-sharing-agreement-person-0001/data-sharing-agreement-person-0001.tsv all local "Firoze Salim" data-sharing-agreement-data
+e scripts/download-s3-config.sh
+aws s3 sync s3://aws cloudfront-logs-register-gov-uk
+./load-register-tsv.sh industrial-classification-2003 discovery industrial-classification-data/data/industrial-classification-2003.tsv local "Ruth James" industrial-classification-data
+./load-register-tsv.sh industrial-classification-2003 discovery industrial-classification-data/data/industrial-classification-2003 local "Ruth James" industrial-classification-data
+./load-register-tsv.sh industrial-classification-2003 discovery industrial-classification-data/data/industrial-classification-2003.tsv all local "Ruth James" industrial-classification-data/data
+cf login -a api.cloud.service.gov.uk -u duncan.garmonsway@digital.cabinet-office.gov.uk
+cf login -a api.cloud.service.gov.uk -u duncan.garmonsway@digital.cabinet-office.gov.uk
+cf login -a https://api.cloud.service.gov.uk -u duncan.garmonsway@digital.cabinet-office.gov.uk
+watch cf services
+git fetch origin pull/320/head:pr
+./load-register-tsv.sh data-sharing-agreement-person-0001 discovery data-sharing-agreement-data/data/data-sharing-agreement-person-0001/data-sharing-agreement-person-0001.tsv all local "Firoze Salim" data-sharing-agreement-data
+cf login -a api.cloud.service.gov.uk -u duncan.garmonsway@digital.cabinet-office.gov.uk
+cf login -a api.cloud.service.gov.uk -u duncan.garmonsway@digital.cabinet-office.gov.uk
+./update-metadata-yaml.sh field discovery registry-data/data/discovery/field/retention-period.yaml local
+./load-register-tsv.sh data-sharing-agreement-0001 discovery data-sharing-agreement-data/data/data-sharing-agreement-0001/data-sharing-agreement-0001.tsv all local "Firoze Salim" data-sharing-agreement-data
+./update-metadata-yaml.sh register discovery registry-data/data/discovery/register/data-sharing-agreement-legal-basis-0001.yaml local
+./update-metadata-yaml.sh field discovery registry-data/data/discovery/field/allowed-persons.yaml local
+./update-metadata-yaml.sh register discovery registry-data/data/discovery/register/data-sharing-agreement-0001.yaml local
+./update-metadata-yaml.sh register discovery registry-data/data/discovery/register/data-sharing-agreement-legal-basis-0001.yaml local
+./update-metadata-yaml.sh register discovery registry-data/data/discovery/register/data-sharing-agreement-legal-basis-0001.yaml local
+./load-register-tsv.sh data-sharing-agreement-legal-basis-0001 discovery data-sharing-agreement-data/data/data-sharing-agreement-legal-basis-0001/data-sharing-agreement-legal-basis-0001.tsv all local "Firoze Salim" data-sharing-agreement-data
+./load-register-tsv.sh data-sharing-agreement-0001 discovery data-sharing-agreement-data/data/data-sharing-agreement-0001/data-sharing-agreement-0001.tsv all local "Firoze Salim" data-sharing-agreement-data
+echo -n | sha256sum
+printf {} | sha256sum
+tmux ls
+./update-metadata-yaml.sh field discovery registry-data/data/discovery/field/data-sharing-agreement-legal-basis-0001.yaml local
+./update-metadata-yaml.sh field discovery registry-data/data/discovery/field/data-sharing-agreement-legal-basis-0001.yaml local
+./load-register-tsv.sh data-sharing-agreement-0001 discovery data-sharing-agreement-data/data/data-sharing-agreement-0001/data-sharing-agreement-0001.tsv all local "Firoze Salim" data-sharing-agreement-data
+./load-register-tsv.sh data-sharing-agreement-0001 discovery data-sharing-agreement-data/data/data-sharing-agreement-0001/data-sharing-agreement-0001.tsv all local "Firoze Salim" data-sharing-agreement-data
+./scripts/reload-metadata-yaml.sh field discovery local "Paul Downey"
+./update-metadata-yaml.sh field discovery registry-data/data/discovery/field/information-sharing-agreement-0001.yaml local
+./load-register-tsv.sh industrial-classification-2003 discovery industrial-classification-data/data/industrial-classification-2003.tsv all local "Ruth James" industrial-classification-data/data
+./update-metadata-yaml.sh field discovery registry-data/data/discovery/field/suppliers.yaml local
+./update-metadata-yaml.sh register discovery registry-data/data/discovery/register/information-sharing-agreement-person-0001.yaml local
+./load-register-tsv.sh information-sharing-agreement-0001 discovery information-sharing-agreement-data/data/information-sharing-agreement-0001/information-sharing-agreement-0001.tsv all local "Firoze Salim" information-sharing-agreement-data
+./update-metadata-yaml.sh field discovery registry-data/data/discovery/field/data-controller-names.yaml local
+./load-register-tsv.sh information-sharing-agreement-0001 discovery information-sharing-agreement-data/data/information-sharing-agreement-0001/information-sharing-agreement-0001.tsv all local "Firoze Salim" information-sharing-agreement-data
+echo -e 'add-item\t{"register-name":"Persons for the information sharing agreements under chapters 1, 2, 3 and 4 of part 5 of the Digital Economy Act 2017"}\nappend-entry\tsystem\tregister-name\t2018-05-02T11:52:00Z\tsha-256:a44ba91f4e48edf70c26f892f8140f5bc31d04aa8188877d374b3af6f6bd8fca' | ./rsf-load.sh https://information-sharing-agreement-person-0001.cloudapps.digital openregister gxp8QxxOOraKGwnf
+echo -e 'add-item\t{"register-name":"Information sharing agreements under chapters 1, 2, 3 and 4 of part 5 of the Digital Economy Act 2017"}\nappend-entry\tsystem\tregister-name\t2018-05-02T11:52:00Z\tsha-256:57b7b2b60129e158a7e482ba51808460923346ab6d7e65b023d7eb931e36bfed' | ./rsf-load.sh https://information-sharing-agreement-0001.cloudapps.digital openregister nIPV67GLWxNOspOS\
+
+echo -e 'add-item\t{"register-name":"Legal basis for disclosure under the Digital Economy Act 2017"}\nappend-entry\tsystem\tregister-name\t2018-05-02T11:52:00Z\tsha-256:7cc6da680b676bda77aa9cedc8bf8d6f9144b389ed87701beaf77be44efb2b32' | ./rsf-load.sh https://information-sharing-agreement-legal-basis-0001.cloudapps.digital openregister wGJ1UhS1uPUUfQ9R
+./load-register-tsv.sh industrial-classification-2003 discovery industrial-classification-data/data/industrial-classification-2003.tsv all local "Ruth James" industrial-classification-data/data
+e temp.R src/xlsxstyles.h src/xlsxstyles.cpp
+./update-metadata-yaml.sh register discovery registry-data/data/discovery/register/industrial-classification-correlation.yaml local
+./update-metadata-yaml.sh register discovery registry-data/data/discovery/register/industrial-classification-2007.yaml local
+./update-metadata-yaml.sh register discovery registry-data/data/discovery/register/industrial-classification-2003.yaml local
+./update-metadata-yaml.sh field discovery registry-data/data/discovery/field/industrial-classification-correlation.yaml local
+./update-metadata-yaml.sh field discovery registry-data/data/discovery/field/industrial-classification-2007.yaml local
+./update-metadata-yaml.sh field discovery registry-data/data/discovery/field/industrial-classification-2003.yaml local
+./load-register-tsv.sh industrial-classification-correlation discovery industrial-classification-data/data/industrial-classification-correlation.tsv all local "Ruth James" industrial-classification-data/data
+./load-register-tsv.sh industrial-classification-2007 discovery industrial-classification-data/data/industrial-classification-2007.tsv all local "Ruth James" industrial-classification-data/data
+./load-register-tsv.sh industrial-classification-2003 discovery industrial-classification-data/data/industrial-classification-2003.tsv all local "Ruth James" industrial-classification-data/data
+timedatectl set-timezone Pacific/Auckland
+axel -n 10 http://prod.publicdata.landregistry.gov.uk.s3-website-eu-west-1.amazonaws.com/pp-complete.txt
+downgrade freetype2
+downgrade lib32-freetype2
+cat /home/nacnudus/gds/tmp.rsf
+e watford-boys-2018-07-04.md
+python3 -m unittest rsfcreator_test
+jupyter notebook
+jupyter notebook
+sudo pacman -S jupyter-notebook
+sudo pacman -S jupyter-notebook
+sudo tail -f /var/log/syslog
+e .config/dunst/dunstrc
+killall dunst;notify-send "verify" "verify"
+killall dunst;notify-send "verify" "verify"
+e piwik_token.json
+aws s3 ls --profile verify-billing
+aws s3 sync s3://govukverify-hub-prod-billing-reports/billing/ . --exclude "*"  --include "Billing_Report_for_ALL_IDPS_for_day_commencing_2018-07-*.csv"
+aws s3 sync s3://govukverify-hub-prod-billing-reports/billing/ . --exclude "*"  --include "*2018-07-*.csv"
+export AWS_PROFILE=verify-billing
+export AWS_PROFILE=verify-billing
+export AWS_PROFILE="profile verify-billing"
+aws s3 sync s3://govukverify-hub-prod-billing-reports/billing/ . --exclude "*"  --include "*2018-07-*.csv"
+aws s3 ls govukverify-hub-prod-billing-reports/billing --recursive
+export AWS_PROFILE="profile verify-billing"
+sudo pacman -S linux-lts
+wo ConferenceScheduler
+wo ConferenceScheduler
+cd cloudfront-logs
+cp -r ../registration-success-model ./
+cp -r ../registration-success-model/* ./
+ll *.mid | wc -l
+mv *.mid ~/R/psaltr/midi
+mv *.mid ~/R/psaltr/midi
+gpg --armour --export duncan.garmonsway@digital.cabinet-office.gov.uk
+mysql -u nacnudus -p nacnudus
+mysql -u nacnudus -p nacnudus
+mysql -u nacnudus -p nacnudus
+mysqldump -u nacnudus -p nacnudus --tab=. piwik_log_action
+pdf psalm.pdf
+aws s3 sync s3://govukverify-hub-prod-billing-reports/rp .
+aws s3 sync s3://govukverify-hub-prod-billing-reports/piwik-data
+mysql -u nacnudus -p < ~/Downloads/piwik_log_action.sql
+aws s3 sync s3://govukverify-hub-prod-billing-reports/piwik-data/ .
+mysql -u nacnudus -p verify < /home/nacnudus/gds/verify/optimisation/piwik-bulk/piwik_log_action.sql
+mysql -u nacnudus -p verify < /home/nacnudus/gds/verify/optimisation/piwik-bulk/piwik_log_action.sql
+mysql -u nacnudus -p verify < /home/nacnudus/gds/verify/optimisation/piwik-bulk/piwik_log_action.sql
+ag "&quot;" piwik_log_action.tsv
+mysql -u root -p
+mysql -u nacnudus -p verify < /home/nacnudus/gds/verify/optimisation/piwik-bulk/piwik_log_action.sql
+sed -- 's/\[\?&quot;\]\?//g' ./piwik_log_action.sql > piwik_log_action_unquoted.sql
+rm psalm.pdf; make
+rm psalm.pdf; make
+ripright -s audiobooks
+	lilypond -dno-point-and-click chant.ly
+mupen64plus GoldenEye\ 007\ \(U\)\ \[\!\].z64
+mupen64plus GoldenEye\ 007\ \(U\)\ \[\!\].z64
+mupen64plus /home/nacnudus/n64/GoldenEye\ 007\ \(U\)\ \[\!\].z64
+mupen64plus /home/nacnudus/n64/GoldenEye\ 007\ \(U\)\ \[\!\].z64
+lilypond -dno-point-and-click chant.ly
+	lilypond -dno-point-and-click chant.ly
+e psalm.ltx chant.ly
+ps ax | grep [c]lamd
+e anyconnect-linux64-4.6.02074-core-vpn-webdeploy-k9.sh
+sudo cp /etc/init.d/vpnagentd /etc/systemd/system
+e /etc/init.d/vpnagentd
+ripright -s audiobooks
+ripright -s music2
+ripright -s -a music2
+e psalm.ltx chant.ly
+aws s3 sync s3://govukverify-hub-prod-billing-reports/piwik-data/ .\
+
+aws s3 sync s3://govukverify-hub-prod-billing-reports/piwik-data/ .\
+
+e psalm.ltx chant.ly
+e psalm.ltx chant.ly
+ripright -s -a music2
+e psalm.ltx chant.ly
+pdf psalm.pdf
+e psalm.ltx chant.ly
+e psalm.ltx chant1.ly chant2.ly
+e psalm.ltx chant.ly
+e psalm.ltx chant*.ly
+e psalm.ltx chant*.ly
+aws s3 ls govukverify-hub-prod-billing-reports/billing --recursive
+export AWS_PROFILE="profile verify-billing"
+export AWS_PROFILE="profile verify-billing"
+e psalm.ltx chant*.ly
+e psalm.ltx chant*.ly
+e psalm.ltx chant*.ly
+ripright -s -a music2
+mtp-detect
+aft-mtp-mount ~/android
+e psalm.ltx chant*.ly
+e psalm.ltx chant*.ly
+e psalm.ltx chant*.ly
+e psalm.ltx chant*.ly
+ag nextline
+e psalm.ltx chant*.ly
+e psalm.ltx chant*.ly
+e psalm.ltx chant*.ly
+ripright -s -a music2
+ripright -s -a music2
+ripright -s -a music2
+export AWS_PROFILE="profile verify-billing"
+e psalm.ltx chant*.ly
+e psalm.ltx chant*.ly
+e psalm.ltx chant*.ly
+ripright -s -a music2
+e psalm.ltx chant*.ly
+e psalm.ltx chant*.ly
+e psalm.ltx chant*.ly
+docker run -v "$(pwd)":"/opt/$(basename $(pwd))" -it rocker/tidyverse:latest /bin/bash\
+
+docker cp ~/Downloads/anyconnect-linux64-4.6.02074-core-vpn-webdeploy-k9.sh fervent_keldysh:home/anyconnect
+docker cp ~/Downloads/anyconnect-linux64-4.6.02074-core-vpn-webdeploy-k9.sh fervent_keldysh:home/anyconnect
+docker cp ~/Downloads/anyconnect-linux64-4.6.02074-core-vpn-webdeploy-k9.sh sharp_ramanujan:home
+docker run -it ubuntu:latest
+docker cp ~/Downloads/anyconnect-linux64-4.6.03049-core-vpn-webdeploy-k9.sh sharp_ramanujan:home
+e psalm.ltx chant*.ly
+e psalm.ltx chant*.ly
+e psalm.ltx chant*.ly
+e psalm.ltx chant*.ly
+e psalm.ltx chant*.ly
+e psalm.ltx chant*.ly
+e psalm.ltx chant*.ly
+e psalm.ltx chant*.ly
+sudo vim /etc/anacrontab
+e ~/.config/urlwatch/urlwatch.yaml
+urlwatch --edit
+e psalm.ltx chant*.ly
+e psalm.ltx chant*.ly
+e psalm.ltx chant*.ly
+e psalm.ltx chant*.ly
+e psalm.ltx chant*.ly
+gp -u origin add-licence-file 
+docker stop chrome; docker rm chrome
+docker stop chrome; docker rm chrome
+docker stop chrome; docker rm chrome
+docker rm chrome
+export AWS_PROFILE="profile verify-billing"\
+aws s3 sync --exclude "*" --include "*2018-0[4-9]*.csv" s3://govukverify-hub-prod-billing-reports/rp/ ./data/rp\
+aws s3 sync --exclude "*" --include "*2018-10*.csv" s3://govukverify-hub-prod-billing-reports/rp/ ./data/rp\
+aws s3 sync --exclude "*" --include "*Billing_Report_for_ALL_IDPS_for_day_commencing_2018-0[4-9]*.csv" s3://govukverify-hub-prod-billing-reports/billing/ ./data/billing\
+aws s3 sync --exclude "*" --include "*Billing_Report_for_ALL_IDPS_for_day_commencing_2018-10*.csv" s3://govukverify-hub-prod-billing-reports/billing/ ./data/billing\
+
+docker cp Downloads/anyconnect-linux64-4.6.03049-core-vpn-webdeploy-k9.sh sleepy_turing:home
+aws s3 sync s3://govukverify-hub-prod-billing-reports/piwik-data/ .
+export AWS_PROFILE="profile verify-billing"
+docker build -t gds-vpn .
+aws s3 sync s3://govukverify-hub-prod-billing-reports/piwik-data/ .
+/opt/cisco/anyconnect/bin/vpn -s connect https://maximus.digital.cabinet-office.gov.uk/byod
+docker build -t gds-vpn .
+export AWS_PROFILE="profile verify-billing"\
+aws s3 sync --exclude "*" --include "*2018-0[4-9]*.csv" s3://govukverify-hub-prod-billing-reports/rp/ ./data/rp\
+aws s3 sync --exclude "*" --include "*2018-10*.csv" s3://govukverify-hub-prod-billing-reports/rp/ ./data/rp\
+aws s3 sync --exclude "*" --include "*Billing_Report_for_ALL_IDPS_for_day_commencing_2018-0[4-9]*.csv" s3://govukverify-hub-prod-billing-reports/billing/ ./data/billing\
+aws s3 sync --exclude "*" --include "*Billing_Report_for_ALL_IDPS_for_day_commencing_2018-10*.csv" s3://govukverify-hub-prod-billing-reports/billing/ ./data/billing\
+
+conda create -n linconhack2018 python=3
+conda create -n lincolnhack2018 python=3
+wo lincolnhack2018
+ssh -i /home/nacnudus/.ssh/id_rsa root@178.128.32.120
+ssh -i /home/nacnudus/.ssh/id_rsa root@167.99.84.171
+ssh -i /home/nacnudus/.ssh/id_rsa root@167.99.84.171
+ssh -i /home/nacnudus/.ssh/id_rsa root@178.62.110.48
+get_iplayer --pid b0brzkzx --get
+export AWS_PROFILE="profile verify-billing"
+export AWS_PROFILE="profile gds-data-science"
+kops export kubecfg accelerator.data-science.org.uk
+export AWS_PROFILE="profile gds-data-science"
+export AWS_PROFILE="profile gds-data-science"
+export AWS_PROFILE="profile gds-data-science"
+export AWS_PROFILE="profile gds-data-science"\
+ssh -i ./aws-data-science.pem ec2-user@ec2-54-159-59-240.compute-1.amazonaws.com\
+
+ssh pi@192.168.1.174
+ping -v www.google.com
+get_iplayer --pid b0959g26 --get --pid-recursive
+ssh pi@192.168.1.174
+ssh pi@192.168.1.15
+sudo nmap -sP 192.168.1.0/24
+conda remove --name verify-datascience-sandbox --all
+sudo nmap -sP 192.168.1.0/24
+ssh pi@192.168.1.15
+sudo nmap -sP 192.168.1.0/24
+cp ~/crossprod-old-pelican/output/theme/images/favicon-96x96.png favicon.png
+sudo touch ssh
+ssh pi@192.168.1.174 
+docker run -it gds-vpn
+ssh pi@192.168.1.174 
+ssh pi@192.168.1.174
+docker run -it gds-vpn
+ssh pi@192.168.1.174
+ssh pi@192.168.1.174
+ssh pi@192.168.1.174
+/opt/cisco/anyconnect/bin/vpn -s connect https://maximus.digital.cabinet-office.gov.uk/byod
+ssh pi@192.168.1.174
+e temp.R src/xlsxvalidation.*
+scp pi@192.168.1.174:speedtest.log ./raspberrypi/speedtest
+/opt/cisco/anyconnect/bin/vpn -s connect https://maximus.digital.cabinet-office.gov.uk/byod
+wget https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/install.sh
+alias termdark
+fc-cache -fv
+fc-cache -fv
+fc-cache -fv
+scp pi@192.168.1.174:speedtest.log ./raspberrypi/speedtest
+fc-cache -fv
+fc-cache -fv
+yay ttf-nerd-fonts-hack-complete-git
+ssh pi@192.168.1.174
+echo $PATH | vim
+e psalm.ltx chant*.ly
+e psalm.ltx chant*.ly
+e psalm.ltx chant*.ly
+g clone git@github.com:ukgovdatascience/rap_companion.git
+get_iplayer --pid b01shmjd --get
+/opt/cisco/anyconnect/bin/vpn -s connect https://maximus.digital.cabinet-office.gov.uk/byod
+docker run -it gds-vpn
+pandoc h1.md --output h1.html
+sass
+sass
+e inst/rmd/h/default.html
+sassc govuk.sass inst/rmarkdown/resources/govuk.css
+e inst/rmd/h/default.html
+e inst/rmd/h/default.html
+pip install -r requirements.txt
+./example.sh
+e input.txt output.jsonl
+cp input.txt ~/gds/verify/bert
+convert yoda.png  -resize 75% yoda-small.png
+cd youtube/statistical-rethinking-winter-2019
+youtube-dl https://www.youtube.com/playlist\?list\=PLDcUM9US4XdNM4Edgs7weiyIguLSToZRI
+e temp.R _posts/2019-02-27-with-added-bacran/with-added-bacran.Rmd
+rmenv r-tensorflow
+cp ~/gds/datascience/rap/rap_companion/images/* images
+ag -Q "lubridate::.__T__-:base"
+aws s3 sync s3://govukverify-hub-prod-billing-reports/piwik-data/2019-02-01--2019-03-13 .
+aws s3 sync s3://govukverify-hub-prod-billing-reports/piwik-data/2019-02-01--2019-03-13 .
+convert govdown-logo-black-on-transparent.svg -rotate 180
+convert apple-touch-icon-180x180.png -resize 167x167 apple-touch-icon-167x167.png
+cp apple-touch-icon.png apple-touch-icon-180x180.png
+convert apple-touch-icon-180x180.png -resize 167x167 apple-touch-icon-167x167.png
+convert apple-touch-icon-180x180.png -resize 152x152 apple-touch-icon-152x152.png
+wo faststream-text-mining
+wo faststream-text-mining
+wo faststream-text-mining
+libreoffice --convert-to xlsx ONS_BoP.xls
+wo faststream-text-mining
+e temp.R index.Rmd inst/rmarkdown/resources/govuk.lua
+e temp.R index.Rmd inst/rmarkdown/resources/govuk.lua
+libreoffice --convert-to xlsx ONS_BoP.xls
+export AWS_PROFILE="profile verify-billing"
+aws s3 sync s3://govukverify-hub-prod-billing-reports/piwik-data/2019-02-01--2019-03-13 .
+ag -Q "<details"
+gc -m "Add page about style guides and methodologies (#21)"
+killall dunst;notify-send -u low foo;notify-send -u normal foo;notify-send -u critical foo
+export AWS_PROFILE="profile verify-billing"\
+aws s3 sync s3://govukverify-hub-prod-billing-reports/piwik-data/ .
+sudo mount /dev/mmcblk0p1 /media/sdcard
+sudo umount sdcard
+sudo nmap -sP 192.168.1.0/24
+sudo mount /dev/mmcblk0p1 /media/sdcard
+sudo umount sdcard
+ssh pi@192.168.1.174
+ssh pi@192.168.1.9
+ssh pi@192.168.1.9
+ssh pi@192.168.1.9
+scp pi@192.168.1.9:speedtest/speedtest.log /home/nacnudus/raspberrypi/speedtest/rofantroad
+ssh pi@192.168.1.9
+sudo nmap -sP 192.168.1.0/24
+sudo cat /etc/netctl/wlp2s0-TALKTALKE0461F
+ssh pi@192.168.1.9
+speedtest-cli --simple
+python ./got_word_counter.py
+psql -d verify-audit-raw
+psql -d verify-audit-raw
+zcat
+createdb verify-audit\
+\
+psql -d verify-audit -a -f ./recreate-audit.sh
+psql -d verify-audit
+killall dunst;notify-send -u low foo;notify-send -u normal foo;notify-send -u critical foo
+sudo systemctl start mongodb.service\
+sudo systemctl enable mongodb.service\
+
+sudo systemctl start mongodb.service\
+sudo systemctl enable mongodb.service
+e node_modules/govuk-frontend/settings/_typography-font-families.scss
+ssh pi@192.168.1.18
+ssh pi@192.168.1.9
+aft-mtp-mount -o allow_other ~/android
+tail -f /var/log/syslog
+jupyter notebook
+du -h -d 1
+psql -d verify-audit
+psql -d verify-audit
+sudo systemctl stop mongodb.service\
+sudo systemctl disable mongodb.service
+sudo systemctl enable mongodb.service\
+sudo systemctl start mongodb.service\
+
+sudo systemctl stop mongodb.service\
+sudo systemctl disable mongodb.service
+sudo systemctl enable mongodb.service\
+sudo systemctl start mongodb.service\
+
+sudo systemctl start postgresql.service
+cat 03\ Indicators\ and\ devices/ddy_devices_fingerprint.json | jq | less
+cat 01\ Blocked\ Accounts/ddy_blocked_accounts.json | jq | less
+cat 01\ Blocked\ Accounts/ddy_blocked_accounts.json | jq | less
+zip ddy_contra_indicators_fraud_accounts.zip ddy_contra_indicators_fraud_accounts.csv --password 1f8161f03c82
+cat ddy_fraud_checks_fraud_accounts.json | jq | less
+zip ddy_contra_indicators_fraud_accounts.zip ddy_contra_indicators_fraud_accounts.csv --password 1f8161f03c82
+backupcloud
+psql -d verify-audit
+psql -d verify-audit
+psql -d verify-audit
+psql -d verify-audit
+psql -d verify-audit
+sudo cat /etc/netctl/wlp2s0-TALKTALKE0461F
+psql -d verify-audit
+psql -d verify-audit
+sudo cat /etc/netctl/wlp2s0-GovWifi
+psql -d verify-audit
