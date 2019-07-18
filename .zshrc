@@ -22,6 +22,7 @@ zplug "lib/directories",   from:oh-my-zsh
 zplug "lib/functions",   from:oh-my-zsh
 zplug "lib/keybindings",   from:oh-my-zsh
 zplug "lib/misc",   from:oh-my-zsh
+zplug "plugins/git",   from:oh-my-zsh
 zplug "plugins/gitfast",   from:oh-my-zsh
 zplug "plugins/fasd",   from:oh-my-zsh
 # zplug "plugins/pip",   from:oh-my-zsh
