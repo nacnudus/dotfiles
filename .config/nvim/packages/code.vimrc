@@ -300,9 +300,8 @@ let g:deoplete#sources#jedi#python_path = '/home/nacnudus/miniconda3/bin/python'
 inoremap <silent><expr><Tab> pumvisible() ? "\<C-n>" :
 \ deoplete#mappings#manual_complete()
 	" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> deolete#mappings#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> deoplete#mappings#smart_close_popup()."\<C-h>"
-
+inoremap <expr><C-h> deolete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> deoplete#smart_close_popup()."\<C-h>"
 
 " }}}
 
