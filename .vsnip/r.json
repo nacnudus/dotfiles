@@ -1,0 +1,7 @@
+ {
+  Library Tidyverse: {
+    "prefix": ["tidy", tidyverse],
+    "body": ["library(tidyverse)"],
+    "description": "load the tidyverse."
+  }
+}

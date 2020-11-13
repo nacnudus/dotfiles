@@ -1,35 +1,15 @@
-"                                             _
-"                      _ __   __ _  _____   _(_)_ __ ___
-"                     | '_ \ / _` |/ __\ \ / / | '_ ` _ \
-"                     | | | | (_| | (__ \ V /| | | | | | |
-"                     |_| |_|\__,_|\___| \_/ |_|_| |_| |_|
-"
-"
-" Author: Duncan Garmonsway <duncan.garmonsway@gmail.com>
-" Source: https://github.com/nacnudus/nacvim
-" Based on: https://github.com/liangxianzhe/oh-my-vim by Xianzhe Liang
-"
 " This is the main config directory
 let $NACVIM="/home/nacnudus/.config/nvim"
 
-
-" Setup language {{{ ==========================================================
-
-language en_NZ.UTF-8           " Solve some plugins incompatibilities
-
-" }}}
-
-" VIM-PLUG {{{ ===============================================================
+language en_GB.UTF-8
 
 " vim-plug auto-installation and setup {{{
 
-" auto installing vim-plug
-let vimplug_file=expand($NACVIM."/autoload/plug.vim")
-if !filereadable(vimplug_file)
-  echo "installing vim-plug..."
-  echo ""
-  execute "silent !mkdir -p ".$NACVIM."/autoload"
-  execute "silent !curl -flo ".$NACVIM."/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+" auto install vim-plug
+if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 " }}}
@@ -41,74 +21,41 @@ call plug#begin(expand($NACVIM.'/plugged'))
 
 " My plugins here: (all have to appear in the same vimrc, it seems)
 
-" Unite and sources for it
-Plug 'Shougo/vimproc.vim', { 'do': 'make' } " dependency of some of Shougo's plugins
-Plug 'Shougo/unite.vim' " keyboard and search-driven menus
-Plug 'Shougo/vimfiler.vim', {'on': 'VimFiler'} " file browser
-Plug 'itchyny/unite-preview', {'on': 'VimFiler'} " preview for vimfiler
-Plug 'Shougo/unite-outline' " navigate by headings in markdown, python, etc. (not R yet)
-Plug 'ujihisa/unite-colorscheme' " colourscheme with auto-preview
-Plug 'ujihisa/unite-locate' " another way to find files
-Plug 'osyo-manga/unite-filetype' " change the file type
-Plug 'osyo-manga/unite-quickfix'
-Plug 'osyo-manga/unite-fold'
-Plug 'tacroe/unite-mark' " navigate to marks
-Plug 'tsukkee/unite-tag'
-Plug 'Shougo/neomru.vim'  " most-recently used files
-
-" Autocompletion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " autocompletion
-Plug 'Shougo/neopairs.vim' " also auto-complete bracket pairs
-Plug 'Shougo/neosnippet.vim' " snippets infrastructure
-Plug 'Shougo/neosnippet-snippets' " snippets themselves
-Plug 'tweekmonster/deoplete-clang2' " C/C++ completion
-
-" Spelling
-Plug 'vim-scripts/LanguageTool', {'for': ['text', 'rmd', 'tex']} " grammar checking
+" Language Server
+Plug 'neovim/nvim-lsp'
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
+Plug 'nvim-lua/diagnostic-nvim'
+Plug 'nvim-lua/lsp-status.nvim'
+Plug 'steelsojka/completion-buffers'
+Plug 'nvim-treesitter/completion-treesitter'
+Plug 'aca/completion-tabnine', { 'do': './install.sh' }
 
 " Syntax
-Plug 'vim-pandoc/vim-pandoc-syntax'
-Plug 'elzr/vim-json', {'for': 'json'}
-" Plug 'scrooloose/syntastic' " syntax checking and linters
-Plug 'w0rp/ale' " asynchronous lint engine (syntax checking and linters)
-Plug 'Chiel92/vim-autoformat' " autoformat various languages
-Plug 'lifepillar/pgsql.vim' " PostgreSQL for .pgsql suffixes
-
-" Tags
-Plug 'ludovicchabant/vim-gutentags' " automatic ctags
+Plug 'nvim-treesitter/nvim-treesitter'
 
 " Git
 Plug 'tpope/vim-fugitive' " Git integration
 Plug 'tpope/vim-rhubarb' " Github integration via fugitive
 Plug 'jreybert/vimagit' " better than fugitive for committing
 Plug 'airblade/vim-gitgutter' " symbol margin for fugitive and vimagit
-Plug 'joedicastro/vim-github-dashboard' " Browse GitHub events in Vim
+
+" Send code to a REPL
+Plug 'jalvesaq/vimcmdline'
 
 " R
 Plug 'jalvesaq/Nvim-R', { 'for': ['r', 'rhelp', 'rmd', 'rrst',
       \ 'rbrowser', 'rdoc', 'rout', 'rmarkdown', 'rnoweb'] }
-" Plug 'roxma/nvim-completion-manager' " ncm-R dependency
-" Plug 'gaalcaras/ncm-R'               " better completions
-" insert mode keybindings in rmd are removed in ftplugin/rmd.vim because they're
-" a pain when typing comment.
-
-" LaTeX
-" Plug 'coot/atp_vim' " Automatic TeX Plugin (uses latex-box under the hood)
-Plug 'lervag/vimtex', { 'for': ['tex',  'bib', 'bst'] }
-
-" Python
-" Plug 'Yggdroot/indentLine', {'for': 'python'} " Show indent lines
-" Plug 'alfredodeza/coveragepy.vim', {'for': 'python'} " Show reports from coverage.py
-" Plug 'ivanov/vim-ipython', {'for': 'python'} " Show reports from coverage.py
-" Plug 'jmcantrell/vim-virtualenv', {'for': 'python'} " virtual environments
-Plug 'python-mode/python-mode', { 'branch': 'develop' }
-" Plug 'zchee/deoplete-jedi', {'for': 'python'} " python autocompletion
 
 " Julia
-" Plug 'JuliaLang/julia-vim', {'for': 'julia'} # Causes error LaTeXtoUnicode
+Plug 'JuliaEditorSupport/julia-vim'
 
-" SML New Jersey (for coursera proglang course)
-Plug 'jez/vim-better-sml', {'for': 'sml'}
+" Python
+Plug 'python-mode/python-mode', { 'for': ['python'] }
+" Plug 'psf/black', { 'branch': 'stable' } " https://github.com/psf/black/issues/1767
+
+" LaTeX
+Plug 'lervag/vimtex', { 'for': ['tex',  'bib', 'bst'] }
 
 " Lilypond
 Plug 'gisraptor/vim-lilypond-integrator', { 'for': 'lilypond' } " lilypond syntax
@@ -122,34 +69,10 @@ Plug 'gisraptor/vim-lilypond-integrator', { 'for': 'lilypond' } " lilypond synta
                                          " <F10> menu (ordinary vim menu)
                                          " <F12> comment region
                                          " <S-F12> uncomment region
-                                         "
-
-" Haskell
-Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
-Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
-
-" Other filetypes
-Plug 'chrisbra/csv.vim', { 'for': 'csv' } " csv filetype plugin
-Plug 'godlygeek/tabular' " dependency of plasticboy/vim-markdown
-Plug 'othree/html5.vim', {'for': ['html', 'xhttml', 'css']} " hmtl
-Plug 'plasticboy/vim-markdown', { 'for': 'markdown' } " depends on godlygeek/tabular
-Plug 'shime/vim-livedown', { 'for': 'markdown' } " preview markdown
-" An alternative to livedown is https://github.com/euclio/vim-markdown-composer
-Plug 'cespare/vim-toml', { 'for': 'toml' }
 
 " Productivity
-Plug 'blueyed/vim-diminactive' " Dim inactive windows
-Plug 'majutsushi/tagbar', {'for': ['cpp']} " tags side-bar index
-Plug 'mhinz/vim-startify' " session manager and start screen
-Plug 'PeterRincker/vim-argumentative' " move by and switch function arguments
-Plug 'Rykka/easydigraph.vim' " convert digraphs to graphs and insert them
 Plug 'dahu/vim-fanfingtastic'            " search mutliple lines
-Plug 'vim-scripts/delimitMate.vim' " Autocompletion of (, [, {, ', ...
-Plug 'jimsei/winresizer' " easy window resizing
-Plug 'chrisbra/vim-diff-enhanced' " better diffs
-Plug 'joedicastro/DirDiff.vim', { 'on': 'DirDiff'} " diff directories
 Plug 'kshenoy/vim-signature' " toggle, display and navigate marks
-Plug 'salsifis/vim-transpose', { 'on': 'Transpose'} " transpose lines and text blocks
 Plug 'sjl/gundo.vim', { 'on' : 'GundoToggle'} " browse the undo tree
 Plug 'troydm/zoomwintab.vim' " \z toggles zoom on windows
 Plug 'tpope/vim-characterize' " reveals all the character info, Unicode included
@@ -160,21 +83,23 @@ Plug 'tpope/vim-surround' " surround vim objects with a pair of identical chars
 Plug 'tpope/vim-unimpaired'              " insert/move lines up/down
 Plug 'tpope/vim-eunuch' " help for UNIX e.g. :Remove :SudoWrite :Move :Rename etc.
 Plug 'junegunn/vim-peekaboo' " show registers in a sidebar
-Plug 'AndrewRadev/splitjoin.vim' " transition between multiline and single-line code
+Plug 'hrsh7th/vim-vsnip' " snippets
+Plug 'hrsh7th/vim-vsnip-integ'
+Plug 'jeffkreeftmeijer/vim-numbertoggle' " toggle between absolute and relative
+Plug 'farmergreg/vim-lastplace' " open a file where you left it
+Plug 'PeterRincker/vim-argumentative' " Move function arguments
 
-" Bling
+" " Bling
+Plug 'TaDaa/vimade' " Dim inactive windows
 Plug 'rakr/vim-togglebg' " toggle background with <F5>
-Plug 'iCyMind/NeoSolarized' " solarized (F5 toggle background)
-Plug 'morhetz/gruvbox' " higher-contrast than solarized (F5 toggle background)
-Plug 'jonathanfilip/vim-lucius' " higher-contrast than solarized (F5 toggle background)
-Plug 'chriskempson/base16-vim' " many colourschemes
-Plug 'sonph/onehalf', {'rtp': 'vim/'}
-Plug 'vim-airline/vim-airline' " good-looking status line
-Plug 'vim-airline/vim-airline-themes' " good-looking status line
+" Plug 'morhetz/gruvbox' " higher-contrast than solarized (F5 toggle background)
+Plug 'lifepillar/vim-gruvbox8' " higher-contrast than solarized (F5 toggle background)
+" Plug 'vim-airline/vim-airline' " good-looking status line
+" Plug 'vim-airline/vim-airline-themes' " good-looking status line
 Plug 'ryanoasis/vim-devicons' " Funky file-type icons etc.
 Plug 'ntpeters/vim-better-whitespace' " highlight and remove trailing whitespace
-Plug 'severin-lemaignan/vim-minimap' " mini overview of the buffer in the sidebar
 Plug 'itchyny/vim-cursorword' " highlight the word under the cursor
+Plug 'romgrk/barbar.nvim' " tab-bar that makes them moveable
 
 " Text-objects
 Plug 'kana/vim-textobj-entire' " ae, ie
@@ -190,19 +115,41 @@ call plug#end()
 " Required:
 filetype plugin indent on      " Indent and plugins by filetype
 
-
 " END PLUGINS (administrated by vim-plug) }}}
 
-" <Leader> & <LocalLeader> mapping {{{
+" Neovim python environment {{{
 
-let mapleader=','
-let maplocalleader= ' '
-" Exit insert mode
-inoremap jk <C-\><C-n>
-" Exit the terminal insert mode
-tnoremap jk <C-\><C-n>
+let g:python3_host_prog = '/home/nacnudus/miniconda3/envs/neovim3/bin/python'
 
 " }}}
+
+" topic-specific vimrc {{{
+
+let g:nacvim_packages=[
+            \'aesthetics',
+            \'basic',
+            \'code',
+            \'copyediting',
+            \'git',
+            \'grep',
+            \'language-server',
+            \'latex',
+            \'R',
+            \'registers',
+            \'spelling',
+            \'text',
+            \'treesitter',
+            \'windows'
+            \]
+
+for package in g:nacvim_packages
+    let package_path = $NACVIM."/packages/".package.".vim"
+    if filereadable(package_path)
+        exec ':so ' package_path
+    endif
+endfor
+
+" end topic-specific vimrc }}}
 
 " Local vimrc configuration {{{
 
@@ -213,176 +160,6 @@ endif
 
 " }}}
 
-" PLUGINS CONFIGURATION {{{
-
-" Neovim python environment {{{
-
-let g:python_host_prog = '/home/nacnudus/miniconda3/envs/neovim2/bin/python'
-let g:python3_host_prog = '/home/nacnudus/miniconda3/envs/neovim3/bin/python'
-
-" }}}
-
-" Airline {{{
-
-set noshowmode " Don't show the default mode indicator
-
-" let g:airline_theme='solarized'
-let g:airline_theme='gruvbox'
-let g:airline#extensions#branc#enable=1
-let g:airline_powerline_fonts=1
-let g:airline#extensions#whitespace#enabled = 1
-let g:airline#extensions#hunks#non_zero_only = 1
-
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline#extensions#tabline#buffer_min_count = 1
-
-nnoremap <F6> :AirlineRefresh<CR>
-
-" }}}
-
-" Font {{{
-
-" Italics
-set t_ZH=[3m
-set t_ZR=[23m
-
-" }}}
-
-" Neomru {{{
-
-let g:neomru#file_mru_path = $NACVIM.'/tmp/neomru/file'
-let g:neomru#directory_mru_path = $NACVIM.'/tmp/neomru/directory'
-
-" }}}
-
-" Unite {{{
-
-" files
-nnoremap <silent><Leader>o :Unite -silent -start-insert file<CR>
-nnoremap <silent><Leader>O :Unite -silent -start-insert file_rec/async<CR>
-nnoremap <silent><Leader>m :Unite -silent file_mru<CR>
-" buffers
-nnoremap <silent><Leader>b :Unite -silent buffer<CR>
-" tabs
-nnoremap <silent><Leader>B :Unite -silent tab<CR>
-" search in buffer
-nnoremap <silent><Leader>f :Unite -silent -no-split -start-insert -auto-preview
-            \ line<CR>
-" search in all open buffers
-nnoremap <silent><Leader>F :Unite -silent -no-split -start-insert -auto-preview
-            \ line:buffers<CR>
-nnoremap <silent>[menu]8 :UniteWithCursorWord -silent -no-split -auto-preview
-            \ line<CR>
-" yankring
-nnoremap <silent><Leader>i :Unite -silent history/yank<CR>
-" help
-nnoremap <silent> g<C-h> :UniteWithCursorWord -silent help<CR>
-" tasks
-nnoremap <silent><Leader>; :Unite -silent -toggle
-            \ grep:%::FIXME\|TODO\|NOTE\|XXX\|COMBAK\|@todo<CR>
-" outlines (also ctags)
-nnoremap <silent><Leader>t :Unite -silent -vertical -winwidth=40
-            \ -direction=topleft -toggle outline<CR>
-
-" }}}
-
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-call unite#filters#sorter_default#use(['sorter_rank'])
-call unite#custom#source('file_mru,file_rec,file_rec/async,grep,locate',
-      \ 'ignore_pattern', join(['\.git/', 'tmp/', 'bundle/'], '\|'))
-let g:unite_source_history_yank_enable = 1
-let g:unite_enable_start_insert = 0
-let g:unite_enable_short_source_mes = 0
-let g:unite_force_overwrite_statusline = 0
-let g:unite_prompt = '>>> '
-let g:unite_marked_icon = '✓'
-let g:unite_candidate_icon = '∘'
-let g:unite_winheight = 15
-let g:unite_update_time = 200
-let g:unite_split_rule = 'botright'
-let g:unite_data_directory = $NACVIM.'/tmp/unite'
-let g:unite_source_buffer_time_format = '(%d-%m-%Y %H:%M:%S) '
-let g:unite_source_file_mru_time_format = '(%d-%m-%Y %H:%M:%S) '
-let g:unite_source_directory_mru_time_format = '(%d-%m-%Y %H:%M:%S) '
-
-" }}}
-
-" END PLUGINS SETUP }}}
-
-" Unite menus {{{
-
-let g:unite_source_menu_menus = {}
-
-" menu prefix key (for all Unite menus) {{{
-
-nnoremap [menu] <Nop>
-nmap ` [menu]
-
-" }}}
-
-" Main Unite Menu {{{
-let g:unite_source_menu_menus.vim = {
-    \ 'description' : '            vim
-        \                                                   ⌘ \v',
-    \}
-let g:unite_source_menu_menus.vim.command_candidates = [
-    \['▷ choose colorscheme',
-        \'Unite colorscheme -auto-preview'],
-    \['▷ mappings',
-        \'Unite mapping -start-insert'],
-    \['▷ edit configuration file (vimrc)',
-        \'edit $MYVIMRC'],
-    \['▷ choose filetype',
-        \'Unite -start-insert filetype'],
-    \['▷ vim help',
-        \'Unite -start-insert help'],
-    \['▷ vim commands',
-        \'Unite -start-insert command'],
-    \['▷ vim functions',
-        \'Unite -start-insert function'],
-    \['▷ vim runtimepath',
-        \'Unite -start-insert runtimepath'],
-    \['▷ vim command output',
-        \'Unite output'],
-    \['▷ unite sources',
-        \'Unite source'],
-    \['▷ kill process',
-        \'Unite -default-action=sigkill -start-insert process'],
-    \['▷ launch executable (dmenu like)',
-        \'Unite -start-insert launcher'],
-    \]
-nnoremap <silent>[menu]v :Unite menu:vim -silent -start-insert<CR>
-
-" END Unite Menu }}}
-
-" topic-specific vimrc {{{
-"
-let g:nacvim_packages=[
-            \'basic',
-            \'code',
-            \'spelling',
-            \'text',
-            \'files',
-            \'grep',
-            \'git',
-            \'navigation',
-            \'registers',
-            \'markdown',
-            \'copyediting',
-            \'python',
-            \'latex'
-            \]
-
-for package in g:nacvim_packages
-    let package_path = $NACVIM."/packages/".package.".vimrc"
-    if filereadable(package_path)
-        exec ':so ' package_path
-    endif
-endfor
-
-" end topic-specific vimrc }}}
-
 " Additional Configuration {{{
 
 let s:after_vimrc = expand('~/.after.vimrc')
@@ -391,4 +168,3 @@ if filereadable(s:after_vimrc)
 endif
 
 " }}}
-let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
