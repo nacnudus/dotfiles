@@ -6,9 +6,14 @@ if(interactive()){
 }
 
 options(menu.graphics = FALSE)
+options(browser = "/usr/bin/google-chrome-stable")
 
 # Secure download of packages via https
 options(download.file.method = "libcurl")
+
+# Trimmed traceback when using pipes
+# options(error = rlang::entrace,
+#         rlang_backtrace_on_error = "branch")
 
 # Function to use all the visible columns in the terminal
 setwidth <- function(howWide=Sys.getenv("COLUMNS")) {
@@ -52,15 +57,6 @@ nowt <- function(x = NULL) x
 
 # Alias for the last result to be calculated
 makeActiveBinding(".", function() .Last.value, env = .GlobalEnv)
-
-utils::assignInNamespace(
-  "q",
-  function(save = "no", status = 0, runLast = TRUE)
-  {
-    .Internal(quit(save, status, runLast))
-  },
-  "base"
-)
 
 .First <- function() {
   options(
