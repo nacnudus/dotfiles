@@ -29,6 +29,7 @@ zplug "plugins/fasd",   from:oh-my-zsh
 zplug "plugins/vi-mode",   from:oh-my-zsh
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 zplug "molovo/tipz" # Gives you helpful hints when you execute a command for which you have an alias defined
+zplug "MichaelAquilina/zsh-autoswitch-virtualenv" # auto virtualenv switcher
 zplug "peterhurford/up.zsh" # Type up 5 to move up five directories
 zplug "supercrabtree/k" # k is the new l, with git context
 zplug "zlsun/solarized-man" # syntax-highlighted man-pages
