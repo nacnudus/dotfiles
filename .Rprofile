@@ -11,6 +11,9 @@ options(browser = "/usr/bin/google-chrome-stable")
 # Secure download of packages via https
 options(download.file.method = "libcurl")
 
+# Authorise reprex to use cached Google credentials
+options(gargle_oauth_email = TRUE)
+
 # Trimmed traceback when using pipes
 # options(error = rlang::entrace,
 #         rlang_backtrace_on_error = "branch")
