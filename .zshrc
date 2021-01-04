@@ -126,6 +126,9 @@ alias ahvpn="sudo openconnect -b https://vpn.digital.cabinet-office.gov.uk/ah -u
 alias githubvpn="sudo openconnect -b https://vpn.digital.cabinet-office.gov.uk/github"
 alias vpnoff="sudo killall openconnect"
 
+# Alias for anbox android emulator
+alias android="anbox launch --package=org.anbox.appmgr --component=org.anbox.appmgr.AppViewActivity"
+
 # Alias for initialising normal ssh
 alias sshid="eval \"$(ssh-agent)\";ssh-add ~/.ssh/id_rsa"
 
