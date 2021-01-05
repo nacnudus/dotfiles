@@ -96,6 +96,11 @@ Plug 'lifepillar/vim-cheat40', { 'on' : 'Cheat40'}
 " Append to the cheatsheat by editing ~/nvim/cheat40.txt
 Plug 'jiangmiao/auto-pairs' " auto-close pairs of brackets
 
+" Telescope
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
 " Bling
 Plug 'TaDaa/vimade' " Dim inactive windows
 Plug 'rakr/vim-togglebg' " toggle background with <F5>
