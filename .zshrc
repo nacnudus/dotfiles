@@ -280,10 +280,6 @@ alias wo="source activate "
 alias de="source deactivate "
 alias jvim="jupyter contrib nbextension install --symlink --sys-prefix"
 
-# Aliases for virtualenv environments
-alias venv="source /usr/bin/virtualenvwrapper.sh"
-alias mkvenv="mkvirtualenv "
-
 # Aliases for rocker
 alias r3.1="docker run --user docker -u 0 -p 8000:8000 -ti rocker/r-ver:3.1 bash"
 alias r3.2="docker run --user docker -u 0 -p 8001:8000 -ti rocker/r-ver:3.2 bash"
