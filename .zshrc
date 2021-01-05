@@ -176,6 +176,8 @@ duplicity --no-encryption --verbosity 8 \
   --exclude /home/nacnudus/pricepaid \
   /home b2://51802ef89485:002adf30676c6847c6a0123c09024721e052d7246f@nactop-home/
 "
+# To restore a file
+# duplicity restore --no-encryption --file-to-restore nacnudus/.ICEauthority b2://51802ef89485:002adf30676c6847c6a0123c09024721e052d7246f@nactop-home/ ./ICEauthority
 
 # Alias for mounting usb sticks
 alias sdbon="sudo mount /dev/sdb1 /media/usb"
