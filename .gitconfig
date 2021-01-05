@@ -1,0 +1,50 @@
+[user]
+	name = Duncan Garmonsway
+	email = nacnudus@gmail.com
+[core]
+	excludesfile = /home/nacnudus/.gitignore_global
+	editor = nvim
+[giggle]
+	main-window-maximized = false
+	main-window-geometry = 1022x576+0+0
+	history-view-vpane-position = 287
+	main-window-view = HistoryView
+	file-view-vpane-position = 341
+[diff]
+  tool = kitty
+  guitool = kitty.gui
+[difftool]
+	prompt = false
+  trustExitCode = true
+[difftool "kitty"]
+  cmd = kitty +kitten diff $LOCAL $REMOTE
+[difftool "kitty.gui"]
+  cmd = kitty kitty +kitten diff $LOCAL $REMOTE
+[diff "jupyternotebook"]
+	command = git-nbdiffdriver diff
+[difftool "nbdime"]
+	cmd = git-nbdifftool diff \"$LOCAL\" \"$REMOTE\" \"$BASE\"
+[mergetool]
+	prompt = false
+[merge "jupyternotebook"]
+	driver = git-nbmergedriver merge %O %A %B %L %P
+	name = jupyter notebook merge driver
+[mergetool "nbdime"]
+	cmd = git-nbmergetool merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[color]
+	ui = true
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[github]
+	user = nacnudus
+[credential]
+[push]
+	default = simple
+[alias]
+  show-rev-number = !sh -c 'git rev-list --reverse HEAD | nl | awk \"{ if(\\$1 == "$0") { print \\$2 }}\"'
+[credential]
+	helper = cache
+[core]
+	excludesfile = /home/nacnudus/.gitignore_global
+[pull]
+	ff = only

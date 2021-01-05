@@ -112,6 +112,13 @@ for i in ~/.*-pass; do
   [ -e $i/.load.zsh ] && . $i/.load.zsh
 done
 
+# Alias for kitty diff
+alias d="kitty +kitten diff"
+alias gd="git difftool"
+alias gdc="git difftool --cached"
+alias gdd="git difftool --no-symlinks --dir-diff"
+alias gddc="git difftool --cached --no-symlinks --dir-diff"
+
 # Aliases for ping
 alias p1="ping 1.1.1.1"
 alias p8="ping 8.8.8.8"
