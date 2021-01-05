@@ -18,8 +18,8 @@ nnoremap <Leader>h <C-w>s
 " Fast window & buffer close and kill.
 " from http://stackoverflow.com/a/4468491/937932, close buffer without closing
 " window.
-nmap <silent> <leader>k :bp\|bd #<CR>
-nnoremap <silent><Leader>K :bd<CR>
+nmap <silent> <leader>K <C-W><C-C>
+nnoremap <silent><Leader>k :bd<CR>
 
 " barbar tab-bar
 
