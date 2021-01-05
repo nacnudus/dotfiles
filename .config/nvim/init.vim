@@ -24,15 +24,15 @@ call plug#begin(expand($NACVIM.'/plugged'))
 " Language Server
 Plug 'neovim/nvim-lsp'
 Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim'
-Plug 'nvim-lua/diagnostic-nvim'
-Plug 'nvim-lua/lsp-status.nvim'
-Plug 'steelsojka/completion-buffers'
-Plug 'nvim-treesitter/completion-treesitter'
-Plug 'aca/completion-tabnine', { 'do': './install.sh' }
+" Plug 'nvim-lua/completion-nvim'
+" Plug 'nvim-lua/diagnostic-nvim'
+" Plug 'nvim-lua/lsp-status.nvim'
+" Plug 'steelsojka/completion-buffers'
+" Plug 'nvim-treesitter/completion-treesitter'
+" Plug 'aca/completion-tabnine', { 'do': './install.sh' }
 
 " Syntax
-Plug 'nvim-treesitter/nvim-treesitter'
+" Plug 'nvim-treesitter/nvim-treesitter'
 
 " Git
 Plug 'tpope/vim-fugitive' " Git integration
@@ -52,7 +52,7 @@ Plug 'JuliaEditorSupport/julia-vim'
 
 " Python
 Plug 'python-mode/python-mode', { 'for': ['python'] }
-" Plug 'psf/black', { 'branch': 'stable' } " https://github.com/psf/black/issues/1767
+Plug 'psf/black', { 'branch': 'stable' } " https://github.com/psf/black/issues/1767
 
 " LaTeX
 Plug 'lervag/vimtex', { 'for': ['tex',  'bib', 'bst'] }
@@ -73,7 +73,6 @@ Plug 'gisraptor/vim-lilypond-integrator', { 'for': 'lilypond' } " lilypond synta
 " Productivity
 Plug 'dahu/vim-fanfingtastic'            " search mutliple lines
 Plug 'kshenoy/vim-signature' " toggle, display and navigate marks
-Plug 'sjl/gundo.vim', { 'on' : 'GundoToggle'} " browse the undo tree
 Plug 'troydm/zoomwintab.vim' " \z toggles zoom on windows
 Plug 'tpope/vim-characterize' " reveals all the character info, Unicode included
 Plug 'tpope/vim-commentary' " toggle comments
@@ -88,20 +87,29 @@ Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'jeffkreeftmeijer/vim-numbertoggle' " toggle between absolute and relative
 Plug 'farmergreg/vim-lastplace' " open a file where you left it
 Plug 'PeterRincker/vim-argumentative' " Move function arguments
+Plug 'simnalamburt/vim-mundo', { 'on' : 'MundoToggle'} " browse the undo tree
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf.vim'
+Plug 'liuchengxu/vim-clap', { 'do': { -> clap#installer#force_download() } } " fuzzy finder
+" For vim-clap also do :Clap install-binary
+Plug 'lifepillar/vim-cheat40', { 'on' : 'Cheat40'}
+" Append to the cheatsheat by editing ~/nvim/cheat40.txt
+Plug 'jiangmiao/auto-pairs' " auto-close pairs of brackets
 
-" " Bling
+" Bling
 Plug 'TaDaa/vimade' " Dim inactive windows
 Plug 'rakr/vim-togglebg' " toggle background with <F5>
-" Plug 'morhetz/gruvbox' " higher-contrast than solarized (F5 toggle background)
+Plug 'morhetz/gruvbox' " higher-contrast than solarized (F5 toggle background)
 Plug 'lifepillar/vim-gruvbox8' " higher-contrast than solarized (F5 toggle background)
-" Plug 'vim-airline/vim-airline' " good-looking status line
-" Plug 'vim-airline/vim-airline-themes' " good-looking status line
+Plug 'vim-airline/vim-airline' " good-looking status line
+Plug 'vim-airline/vim-airline-themes' " good-looking status line
 Plug 'ryanoasis/vim-devicons' " Funky file-type icons etc.
 Plug 'ntpeters/vim-better-whitespace' " highlight and remove trailing whitespace
 Plug 'itchyny/vim-cursorword' " highlight the word under the cursor
 Plug 'romgrk/barbar.nvim' " tab-bar that makes them moveable
 
 " Text-objects
+Plug 'jeanCarloMachado/vim-toop' " use text objects in custom functions
 Plug 'kana/vim-textobj-entire' " ae, ie
 Plug 'kana/vim-textobj-indent' " ai, ii, aI, iI
 Plug 'kana/vim-textobj-lastpat' " a/, i/, a?, i?
@@ -119,7 +127,7 @@ filetype plugin indent on      " Indent and plugins by filetype
 
 " Neovim python environment {{{
 
-let g:python3_host_prog = '/home/nacnudus/miniconda3/envs/neovim3/bin/python'
+let g:python3_host_prog = '/home/nacnudus/.virtualenvs/neovim-python3/bin/python'
 
 " }}}
 
@@ -131,7 +139,6 @@ let g:nacvim_packages=[
             \'code',
             \'copyediting',
             \'git',
-            \'grep',
             \'language-server',
             \'latex',
             \'R',

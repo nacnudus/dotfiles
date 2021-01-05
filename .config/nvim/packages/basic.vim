@@ -11,7 +11,7 @@ tnoremap jk <C-\><C-n>
 
 " Basic options {{{
 
-set nohidden
+set hidden
 set visualbell                  " turn on the visual bell
 set cursorline                  " highlight the line under the cursor
 set title                       " set the terminal title to the current file
@@ -33,18 +33,16 @@ set smartcase                   " smart case ignore
 
 " }}}
 
-" Permanent undo levels {{{
-
-set undofile
-
-" }}}
 
 " Backups {{{
+
+" Enable persistent undo so that undo history persists across vim sessions
+set undofile
 
 set backup
 set noswapfile
 set backupdir=$HOME/.config/nvim/tmp/backup/
-set undodir=$HOME/.config/nvim/tmp/undo/
+set undodir=$HOME/.config/nvim/tmp/undo
 set directory=$HOME/.config/nvim/tmp/swap/
 set viminfo+=n$HOME/.config/nvim/tmp/viminfo
 
@@ -69,3 +67,10 @@ nnoremap Y y$
 
 " Quick saving
 nmap <silent> <Leader>w :update<CR>
+
+" Avoid a bug https://github.com/neovim/neovim/issues/12432
+set display=lastline
+
+" Open a cheat sheet (overriding Vim help)
+" Append to the cheatsheat by editing ~/nvim/cheat40.txt
+nmap <F1> :<c-u>Cheat40<cr>

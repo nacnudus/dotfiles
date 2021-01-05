@@ -1,6 +1,5 @@
 " Fugitive {{{
 
-nnoremap <Leader>gn :Unite output:echo\ system("git\ init")<CR>
 nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gw :Gwrite<CR>
 nnoremap <Leader>go :Gread<CR>
@@ -37,5 +36,19 @@ if !exists(":Gdiffoff")
     command Gdiffoff diffoff | q | Gedit
 endif
 noremap <Leader>dq :Gdiffoff<CR>
+
+" }}}
+
+" GitGutter {{{
+
+" Navigate between hunks
+nmap ]h <Plug>(GitGutterNextHunk)
+nmap [h <Plug>(GitGutterPrevHunk)
+
+" Hunk objects
+omap ih <Plug>(GitGutterTextObjectInnerPending)
+omap ah <Plug>(GitGutterTextObjectOuterPending)
+xmap ih <Plug>(GitGutterTextObjectInnerVisual)
+xmap ah <Plug>(GitGutterTextObjectOuterVisual)
 
 " }}}

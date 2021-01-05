@@ -2,7 +2,8 @@
 let R_notmuxconf = 1
 
 " Don't use the nvim terminal emulator
-let R_external_term = 1
+" let R_external_term = 1
+let R_external_term = "kitty "
 let R_applescript = 0
 let R_notmuxconf = 1 " Use my own tmux, which allows mouse scroll
 

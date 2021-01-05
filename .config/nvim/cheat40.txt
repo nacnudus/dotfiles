@@ -1,0 +1,5 @@
+Custom {{{1
+Show this cheat sheet    <F1>          N
+Exit without saving      <leader>``    N
+Exit insert mode         jk            I
+Quicksave                <leader>,     N

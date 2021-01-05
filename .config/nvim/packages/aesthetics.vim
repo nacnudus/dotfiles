@@ -25,7 +25,7 @@ syntax enable                  " enable the syntax highlight
 
 colorscheme gruvbox8_soft
 
-" call togglebg#map("<F5>")      " toggle dark and light with F5
+call togglebg#map("<F5>")      " toggle dark and light with F5
 
 let g:gruvbox_contrast_dark      = 'soft'
 let g:gruvbox_contrast_light     = 'soft'

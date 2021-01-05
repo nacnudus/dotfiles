@@ -1,13 +1,19 @@
 " Activate language servers
 lua << EOF
-    local on_attach_vim = function(client)
-      require'diagnostic'.on_attach(client)
-    end
-    require'nvim_lsp'.bashls.setup{on_attach=on_attach_vim}
-    require'nvim_lsp'.julials.setup{on_attach=on_attach_vim}
-    require'nvim_lsp'.r_language_server.setup{on_attach=on_attach_vim}
-    require'nvim_lsp'.pyls.setup{on_attach=on_attach_vim}
-    require'nvim_lsp'.diagnosticls.setup{filetypes={'r', 'python'}}
+    -- local on_attach_vim = function(client)
+    --   require'diagnostic'.on_attach(client)
+    -- end
+    -- require'lspconfig'.julials.setup{on_attach=on_attach_vim}
+    -- require'lspconfig'.r_language_server.setup{on_attach=on_attach_vim}
+    -- require'lspconfig'.pyls.setup{on_attach=on_attach_vim}
+    -- require'lspconfig'.sqlls.setup{on_attach=on_ttach_vim}
+    -- require'lspconfig'.bashls.setup{}
+    -- require'lspconfig'.diagnosticls.setup{filetypes={'r', 'python'}}
+    -- require'lspconfig'.julials.setup{}
+    -- require'lspconfig'.r_language_server.setup{}
+    -- require'lspconfig'.pyls.setup{}
+    require'lspconfig'.sqlls.setup{}
+    -- require'lspconfig'.bashls.setup{}
 EOF
 
 " Mappings
@@ -22,40 +28,38 @@ nnoremap <silent> gW        <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
 nnoremap <silent> gd        <cmd>lua vim.lsp.buf.declaration()<CR>
 nnoremap <silent> rn        <cmd>lua vim.lsp.buf.rename()<CR>
 nnoremap <silent> <leader>e <cmd>lua vim.lsp.util.show_line_diagnostics()<CR>
+nnoremap <silent> <leader>f <cmd>lua vim.lsp.buf.formatting()<CR>
 
 "map <c-p> to manually trigger completion
-imap <silent> <c-p> <Plug>(completion_trigger)
+"imap <silent> <c-p> <Plug>(completion_trigger)
 
 " Activate completion everywhere
-autocmd BufEnter * setlocal omnifunc=v:lua.vim.lsp.omnifunc
-autocmd BufEnter * lua require'completion'.on_attach()
+" autocmd BufEnter * setlocal omnifunc=v:lua.vim.lsp.omnifunc
+" autocmd BufEnter * lua require'completion'.on_attach()
 
 " Autoformat Python on save
-autocmd BufWritePost *.py execute ':Black'
+" autocmd BufWritePost *.py execute ':Black'
 
-" Use completion-nvim in every buffer
-autocmd BufEnter * lua require'completion'.on_attach()
+" " Set completeopt to have a better completion experience
+" set completeopt=menuone,noinsert,noselect
 
-" Set completeopt to have a better completion experience
-set completeopt=menuone,noinsert,noselect
+" " Possible value: 'UltiSnips', 'Neosnippet', 'vim-vsnip', 'snippets.nvim'
+" let g:completion_enable_snippet = 'vim-vsnip'
 
-" Possible value: 'UltiSnips', 'Neosnippet', 'vim-vsnip', 'snippets.nvim'
-let g:completion_enable_snippet = 'vim-vsnip'
+" " Avoid showing message extra message when using completion
+" set shortmess+=c
 
-" Avoid showing message extra message when using completion
-set shortmess+=c
+" " Statusline
+" lua << END
+"     -- local lsp_status = require('lsp-status')
+"     -- lsp_status.register_progress()
+"     -- local nvim_lsp = require('nvim_lsp')
+" END
 
-" Statusline
-lua << END
-    local lsp_status = require('lsp-status')
-    lsp_status.register_progress()
-    local nvim_lsp = require('nvim_lsp')
-END
+" function! LspStatus() abort
+"   if luaeval('#vim.lsp.buf_get_clients() > 0')
+"     return luaeval("require('lsp-status').status()")
+"   endif
 
-function! LspStatus() abort
-  if luaeval('#vim.lsp.buf_get_clients() > 0')
-    return luaeval("require('lsp-status').status()")
-  endif
-
-  return ''
-endfunction
+"   return ''
+" endfunction
