@@ -1,19 +1,10 @@
 " Activate language servers
 lua << EOF
-    -- local on_attach_vim = function(client)
-    --   require'diagnostic'.on_attach(client)
-    -- end
-    -- require'lspconfig'.julials.setup{on_attach=on_attach_vim}
-    -- require'lspconfig'.r_language_server.setup{on_attach=on_attach_vim}
-    -- require'lspconfig'.pyls.setup{on_attach=on_attach_vim}
-    -- require'lspconfig'.sqlls.setup{on_attach=on_ttach_vim}
-    -- require'lspconfig'.bashls.setup{}
-    -- require'lspconfig'.diagnosticls.setup{filetypes={'r', 'python'}}
-    -- require'lspconfig'.julials.setup{}
-    -- require'lspconfig'.r_language_server.setup{}
-    -- require'lspconfig'.pyls.setup{}
+    require'lspconfig'.julials.setup{}
+    require'lspconfig'.r_language_server.setup{}
+    require'lspconfig'.pyls.setup{}
     require'lspconfig'.sqlls.setup{}
-    -- require'lspconfig'.bashls.setup{}
+    require'lspconfig'.bashls.setup{}
 EOF
 
 " Mappings
