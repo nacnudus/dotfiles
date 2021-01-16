@@ -27,6 +27,9 @@ nnoremap <silent> g0        <cmd>lua vim.lsp.buf.document_symbol()<CR>
 nnoremap <silent> gW        <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
 nnoremap <silent> gd        <cmd>lua vim.lsp.buf.declaration()<CR>
 nnoremap <silent> rn        <cmd>lua vim.lsp.buf.rename()<CR>
+nnoremap <silent> dn        <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+nnoremap <silent> dp        <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+nnoremap <silent> do        <cmd>lua vim.lsp.diagnostic.set_loclist()<CR>
 nnoremap <silent> <leader>e <cmd>lua vim.lsp.util.show_line_diagnostics()<CR>
 nnoremap <silent> <leader>f <cmd>lua vim.lsp.buf.formatting()<CR>
 
