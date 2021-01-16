@@ -51,4 +51,8 @@ omap ah <Plug>(GitGutterTextObjectOuterPending)
 xmap ih <Plug>(GitGutterTextObjectInnerVisual)
 xmap ah <Plug>(GitGutterTextObjectOuterVisual)
 
+" Don't use the floating preview of git hunks, otherwise you can't select part
+" of a hunk that has both additions and deletions.
+let g:gitgutter_preview_win_floating=0
+
 " }}}
