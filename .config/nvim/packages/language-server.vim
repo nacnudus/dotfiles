@@ -30,24 +30,21 @@ nnoremap <silent> rn        <cmd>lua vim.lsp.buf.rename()<CR>
 nnoremap <silent> <leader>e <cmd>lua vim.lsp.util.show_line_diagnostics()<CR>
 nnoremap <silent> <leader>f <cmd>lua vim.lsp.buf.formatting()<CR>
 
-"map <c-p> to manually trigger completion
-"imap <silent> <c-p> <Plug>(completion_trigger)
+" map <c-p> to manually trigger completion
+imap <silent> <c-p> <Plug>(completion_trigger)
 
 " Activate completion everywhere
-" autocmd BufEnter * setlocal omnifunc=v:lua.vim.lsp.omnifunc
-" autocmd BufEnter * lua require'completion'.on_attach()
+autocmd BufEnter * setlocal omnifunc=v:lua.vim.lsp.omnifunc
+autocmd BufEnter * lua require'completion'.on_attach()
 
-" Autoformat Python on save
-" autocmd BufWritePost *.py execute ':Black'
+" Set completeopt to have a better completion experience
+set completeopt=menuone,noinsert,noselect
 
-" " Set completeopt to have a better completion experience
-" set completeopt=menuone,noinsert,noselect
+" Possible value: 'UltiSnips', 'Neosnippet', 'vim-vsnip', 'snippets.nvim'
+let g:completion_enable_snippet = 'vim-vsnip'
 
-" " Possible value: 'UltiSnips', 'Neosnippet', 'vim-vsnip', 'snippets.nvim'
-" let g:completion_enable_snippet = 'vim-vsnip'
-
-" " Avoid showing message extra message when using completion
-" set shortmess+=c
+" Avoid showing message extra message when using completion
+set shortmess+=c
 
 " " Statusline
 " lua << END

@@ -25,14 +25,6 @@ call plug#begin(expand($NACVIM.'/plugged'))
 Plug 'neovim/nvim-lsp'
 Plug 'neovim/nvim-lspconfig'
 " Plug 'nvim-lua/completion-nvim'
-" Plug 'nvim-lua/diagnostic-nvim'
-" Plug 'nvim-lua/lsp-status.nvim'
-" Plug 'steelsojka/completion-buffers'
-" Plug 'nvim-treesitter/completion-treesitter'
-" Plug 'aca/completion-tabnine', { 'do': './install.sh' }
-
-" Syntax
-" Plug 'nvim-treesitter/nvim-treesitter'
 
 " Git
 Plug 'tpope/vim-fugitive' " Git integration
