@@ -114,3 +114,10 @@ let cmdline_map_send_motion    = '<LocalLeader>lm'
 let cmdline_map_quit           = '<LocalLeader>q'
 
 " }}}
+
+" python {{{
+
+" " Autoformat Python on save
+" autocmd BufWritePost *.py execute ':Black'
+
+" }}}
