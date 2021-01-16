@@ -24,7 +24,7 @@ call plug#begin(expand($NACVIM.'/plugged'))
 " Language Server
 Plug 'neovim/nvim-lsp'
 Plug 'neovim/nvim-lspconfig'
-" Plug 'nvim-lua/completion-nvim'
+Plug 'nvim-lua/completion-nvim'
 
 " Git
 Plug 'tpope/vim-fugitive' " Git integration
