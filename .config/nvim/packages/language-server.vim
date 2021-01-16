@@ -5,6 +5,15 @@ lua << EOF
     require'lspconfig'.pyls.setup{}
     require'lspconfig'.sqlls.setup{}
     require'lspconfig'.bashls.setup{}
+
+    -- For debugging
+    -- vim.lsp.set_log_level("debug")
+
+    -- Then in the command line, check whether the server is running.
+    -- :lua print(vim.lsp.buf.server_ready())
+
+    -- If not, read the log
+    -- :lua vim.cmd('e'..vim.lsp.get_log_path()
 EOF
 
 " Mappings
