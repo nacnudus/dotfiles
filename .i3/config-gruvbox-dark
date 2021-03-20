@@ -249,9 +249,16 @@ focus_follows_mouse no
 # bindsym XF86AudioLowerVolume exec amixer -c 0 set Master 5- && amixer -c 0 set Headphone 5-
 # bindsym XF86AudioRaiseVolume exec amixer -c 0 set Master 5+ && amixer -c 0 set Headphone 5+
 # bindsym XF86AudioMute exec amixer -c 0 set Master toggle && amixer -c 0 set Speaker toggle && amixer -c 0 set Headphone toggle && amixer -c 0 set 'Line Out' toggle
-bindsym XF86AudioLowerVolume exec /usr/bin/pulseaudio-ctl down
-bindsym XF86AudioRaiseVolume exec /usr/bin/pulseaudio-ctl up
-bindsym XF86AudioMute exec /usr/bin/pulseaudio-ctl mute
+
+# # These worked with pulseaudio but not pipewire
+# bindsym XF86AudioLowerVolume exec /usr/bin/pulseaudio-ctl down
+# bindsym XF86AudioRaiseVolume exec /usr/bin/pulseaudio-ctl up
+# bindsym XF86AudioMute exec /usr/bin/pulseaudio-ctl mute
+
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+
 
 # Brightness
 bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 5 -steps 1 -time 10
