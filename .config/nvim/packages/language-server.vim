@@ -19,17 +19,17 @@ EOF
 " Mappings
 nnoremap <silent> <c-]>     <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> K         <cmd>lua vim.lsp.buf.hover()<CR>
-nnoremap <silent> gD        <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> gi        <cmd>lua vim.lsp.buf.implementation()<CR>
 nnoremap <silent> <c-k>     <cmd>lua vim.lsp.buf.signature_help()<CR>
-nnoremap <silent> 1gD       <cmd>lua vim.lsp.buf.type_definition()<CR>
+nnoremap <silent> gtd       <cmd>lua vim.lsp.buf.type_definition()<CR>
 nnoremap <silent> gr        <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> g0        <cmd>lua vim.lsp.buf.document_symbol()<CR>
-nnoremap <silent> gW        <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
+nnoremap <silent> gw        <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
 nnoremap <silent> gd        <cmd>lua vim.lsp.buf.declaration()<CR>
-nnoremap <silent> rn        <cmd>lua vim.lsp.buf.rename()<CR>
-nnoremap <silent> dn        <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
-nnoremap <silent> dp        <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
-nnoremap <silent> do        <cmd>lua vim.lsp.diagnostic.set_loclist()<CR>
+nnoremap <silent> gR        <cmd>lua vim.lsp.buf.rename()<CR>
+nnoremap <silent> gn        <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+nnoremap <silent> gp        <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+nnoremap <silent> go        <cmd>lua vim.lsp.diagnostic.set_loclist()<CR>
 nnoremap <silent> <leader>e <cmd>lua vim.lsp.util.show_line_diagnostics()<CR>
 nnoremap <silent> <leader>f <cmd>lua vim.lsp.buf.formatting()<CR>
 
@@ -60,6 +60,6 @@ set shortmess+=c
 "   if luaeval('#vim.lsp.buf_get_clients() > 0')
 "     return luaeval("require('lsp-status').status()")
 "   endif
-
+"
 "   return ''
 " endfunction

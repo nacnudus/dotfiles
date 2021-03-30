@@ -26,6 +26,17 @@ Plug 'neovim/nvim-lsp'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 
+" Syntax (treesitter)
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'romgrk/nvim-treesitter-context' " when the context scrolls out of view
+Plug 'nvim-treesitter/nvim-treesitter-refactor'
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+Plug 'p00f/nvim-ts-rainbow' " rainbow parentheses
+
+" Debug
+" Plug 'mfussenegger/nvim-dap' " No support for R or Julia, Python looks hard
+" Plug 'theHamsta/nvim-dap-virtual-text'
+
 " Git
 Plug 'tpope/vim-fugitive' " Git integration
 Plug 'tpope/vim-rhubarb' " Github integration via fugitive
