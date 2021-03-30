@@ -107,10 +107,6 @@ setopt extendedglob
 
 bindkey "" znt-history-widget
 
-# Load the custom .*-pass I have
-for i in ~/.*-pass; do
-  [ -e $i/.load.zsh ] && . $i/.load.zsh
-done
 
 # Alias for kitty diff
 alias d="kitty +kitten diff"
