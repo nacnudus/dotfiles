@@ -4,15 +4,23 @@
 [core]
   excludesfile = /home/nacnudus/.gitignore_global
   editor = nvim
+  pager = delta
+[interactive]
+  diffFilter = delta --color-only
 [giggle]
   main-window-maximized = false
   main-window-geometry = 1022x576+0+0
   history-view-vpane-position = 287
   main-window-view = HistoryView
   file-view-vpane-position = 341
+[delta]
+  syntax-theme = gruvbox-dark
+  line-numbers = true
+  side-by-side = tue
 [diff]
   tool = kitty
   guitool = kitty.gui
+  colorMoved = default
 [difftool]
   prompt = false
   trustExitCode = true
