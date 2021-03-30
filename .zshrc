@@ -119,6 +119,8 @@ alias gdc="git difftool --cached"
 alias gdd="git difftool --no-symlinks --dir-diff"
 alias gddc="git difftool --cached --no-symlinks --dir-diff"
 
+# Alias for better tree
+tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
 # Aliases for ping
 alias p1="ping 1.1.1.1"
 alias p8="ping 8.8.8.8"
