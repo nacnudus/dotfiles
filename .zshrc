@@ -107,6 +107,10 @@ setopt extendedglob
 
 bindkey "" znt-history-widget
 
+# Use less to view PDFs and things
+LESSOPEN="|lesspipe.sh %s"; export LESSOPEN
+# batpipe doesn't do as many formats yet 2021-03-29
+# eval "$(batpipe)"
 
 # Alias for kitty diff
 alias d="kitty +kitten diff"
