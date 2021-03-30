@@ -22,6 +22,7 @@ zplug "lib/directories",   from:oh-my-zsh
 zplug "lib/functions",   from:oh-my-zsh
 zplug "lib/keybindings",   from:oh-my-zsh
 zplug "lib/misc",   from:oh-my-zsh
+zplug "plugins/colored-man-pages",   from:oh-my-zsh
 zplug "plugins/git",   from:oh-my-zsh
 zplug "plugins/gitfast",   from:oh-my-zsh
 zplug "plugins/fasd",   from:oh-my-zsh
@@ -32,7 +33,6 @@ zplug "molovo/tipz" # Gives you helpful hints when you execute a command for whi
 zplug "MichaelAquilina/zsh-autoswitch-virtualenv" # auto virtualenv switcher
 zplug "peterhurford/up.zsh" # Type up 5 to move up five directories
 zplug "supercrabtree/k" # k is the new l, with git context
-zplug "zlsun/solarized-man" # syntax-highlighted man-pages
 zplug "psprint/zsh-navigation-tools" # multiline history searcher
 zplug "johnhamelink/rvm-zsh", lazy:true
 
