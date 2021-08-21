@@ -21,10 +21,10 @@ let g:better_whitespace_filetypes_blacklist = ['csv', 'txt', 'diff', 'gitcommit'
 nmap <Leader>c <Plug>CommentaryLine
 xmap <Leader>c <Plug>Commentary
 
-augroup plugin_commentary
-    au!
-    au FileType python setlocal commentstring=#%s
-augroup END
+" augroup plugin_commentary
+"     au!
+"     " au FileType python setlocal commentstring=#%s
+" augroup END
 
 " }}}
 

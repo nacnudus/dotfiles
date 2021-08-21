@@ -23,7 +23,8 @@ set background=dark            " set a dark background
 
 syntax enable                  " enable the syntax highlight
 
-colorscheme gruvbox8_soft
+" colorscheme gruvbox8_soft
+colorscheme gruvbox
 
 call togglebg#map("<F5>")      " toggle dark and light with F5
 

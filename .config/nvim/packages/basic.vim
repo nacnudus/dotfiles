@@ -74,3 +74,7 @@ set display=lastline
 " Open a cheat sheet (overriding Vim help)
 " Append to the cheatsheat by editing ~/nvim/cheat40.txt
 nmap <F1> :<c-u>Cheat40<cr>
+let g:cheat40_use_default = 0
+
+" Highlight on yank
+au TextYankPost * lua vim.highlight.on_yank {higroup="IncSearch", timeout=150, on_visual=true}

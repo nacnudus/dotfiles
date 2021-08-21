@@ -22,16 +22,16 @@ call plug#begin(expand($NACVIM.'/plugged'))
 " My plugins here: (all have to appear in the same vimrc, it seems)
 
 " Language Server
-Plug 'neovim/nvim-lsp'
 Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim'
+" Plug 'hrsh7th/nvim-compe' " completion
 
 " Syntax (treesitter)
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'romgrk/nvim-treesitter-context' " when the context scrolls out of view
+Plug 'nvim-treesitter/playground' " Reveal the abstract syntax tree
 Plug 'nvim-treesitter/nvim-treesitter-refactor'
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'p00f/nvim-ts-rainbow' " rainbow parentheses
+Plug 'romgrk/nvim-treesitter-context' " when the context scrolls out of view
 
 " Debug
 " Plug 'mfussenegger/nvim-dap' " No support for R or Julia, Python looks hard
@@ -42,6 +42,8 @@ Plug 'tpope/vim-fugitive' " Git integration
 Plug 'tpope/vim-rhubarb' " Github integration via fugitive
 Plug 'jreybert/vimagit' " better than fugitive for committing
 Plug 'airblade/vim-gitgutter' " symbol margin for fugitive and vimagit
+" TODO: replace gitgutter with https://github.com/lewis6991/gitsigns.nvim when
+" mature
 
 " Send code to a REPL
 Plug 'jalvesaq/vimcmdline'
@@ -89,12 +91,10 @@ Plug 'hrsh7th/vim-vsnip' " snippets
 Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'jeffkreeftmeijer/vim-numbertoggle' " toggle between absolute and relative
 Plug 'farmergreg/vim-lastplace' " open a file where you left it
-Plug 'PeterRincker/vim-argumentative' " Move function arguments
+" Plug 'PeterRincker/vim-argumentative' " Move function arguments
 Plug 'simnalamburt/vim-mundo', { 'on' : 'MundoToggle'} " browse the undo tree
 " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " Plug 'junegunn/fzf.vim'
-Plug 'liuchengxu/vim-clap', { 'do': { -> clap#installer#force_download() } } " fuzzy finder
-" For vim-clap also do :Clap install-binary
 Plug 'lifepillar/vim-cheat40', { 'on' : 'Cheat40'}
 " Append to the cheatsheat by editing ~/nvim/cheat40.txt
 Plug 'jiangmiao/auto-pairs' " auto-close pairs of brackets
@@ -104,11 +104,15 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
+" Gruvbox
+" Plug 'morhetz/gruvbox' " higher-contrast than solarized (F5 toggle background)
+" Plug 'lifepillar/vim-gruvbox8' " higher-contrast than solarized (F5 toggle background)
+Plug 'rktjmp/lush.nvim'
+Plug 'npxbr/gruvbox.nvim'
+
 " Bling
 Plug 'TaDaa/vimade' " Dim inactive windows
 Plug 'rakr/vim-togglebg' " toggle background with <F5>
-Plug 'morhetz/gruvbox' " higher-contrast than solarized (F5 toggle background)
-Plug 'lifepillar/vim-gruvbox8' " higher-contrast than solarized (F5 toggle background)
 Plug 'vim-airline/vim-airline' " good-looking status line
 Plug 'vim-airline/vim-airline-themes' " good-looking status line
 Plug 'ryanoasis/vim-devicons' " Funky file-type icons etc.
@@ -149,8 +153,8 @@ let g:nacvim_packages=[
             \'git',
             \'language-server',
             \'latex',
-            \'R',
             \'registers',
+            \'R',
             \'spelling',
             \'text',
             \'treesitter',

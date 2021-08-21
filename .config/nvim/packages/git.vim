@@ -1,6 +1,6 @@
 " Fugitive {{{
 
-nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>gs :Git<CR>
 nnoremap <Leader>gw :Gwrite<CR>
 nnoremap <Leader>go :Gread<CR>
 nnoremap <Leader>gR :Gremove<CR>
