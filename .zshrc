@@ -123,8 +123,8 @@ alias gddc="git difftool --cached --no-symlinks --dir-diff"
 tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
 
 # Alias for bat versions of cat, ripgrep, man, etc.
-alias cat="bat"
-alias rg="batgrep"
+# alias cat="bat"
+# alias rg="batgrep" # Doesn't support all options, e.g. -c for count
 # alias man="batman" # Not as good as oh-my-zsh colored-man-pages yet
 
 # Aliases for ping
