@@ -2,7 +2,6 @@ if(interactive()){
   # suppressMessages(suppressWarnings(require(conflicted)))
   suppressMessages(library(colorout))
   suppressMessages(library(usethis))
-  suppressMessages(library(devtools))
 }
 
 options(menu.graphics = FALSE)
