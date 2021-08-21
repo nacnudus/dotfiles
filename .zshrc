@@ -286,6 +286,11 @@ alias notify="killall dunst;notify-send foo;notify-send bar"
 alias notifyoff="notify-send \"DUNST_COMMAND_PAUSE\""
 alias notifyon="notify-send \"DUNST_COMMAND_RESUME\""
 
+# Alias for querying and setting the power_save wifi state
+alias powersave="sudo iw dev wlp2s0 get power_save"
+alias powersaveoff="sudo iw dev wlp2s0 set power_save off"
+alias powersaveon="sudo iw dev wlp2s0 set power_save on"
+
 # Aliases for Conda environments
 alias mkenv3="conda create python=3 ipython jupyter pip -n "
 alias mkenv2="conda create python=2 ipython jupyter pip -n "
