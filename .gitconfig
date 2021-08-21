@@ -56,3 +56,5 @@
   excludesfile = /home/nacnudus/.gitignore_global
 [pull]
   ff = only
+[init]
+	defaultBranch = main
