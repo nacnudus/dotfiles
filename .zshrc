@@ -154,8 +154,8 @@ alias sshgds="eval \"$(ssh-agent)\";ssh-add ~/.ssh/gds_rsa"
 alias l="k -ha"
 
 # Aliases for updating
-alias updatetest="yay -Syyua"
-alias updatereal="yay -Syyua --noconfirm"
+alias updatetest="yay -Syyu"
+alias updatereal="yay -Syyu --noconfirm"
 
 # Alias to load R without .Rprofile for using rhub without colorout
 alias rhub="R --no-init-file"
