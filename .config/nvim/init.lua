@@ -39,17 +39,11 @@ require('packer').startup(function()
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
 end)
 
---Incremental live completion (note: this is now a default on master)
-vim.o.inccommand = 'nosplit'
-
 --Set highlight on search
 vim.o.hlsearch = false
 
 --Make line numbers default
 vim.wo.number = true
-
---Do not save when switching buffers (note: this is now a default on master)
-vim.o.hidden = true
 
 --Enable mouse mode
 vim.o.mouse = 'a'
@@ -139,9 +133,6 @@ vim.api.nvim_exec(
 ]],
   false
 )
-
--- Y yank until the end of line  (note: this is now a default on master)
-vim.api.nvim_set_keymap('n', 'Y', 'y$', { noremap = true })
 
 -- LSP settings
 local nvim_lsp = require 'lspconfig'
