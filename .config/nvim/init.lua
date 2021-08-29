@@ -25,8 +25,8 @@ require('packer').startup(function()
   -- UI to select things (files, grep results, open buffers...)
   use { 'nvim-telescope/telescope.nvim', requires = { { 'nvim-lua/popup.nvim' }, { 'nvim-lua/plenary.nvim' } } }
   -- Colour scheme with treesitter support. Check for better-maintained alternatives.
-  use { "ellisonleao/gruvbox.nvim", requires = { "rktjmp/lush.nvim" } } 
-  use 'joshdick/onedark.vim' -- Theme with better treesitter support?
+  use { "sainnhe/gruvbox-material" } 
+  -- use { "ellisonleao/gruvbox.nvim", requires = { "rktjmp/lush.nvim" } } 
   -- Fancier statusline
   use { 'hoob3rt/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true} }
   -- Add git related info in the signs columns and popups
@@ -66,12 +66,18 @@ vim.wo.signcolumn = 'yes'
 --Set colorscheme (order is important here)
 vim.o.termguicolors = true
 vim.o.background = "dark" -- or "light" for light mode
-vim.cmd [[colorscheme gruvbox]]
+vim.g.gruvbox_material_palette = 'original'
+vim.g.gruvbox_material_statusline_style = 'original'
+vim.g.gruvbox_material_better_performance = 1
+vim.g.gruvbox_material_enable_italic = 1
+vim.g.gruvbox_material_enable_bold = 1
+vim.g.gruvbox_material_background = 'medium' -- 'hard', 'medium', 'soft'
+vim.cmd [[colorscheme gruvbox-material]]
 
 --Set statusbar
-require('lualine').setup{
-  options = {theme = 'gruvbox'},
-}
+--require('lualine').setup{
+--  options = {theme = 'gruvbox'},
+--}
 
 --Remap space as leader key
 vim.api.nvim_set_keymap('', '<Space>', '<Nop>', { noremap = true, silent = true })
