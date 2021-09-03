@@ -19,7 +19,16 @@ require('packer').startup(function()
   -- Additional textobjects for treesitter
   use 'nvim-treesitter/nvim-treesitter-textobjects'
   use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
+  use {
+    'sudormrfbin/cheatsheet.nvim',
+    requires = {
+      {'nvim-telescope/telescope.nvim'},
+      {'nvim-lua/popup.nvim'},
+      {'nvim-lua/plenary.nvim'},
+    }
+  }
 end)
 
 require('plugins.gitsigns')
 require('plugins.telescope')
+require('plugins.cheatsheet-nvim')
