@@ -9,7 +9,6 @@ require('packer').startup(function()
   use { 'nvim-telescope/telescope.nvim', requires = { { 'nvim-lua/popup.nvim' }, { 'nvim-lua/plenary.nvim' } } }
   -- Colour scheme with treesitter support. Check for better-maintained alternatives.
   use { "sainnhe/gruvbox-material" }
-  -- use { "ellisonleao/gruvbox.nvim", requires = { "rktjmp/lush.nvim" } } 
   -- Fancier statusline
   use { 'hoob3rt/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true} }
   -- Add git related info in the signs columns and popups
