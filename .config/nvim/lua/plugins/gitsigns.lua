@@ -7,4 +7,5 @@ require('gitsigns').setup {
     topdelete = { hl = 'GitGutterDelete', text = '‾' },
     changedelete = { hl = 'GitGutterChange', text = '~' },
   },
+  word_diff = true
 }
