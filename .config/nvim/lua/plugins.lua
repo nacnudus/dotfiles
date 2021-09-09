@@ -28,7 +28,7 @@ require('packer').startup(function()
   }
 end)
 
+require('plugins.cheatsheet-nvim')
 require('plugins.gitsigns')
 require('plugins.telescope')
-require('plugins.cheatsheet-nvim')
 require('plugins.vim-commentary')
