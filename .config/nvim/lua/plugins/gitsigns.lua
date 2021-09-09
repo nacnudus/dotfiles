@@ -1,11 +1,11 @@
 -- Gitsigns
 require('gitsigns').setup {
   signs = {
-    add = { hl = 'GitGutterAdd', text = '+' },
-    change = { hl = 'GitGutterChange', text = '~' },
-    delete = { hl = 'GitGutterDelete', text = '_' },
-    topdelete = { hl = 'GitGutterDelete', text = '‾' },
-    changedelete = { hl = 'GitGutterChange', text = '~' },
+    add = { text = '+' },
+    change = { text = '~' },
+    delete = { text = '_', show_count = true },
+    topdelete = { text = '‾', show_count = true },
+    changedelete = { text = '_̴', show_count = true, hl = 'GitSignsDelete' },
   },
   word_diff = true
 }
