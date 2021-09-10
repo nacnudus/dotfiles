@@ -1,4 +1,7 @@
 -- Telescope
+vim.api.nvim_set_keymap('n', '<leader>t', ':Telescope<CR>', {})
+vim.api.nvim_set_keymap('x', '<leader>t', ':Telescope<CR>', {})
+
 require('telescope').setup {
   defaults = {
     mappings = {
@@ -7,5 +10,6 @@ require('telescope').setup {
         ['<C-d>'] = false,
       },
     },
+    layout_strategy = 'flex',
   },
 }
