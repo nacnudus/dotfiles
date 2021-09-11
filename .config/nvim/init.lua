@@ -16,8 +16,12 @@ vim.api.nvim_exec(
   false
 )
 
+-- native-config must be first to define leader keys
+require('native-config')
+
+-- plugins must come second
 require('plugins')
 
-require('native-config')
+-- Once plugins have been loaded, general config can configure them
 require('language-server')
 require('treesitter')
