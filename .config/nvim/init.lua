@@ -16,7 +16,8 @@ vim.api.nvim_exec(
   false
 )
 
-require('native-config')
 require('plugins')
+
+require('native-config')
 require('language-server')
 require('treesitter')
