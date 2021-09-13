@@ -18,6 +18,22 @@ require('packer').startup(function()
   -- Additional textobjects for treesitter
   use 'nvim-treesitter/nvim-treesitter-textobjects'
   use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
+  -- Auto-completion
+  use {
+    "hrsh7th/nvim-cmp",
+    requires = {
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-nvim-lua",
+      "hrsh7th/cmp-path",
+      "hrsh7th/vim-vsnip",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-emoji",
+      "f3fora/cmp-spell",
+      "quangnguyen30192/cmp-nvim-tags",
+      "ray-x/cmp-treesitter",
+      "kdheepak/cmp-latex-symbols",
+    }
+  }
   use {
     'sudormrfbin/cheatsheet.nvim',
     requires = {
@@ -33,3 +49,4 @@ require('plugins.gitsigns')
 require('plugins.lualine-nvim')
 require('plugins.telescope')
 require('plugins.vim-commentary')
+require('plugins.nvim-cmp')

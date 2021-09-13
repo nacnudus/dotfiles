@@ -61,7 +61,7 @@ vim.api.nvim_exec(
 )
 
 -- Set completeopt to have a better completion experience
-vim.o.completeopt = 'menuone,noselect'
+vim.o.completeopt = 'menuone,preview,noselect'
 
 -- Python executables and environments
 -- disable python2 support
