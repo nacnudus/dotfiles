@@ -30,7 +30,7 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 -- Enable the following language servers
-local servers = { 'clangd', 'pyright', 'tsserver' }
+local servers = { 'pyright', 'tsserver' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = On_attach,
@@ -39,3 +39,4 @@ for _, lsp in ipairs(servers) do
 end
 
 require('language-server.lua-language-server')
+require('language-server.cpp-language-server')
