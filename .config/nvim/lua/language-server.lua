@@ -41,3 +41,4 @@ end
 require('language-server.lua-language-server')
 require('language-server.cpp-language-server')
 require('language-server.python-language-server')
+require('language-server.julia-language-server')
