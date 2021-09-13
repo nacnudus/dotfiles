@@ -62,3 +62,8 @@ vim.api.nvim_exec(
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
+
+-- Python executables and environments
+-- disable python2 support
+vim.g.loaded_python_provider = 0
+vim.g.python3_host_prog = '/home/nacnudus/.virtualenvs/neovim-python3/bin/python'
