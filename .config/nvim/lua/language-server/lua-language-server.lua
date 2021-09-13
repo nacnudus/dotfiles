@@ -9,8 +9,7 @@ table.insert(runtime_path, 'lua/?/init.lua')
 
 require('lspconfig').sumneko_lua.setup {
   cmd = { sumneko_binary, '-E', sumneko_root_path .. '/main.lua' },
-  on_attach = on_attach,
-  capabilities = capabilities,
+  on_attach = On_attach,
   settings = {
     Lua = {
       runtime = {
