@@ -31,5 +31,6 @@ end)
 
 require('plugins.cheatsheet-nvim')
 require('plugins.gitsigns')
+require('plugins.lualine-nvim')
 require('plugins.telescope')
 require('plugins.vim-commentary')
