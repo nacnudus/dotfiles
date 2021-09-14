@@ -1,6 +1,11 @@
 require('cmp').setup {
   mapping = {
-    ['<C-y>'] = require('cmp').mapping.confirm({ select = true }),
+    ["<CR>"] = require('cmp').mapping.confirm({
+      behavior = require('cmp').ConfirmBehavior.Replace,
+      select = true
+    }),
+    ["<C-c>"] = require('cmp').mapping.close(),
+    ["<C-space>"] = require('cmp').mapping.complete(),
   },
   sources = {
     { name = 'nvim_lsp' },
