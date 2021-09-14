@@ -11,5 +11,25 @@ require('cmp').setup {
     { name = 'spell' },
     { name = 'treesitter' },
     { name = "latex_symbols" },
-  }
+  },
+  formatting = {
+    format = function(entry, vim_item)
+      -- fancy icons and a name of kind
+      vim_item.kind = require("lspkind").presets.default[vim_item.kind] .. " " .. vim_item.kind
+
+      -- set a name for each source
+      vim_item.menu = ({
+        buffer = "[buffer]",
+        nvim_lsp = "[LSP]",
+        nvim_lua = "[lua]",
+        path = "[path]",
+        emoji = "[emoji]",
+        spell = "[spell]",
+        tags = "[tags]",
+        treesitter = "[TS]",
+        latex_symbols = "[LaTeX]",
+      })[entry.source.name]
+      return vim_item
+    end,
+  },
 }

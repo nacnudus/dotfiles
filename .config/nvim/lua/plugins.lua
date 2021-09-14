@@ -42,6 +42,7 @@ require('packer').startup(function()
       {'nvim-lua/plenary.nvim'},
     }
   }
+  use 'onsails/lspkind-nvim' -- Add vscode-like pictograms to neovim built-in lsp
 end)
 
 require('plugins.cheatsheet-nvim')
@@ -50,3 +51,4 @@ require('plugins.lualine-nvim')
 require('plugins.telescope')
 require('plugins.vim-commentary')
 require('plugins.nvim-cmp')
+require('plugins.lspkind-nvim')
