@@ -42,6 +42,7 @@ require('packer').startup(function()
     }
   }
   use 'onsails/lspkind-nvim' -- Add vscode-like pictograms to neovim built-in lsp
+  use 'jalvesaq/nvim-r' -- R languauge plugin
 end)
 
 require('plugins.cheatsheet-nvim')
@@ -51,3 +52,4 @@ require('plugins.telescope')
 require('plugins.vim-commentary')
 require('plugins.nvim-cmp')
 require('plugins.lspkind-nvim')
+require('plugins.nvim-r')

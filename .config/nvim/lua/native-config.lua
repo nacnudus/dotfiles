@@ -1,6 +1,9 @@
 --Make line numbers default
 vim.wo.number = true
 
+--Don't open files folded
+vim.o.foldenable = false
+
 --Enable mouse mode
 vim.o.mouse = 'a'
 
