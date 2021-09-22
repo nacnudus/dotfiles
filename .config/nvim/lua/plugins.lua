@@ -45,6 +45,8 @@ require('packer').startup(function()
   use 'tpope/vim-rhubarb' -- Fugitive-companion to interact with github
   use 'tpope/vim-commentary' -- "gc" to comment visual regions/lines
   use 'tpope/vim-surround' -- Edit pairs of surrounding characters
+  -- Send code to a REPL
+  use 'jalvesaq/vimcmdline'
   -- Languages
   use 'jalvesaq/nvim-r' -- R languauge plugin
 end)
@@ -56,4 +58,5 @@ require('plugins.lualine-nvim')
 require('plugins.nvim-cmp')
 require('plugins.nvim-r')
 require('plugins.telescope')
+require('plugins.vimcmdline')
 require('plugins.vim-commentary')
