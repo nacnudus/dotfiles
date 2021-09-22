@@ -24,6 +24,9 @@ require('telescope').setup {
 -- | `!.mp3$`  | inverse-suffix-exact-match | Items that do not end with `.mp3`    |
 require('telescope').load_extension('fzf')
 
+-- Preview images, pdfs, thumbnails, epubs
+require('telescope').load_extension('media_files')
+
 -- Leader mappings
 
 -- Open Telescope with a list of things it can do

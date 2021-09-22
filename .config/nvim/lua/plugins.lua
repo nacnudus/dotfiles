@@ -20,6 +20,7 @@ require('packer').startup(function()
   use { 'nvim-telescope/telescope.nvim', requires = { { 'nvim-lua/plenary.nvim' } } }
   use { 'nvim-telescope/telescope-symbols.nvim', requires = { { 'nvim-telescope/telescope.nvim' }, { 'nvim-lua/plenary.nvim' } } }
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' } -- support exact matches and other syntax
+  use { 'nvim-telescope/telescope-media-files.nvim' } -- media_files to view thumbnails
   -- Language server
   use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
   -- Treesitter
