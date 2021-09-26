@@ -8,6 +8,7 @@ require('telescope').setup {
       },
     },
     layout_strategy = 'flex',
+    path_display = 'smart'
   },
 }
 
