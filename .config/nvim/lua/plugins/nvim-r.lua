@@ -1,5 +1,5 @@
 -- -- Don't use the built-in terminal (not working)
-vim.g.R_external_term = 1
+vim.g.R_external_term = 'kitty -e '
 vim.g.R_notmuxconf = 1  -- Use my own tmux, which allows mouse scroll
 
 -- Use Alt+- to create <- as in Rstudio
