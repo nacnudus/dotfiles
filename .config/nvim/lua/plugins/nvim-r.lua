@@ -1,4 +1,4 @@
--- -- Don't use the built-in terminal (not working)
+-- Don't use the built-in terminal
 vim.g.R_external_term = 'kitty -e '
 vim.g.R_notmuxconf = 1  -- Use my own tmux, which allows mouse scroll
 
