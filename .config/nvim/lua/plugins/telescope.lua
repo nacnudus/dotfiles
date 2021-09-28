@@ -6,9 +6,7 @@ require('telescope').setup {
         ['<C-u>'] = false,
         ['<C-d>'] = false,
       },
-    },
-    layout_strategy = 'flex',
-    path_display = 'smart'
+    }
   },
 }
 
