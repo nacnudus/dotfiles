@@ -34,8 +34,8 @@ vim.cmd [[colorscheme gruvbox-material]]
 
 --Remap space as leader key
 vim.api.nvim_set_keymap('', '<Space>', '<Nop>', { noremap = true, silent = true })
-vim.g.mapleader = ' ' -- global commands
-vim.g.maplocalleader = ',' -- filetype-specific commands
+vim.g.mapleader = ',' -- global commands
+vim.g.maplocalleader = ' ' -- filetype-specific commands
 
 --Remap jk as escape key to get into normal mode
 vim.api.nvim_set_keymap('i', 'jk', '<ESC>', { noremap = true, silent = true })
