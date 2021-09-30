@@ -1,6 +1,6 @@
 require('cmp').setup {
   mapping = {
-    ["<CR>"] = require('cmp').mapping.confirm({
+    ["<TAB>"] = require('cmp').mapping.confirm({
       behavior = require('cmp').ConfirmBehavior.Replace,
       select = true
     }),
