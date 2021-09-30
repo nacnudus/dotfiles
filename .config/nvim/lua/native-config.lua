@@ -70,3 +70,11 @@ vim.o.completeopt = 'menuone,preview,noselect'
 -- disable python2 support
 vim.g.loaded_python_provider = 0
 vim.g.python3_host_prog = '/home/nacnudus/.virtualenvs/neovim-python3/bin/python'
+
+-- Spaces & Tabs
+vim.o.tabstop     = 2    -- number of visual spaces per TAB
+vim.o.softtabstop = 2    -- number of spaces in tab when editing
+vim.o.shiftwidth  = 2    -- number of spaces to use for autoindent
+vim.o.expandtab   = true -- tabs are spaces
+vim.o.autoindent  = true
+vim.o.copyindent  = true -- copy indent from the previous line
