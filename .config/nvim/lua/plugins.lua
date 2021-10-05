@@ -46,7 +46,7 @@ require('packer').startup(function()
   use 'tpope/vim-fugitive' -- Git commands in nvim
   use 'tpope/vim-rhubarb' -- Fugitive-companion to interact with github
   use 'tpope/vim-commentary' -- "gc" to comment visual regions/lines
-  use 'tpope/vim-surround' -- Edit pairs of surrounding characters
+  use { 'tpope/vim-surround', requires = { 'tpope/vim-repeat' } } -- Edit pairs of surrounding characters
   use 'tpope/vim-characterize' -- Reveal character info, unicode included
   -- Send code to a REPL
   use { 'jalvesaq/vimcmdline', ft = { 'python', 'julia' } }
