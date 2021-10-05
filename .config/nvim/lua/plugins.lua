@@ -50,7 +50,7 @@ require('packer').startup(function()
   -- Send code to a REPL
   use 'jalvesaq/vimcmdline'
   -- Languages
-  use 'jalvesaq/nvim-r' -- R languauge plugin
+  use { 'jalvesaq/Nvim-R', ft = { 'r', 'rmd', 'rrst', 'rout' } } -- R language plugin
 end)
 
 require('plugins.cheatsheet-nvim')
