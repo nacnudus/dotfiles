@@ -48,7 +48,7 @@ require('packer').startup(function()
   use 'tpope/vim-commentary' -- "gc" to comment visual regions/lines
   use 'tpope/vim-surround' -- Edit pairs of surrounding characters
   -- Send code to a REPL
-  use 'jalvesaq/vimcmdline'
+  use { 'jalvesaq/vimcmdline', ft = { 'python', 'julia' } }
   -- Languages
   use { 'jalvesaq/Nvim-R', ft = { 'r', 'rmd', 'rrst', 'rout' } } -- R language plugin
 end)
