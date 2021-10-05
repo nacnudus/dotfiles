@@ -50,6 +50,7 @@ require('packer').startup(function()
   use 'tpope/vim-characterize' -- Reveal character info, unicode included
   use { 'tpope/vim-speeddating', requires = { 'tpope/vim-repeat' } } -- Increment dates
   use { 'tpope/vim-unimpaired', requires = { 'tpope/vim-repeat' } } -- pairwise utilities
+  use 'tpope/vim-eunuch' -- help for UNIX e.g. :Remove :SudoWrite :Move :Rename etc.
   -- Send code to a REPL
   use { 'jalvesaq/vimcmdline', ft = { 'python', 'julia' } }
   -- Languages
