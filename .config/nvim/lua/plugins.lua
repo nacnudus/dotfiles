@@ -55,6 +55,9 @@ require('packer').startup(function()
   use { 'jalvesaq/vimcmdline', ft = { 'python', 'julia' } }
   -- Languages
   use { 'jalvesaq/Nvim-R', ft = { 'r', 'rmd', 'rrst', 'rout' } } -- R language plugin
+  -- Clipboard
+  use { "AckslD/nvim-neoclip.lua", requires = { 'tami5/sqlite.lua', module = 'sqlite' }
+  }
 end)
 
 require('plugins.cheatsheet-nvim')
@@ -66,3 +69,4 @@ require('plugins.nvim-r')
 require('plugins.telescope')
 require('plugins.vimcmdline')
 require('plugins.vim-commentary')
+require('plugins.nvim-neoclip')

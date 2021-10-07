@@ -38,3 +38,4 @@ vim.api.nvim_set_keymap('n', '<leader>tg', [[<cmd>lua require('telescope.builtin
 vim.api.nvim_set_keymap('n', '<leader>tz', [[<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>t/', [[<cmd>lua require('telescope.builtin').live_grep()<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>to', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>ty', [[<cmd>lua require('telescope').extensions.neoclip.default()<CR>]], { noremap = true, silent = true })
