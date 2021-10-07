@@ -52,6 +52,15 @@ vim.g.indent_blankline_buftype_exclude = { 'terminal', 'nofile' }
 vim.g.indent_blankline_char_highlight = 'LineNr'
 vim.g.indent_blankline_show_trailing_blankline_indent = false
 
+-- Make Y similar to D & C
+vim.api.nvim_set_keymap('n', 'Y', 'y$', { noremap = true, silent = true })
+
+-- Cut/paste to/from the system clipboard
+vim.api.nvim_set_keymap('', '<Leader>y', '"+y', { noremap = true, silent = true } )
+vim.api.nvim_set_keymap('', '<Leader>Y', '"+Y', { noremap = true, silent = true } )
+vim.api.nvim_set_keymap('', '<Leader>p', '"+p', { noremap = true, silent = true } )
+vim.api.nvim_set_keymap('', '<Leader>P', '"+P', { noremap = true, silent = true } )
+
 -- Highlight on yank
 vim.api.nvim_exec(
   [[
