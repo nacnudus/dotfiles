@@ -1,6 +1,3 @@
---Make line numbers default
-vim.wo.number = true
-
 --Don't open files folded
 vim.o.foldenable = false
 
@@ -84,3 +81,11 @@ vim.o.shiftwidth  = 2    -- number of spaces to use for autoindent
 vim.o.expandtab   = true -- tabs are spaces
 vim.o.autoindent  = true
 vim.o.copyindent  = true -- copy indent from the previous line
+
+-- Visual cues
+vim.o.number = true         -- Make line numbers default
+vim.o.relativenumber = true -- Make line numbers relative
+vim.o.cursorline = true     -- highlight the line under the curser
+vim.o.virtualedit = 'all'   -- edit where there is no actual character
+vim.o.conceallevel = 2      -- hidden unless a replacement character is defined
+vim.o.showmatch = true      -- briefly jump to the matching bracket on insertion
