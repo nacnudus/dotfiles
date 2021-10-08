@@ -1,6 +1,4 @@
 -- Mappings
-local nvim_lsp = require 'lspconfig'
-
 On_attach = function(_, bufnr)
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
