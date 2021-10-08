@@ -1,5 +1,5 @@
 -- Example custom server
-local sumneko_root_path = "/usr/share/lua-language-server" -- Change to your sumneko root installation
+local sumneko_root_path = "/usr/lib/lua-language-server" -- Change to your sumneko root installation
 local sumneko_binary = '/usr/bin/lua-language-server'
 
 -- Make runtime files discoverable to the server
