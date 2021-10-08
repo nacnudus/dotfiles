@@ -95,3 +95,9 @@ vim.api.nvim_set_keymap('n', '``', ':qa!<CR>', { noremap = true, silent = true }
 
 -- Save quickly
 vim.api.nvim_set_keymap('n', '<Leader>w', ':update<CR>', { noremap = true, silent = true })
+
+-- Session persistence
+vim.opt.backupdir = '$HOME/.config/nvim/tmp/backup/'
+vim.opt.shadafile = '$HOME/.config/nvim/tmp/viminfo'
+vim.opt.undodir = '$HOME/.config/nvim/tmp/undo/'
+vim.opt.directory = '$HOME/.config/nvim/tmp/swap/'
