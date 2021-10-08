@@ -2,9 +2,9 @@
 vim.g.cmdline_map_start          = '<LocalLeader>s'
 vim.g.cmdline_map_send           = '<LocalLeader>d'
 vim.g.cmdline_map_send_and_stay  = '<LocalLeader>l'
-vim.g.cmdline_map_source_fun     = '<LocalLeader>ff'
-vim.g.cmdline_map_send_paragraph = '<LocalLeader>pp'
-vim.g.cmdline_map_send_block     = '<LocalLeader>bb'
+vim.g.cmdline_map_source_fun     = '<LocalLeader>fe'
+vim.g.cmdline_map_send_paragraph = '<LocalLeader>pe'
+vim.g.cmdline_map_send_block     = '<LocalLeader>be'
 vim.g.cmdline_map_send_motion    = '<LocalLeader>m'
 vim.g.cmdline_map_quit           = '<LocalLeader>q'
 
