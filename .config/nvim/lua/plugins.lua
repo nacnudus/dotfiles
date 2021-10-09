@@ -56,8 +56,8 @@ require('packer').startup(function()
   -- Languages
   use { 'jalvesaq/Nvim-R', ft = { 'r', 'rmd', 'rrst', 'rout' } } -- R language plugin
   -- Clipboard
-  use { "AckslD/nvim-neoclip.lua", requires = { 'tami5/sqlite.lua', module = 'sqlite' }
-  }
+  use { "AckslD/nvim-neoclip.lua", requires = { 'tami5/sqlite.lua', module = 'sqlite' } }
+  use "mbbill/undotree" -- Undo tree
 end)
 
 require('plugins.cheatsheet-nvim')
@@ -70,3 +70,4 @@ require('plugins.telescope')
 require('plugins.vimcmdline')
 require('plugins.vim-commentary')
 require('plugins.nvim-neoclip')
+require('plugins.undotree')
