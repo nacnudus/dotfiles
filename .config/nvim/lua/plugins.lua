@@ -12,6 +12,7 @@ require('packer').startup(function()
   }
   -- Colour scheme with treesitter support. Check for better-maintained alternatives.
   use { "sainnhe/gruvbox-material" }
+  use "rakr/vim-togglebg" -- toggle light/dark theme
   -- Fancier statusline
   use { 'hoob3rt/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true} }
   -- Add git related info in the signs columns and popups
@@ -72,3 +73,4 @@ require('plugins.vimcmdline')
 require('plugins.vim-commentary')
 require('plugins.nvim-neoclip')
 require('plugins.undotree')
+require('plugins.vim-togglebg')
