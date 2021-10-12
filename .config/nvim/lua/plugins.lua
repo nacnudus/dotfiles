@@ -26,6 +26,7 @@ require('packer').startup(function()
   use { 'nvim-telescope/telescope-media-files.nvim' } -- media_files to view thumbnails
   -- Language server
   use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
+  use 'kosayoda/nvim-lightbulb' -- Show lightbulb in gutter when codeactions available
   -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'nvim-treesitter/nvim-treesitter-textobjects'
@@ -77,3 +78,4 @@ require('plugins.nvim-neoclip')
 require('plugins.undotree')
 require('plugins.vim-togglebg')
 require('plugins.vim-fugitive')
+require('plugins.nvim-lightbulb')
