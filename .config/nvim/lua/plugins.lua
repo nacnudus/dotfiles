@@ -17,6 +17,8 @@ require('packer').startup(function()
   use { 'hoob3rt/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true} }
   -- Add git related info in the signs columns and popups
   use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
+  -- GitHub integration
+  use { 'pwntester/octo.nvim', config=function() require"octo".setup() end }
   -- Lists of things
   use { 'nvim-telescope/telescope.nvim', requires = { { 'nvim-lua/plenary.nvim' } } }
   use { 'nvim-telescope/telescope-symbols.nvim', requires = { { 'nvim-telescope/telescope.nvim' }, { 'nvim-lua/plenary.nvim' } } }
