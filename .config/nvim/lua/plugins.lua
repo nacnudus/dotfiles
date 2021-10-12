@@ -27,6 +27,11 @@ require('packer').startup(function()
   -- Language server
   use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
   use 'kosayoda/nvim-lightbulb' -- Show lightbulb in gutter when codeactions available
+  use {
+    "folke/trouble.nvim", -- pretty diagnostics, quickfix, location, references, telescope
+    requires = "kyazdani42/nvim-web-devicons",
+    config = function() require("trouble").setup{} end
+  }
   -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'nvim-treesitter/nvim-treesitter-textobjects'
