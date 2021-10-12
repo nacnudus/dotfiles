@@ -36,9 +36,19 @@ vim.g.rmd_fenced_languages = { 'r', 'python' }
 vim.g.markdown_fenced_languages = { 'r', 'python' }
 vim.g.R_non_r_compl = 0 -- use omni completion provided by another plugin
 
-vim.api.nvim_set_keymap('n', '<LocalLeader>sw', ':call SendCmdToR("setwidth()")<CR>', { noremap = true, silent = true })
+-- Reset the terminal width
+vim.api.nvim_set_keymap(
+  'n',
+  '<LocalLeader>sw',
+  ':call SendCmdToR("options(width = as.integer(Sys.getenv(\'COLUMNS\')))")<CR>',
+  { noremap = true, silent = true }
+)
+
+-- Glimpse an object
 vim.api.nvim_set_keymap('n', '<LocalLeader>gl', ':call RAction("dplyr::glimpse")<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<LocalLeader>rP', ':call RAction("print_tibble_inf")<CR>', { noremap = true, silent = true })
+
+-- Print all rows of a data frame
+vim.api.nvim_set_keymap('n', '<LocalLeader>rP', ':call RAction("pillar:::print.tbl(tibble::as_tibble", ", NULL), n = Inf")<CR>', { noremap = true, silent = true })
 
 -- tags
 vim.cmd('autocmd FileType r set tags+=~/.config/nvim/plugged/Nvim-R/Rtags,~/.config/nvim/plugged/Nvim-R/RsrcTags')
