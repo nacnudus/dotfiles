@@ -51,9 +51,10 @@ vim.api.nvim_set_keymap('n', '<LocalLeader>gl', ':call RAction("dplyr::glimpse")
 vim.api.nvim_set_keymap('n', '<LocalLeader>rP', ':call RAction("pillar:::print.tbl(tibble::as_tibble", ", NULL), n = Inf")<CR>', { noremap = true, silent = true })
 
 -- tags
-vim.cmd('autocmd FileType r set tags+=~/.config/nvim/plugged/Nvim-R/Rtags,~/.config/nvim/plugged/Nvim-R/RsrcTags')
-vim.cmd('autocmd FileType rmd set tags+=~/.config/nvim/plugged/Nvim-R/Rtags,~/.config/nvim/plugged/Nvim-R/RsrcTags')
-vim.cmd('autocmd FileType rnoweb set tags+=~/.config/nvim/plugged/Nvim-R/Rtags,~/.config/nvim/plugged/Nvim-R/RsrcTags')
+vim.cmd('autocmd FileType r set tags+=~/.cache/Nvim-R/Rtags,~/.cache/Nvim-R/RsrcTags')
+vim.cmd('autocmd FileType rmd set tags+=~/.cache/Nvim-R/Rtags,~/.cache/Nvim-R/RsrcTags')
+vim.cmd('autocmd FileType rrst set tags+=~/.cache/Nvim-R/Rtags,~/.cache/Nvim-R/RsrcTags')
+vim.cmd('autocmd FileType rnoweb set tags+=~/.cache/Nvim-R/Rtags,~/.cache/Nvim-R/RsrcTags')
 
 -- Close R without saving on vim exit
 vim.cmd('autocmd VimLeave * if exists("g:SendCmdToR") && string(g:SendCmdToR) != "function(\'SendCmdToR_fake\')" | call RQuit("nosave") | endif')
