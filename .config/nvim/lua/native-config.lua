@@ -111,3 +111,13 @@ vim.api.nvim_set_keymap('n', '<A-h>', '<C-w>h', { noremap = true, silent = true 
 vim.api.nvim_set_keymap('n', '<A-j>', '<C-w>j', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<A-k>', '<C-w>k', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<A-l>', '<C-w>l', { noremap = true, silent = true })
+
+-- New panes
+vim.api.nvim_set_keymap('n', '<Leader>v', '<C-w>v', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>h', '<C-w>s', { noremap = true, silent = true })
+
+-- Fast window & buffer close and kill.
+-- from http://stackoverflow.com/a/4468491/937932, close buffer without closing
+-- window.
+vim.api.nvim_set_keymap('n', '<Leader>k', '<C-w><C-c>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>K', ':bp|bd #<CR>', { noremap = true, silent = true })
