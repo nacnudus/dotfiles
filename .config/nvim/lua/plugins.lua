@@ -82,6 +82,7 @@ require('packer').startup(function()
     'AckslD/nvim-revJ.lua', -- un-join function signatures
     requires = {'kana/vim-textobj-user', 'sgur/vim-textobj-parameter'},
   }
+  use 'sunjon/shade.nvim' -- dim inactive windows
 end)
 
 require('plugins.cheatsheet-nvim')
@@ -99,3 +100,4 @@ require('plugins.vim-togglebg')
 require('plugins.vim-fugitive')
 require('plugins.nvim-lightbulb')
 require('plugins.nvim-revJ')
+require('plugins.shade_nvim')
