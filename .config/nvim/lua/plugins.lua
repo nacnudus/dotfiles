@@ -68,6 +68,7 @@ require('packer').startup(function()
   use { "AckslD/nvim-neoclip.lua", requires = { 'tami5/sqlite.lua', module = 'sqlite' } }
   use "mbbill/undotree" -- Undo tree
   use "farmergreg/vim-lastplace" -- Reopen files in the place the cursor was last time
+  use { 'glepnir/lspsaga.nvim', requires = { 'neovim/nvim-lspconfig' } }
 end)
 
 require('plugins.cheatsheet-nvim')
@@ -84,3 +85,4 @@ require('plugins.undotree')
 require('plugins.vim-togglebg')
 require('plugins.vim-fugitive')
 require('plugins.nvim-lightbulb')
+require('plugins.lspsaga')
