@@ -78,6 +78,10 @@ require('packer').startup(function()
       require('session-lens').setup({--[[your custom config--]]})
     end
   }
+  use {
+    'AckslD/nvim-revJ.lua', -- un-join function signatures
+    requires = {'kana/vim-textobj-user', 'sgur/vim-textobj-parameter'},
+  }
 end)
 
 require('plugins.cheatsheet-nvim')
@@ -94,3 +98,4 @@ require('plugins.undotree')
 require('plugins.vim-togglebg')
 require('plugins.vim-fugitive')
 require('plugins.nvim-lightbulb')
+require('plugins.nvim-revJ')
