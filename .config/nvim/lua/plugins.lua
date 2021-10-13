@@ -69,6 +69,7 @@ require('packer').startup(function()
   use "mbbill/undotree" -- Undo tree
   use "farmergreg/vim-lastplace" -- Reopen files in the place the cursor was last time
   use "dahu/vim-fanfingtastic" -- f character across lines
+  use "rmagatti/auto-session" -- automatically save and load sessions
 end)
 
 require('plugins.cheatsheet-nvim')

@@ -122,3 +122,6 @@ vim.api.nvim_set_keymap('n', '<Leader>h', '<C-w>s', { noremap = true, silent = t
 -- window.
 vim.api.nvim_set_keymap('n', '<Leader>k', '<C-w><C-c>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>K', ':bp|bd #<CR>', { noremap = true, silent = true })
+
+-- Manage sessions
+vim.o.sessionoptions="blank,buffers,curdir,folds,help,options,tabpages,winsize,resize,winpos,terminal"
