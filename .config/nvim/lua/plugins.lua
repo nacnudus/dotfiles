@@ -83,6 +83,7 @@ require('packer').startup(function()
     requires = {'kana/vim-textobj-user', 'sgur/vim-textobj-parameter'},
   }
   use 'sunjon/shade.nvim' -- dim inactive windows
+  use "folke/twilight.nvim" -- dim inactive sections of code
 end)
 
 require('plugins.cheatsheet-nvim')
@@ -101,3 +102,4 @@ require('plugins.vim-fugitive')
 require('plugins.nvim-lightbulb')
 require('plugins.nvim-revJ')
 require('plugins.shade_nvim')
+require('plugins.twilight_nvim')
