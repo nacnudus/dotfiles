@@ -30,6 +30,9 @@ require('telescope').load_extension('fzf')
 -- Preview images, pdfs, thumbnails, epubs
 require('telescope').load_extension('media_files')
 
+-- Choose sessions
+require("telescope").load_extension("session-lens")
+
 -- Leader mappings
 
 -- Open Telescope with a list of things it can do
