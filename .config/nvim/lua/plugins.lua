@@ -68,6 +68,7 @@ require('packer').startup(function()
   use { "AckslD/nvim-neoclip.lua", requires = { 'tami5/sqlite.lua', module = 'sqlite' } }
   use "mbbill/undotree" -- Undo tree
   use "farmergreg/vim-lastplace" -- Reopen files in the place the cursor was last time
+  use "dahu/vim-fanfingtastic" -- f character across lines
 end)
 
 require('plugins.cheatsheet-nvim')
