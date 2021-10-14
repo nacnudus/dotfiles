@@ -41,6 +41,10 @@ require('packer').startup(function()
     requires = { 'nvim-treesitter/nvim-treesitter' },
     config = function() require('nvim-biscuits').setup{} end
   }
+  use {
+    'romgrk/nvim-treesitter-context',
+    requires = { 'nvim-treesitter/nvim-treesitter' }
+  }
   -- Auto-completion
   use {
     "hrsh7th/nvim-cmp",
@@ -108,3 +112,4 @@ require('plugins.nvim-lightbulb')
 require('plugins.nvim-revJ')
 require('plugins.shade_nvim')
 require('plugins.twilight_nvim')
+require('plugins.nvim-treesitter-context')
