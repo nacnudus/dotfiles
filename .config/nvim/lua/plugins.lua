@@ -36,6 +36,11 @@ require('packer').startup(function()
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'nvim-treesitter/nvim-treesitter-textobjects'
   use 'p00f/nvim-ts-rainbow' -- parentheses matching
+  use { 
+    "code-biscuits/nvim-biscuits",
+    requires = { 'nvim-treesitter/nvim-treesitter' },
+    config = function() require('nvim-biscuits').setup{} end
+  }
   -- Auto-completion
   use {
     "hrsh7th/nvim-cmp",
