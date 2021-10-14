@@ -93,6 +93,7 @@ require('packer').startup(function()
   }
   use 'sunjon/shade.nvim' -- dim inactive windows
   use "folke/twilight.nvim" -- dim inactive sections of code
+  use "nacro90/numb.nvim" -- peek at line numbers
 end)
 
 require('plugins.cheatsheet-nvim')
@@ -113,3 +114,5 @@ require('plugins.nvim-revJ')
 require('plugins.shade_nvim')
 require('plugins.twilight_nvim')
 require('plugins.nvim-treesitter-context')
+require('plugins.numb_nvim')
+
