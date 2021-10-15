@@ -90,6 +90,7 @@ vim.o.virtualedit = 'all'   -- edit where there is no actual character
 vim.o.conceallevel = 2      -- hidden unless a replacement character is defined
 vim.o.showmatch = true      -- briefly jump to the matching bracket on insertion
 vim.o.title = true          -- show the filename and full path in the window title bar
+vim.o.scrolloff = 7 -- buffer when scrolling
 
 -- Exit without save
 vim.api.nvim_set_keymap('n', '``', ':qa!<CR>', { noremap = true, silent = true })
