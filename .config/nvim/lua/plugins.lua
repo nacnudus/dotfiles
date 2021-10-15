@@ -97,6 +97,7 @@ require('packer').startup(function()
   use "kshenoy/vim-signature" -- display marks beside line numbers
   use "jeffkreeftmeijer/vim-numbertoggle" -- toggle between absolute and relative
   use "PeterRincker/vim-argumentative" -- toggle between absolute and relative
+  use "troydm/zoomwintab.vim" -- maximise a window temporarily
 end)
 
 require('plugins.cheatsheet-nvim')
@@ -118,4 +119,4 @@ require('plugins.shade_nvim')
 require('plugins.twilight_nvim')
 require('plugins.nvim-treesitter-context')
 require('plugins.numb_nvim')
-
+require('plugins.zoomwintab_vim')
