@@ -94,6 +94,7 @@ require('packer').startup(function()
   use 'sunjon/shade.nvim' -- dim inactive windows
   use "folke/twilight.nvim" -- dim inactive sections of code
   use "nacro90/numb.nvim" -- peek at line numbers
+  use "kshenoy/vim-signature" -- display marks beside line numbers
 end)
 
 require('plugins.cheatsheet-nvim')
