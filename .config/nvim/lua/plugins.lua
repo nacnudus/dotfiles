@@ -95,6 +95,7 @@ require('packer').startup(function()
   use "folke/twilight.nvim" -- dim inactive sections of code
   use "nacro90/numb.nvim" -- peek at line numbers
   use "kshenoy/vim-signature" -- display marks beside line numbers
+  use "jeffkreeftmeijer/vim-numbertoggle" -- toggle between absolute and relative
 end)
 
 require('plugins.cheatsheet-nvim')
