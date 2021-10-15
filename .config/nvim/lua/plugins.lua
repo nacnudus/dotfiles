@@ -98,6 +98,7 @@ require('packer').startup(function()
   use "jeffkreeftmeijer/vim-numbertoggle" -- toggle between absolute and relative
   use "PeterRincker/vim-argumentative" -- toggle between absolute and relative
   use "troydm/zoomwintab.vim" -- maximise a window temporarily
+  use "ntpeters/vim-better-whitespace" -- trim whitespace on save
 end)
 
 require('plugins.cheatsheet-nvim')
@@ -120,3 +121,4 @@ require('plugins.twilight_nvim')
 require('plugins.nvim-treesitter-context')
 require('plugins.numb_nvim')
 require('plugins.zoomwintab_vim')
+require('plugins.vim-better-whitespace')
