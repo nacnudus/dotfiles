@@ -36,7 +36,7 @@ require('packer').startup(function()
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'nvim-treesitter/nvim-treesitter-textobjects'
   use 'p00f/nvim-ts-rainbow' -- parentheses matching
-  use { 
+  use {
     "code-biscuits/nvim-biscuits",
     requires = { 'nvim-treesitter/nvim-treesitter' },
     config = function() require('nvim-biscuits').setup{} end
@@ -91,7 +91,6 @@ require('packer').startup(function()
     'AckslD/nvim-revJ.lua', -- un-join function signatures
     requires = {'kana/vim-textobj-user', 'sgur/vim-textobj-parameter'},
   }
-  use 'sunjon/shade.nvim' -- dim inactive windows
   use "folke/twilight.nvim" -- dim inactive sections of code
   use "nacro90/numb.nvim" -- peek at line numbers
   use "kshenoy/vim-signature" -- display marks beside line numbers
@@ -116,7 +115,6 @@ require('plugins.vim-togglebg')
 require('plugins.vim-fugitive')
 require('plugins.nvim-lightbulb')
 require('plugins.nvim-revJ')
-require('plugins.shade_nvim')
 require('plugins.twilight_nvim')
 require('plugins.nvim-treesitter-context')
 require('plugins.numb_nvim')
