@@ -1,2 +1,1 @@
-require("twilight").setup{} 
-require("twilight").enable()
+require("twilight").setup{}
