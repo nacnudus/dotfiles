@@ -103,6 +103,7 @@ require('packer').startup(function()
     require = {'nvim-treesitter'}, -- or require if not used so far
     after = {'nvim-cmp'} -- if a completion plugin is using tabs load it before
   }
+  use "RRethy/vim-illuminate" -- highlight other instances of the word under the cursor
 end)
 
 require('plugins.cheatsheet-nvim')
@@ -126,3 +127,4 @@ require('plugins.numb_nvim')
 require('plugins.zoomwintab_vim')
 require('plugins.vim-better-whitespace')
 require('plugins.tabout_nvim')
+require('plugins.vim-illuminate')
