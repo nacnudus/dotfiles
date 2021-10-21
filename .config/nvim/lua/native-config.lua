@@ -96,7 +96,7 @@ vim.o.scrolloff = 7 -- buffer when scrolling
 vim.api.nvim_set_keymap('n', '``', ':qa!<CR>', { noremap = true, silent = true })
 
 -- Save quickly
-vim.api.nvim_set_keymap('n', '<Leader>w', ':update<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>ww', ':update<CR>', { noremap = true, silent = true })
 
 -- Session persistence
 vim.opt.backupdir = '/home/nacnudus/.config/nvim/tmp/backup/'
