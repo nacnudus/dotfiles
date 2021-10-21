@@ -126,3 +126,7 @@ vim.api.nvim_set_keymap('n', '<Leader>K', ':bp|bd #<CR>', { noremap = true, sile
 
 -- Manage sessions
 vim.o.sessionoptions="blank,buffers,curdir,folds,help,options,tabpages,winsize,resize,winpos,terminal"
+
+-- Mark the final column
+vim.opt.textwidth = 80
+vim.opt.colorcolumn = "+1"
