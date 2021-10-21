@@ -47,3 +47,4 @@ vim.api.nvim_set_keymap('n', '<leader>t/', [[<cmd>lua require('telescope.builtin
 vim.api.nvim_set_keymap('n', '<leader>to', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>ts', [[<cmd>lua require('telescope.builtin').spell_suggest()<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>ty', [[<cmd>lua require('telescope').extensions.neoclip.default()<CR>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>tn', [[<cmd>lua require('telescope').extensions.notify.notify()<CR>]], { noremap = true, silent = true })
