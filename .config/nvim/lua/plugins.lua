@@ -105,6 +105,9 @@ require('packer').startup(function()
   }
   use "RRethy/vim-illuminate" -- highlight other instances of the word under the cursor
   use "kyazdani42/nvim-web-devicons" -- add icons to plugins
+  use { "gelguy/wilder.nvim", -- wildmenu autocomplete
+    requires = { 'romgrk/fzy-lua-native', after = 'wilder.nvim' }
+  }
 end)
 
 require('plugins.cheatsheet-nvim')
@@ -129,3 +132,5 @@ require('plugins.zoomwintab_vim')
 require('plugins.vim-better-whitespace')
 require('plugins.tabout_nvim')
 require('plugins.vim-illuminate')
+require('plugins.wilder_nvim')
+require('plugins.nvim-web-devicons')
