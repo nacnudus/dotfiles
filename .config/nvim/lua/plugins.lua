@@ -104,6 +104,7 @@ require('packer').startup(function()
     after = {'nvim-cmp'} -- if a completion plugin is using tabs load it before
   }
   use "RRethy/vim-illuminate" -- highlight other instances of the word under the cursor
+  use "kyazdani42/nvim-web-devicons" -- add icons to plugins
 end)
 
 require('plugins.cheatsheet-nvim')
