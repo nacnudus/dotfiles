@@ -96,7 +96,7 @@ vim.o.scrolloff = 7 -- buffer when scrolling
 vim.api.nvim_set_keymap('n', '``', ':qa!<CR>', { noremap = true, silent = true })
 
 -- Save quickly
-vim.api.nvim_set_keymap('n', '<Leader>w', ':update<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>ww', ':update<CR>', { noremap = true, silent = true })
 
 -- Session persistence
 vim.opt.backupdir = '/home/nacnudus/.config/nvim/tmp/backup/'
@@ -126,3 +126,7 @@ vim.api.nvim_set_keymap('n', '<Leader>K', ':bp|bd #<CR>', { noremap = true, sile
 
 -- Manage sessions
 vim.o.sessionoptions="blank,buffers,curdir,folds,help,options,tabpages,winsize,resize,winpos,terminal"
+
+-- Mark the final column
+vim.opt.textwidth = 80
+vim.opt.colorcolumn = "+1"

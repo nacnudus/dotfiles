@@ -38,8 +38,7 @@ require('packer').startup(function()
   use 'p00f/nvim-ts-rainbow' -- parentheses matching
   use {
     "code-biscuits/nvim-biscuits",
-    requires = { 'nvim-treesitter/nvim-treesitter' },
-    config = function() require('nvim-biscuits').setup{} end
+    requires = { 'nvim-treesitter/nvim-treesitter' }
   }
   use {
     'romgrk/nvim-treesitter-context',
@@ -136,3 +135,4 @@ require('plugins.vim-illuminate')
 require('plugins.wilder_nvim')
 require('plugins.nvim-web-devicons')
 require('plugins.nvim-notify')
+require('plugins.nvim-biscuits')
