@@ -108,6 +108,12 @@ require('packer').startup(function()
     requires = { 'romgrk/fzy-lua-native', after = 'wilder.nvim' }
   }
   use "rcarriga/nvim-notify" -- fancy notifications from plugins
+  use {
+    "ldelossa/calltree.nvim",
+    config = function()
+      require('calltree').setup({})
+    end
+  }-- call tree in the side bar
 end)
 
 require('plugins.cheatsheet-nvim')
