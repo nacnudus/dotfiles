@@ -69,10 +69,16 @@ vim.api.nvim_exec(
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,preview,noselect'
 
--- Python executables and environments
--- disable python2 support
+-- Language executables and environments
+-- Disable by setting = 0
 vim.g.loaded_python_provider = 0
-vim.g.python3_host_prog = '/home/nacnudus/.virtualenvs/neovim-python3/bin/python'
+vim.g.loaded_python3_provider = 0
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_ruby_provider = 0
+vim.g.loaded_node_provider = 0
+
+-- Disable
+-- vim.g.python3_host_prog = '/home/nacnudus/.virtualenvs/neovim-python3/bin/python'
 
 -- Spaces & Tabs
 vim.o.tabstop     = 2    -- number of visual spaces per TAB

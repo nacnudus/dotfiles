@@ -7,9 +7,9 @@ require('cmp').setup {
     ["<C-c>"] = require('cmp').mapping.close(),
     ["<C-space>"] = require('cmp').mapping.complete(),
   },
-  sources = {
+  sources = require('cmp').config.sources({
     { name = 'buffer',
-      opts = {
+      option = {
         get_bufnrs = function()
           return vim.api.nvim_list_bufs()
         end
@@ -23,7 +23,7 @@ require('cmp').setup {
     { name = 'tags' },
     { name = 'treesitter' },
     { name = "latex_symbols" },
-  },
+  }),
   formatting = {
     format = function(entry, vim_item)
       -- fancy icons and a name of kind
