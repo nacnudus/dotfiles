@@ -107,7 +107,6 @@ require('packer').startup(function()
   use { "gelguy/wilder.nvim", -- wildmenu autocomplete
     requires = { 'romgrk/fzy-lua-native', after = 'wilder.nvim' }
   }
-  use "rcarriga/nvim-notify" -- fancy notifications from plugins
 end)
 
 require('plugins.cheatsheet-nvim')
@@ -134,5 +133,4 @@ require('plugins.tabout_nvim')
 require('plugins.vim-illuminate')
 require('plugins.wilder_nvim')
 require('plugins.nvim-web-devicons')
-require('plugins.nvim-notify')
 require('plugins.nvim-biscuits')
