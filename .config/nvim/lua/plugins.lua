@@ -107,6 +107,7 @@ require('packer').startup(function()
   use { "gelguy/wilder.nvim", -- wildmenu autocomplete
     requires = { 'romgrk/fzy-lua-native', after = 'wilder.nvim' }
   }
+  use "coachshea/vim-textobj-markdown" -- text objects of code fences and headings
 end)
 
 require('plugins.cheatsheet-nvim')
