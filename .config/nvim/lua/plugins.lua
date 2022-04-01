@@ -108,6 +108,7 @@ require('packer').startup(function()
     requires = { 'romgrk/fzy-lua-native', after = 'wilder.nvim' }
   }
   use "coachshea/vim-textobj-markdown" -- text objects of code fences and headings
+  use "github/copilot.vim"
 end)
 
 require('plugins.cheatsheet-nvim')
@@ -135,3 +136,4 @@ require('plugins.vim-illuminate')
 require('plugins.wilder_nvim')
 require('plugins.nvim-web-devicons')
 require('plugins.nvim-biscuits')
+require('plugins.copilot_vim')
