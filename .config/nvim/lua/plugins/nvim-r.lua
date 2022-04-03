@@ -58,3 +58,10 @@ vim.cmd('autocmd FileType rnoweb set tags+=~/.cache/Nvim-R/Rtags,~/.cache/Nvim-R
 
 -- Close R without saving on vim exit
 vim.cmd('autocmd VimLeave * if exists("g:SendCmdToR") && string(g:SendCmdToR) != "function(\'SendCmdToR_fake\')" | call RQuit("nosave") | endif')
+
+-- Use radian REPL
+vim.g.R_app = "radian"
+vim.g.R_cmd = "R"
+vim.g.R_hl_term = 0
+-- vim.g.R_args = []  " if you had set any
+vim.g.R_bracketed_paste = 1
