@@ -15,6 +15,6 @@ require('neoclip').setup({
         paste_behind = 'P',
         custom = {},
       },
-    }
+    },
   },
 })
