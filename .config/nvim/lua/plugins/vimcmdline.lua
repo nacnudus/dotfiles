@@ -13,7 +13,7 @@ vim.g.cmdline_in_buffer = 0
 vim.g.cmdline_external_term_cmd = 'kitty %s &'
 vim.g.cmdline_tmux_conf = "~/.tmux.conf"
 
--- Use particular interpreters for certain languagese
+-- Use particular interpreters for certain languages
 vim.g.cmdline_app = {
   python = "'source ~/.virtualenvs/$(cat .venv)/bin/activate; ipython'"
 }
