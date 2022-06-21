@@ -48,15 +48,18 @@ require('packer').startup(function()
   use {
     "hrsh7th/nvim-cmp",
     requires = {
+      "f3fora/cmp-spell",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-cmdline",
+      "hrsh7th/cmp-emoji",
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-nvim-lua",
       "hrsh7th/cmp-path",
-      "hrsh7th/cmp-buffer",
-      "hrsh7th/cmp-emoji",
-      "f3fora/cmp-spell",
+      "hrsh7th/nvim-lspconfig",
+      "kdheepak/cmp-latex-symbols",
+      "petertriho/cmp-git",
       "quangnguyen30192/cmp-nvim-tags",
       "ray-x/cmp-treesitter",
-      "kdheepak/cmp-latex-symbols",
     }
   }
   use 'onsails/lspkind-nvim' -- Add vscode-like pictograms to neovim built-in lsp
@@ -139,3 +142,4 @@ require('plugins.wilder_nvim')
 require('plugins.nvim-web-devicons')
 require('plugins.nvim-biscuits')
 require('plugins.diffview_nvim')
+require("plugins.cmp-git")
