@@ -109,6 +109,8 @@ require('packer').startup(function()
   }
   use "coachshea/vim-textobj-markdown" -- text objects of code fences and headings
   use "github/copilot.vim"
+  -- git diff
+  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 end)
 
 require('plugins.cheatsheet-nvim')
@@ -137,3 +139,4 @@ require('plugins.wilder_nvim')
 require('plugins.nvim-web-devicons')
 require('plugins.nvim-biscuits')
 require('plugins.copilot_vim')
+require('plugins.diffview_nvim')
