@@ -76,6 +76,7 @@ require('packer').startup(function()
   use { 'jalvesaq/vimcmdline', ft = { 'python', 'julia' } }
   -- Languages
   use { 'jalvesaq/Nvim-R', ft = { 'r', 'rmd', 'rrst', 'rout' } } -- R language plugin
+  use { 'memgraph/cypher.vim', ft = { 'cypher' } }
   -- Clipboard
   use { "AckslD/nvim-neoclip.lua", requires = { 'tami5/sqlite.lua', module = 'sqlite' } }
   use "mbbill/undotree" -- Undo tree
