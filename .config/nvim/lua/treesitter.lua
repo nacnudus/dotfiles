@@ -23,6 +23,7 @@ require('nvim-treesitter.configs').setup {
     "r",
     "regex",
     "ruby",
+    "rust",
     "scss",
     "toml",
     "vim",
