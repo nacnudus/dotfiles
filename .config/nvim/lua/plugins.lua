@@ -115,6 +115,7 @@ require('packer').startup(function()
   use "github/copilot.vim"
   -- git diff
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+  use { 'AndrewRadev/linediff.vim' }
 end)
 
 require('plugins.cheatsheet-nvim')
