@@ -116,6 +116,7 @@ require('packer').startup(function()
   -- git diff
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
   use { 'AndrewRadev/linediff.vim' }
+  use { 'drybalka/tree-climber.nvim' }
 end)
 
 require('plugins.cheatsheet-nvim')
@@ -145,3 +146,4 @@ require('plugins.nvim-web-devicons')
 require('plugins.nvim-biscuits')
 require('plugins.diffview_nvim')
 require("plugins.cmp-git")
+require('plugins.tree-climber_nvim')
