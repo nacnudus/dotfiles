@@ -112,7 +112,6 @@ require('packer').startup(function()
     requires = { 'romgrk/fzy-lua-native', after = 'wilder.nvim' }
   }
   use "coachshea/vim-textobj-markdown" -- text objects of code fences and headings
-  use "github/copilot.vim"
   -- git diff
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
   use { 'AndrewRadev/linediff.vim' }
