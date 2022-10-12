@@ -3,7 +3,7 @@ On_attach = function(client, bufnr)
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   -- Find the clients capabilities
-  local cap = client.resolved_capabilities
+  local cap = client.server_capabilities
 
   if cap.document_highlight then
       vim.cmd('augroup LspHighlight')
