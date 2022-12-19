@@ -98,7 +98,7 @@ require('packer').startup(function()
   use "nacro90/numb.nvim" -- peek at line numbers
   use "kshenoy/vim-signature" -- display marks beside line numbers
   use "jeffkreeftmeijer/vim-numbertoggle" -- toggle between absolute and relative
-  use "PeterRincker/vim-argumentative" -- toggle between absolute and relative
+  use "PeterRincker/vim-argumentative" -- swap function arguments
   use "troydm/zoomwintab.vim" -- maximise a window temporarily
   use "ntpeters/vim-better-whitespace" -- trim whitespace on save
   use {
