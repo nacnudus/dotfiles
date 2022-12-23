@@ -25,3 +25,4 @@ require('plugins')
 -- Once plugins have been loaded, general config can configure them
 require('language-server')
 require('treesitter')
+require('debug-adapter-protocol')

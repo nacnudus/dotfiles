@@ -1,7 +1,7 @@
 -- Mappings similar to opening and closing fugitive
 vim.api.nvim_set_keymap(
   'n',
-  '<Leader>d',
+  '<Leader>dd',
   '<cmd>DiffviewOpen<cr>',
   { noremap = true, silent = true }
 )

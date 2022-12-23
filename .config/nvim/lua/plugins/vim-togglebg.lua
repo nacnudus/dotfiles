@@ -1,1 +1,1 @@
-vim.cmd('call togglebg#map("<F5>")')
+vim.cmd('call togglebg#map("<F4>")')

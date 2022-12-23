@@ -32,6 +32,10 @@ require('packer').startup(function()
     requires = "kyazdani42/nvim-web-devicons",
     config = function() require("trouble").setup{} end
   }
+  -- Debug adapter protocol (DAP)
+  use 'mfussenegger/nvim-dap'
+  use { 'mfussenegger/nvim-dap-python' }
+  use { "rcarriga/nvim-dap-ui" }
   -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'nvim-treesitter/nvim-treesitter-textobjects'
