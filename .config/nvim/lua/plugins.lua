@@ -64,6 +64,7 @@ require('packer').startup(function()
       "petertriho/cmp-git",
       "quangnguyen30192/cmp-nvim-tags",
       "ray-x/cmp-treesitter",
+      "jalvesaq/cmp-nvim-r",
     }
   }
   use 'onsails/lspkind-nvim' -- Add vscode-like pictograms to neovim built-in lsp

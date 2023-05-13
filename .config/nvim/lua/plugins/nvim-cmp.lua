@@ -58,15 +58,16 @@
       ['<Tab>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     }),
     sources = cmp.config.sources({
+      { name = 'cmp_nvim_r' },
+      { name = 'nvim_lua' },
+      { name = 'nvim_lsp' },
+      { name = 'treesitter' },
       { name = 'buffer' },
       { name = 'emoji' },
       { name = 'latex_symbols' },
-      { name = 'nvim_lsp' },
-      { name = 'nvim_lua' },
       { name = 'path' },
       { name = 'spell' },
       { name = 'tags' },
-      { name = 'treesitter' },
     })
   })
 
