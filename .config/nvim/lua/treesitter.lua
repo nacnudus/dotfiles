@@ -25,6 +25,7 @@ require('nvim-treesitter.configs').setup {
     "ruby",
     "rust",
     "scss",
+    "terraform",
     "toml",
     "vim",
     "yaml"
