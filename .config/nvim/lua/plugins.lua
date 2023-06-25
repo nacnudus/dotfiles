@@ -24,6 +24,9 @@ require('packer').startup(function()
   use { 'nvim-telescope/telescope-symbols.nvim', requires = { { 'nvim-telescope/telescope.nvim' }, { 'nvim-lua/plenary.nvim' } } }
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' } -- support exact matches and other syntax
   use { 'nvim-telescope/telescope-media-files.nvim' } -- media_files to view thumbnails
+  -- Snippets, mainly because they're required for the html language server
+  use 'hrsh7th/vim-vsnip'
+  use 'hrsh7th/vim-vsnip-integ'
   -- Language server
   use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
   use 'kosayoda/nvim-lightbulb' -- Show lightbulb in gutter when codeactions available
@@ -151,3 +154,4 @@ require('plugins.nvim-biscuits')
 require('plugins.diffview_nvim')
 require("plugins.cmp-git")
 require('plugins.tree-climber_nvim')
+require('plugins.vsnip')
