@@ -47,6 +47,7 @@ vim.cmd('autocmd FileType r set tags+=~/.cache/Nvim-R/Rtags,~/.cache/Nvim-R/Rsrc
 vim.cmd('autocmd FileType rmd set tags+=~/.cache/Nvim-R/Rtags,~/.cache/Nvim-R/RsrcTags')
 vim.cmd('autocmd FileType rrst set tags+=~/.cache/Nvim-R/Rtags,~/.cache/Nvim-R/RsrcTags')
 vim.cmd('autocmd FileType rnoweb set tags+=~/.cache/Nvim-R/Rtags,~/.cache/Nvim-R/RsrcTags')
+vim.cmd('autocmd FileType quarto set tags+=~/.cache/Nvim-R/Rtags,~/.cache/Nvim-R/RsrcTags')
 
 -- Close R without saving on vim exit
 vim.cmd('autocmd VimLeave * if exists("g:SendCmdToR") && string(g:SendCmdToR) != "function(\'SendCmdToR_fake\')" | call RQuit("nosave") | endif')
