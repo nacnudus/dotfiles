@@ -14,7 +14,7 @@ require('packer').startup(function()
   use { "sainnhe/gruvbox-material" }
   use "mikker/vim-togglebg" -- toggle light/dark theme
   -- Fancier statusline
-  use { 'hoob3rt/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true} }
+  use { 'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons', opt = true } }
   -- Add git related info in the signs columns and popups
   use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
   -- GitHub integration
