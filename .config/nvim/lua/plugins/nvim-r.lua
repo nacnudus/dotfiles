@@ -6,7 +6,6 @@ vim.g.R_notmuxconf = 1  -- Use my own tmux, which allows mouse scroll
 vim.g.R_assign_map = "<M-->"
 
 -- vim.g.rout_follow_colorscheme = 1 -- Doesn't seem to work
-vim.g.R_commented_lines  = 1 -- Include commented lines when sending to console
 vim.g.R_clear_line  = 1 -- Delete existing stuff on command line before sending command to R
 vim.g.R_rmd_environment = "new.env()" -- compile .Rmd in a fresh environment
 
