@@ -70,6 +70,27 @@ require('packer').startup(function()
       "jalvesaq/cmp-nvim-r",
     }
   }
+  -- GitHub Copilot
+  use {
+    -- "github/copilot.vim",
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup({
+        -- Resolve conflict with copilot-cmp
+        -- suggestion = { enabled = false },
+        -- panel = { enabled = false },
+      })
+    end,
+  }
+  use {
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua" },
+    config = function ()
+      require("copilot_cmp").setup()
+    end
+  }
   --  Tim Pope
   use 'tpope/vim-fugitive' -- Git commands in nvim
   use 'tpope/vim-rhubarb' -- Fugitive-companion to interact with github

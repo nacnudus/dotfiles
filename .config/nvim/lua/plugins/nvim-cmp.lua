@@ -55,9 +55,10 @@
       ['<C-f>'] = cmp.mapping.scroll_docs(4),
       ['<C-Space>'] = cmp.mapping.complete(),
       ['<C-e>'] = cmp.mapping.abort(),
-      ['<Tab>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+      ['<CR>'] = cmp.mapping.confirm({ select = false }),
     }),
     sources = cmp.config.sources({
+      { name = "copilot" },
       { name = 'cmp_nvim_r' },
       { name = 'nvim_lua' },
       { name = 'nvim_lsp' },
@@ -68,7 +69,24 @@
       { name = 'path' },
       { name = 'spell' },
       { name = 'tags' },
-    })
+    }),
+    sorting = {
+      priority_weight = 2,
+      comparators = {
+        -- require("copilot_cmp.comparators").prioritize,
+        -- Below is the default comparitor list and order for nvim-cmp
+        cmp.config.compare.offset,
+        -- cmp.config.compare.scopes, --this is commented in nvim-cmp too
+        cmp.config.compare.exact,
+        cmp.config.compare.score,
+        cmp.config.compare.recently_used,
+        cmp.config.compare.locality,
+        cmp.config.compare.kind,
+        cmp.config.compare.sort_text,
+        cmp.config.compare.length,
+        cmp.config.compare.order,
+      },
+    },
   })
 
   -- Set configuration for specific filetype.
