@@ -70,7 +70,6 @@ require('packer').startup(function()
       "jalvesaq/cmp-nvim-r",
     }
   }
-  use 'onsails/lspkind-nvim' -- Add vscode-like pictograms to neovim built-in lsp
   --  Tim Pope
   use 'tpope/vim-fugitive' -- Git commands in nvim
   use 'tpope/vim-rhubarb' -- Fugitive-companion to interact with github
@@ -128,7 +127,6 @@ end)
 
 require('plugins.cheatsheet-nvim')
 require('plugins.gitsigns')
-require('plugins.lspkind-nvim')
 require('plugins.lualine-nvim')
 require('plugins.nvim-cmp')
 require('plugins.nvim-r')
