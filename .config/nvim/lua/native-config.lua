@@ -21,13 +21,6 @@ vim.wo.signcolumn = 'yes'
 --Set colorscheme (order is important here)
 vim.o.termguicolors = true
 vim.o.background = "dark" -- or "light" for light mode
-vim.g.gruvbox_material_palette = 'original'
-vim.g.gruvbox_material_statusline_style = 'original'
-vim.g.gruvbox_material_better_performance = 1
-vim.g.gruvbox_material_enable_italic = 1
-vim.g.gruvbox_material_enable_bold = 1
-vim.g.gruvbox_material_background = 'medium' -- 'hard', 'medium', 'soft'
-vim.cmd [[colorscheme gruvbox-material]]
 
 --Remap space as leader key
 vim.api.nvim_set_keymap('', '<Space>', '<Nop>', { noremap = true, silent = true })

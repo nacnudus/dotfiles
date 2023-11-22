@@ -125,6 +125,7 @@ require('packer').startup(function()
   use { 'drybalka/tree-climber.nvim' }
 end)
 
+require('plugins.gruvbox-material')
 require('plugins.cheatsheet-nvim')
 require('plugins.gitsigns')
 require('plugins.lualine-nvim')
