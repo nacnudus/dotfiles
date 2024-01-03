@@ -15,6 +15,8 @@ require('packer').startup(function()
   use "mikker/vim-togglebg" -- toggle light/dark theme
   -- Fancier statusline
   use { 'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons', opt = true } }
+  -- Edit a filesystem like a normal buffer
+  use { 'stevearc/oil.nvim', config=function() require("oil").setup() end }
   -- Add git related info in the signs columns and popups
   use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
   -- GitHub integration
@@ -175,3 +177,4 @@ require('plugins.diffview_nvim')
 require("plugins.cmp-git")
 require('plugins.tree-climber_nvim')
 require('plugins.vsnip')
+require('plugins.oil_nvim')
