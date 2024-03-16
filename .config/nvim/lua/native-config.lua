@@ -129,3 +129,6 @@ vim.o.sessionoptions="blank,buffers,curdir,folds,help,options,tabpages,winsize,r
 -- Mark the final column
 vim.opt.textwidth = 80
 vim.opt.colorcolumn = "+1"
+
+-- Don't hard-wrap markdown (because GitHub doesn't render it properly)
+vim.cmd('autocmd FileType markdown set textwidth=9999')
