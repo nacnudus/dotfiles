@@ -117,6 +117,10 @@ vim.api.nvim_set_keymap('n', '<A-l>', '<C-w>l', { noremap = true, silent = true 
 vim.api.nvim_set_keymap('n', '<Leader>v', '<C-w>v', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>h', '<C-w>s', { noremap = true, silent = true })
 
+-- Copy buffer file path to clipboard
+vim.api.nvim_create_user_command('Path', ":let @+=expand('%')", {})
+vim.api.nvim_create_user_command('FullPath', ":let @+=expand('%:p')", {})
+
 -- Fast window & buffer close and kill.
 -- from http://stackoverflow.com/a/4468491/937932, close buffer without closing
 -- window.
