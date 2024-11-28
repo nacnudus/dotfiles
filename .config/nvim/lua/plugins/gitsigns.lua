@@ -5,7 +5,6 @@ require('gitsigns').setup {
     change       = { text = '~' },
     delete       = { text = '_', show_count = true },
     topdelete    = { text = '‾', show_count = true },
-    changedelete = { foo = '_̴', show_count = true, hl = 'GitSignsDelete' },
     untracked    = { text = '┆' },
   },
   signcolumn = true,  -- Toggle with `:Gitsigns toggle_signs`
@@ -37,10 +36,8 @@ require('gitsigns').setup {
     row = 0,
     col = 1
   },
-  yadm = {
-    enable = false
-  },
   on_attach = function(bufnr)
+    vim.api.nvim_set_hl(0, 'GitSignsChangedelete', { link = 'GitSignsDelete' })
     -- Setup keymaps
     vim.api.nvim_buf_set_keymap(bufnr, 'n', ']h', '<cmd>lua require"gitsigns".next_hunk()<CR>', { noremap = true })
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '[h', '<cmd>lua require"gitsigns".prev_hunk()<CR>', { noremap = true })
