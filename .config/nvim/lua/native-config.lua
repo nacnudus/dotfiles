@@ -136,3 +136,12 @@ vim.opt.colorcolumn = "+1"
 
 -- Don't hard-wrap markdown (because GitHub doesn't render it properly)
 vim.cmd('autocmd FileType markdown set textwidth=9999')
+
+-- Format a json buffer with jq
+vim.api.nvim_set_keymap('n', '<Leader>jq', ':%!jq .<CR>', { noremap = true, silent = true })
+
+-- Stringify a json buffer with jq
+vim.api.nvim_set_keymap('n', '<Leader>js', ':%!jq \'. | stringify\'<CR>', { noremap = true, silent = true })
+--
+-- Format a json buffer into yaml
+vim.api.nvim_set_keymap('n', '<Leader>yq', ':%!yq -P .<CR>', { noremap = true, silent = true })
