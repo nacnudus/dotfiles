@@ -5,10 +5,10 @@ require('telescope').setup {
       i = {
         ['<C-u>'] = false,
         ['<C-d>'] = false,
-        ["<c-t>"] = require("trouble.providers.telescope").open_with_trouble
+        ["<c-t>"] = require("trouble.sources.telescope").open
       },
       n = {
-        ["<c-t>"] = require("trouble.providers.telescope").open_with_trouble
+        ["<c-t>"] = require("trouble.sources.telescope").open
       },
     }
   },
