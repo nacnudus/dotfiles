@@ -44,7 +44,7 @@ require('packer').startup(function()
   -- Debug adapter protocol (DAP)
   use 'mfussenegger/nvim-dap'
   use { 'mfussenegger/nvim-dap-python' }
-  use { "rcarriga/nvim-dap-ui" }
+  use { "rcarriga/nvim-dap-ui", requires = { { 'nvim-neotest/nvim-nio'} } }
   -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'nvim-treesitter/nvim-treesitter-textobjects'
