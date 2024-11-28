@@ -1,6 +1,10 @@
 local use = require('packer').use
 require('packer').startup(function()
   use 'wbthomason/packer.nvim' -- Package manager
+  -- cope with big files
+  use {
+    "LunarVim/bigfile.nvim",
+  }
   -- Cheatsheet
   use {
     'sudormrfbin/cheatsheet.nvim',
@@ -148,6 +152,7 @@ require('packer').startup(function()
   use { 'drybalka/tree-climber.nvim' }
 end)
 
+require('plugins.bigfile_nvim')
 require('plugins.gruvbox-material')
 require('plugins.cheatsheet-nvim')
 require('plugins.gitsigns')
