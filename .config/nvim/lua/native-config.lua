@@ -141,7 +141,7 @@ vim.cmd('autocmd FileType markdown set textwidth=9999')
 vim.api.nvim_set_keymap('n', '<Leader>jq', ':%!jq .<CR>', { noremap = true, silent = true })
 
 -- Stringify a json buffer with jq
-vim.api.nvim_set_keymap('n', '<Leader>js', ':%!jq \'. | stringify\'<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>js', ':%!jq \'. | @json\'<CR>', { noremap = true, silent = true })
 --
 -- Format a json buffer into yaml
 vim.api.nvim_set_keymap('n', '<Leader>yq', ':%!yq -P .<CR>', { noremap = true, silent = true })
